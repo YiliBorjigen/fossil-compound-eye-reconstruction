@@ -20,6 +20,9 @@
 - In a prospectively selected fourth *Pieris* region, a spatial direction field
   frozen on three earlier manually traced regions reduced median held-out path
   RMSE from 5.02 to 1.44 voxels and improved all 13 usable traces.
+- In the same prospective fourth-region test, using surface normals as visual
+  directions produced a median angular error of 15.26 degrees; the frozen
+  field reduced it to 3.12 degrees and improved all 13 usable traces.
 
 ## Not established
 
@@ -47,6 +50,11 @@
 - The positive Patch 4 direction result is still one specimen, one region and
   one annotator. It does not validate the clicked paths as crystalline cones or
   establish transfer to another eye.
+- A whole-eye visual field has not been reconstructed. Across all four
+  region-held-out tests, the current direction field improved only 17/34 paths
+  and failed for every usable path in Patches 2–3.
+- Sparse local angular span and nearest traced-neighbour measurements are not
+  full-eye field of view or adjacent-facet interommatidial angles.
 - Apposition and superposition eyes have not been shown to share one
   transferable cone model and will be analysed separately.
 
@@ -88,3 +96,11 @@ near the two training regions with similar directions, while training-only
 leave-one-region-out prediction was poor for the distant sign-changing region.
 The result supports local interpolation of manual directions, not a solved
 whole-eye field, automatic segmentation or fossil reconstruction.
+
+Experiment 51 gives that local result a functional scale: surface normals were
+wrong by a median 15.26 degrees in prospective Patch 4, reduced to 3.12 degrees
+by the frozen field. This is evidence that internal-axis orientation can matter
+to a local viewing-direction estimate. It must travel with the negative
+whole-eye diagnostic (17/34 improvements, including complete failures in
+Patches 2–3) and with the fact that the manual paths lack independent
+anatomical validation.

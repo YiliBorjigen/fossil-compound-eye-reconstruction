@@ -118,6 +118,17 @@ transfer.
 
 ![Experiment 50 frozen Patch 4 test](experiments/manual-axis-pieris/results/patch_4_spatial_field/experiment_50_patch4_spatial_field.png)
 
+Experiment 51 asked whether this axis correction matters for functional eye
+reconstruction. In the prospective Patch 4 test, treating the surface normals
+as visual axes gave a median angular error of 15.26 degrees. The frozen field
+reduced it to 3.12 degrees and improved all 13 traces; pairwise angular-geometry
+RMSE fell from 4.25 to 3.56 degrees. This demonstrates a meaningful local
+functional consequence. It does not yet give a whole-eye field: the same
+region-held-out predictor improved only 17 of 34 traces across all four regions
+and failed in Patches 2–3.
+
+![Experiment 51 functional axis consequence](experiments/manual-axis-pieris/results/functional_axis/experiment_51_functional_axis_consequence.png)
+
 ![Blind modern-eye population-prior result across 15 spatial blocks](figures/population-prior-modern-metrics.png)
 
 ![Independent Pieris transfer result](figures/population-prior-pieris-transfer.png)
@@ -196,10 +207,13 @@ voxels through depth. Experiment 49 confirms that manually measured tilt helps
 in three regions, but also shows that a constant correction fails on the third:
 the orientation field varies across the eye. Experiment 50 shows that a simple
 field frozen on Patches 1–3 can predict a nearby fourth region, reducing median
-path error by 71.6%. The next deployable test is no longer another hand-traced
-region from this specimen. It is the same frozen idea evaluated against the
-requested InSegtCone author labels or an independently annotated apposition
-eye. Moth superposition eyes will be tested separately.
+path error by 71.6%. Experiment 51 shows why the correction matters: the
+surface-normal approximation is wrong by a median 15.26 degrees in the
+prospective region, reduced to 3.12 degrees by the frozen field. But the
+whole-eye leave-one-region-out result succeeds for only 17/34 traces, so a
+complete field of view is not solved. The next deployable test is the same idea
+evaluated against the requested InSegtCone author labels or an independently
+annotated apposition eye. Moth superposition eyes will be tested separately.
 
 The modern-eye work builds on the open-source
 [ODA project](https://github.com/jpcurrea/ODA) and the public

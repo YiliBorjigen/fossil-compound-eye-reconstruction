@@ -99,7 +99,7 @@ internal target depths. Because the public label contains no individual cone
 masks, the tracked ridges cannot be called anatomical cone axes. A trained or
 manually validated 3D cone segmentation is now the next required evidence.
 
-## Manual axes and a frozen spatial test (Experiments 48–50)
+## Manual axes and a functional consequence (Experiments 48–51)
 
 Experiment 48 replaced ambiguous intensity ridges with manually traced paths.
 Within one region, following a fitted straight path improved the intensity
@@ -114,3 +114,12 @@ directions before Patch 4 was scored. It reduced median held-out path RMSE from
 5.02 to 1.44 voxels and improved all 13 usable traces. This is a prospective
 regional success within one specimen. It does not replace author-provided cone
 labels or an independent-eye test.
+
+Experiment 51 converted the path result into visual-direction consequences.
+In prospective Patch 4, the surface normals differed from the manual axes by a
+median 15.26 degrees, while the frozen field differed by 3.12 degrees and won
+for all 13 paths. Sparse pairwise angular-geometry error also fell from 4.25 to
+3.56 degrees. The whole-eye diagnostic remained negative: region-held-out
+prediction improved only 17/34 paths and failed throughout Patches 2–3. Thus
+internal-axis correction matters locally, but the current field model cannot
+yet reconstruct the complete eye.

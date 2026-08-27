@@ -1,11 +1,13 @@
 # Manual-axis Pieris experiments
 
-Experiments 48–50 use Li Yi's manually traced cone centre-lines from four
+Experiments 48–51 use Li Yi's manually traced cone centre-lines from four
 pre-selected *Pieris napi* regions. Experiment 48 asks whether a leave-one-cone-
 out residual template improves when it is placed on the traced 3D path rather
 than held on a static surface normal. Experiment 49 asks whether a simple skew
 model learned in one or two regions transfers to a held-out region. Experiment
 50 freezes a spatially varying field on Patches 1–3 before testing it in Patch 4.
+Experiment 51 asks whether the difference between the surface normals and
+those internal directions is large enough to alter a functional interpretation.
 
 The intensity reconstructions are oracle-axis diagnostics within previously
 examined data. The regional transfer test withholds the test-region paths from
@@ -49,6 +51,14 @@ field and an eye-wide constant field do not reproduce that gain. This supports
 local interpolation of regional cone direction within this specimen; it does
 not yet validate anatomy, another eye or a fossil.
 
+Experiment 51 expresses that result in angular rather than path coordinates.
+In Patch 4, the surface-normal assumption has a median direction error of
+15.26 degrees; the frozen field reduces it to 3.12 degrees and improves all 13
+paths. Pairwise angular-geometry RMSE also falls from 4.25 to 3.56 degrees.
+This is a meaningful local functional correction. It is not a complete visual
+field: across all four region-held-out tests, the predicted field wins for only
+17/34 paths and fails in Patches 2–3.
+
 None of the uploaded preliminary random-forest masks is used. They label 53.3%,
 59.8% and 95.2% of Patches 1–3 as cone, respectively, despite high internal OOB
 scores. Those scores reflect the sparse, imbalanced training scribbles rather
@@ -74,3 +84,9 @@ Patches 1–3 and the already selected Patch 4 seed. Preserve the resulting JSON
 then pass it unchanged to `run_patch4_spatial_field_test.py`. The scripts expose
 all paths through `--help`; raw CT and annotation archives are intentionally not
 stored in Git.
+
+For the functional consequence, pass the same four patch inputs and frozen
+Experiment 50 JSON to `run_functional_axis_consequence.py`. The script reports
+angular direction error and sparse local angular geometry. Its local span and
+nearest traced-neighbour values must not be presented as full-eye field of view
+or true adjacent-facet interommatidial angles.
