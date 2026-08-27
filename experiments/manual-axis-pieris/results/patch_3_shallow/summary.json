@@ -1,0 +1,53 @@
+{
+  "status": "within-region oracle-axis diagnostic; not independent validation",
+  "source_annotation_cones": 12,
+  "source_background_points": 8,
+  "documented_corrections": [],
+  "evaluated_cones": [
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "evaluation_depths": [
+    12,
+    17
+  ],
+  "evaluation_voxel_size_micrometres": 1.08,
+  "methods": {
+    "local_depth_background": {
+      "median_normalised_mae": 0.18459289514973862,
+      "median_correlation": 0.726993442849075,
+      "wins_vs_background": 0
+    },
+    "surface_normal_static": {
+      "median_normalised_mae": 0.1617410583364569,
+      "median_correlation": 0.8151726531356712,
+      "wins_vs_background": 4
+    },
+    "oracle_fitted_straight_axis": {
+      "median_normalised_mae": 0.11449724663869988,
+      "median_correlation": 0.9396963719181519,
+      "wins_vs_background": 5
+    },
+    "oracle_fitted_quadratic_axis": {
+      "median_normalised_mae": 0.1126217073409157,
+      "median_correlation": 0.9299465713100762,
+      "wins_vs_background": 5
+    },
+    "raw_manual_path": {
+      "median_normalised_mae": 0.12269067217942066,
+      "median_correlation": 0.9120167378649454,
+      "wins_vs_background": 5
+    },
+    "permuted_quadratic_axis": {
+      "median_normalised_mae": 0.12938223830252438,
+      "median_correlation": 0.9001018621972607,
+      "wins_vs_background": 5
+    }
+  },
+  "median_path_shift_voxels": 2.451689905261555,
+  "median_straight_fit_rmse_voxels": 0.4175260841583317,
+  "median_quadratic_fit_rmse_voxels": 0.3507365197715077
+}

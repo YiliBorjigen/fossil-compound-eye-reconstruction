@@ -110,6 +110,16 @@ def main() -> None:
     parser.add_argument("--volume", type=Path, required=True)
     parser.add_argument("--annotations", type=Path, required=True)
     parser.add_argument("--output-dir", type=Path, required=True)
+    parser.add_argument("--selected-cones", default="1,2,3,4,5")
+    parser.add_argument("--depth-start", type=int, default=34)
+    parser.add_argument("--depth-stop", type=int, default=50)
+    parser.add_argument(
+        "--drop-nodes",
+        action="append",
+        default=[],
+        metavar="CONE_ID:DEPTH,DEPTH",
+        help="Documented continuity-audit correction; may be supplied more than once",
+    )
     args = parser.parse_args()
 
     volume = np.load(args.volume)
@@ -117,33 +127,40 @@ def main() -> None:
     original_project = json.loads(json.dumps(project))
 
     corrections = []
+    requested_drops: dict[int, set[int]] = {}
+    for specification in args.drop_nodes:
+        cone_text, depth_text = specification.split(":", maxsplit=1)
+        requested_drops.setdefault(int(cone_text), set()).update(
+            int(value) for value in depth_text.split(",")
+        )
     for cone in project["cones"]:
-        if int(cone["id"]) == 2:
-            removed = [node for node in cone["nodes"] if int(node["depth"]) in (14, 15)]
+        cone_id = int(cone["id"])
+        depths_to_drop = requested_drops.get(cone_id, set())
+        if depths_to_drop:
+            removed = [
+                node for node in cone["nodes"] if int(node["depth"]) in depths_to_drop
+            ]
             cone["nodes"] = [
-                node for node in cone["nodes"] if int(node["depth"]) not in (14, 15)
+                node for node in cone["nodes"] if int(node["depth"]) not in depths_to_drop
             ]
             corrections.append(
                 {
-                    "cone_id": 2,
-                    "action": "removed two pre-jump nodes",
-                    "depths": [14, 15],
-                    "reason": (
-                        "the depth-15 to depth-16 displacement was 79.14 voxels, "
-                        "whereas the other within-track steps were below 1.6 voxels"
-                    ),
+                    "cone_id": cone_id,
+                    "action": "removed nodes after continuity audit",
+                    "depths": sorted(depths_to_drop),
+                    "reason": "explicit command-line correction; original archive preserved",
                     "removed_nodes": removed,
                 }
             )
 
-    project["source_volume"] = "patch_1/unfolded_intensity.npy"
+    project["source_volume"] = f"{args.volume.parent.name}/{args.volume.name}"
     project["audit_corrections"] = corrections
     project["original_annotation_file_sha256"] = hashlib.sha256(
         args.annotations.read_bytes()
     ).hexdigest()
 
-    selected_ids = (1, 2, 3, 4, 5)
-    depths = np.arange(34, 51, dtype=int)
+    selected_ids = tuple(int(value) for value in args.selected_cones.split(","))
+    depths = np.arange(args.depth_start, args.depth_stop + 1, dtype=int)
     paths = {}
     for cone in project["cones"]:
         cone_id = int(cone["id"])
@@ -303,7 +320,9 @@ def main() -> None:
     axes[0].set_aspect("equal", adjustable="datalim")
     axes[0].set_xlabel("Column shift (voxels)")
     axes[0].set_ylabel("Row shift (voxels)")
-    axes[0].set_title("A  Human-traced paths, depths 34–50")
+    axes[0].set_title(
+        f"A  Human-traced paths, depths {depths[0]}–{depths[-1]}"
+    )
     axes[0].legend(fontsize=7, frameon=False)
 
     labels = [

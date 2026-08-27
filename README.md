@@ -97,6 +97,16 @@ curvature.
 
 ![Experiment 48 manual-axis pilot](experiments/manual-axis-pieris/results/experiment_48_manual_axis_pilot.png)
 
+Experiment 49 extended the manual-axis test to two more pre-selected regions.
+A constant eye-relative skew learned in Patch 1 transferred to Patch 2, reducing
+median 3D path RMSE from 5.63 to 1.86 voxels. It then failed the held-out Patch
+3 test: the model learned from Patches 1–2 increased RMSE from 2.89 to 3.52
+voxels and lost for all 11 usable tracks. Manual axes still improved the
+within-region intensity diagnostic in Patch 3. Cone skew is therefore real but
+spatially varying across this eye; one global tilt correction is not sufficient.
+
+![Experiment 49 cross-region axis transfer](experiments/manual-axis-pieris/results/cross_region/experiment_49_cross_region_axis_transfer.png)
+
 ![Blind modern-eye population-prior result across 15 spatial blocks](figures/population-prior-modern-metrics.png)
 
 ![Independent Pieris transfer result](figures/population-prior-pieris-transfer.png)
@@ -136,7 +146,7 @@ including failed tests and missing records, is retained in
 - `experiments/centerline-pieris/` tests candidate 3D paths, curvature and
   cornea-to-internal continuity without calling intensity ridges cone labels.
 - `experiments/manual-axis-pieris/` tests human-traced cone axes and separates
-  regional tilt from curvature in a within-region diagnostic.
+  regional tilt from curvature and tests whether that tilt transfers between regions.
 - `apps/cone-centerline-annotator/` is a clickable tool for manually marking
   curved three-dimensional cone axes and exporting reproducible training
   labels. Its preliminary mask is annotation assistance, not validation.
@@ -170,14 +180,15 @@ segmentation of the relevant lens/cone boundary. The independent *Pieris*
 transfer has shown that the present population template is not general.
 Experiment 46 identified centre and axis definition as the immediate
 bottleneck. Experiment 47 showed that candidate curvature is sub-error-scale.
-Experiment 48 now shows directly that the regional cone axis tilts by several
-voxels through depth and that a straight tilted axis captures essentially all
-of the observed benefit; quadratic curvature adds no stable improvement. The
-clickable annotator remains a fallback, while the exact published Pieris labels
-and trained dictionaries are being requested from the InSegtCone authors. The
-next deployable task is to predict regional tilt without supplying the held-out
-manual path, then freeze that rule for the prospective Bombus replication.
-Moth superposition eyes will be tested separately.
+Experiment 48 shows directly that the regional cone axis tilts by several
+voxels through depth. Experiment 49 confirms that manually measured tilt helps
+in three regions, but also shows that a constant correction fails on the third:
+the orientation field varies across the eye. The clickable annotator is now
+providing training paths for a spatially varying axis model, while the exact
+published Pieris labels and trained dictionaries are being requested from the
+InSegtCone authors. The next deployable task is to fit that field on Patches
+1–3 and freeze it before a fourth-region or author-label test. Moth
+superposition eyes will be tested separately.
 
 The modern-eye work builds on the open-source
 [ODA project](https://github.com/jpcurrea/ODA) and the public

@@ -1,0 +1,34 @@
+{
+  "status": "held-out regional transfer diagnostic; same specimen and annotator",
+  "coordinate_system": "whole-eye PCA tangent frame; constant median skew coefficients",
+  "patch_1_model": [
+    -0.1755390335467471,
+    -0.1678942498892555
+  ],
+  "patch_1_plus_2_model": [
+    -0.19187065178053736,
+    -0.1821245509970249
+  ],
+  "patch_1_to_patch_2": {
+    "tracks": 5,
+    "median_normal_path_rmse_voxels": 5.630705780034504,
+    "median_transferred_path_rmse_voxels": 1.859126431363994,
+    "median_oracle_straight_path_rmse_voxels": 0.43337096339186865,
+    "transferred_wins_vs_normal": 5,
+    "median_fractional_change_vs_normal": -0.6910156973177576
+  },
+  "patch_1_plus_2_to_patch_3": {
+    "tracks": 11,
+    "median_normal_path_rmse_voxels": 2.888110254495675,
+    "median_transferred_path_rmse_voxels": 3.5169123638215734,
+    "median_oracle_straight_path_rmse_voxels": 0.45612335720701364,
+    "transferred_wins_vs_normal": 0,
+    "median_fractional_change_vs_normal": 0.23272136803378093
+  },
+  "interpretation": "Manual cone skew is reproducible within regions, but a single eye-wide constant skew does not transfer to Patch 3. The next model must predict a spatially varying orientation field.",
+  "claim_limits": [
+    "Manual centre-lines are not independent anatomical segmentations.",
+    "All regions come from one Pieris specimen and one annotator.",
+    "Patch 3 tests a constant-skew model, not every possible spatial model."
+  ]
+}
