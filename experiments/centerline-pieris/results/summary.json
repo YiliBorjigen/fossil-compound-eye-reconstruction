@@ -1,0 +1,60 @@
+{
+  "status": "post-transfer candidate centre-line audit; not anatomical validation",
+  "source_label_scope": "eye volume and corneal surface only; no individual cone labels",
+  "voxel_spacing_micrometres_xyz": [
+    1.08,
+    1.08,
+    1.08
+  ],
+  "isotropic_sampling": true,
+  "primary_detector_percentile": 75.0,
+  "primary_maximum_step_voxels": 3.2,
+  "minimum_track_length": 15,
+  "regions": {
+    "1": {
+      "reference_depth": 20,
+      "eligible_candidate_tracks": 80,
+      "tracks_spanning_old_outer_to_internal_depths": 24,
+      "median_line_blocked_cv_voxels": 1.3714288469290659,
+      "median_quadratic_blocked_cv_voxels": 1.0012956398350559,
+      "median_paired_quadratic_minus_line_voxels": -0.0985108092379604,
+      "fraction_quadratic_wins": 0.6,
+      "median_curvature_rms_micrometres": 0.6612567107108012
+    },
+    "2": {
+      "reference_depth": 19,
+      "eligible_candidate_tracks": 56,
+      "tracks_spanning_old_outer_to_internal_depths": 8,
+      "median_line_blocked_cv_voxels": 1.112978064398926,
+      "median_quadratic_blocked_cv_voxels": 0.9152497062179179,
+      "median_paired_quadratic_minus_line_voxels": -0.06968431899268535,
+      "fraction_quadratic_wins": 0.5892857142857143,
+      "median_curvature_rms_micrometres": 0.6035133966224527
+    },
+    "3": {
+      "reference_depth": 13,
+      "eligible_candidate_tracks": 14,
+      "tracks_spanning_old_outer_to_internal_depths": 0,
+      "median_line_blocked_cv_voxels": 1.1872606774785837,
+      "median_quadratic_blocked_cv_voxels": 1.2248773953801877,
+      "median_paired_quadratic_minus_line_voxels": 0.017891074779775362,
+      "fraction_quadratic_wins": 0.42857142857142855,
+      "median_curvature_rms_micrometres": 0.5627696397968271
+    }
+  },
+  "sensitivity": {
+    "1": {
+      "settings_with_quadratic_median_improvement": 12,
+      "settings_tested": 12
+    },
+    "2": {
+      "settings_with_quadratic_median_improvement": 12,
+      "settings_tested": 12
+    },
+    "3": {
+      "settings_with_quadratic_median_improvement": 6,
+      "settings_tested": 12
+    }
+  },
+  "interpretation": "Low-order curvature gives a small, region-dependent improvement, with median deviation around 0.6 micrometres. This is too small to explain the earlier approximately 3.2 micrometre centre-registration error. More importantly, raw maxima do not form reliable cornea-to-internal tracks, so a trained or manually validated three-dimensional cone segmentation is still required."
+}

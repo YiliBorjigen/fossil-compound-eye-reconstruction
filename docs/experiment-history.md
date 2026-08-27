@@ -86,3 +86,15 @@ suggests that centre and axis registration is the immediate bottleneck, but the
 current targets are only two-dimensional CT peaks. The next experiment must
 trace three-dimensional cone centre-lines before another transfer claim is
 tested.
+
+## Candidate centre-line and curvature audit (Experiment 47)
+
+Experiment 47 checked whether unequal z sampling or a straight-axis assumption
+caused the Pieris registration error. The source manifest reports isotropic
+1.08 micrometre voxels. Low-order curvature modestly improved blocked-depth
+tracking in two regions, but not the third, and the typical curved-versus-
+straight deviation was only about 0.6 micrometres. More importantly, very few
+raw intensity tracks remained continuous from the shallow lattice to the old
+internal target depths. Because the public label contains no individual cone
+masks, the tracked ridges cannot be called anatomical cone axes. A trained or
+manually validated 3D cone segmentation is now the next required evidence.

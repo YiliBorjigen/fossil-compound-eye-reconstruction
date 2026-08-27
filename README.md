@@ -75,6 +75,17 @@ axis before fitting another intensity template.
 
 ![Experiment 46 error decomposition](experiments/anatomy-aware-residual/results/experiment_46_error_decomposition.png)
 
+Experiment 47 tested whether gently curved axes or unequal z sampling explained
+the remaining error. The Pieris acquisition is sampled isotropically at 1.08
+micrometres. Candidate intensity ridges showed a small quadratic-path advantage
+in two regions, with typical curvature around 0.6 micrometres, but not in the
+third. Only 24, 8 and 0 tracks in the three regions remained continuous between
+the earlier shallow and internal depths. Curvature is therefore too small to
+explain the roughly 3.2 micrometre registration error, and raw intensity maxima
+cannot substitute for a validated three-dimensional cone segmentation.
+
+![Experiment 47 centre-line audit](experiments/centerline-pieris/results/experiment_47_centerline_audit.png)
+
 ![Blind modern-eye population-prior result across 15 spatial blocks](figures/population-prior-modern-metrics.png)
 
 ![Independent Pieris transfer result](figures/population-prior-pieris-transfer.png)
@@ -111,6 +122,8 @@ including failed tests and missing records, is retained in
   transfer, including its failed strict run and adapted negative result.
 - `experiments/anatomy-aware-residual/` decomposes cone intensity and
   registration error after that transfer and records the diagnostic result.
+- `experiments/centerline-pieris/` tests candidate 3D paths, curvature and
+  cornea-to-internal continuity without calling intensity ridges cone labels.
 - `reports/` preserves the decisive audits, including the *Archegonus* and
   *Pieris* transfer failures.
 - `figures/` contains selected, publication-size outputs. Large intermediate
@@ -137,11 +150,13 @@ This is an exploratory research record by Li Yi (Yili Borjigen), not a finished
 anatomical reconstruction package. The next useful fossil evidence would be an expert or author-provided
 segmentation of the relevant lens/cone boundary. The independent *Pieris*
 transfer has shown that the present population template is not general.
-Experiment 46 suggests that centre and axis definition, rather than another
-intensity-template variant, is the immediate bottleneck. The next method will
-trace three-dimensional cone centre-lines, lengths, radii and tilts in the
-already examined modern scans, then lock those rules before a third apposition
-eye is used for biological replication. Moth superposition eyes will be tested
+Experiment 46 identified centre and axis definition as the immediate
+bottleneck. Experiment 47 showed that allowing gentle curvature is appropriate
+but insufficient: candidate curvature is sub-error-scale and raw peaks do not
+provide reliable anatomical continuity. The next required input is a trained
+or manually validated three-dimensional cone segmentation. Only then can
+centre-lines, lengths, radii and tilts be locked before a third apposition eye
+is used for biological replication. Moth superposition eyes will be tested
 separately.
 
 The modern-eye work builds on the open-source

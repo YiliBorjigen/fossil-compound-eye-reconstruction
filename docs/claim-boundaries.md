@@ -38,6 +38,9 @@
   only the oracle-centred diagnostic improved.
 - Current internal targets are two-dimensional CT intensity peaks, not verified
   three-dimensional cone centre-lines or homologous anatomical landmarks.
+- Candidate ridge tracking in Pieris does not establish cone identity: only 24,
+  8 and 0 tracks in the three regions spanned the old shallow-to-internal depth
+  interval, and the public label contains no individual cone masks.
 - Apposition and superposition eyes have not been shown to share one
   transferable cone model and will be analysed separately.
 
@@ -65,3 +68,10 @@ The Experiment 46 oracle-centred result is a mechanistic diagnostic on the same
 registration as a working hypothesis for the error source; it is not an
 independent replication, a deployable method, or evidence about fossil cone
 identity.
+
+The Experiment 47 curvature result also remains a candidate-ridge audit. A
+quadratic path modestly improved blocked-depth prediction in two regions but not
+the third, and its typical deviation from a straight path was about 0.6
+micrometres. This supports permitting gentle curvature in a future segmenter;
+it does not show that the tracked ridges are crystalline-cone axes or explain
+the earlier approximately 3.2 micrometre registration error.

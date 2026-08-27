@@ -33,7 +33,17 @@ predict the missing centre-line in micrometres and degrees. Second, ask whether
 a normalised residual improves over the local depth profile once that axis is
 correct.
 
+## Result of the first centre-line audit
+
+Experiment 47 confirmed isotropic 1.08 micrometre voxel spacing and allowed a
+low-order curved path. Candidate curvature was small, around 0.6 micrometres,
+and did not reproduce consistently across all three Pieris regions. Raw
+slice-wise maxima also failed to provide continuous cornea-to-internal tracks.
+The next step is therefore not another curve fit. It is a trained or manually
+validated 3D cone segmentation from which centre-lines can be measured.
+
 ## Validation order
+
 
 - Develop the centre-line representation on the already examined Apis and
   Pieris scans.
