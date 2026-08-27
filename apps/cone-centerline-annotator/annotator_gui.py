@@ -229,6 +229,15 @@ class Annotator(tk.Tk):
         if self.project is None or self.volume_path is None or self.output_dir is None:
             messagebox.showinfo("Open data first", "Open and annotate a patch first.")
             return
+        if len(self.project.get("cones", [])) < 3:
+            messagebox.showinfo("More cone tracks needed", "Mark at least three cones before training.")
+            return
+        if len(self.project.get("background_points", [])) < 10:
+            messagebox.showinfo(
+                "More background needed",
+                "Add at least ten explicit background points, spread across several depths, before training.",
+            )
+            return
         self.save_and_export(silent=True)
         scribbles = self.output_dir / "training_scribbles.npy"
         self.status.set("Training preliminary mask…")

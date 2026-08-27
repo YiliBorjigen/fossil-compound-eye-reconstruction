@@ -7,8 +7,12 @@ not anatomical ground truth and must not be used as an independent test set.
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 
+import matplotlib
+
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.ndimage import gaussian_filter, gaussian_gradient_magnitude
@@ -61,13 +65,16 @@ def train_from_scribbles(
         min_samples_leaf=2,
         class_weight="balanced",
         oob_score=True,
-        n_jobs=-1,
+        n_jobs=max(1, min(4, os.cpu_count() or 1)),
         random_state=random_state,
     )
     model.fit(design, target)
     probability = model.predict_proba(features.reshape(-1, features.shape[-1]))[:, 1]
     probability = probability.reshape(volume.shape).astype(np.float32)
     mask = probability >= 0.5
+
+    mask_fraction = float(np.mean(mask))
+    qc_status = "pass" if mask_fraction <= 0.20 else "fail: implausibly broad mask"
 
     output_dir.mkdir(parents=True, exist_ok=True)
     np.save(output_dir / "cone_probability.npy", probability)
@@ -78,6 +85,8 @@ def train_from_scribbles(
         "background_training_voxels": int(len(background)),
         "random_forest_oob_score": float(model.oob_score_),
         "probability_threshold": 0.5,
+        "predicted_mask_fraction": mask_fraction,
+        "quality_control": qc_status,
         "warning": (
             "Training and evaluation use the same manually annotated volume. "
             "The mask must be reviewed and corrected before centre-line measurement."

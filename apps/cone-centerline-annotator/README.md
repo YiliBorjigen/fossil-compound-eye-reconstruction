@@ -20,8 +20,8 @@ not available. It does not require command-line use.
 2. Click the centre of that same cone at several depths. Use the slider or the
    arrow keys to move through the volume. The GUI interpolates between clicks.
 3. Repeat for at least three well-separated cones.
-4. Select **Explicit background** and click areas that are clearly not cones at
-   several depths.
+4. Select **Explicit background** and add at least ten points that are clearly
+   not cones, spread across several depths.
 5. Click **Save and export**.
 6. Click **Train preliminary mask**. Review the saved preview; the output is an
    annotation aid, not validated anatomy.

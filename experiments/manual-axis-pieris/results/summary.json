@@ -1,0 +1,75 @@
+{
+  "status": "within-region oracle-axis diagnostic; not independent validation",
+  "source_annotation_cones": 7,
+  "source_background_points": 3,
+  "documented_corrections": [
+    {
+      "cone_id": 2,
+      "action": "removed two pre-jump nodes",
+      "depths": [
+        14,
+        15
+      ],
+      "reason": "the depth-15 to depth-16 displacement was 79.14 voxels, whereas the other within-track steps were below 1.6 voxels",
+      "removed_nodes": [
+        {
+          "depth": 14,
+          "row": 100.35655737704919,
+          "column": 102.37909836065573
+        },
+        {
+          "depth": 15,
+          "row": 100.74180327868852,
+          "column": 102.57172131147541
+        }
+      ]
+    }
+  ],
+  "evaluated_cones": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "evaluation_depths": [
+    34,
+    50
+  ],
+  "evaluation_voxel_size_micrometres": 1.08,
+  "methods": {
+    "local_depth_background": {
+      "median_normalised_mae": 0.3990544915483463,
+      "median_correlation": -0.0002959589083404284,
+      "wins_vs_background": 0
+    },
+    "surface_normal_static": {
+      "median_normalised_mae": 0.3528444786260862,
+      "median_correlation": 0.21064013021503705,
+      "wins_vs_background": 3
+    },
+    "oracle_fitted_straight_axis": {
+      "median_normalised_mae": 0.28191906849906906,
+      "median_correlation": 0.731050983612178,
+      "wins_vs_background": 4
+    },
+    "oracle_fitted_quadratic_axis": {
+      "median_normalised_mae": 0.28200789399035553,
+      "median_correlation": 0.7278932440553592,
+      "wins_vs_background": 4
+    },
+    "raw_manual_path": {
+      "median_normalised_mae": 0.2740130370687197,
+      "median_correlation": 0.6700622978962625,
+      "wins_vs_background": 4
+    },
+    "permuted_quadratic_axis": {
+      "median_normalised_mae": 0.2961903369941206,
+      "median_correlation": 0.4172602458104393,
+      "wins_vs_background": 4
+    }
+  },
+  "median_path_shift_voxels": 4.873018033702091,
+  "median_straight_fit_rmse_voxels": 0.4590648511591149,
+  "median_quadratic_fit_rmse_voxels": 0.4178214628115662
+}

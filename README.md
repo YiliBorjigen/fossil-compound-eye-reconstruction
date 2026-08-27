@@ -86,6 +86,17 @@ cannot substitute for a validated three-dimensional cone segmentation.
 
 ![Experiment 47 centre-line audit](experiments/centerline-pieris/results/experiment_47_centerline_audit.png)
 
+Experiment 48 used seven manually traced cone paths from the first *Pieris*
+region. Five overlap through depths 34–50 and move by a median 4.87 voxels
+(5.26 micrometres). In a leave-one-cone-out diagnostic, placing the residual
+template on a fitted straight axis reduced median normalised error from 0.399
+for local background to 0.282 and improved four of five cones. A quadratic
+axis also gave 0.282 and beat the straight axis for only one cone. The missing
+information is therefore regional axis tilt, not demonstrably cone-specific
+curvature.
+
+![Experiment 48 manual-axis pilot](experiments/manual-axis-pieris/results/experiment_48_manual_axis_pilot.png)
+
 ![Blind modern-eye population-prior result across 15 spatial blocks](figures/population-prior-modern-metrics.png)
 
 ![Independent Pieris transfer result](figures/population-prior-pieris-transfer.png)
@@ -124,6 +135,8 @@ including failed tests and missing records, is retained in
   registration error after that transfer and records the diagnostic result.
 - `experiments/centerline-pieris/` tests candidate 3D paths, curvature and
   cornea-to-internal continuity without calling intensity ridges cone labels.
+- `experiments/manual-axis-pieris/` tests human-traced cone axes and separates
+  regional tilt from curvature in a within-region diagnostic.
 - `apps/cone-centerline-annotator/` is a clickable tool for manually marking
   curved three-dimensional cone axes and exporting reproducible training
   labels. Its preliminary mask is annotation assistance, not validation.
@@ -156,14 +169,14 @@ anatomical reconstruction package. The next useful fossil evidence would be an e
 segmentation of the relevant lens/cone boundary. The independent *Pieris*
 transfer has shown that the present population template is not general.
 Experiment 46 identified centre and axis definition as the immediate
-bottleneck. Experiment 47 showed that allowing gentle curvature is appropriate
-but insufficient: candidate curvature is sub-error-scale and raw peaks do not
-provide reliable anatomical continuity. The next required input is a trained
-or manually validated three-dimensional cone segmentation. A clickable manual
-centre-line annotator is now included as a fallback, and the exact published
-Pieris cone-label files and trained dictionaries are being requested from the
-InSegtCone authors. Only after those labels have been checked will centre-lines,
-lengths, radii and tilts be locked for the prospective Bombus replication.
+bottleneck. Experiment 47 showed that candidate curvature is sub-error-scale.
+Experiment 48 now shows directly that the regional cone axis tilts by several
+voxels through depth and that a straight tilted axis captures essentially all
+of the observed benefit; quadratic curvature adds no stable improvement. The
+clickable annotator remains a fallback, while the exact published Pieris labels
+and trained dictionaries are being requested from the InSegtCone authors. The
+next deployable task is to predict regional tilt without supplying the held-out
+manual path, then freeze that rule for the prospective Bombus replication.
 Moth superposition eyes will be tested separately.
 
 The modern-eye work builds on the open-source
