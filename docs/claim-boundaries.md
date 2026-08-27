@@ -26,6 +26,10 @@
 - The 116 robust *Asaphus* facets define a reproducible outer-surface geometric
   envelope: matched normals change by a median 0.22 degrees across neighbouring
   thresholds, and the cropped surface-normal field spans 34.64 degrees.
+- Experiment 53 quantifies preservation-geometry sensitivity. At the nominal
+  smoothing, threshold changes move the 95th-percentile matched normal by at
+  most 0.64 degrees; half-voxel sampling offsets move it by at most 1.06
+  degrees. These are preserved-state measurement results.
 
 ## Not established
 
@@ -59,9 +63,17 @@
 - Sparse local angular span and nearest traced-neighbour measurements are not
   full-eye field of view or adjacent-facet interommatidial angles.
 - The 34.64-degree *Asaphus* span and 2.31-degree adjacent-normal separation are
-  surface-normal baselines for a cropped field, not validated optical field of
-  view or interommatidial angle. With a 15-degree axis-departure allowance, the
-  maximum span is only bounded between 4.64 and 64.64 degrees.
+  surface-normal baselines for a cropped field as preserved, not living-eye
+  geometry, a validated optical field of view or an interommatidial angle. With
+  a 15-degree axis-departure allowance, the maximum span is only bounded between
+  4.64 and 64.64 degrees.
+- No specimen-specific retrodeformation has been recovered. Under transparent
+  hypothetical 10% affine scaling/shear, the largest 95th-percentile normal
+  change is 5.72 degrees; under 20% it is 11.42 degrees. These scenarios expose
+  sensitivity and are not estimates of geological strain.
+- No fossil ray tracing, calcite birefringence, rhabdom geometry, sensitivity
+  or acuity model has been implemented. Surface-normal geometry cannot by
+  itself establish what the animal could see.
 - Apposition and superposition eyes have not been shown to share one
   transferable cone model and will be analysed separately.
 
@@ -114,6 +126,13 @@ anatomical validation.
 
 Experiment 52 deliberately does not copy the *Pieris* tilt into *Asaphus*. Its
 bounded sensitivity calculation says instead: if the unknown fossil axes may
-depart from the measured normals by beta degrees, the maximum field span may
+depart from the measured normals by beta degrees, the maximum axis span may
 change by as much as 2 beta. Threshold stability therefore establishes precise
-outer geometry, not precise biological sight direction.
+preserved outer geometry, not precise biological sight direction.
+
+Experiment 53 addresses the separate taphonomic objection. The nominal normal
+field is reasonably stable to threshold, smoothing and half-voxel sampling,
+but hypothetical 10% and 20% affine strain can change normals by more than the
+2.31-degree median separation between neighbours. The available unilateral
+crop contains no independent strain constraint, so those transforms cannot be
+chosen from the outcome or called a reconstruction of the living eye.

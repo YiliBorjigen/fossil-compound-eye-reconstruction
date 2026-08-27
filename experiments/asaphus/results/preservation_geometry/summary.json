@@ -1,0 +1,79 @@
+{
+  "status": "preserved-surface normal and hypothetical affine-deformation sensitivity audit",
+  "facets": 116,
+  "baseline": {
+    "maximum_pairwise_span_degrees": 34.642111168906574,
+    "median_adjacent_normal_angle_degrees": 2.309158545356195,
+    "p95_adjacent_normal_angle_degrees": 4.582785230071331,
+    "spherical_hull_solid_angle_sr": 0.1668415832987861,
+    "single_hemisphere": true
+  },
+  "normal_estimation": {
+    "subpixel_sampling_change_from_experiment_52_degrees": {
+      "median_normal_change_degrees": 0.0,
+      "p95_normal_change_degrees": 0.0,
+      "maximum_normal_change_degrees": 0.0
+    },
+    "threshold_45_to_70_at_surface_sigma_2": {
+      "maximum_span_range_degrees": [
+        34.552007697334474,
+        39.97196726065287
+      ],
+      "median_neighbour_angle_range_degrees": [
+        2.212343613208207,
+        2.334746849486222
+      ],
+      "largest_p95_per_facet_change_degrees": 0.6351653348214015
+    },
+    "surface_smoothing_sigma_1_to_15_at_threshold_50": {
+      "maximum_span_range_degrees": [
+        33.464894968754784,
+        36.968807776681324
+      ],
+      "median_neighbour_angle_range_degrees": [
+        1.9423788682194765,
+        2.450067096090937
+      ],
+      "largest_p95_per_facet_change_degrees": 1.6747080936238021
+    },
+    "half_voxel_sampling_offsets": {
+      "maximum_span_range_degrees": [
+        34.364364471578014,
+        34.93595299182572
+      ],
+      "largest_p95_change_from_subpixel_nominal_degrees": 1.0550140995097235
+    }
+  },
+  "hypothetical_affine_retrodeformation": {
+    "ten_percent_scaling_or_shear": {
+      "maximum_span_range_degrees": [
+        31.37813400797952,
+        37.842212302007255
+      ],
+      "median_neighbour_angle_range_degrees": [
+        2.086299111346155,
+        2.5322101081754225
+      ],
+      "largest_p95_normal_change_degrees": 5.719584587673787
+    },
+    "twenty_percent_scaling_or_shear": {
+      "maximum_span_range_degrees": [
+        28.054450602648195,
+        40.974869952397455
+      ],
+      "median_neighbour_angle_range_degrees": [
+        1.8609490102363253,
+        2.754444394179701
+      ],
+      "largest_p95_normal_change_degrees": 11.415826804778606
+    }
+  },
+  "interpretation": "The output quantifies how the preserved-state surface-normal geometry changes under measurement choices and transparent affine strain scenarios. It does not identify the specimen's actual taphonomic strain or recover its living geometry.",
+  "claim_limits": [
+    "The specimen-specific deformation field is unknown.",
+    "The 10% and 20% affine scenarios are sensitivity tests, not estimated geological strain.",
+    "Only a cropped field from one side of one specimen is available, so bilateral retrodeformation is impossible here.",
+    "Surface normals remain geometric normals rather than validated optical axes.",
+    "No refractive, birefringent, rhabdom-length, sensitivity or acuity model is evaluated."
+  ]
+}

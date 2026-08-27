@@ -124,7 +124,7 @@ prediction improved only 17/34 paths and failed throughout Patches 2–3. Thus
 internal-axis correction matters locally, but the current field model cannot
 yet reconstruct the complete eye.
 
-## Fossil visual-field sensitivity (Experiment 52)
+## Preserved fossil geometry and deformation sensitivity (Experiments 52–53)
 
 Experiment 52 used the preserved *Asaphus* facet field to calculate a geometric
 surface-normal envelope, then separated threshold precision from anatomical
@@ -132,5 +132,14 @@ uncertainty. The 116 robust facets produced a 34.64-degree maximum sampled span
 and 2.31-degree median adjacent-normal separation. Matched normals varied by a
 median 0.22 degrees across neighbouring intensity thresholds. However, an
 unknown axis departure bounded at 15 degrees permits a maximum span anywhere
-from 4.64 to 64.64 degrees. The outer measurement is reproducible; the optical
-interpretation remains underdetermined without internal-axis evidence.
+from 4.64 to 64.64 degrees. The measurement describes the cropped fossil as
+preserved; it is not a reconstructed living field of view.
+
+Experiment 53 tested the other major uncertainty: normal-estimation choices and
+taphonomic distortion. Reasonable threshold, smoothing and half-voxel sampling
+changes were generally small, although an undersmoothed high-threshold setting
+failed the hemisphere check. Transparent 10% affine scaling/shear scenarios
+gave 31.38–37.84-degree spans and up to 5.72-degree p95 normal changes; 20%
+scenarios gave 28.05–40.97 degrees and up to 11.42 degrees. These are
+sensitivity bounds, not a recovered retrodeformation. A unilateral crop without
+strain markers cannot identify the original geometry.

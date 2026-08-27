@@ -130,16 +130,25 @@ and failed in Patches 2–3.
 ![Experiment 51 functional axis consequence](experiments/manual-axis-pieris/results/functional_axis/experiment_51_functional_axis_consequence.png)
 
 Experiment 52 then returned to the fossil without importing *Pieris* anatomy.
-The 116 robust *Asaphus* facets give a stable surface-normal baseline: matched
-normals change by a median 0.22 degrees across neighbouring thresholds. The
-cropped normal envelope spans 34.64 degrees and adjacent normals differ by a
-median 2.31 degrees. But these are geometric, not verified optical, axes. If
-the unknown internal axes are allowed to depart by at most 15 degrees, the
-maximum span is only bounded between 4.64 and 64.64 degrees. The scan therefore
-measures the outer geometry much more precisely than it determines visual
-function.
+The 116 robust *Asaphus* facets give a stable preserved-state surface-normal
+baseline: matched normals change by a median 0.22 degrees across neighbouring
+thresholds. The cropped normal envelope spans 34.64 degrees and adjacent
+normals differ by a median 2.31 degrees. But these are geometric, not verified
+optical, axes. If the unknown internal axes are allowed to depart by at most 15
+degrees, the maximum span is only bounded between 4.64 and 64.64 degrees.
 
-![Experiment 52 Asaphus visual-field sensitivity](experiments/asaphus/results/visual_field/experiment_52_asaphus_visual_field_sensitivity.png)
+Experiment 53 tested whether image-processing choices or fossil deformation
+could undermine even that geometric result. Normal estimation was generally
+stable under the tested threshold, smoothing and half-voxel sampling choices.
+The taphonomic uncertainty is more serious: transparent 10% affine
+scaling/shear scenarios changed the p95 facet normal by as much as 5.72 degrees,
+and 20% scenarios by 11.42 degrees. These are sensitivity tests, not estimates
+of actual strain. Because the scan is a unilateral crop without independent
+strain markers, the code does not recover the living eye shape or field of view.
+
+![Experiment 52 Asaphus preserved-surface angular sensitivity](experiments/asaphus/results/visual_field/experiment_52_asaphus_visual_field_sensitivity.png)
+
+![Experiment 53 preservation-geometry audit](experiments/asaphus/results/preservation_geometry/experiment_53_preservation_geometry_audit.png)
 
 ![Blind modern-eye population-prior result across 15 spatial blocks](figures/population-prior-modern-metrics.png)
 
@@ -151,8 +160,10 @@ The experiments do not justify drawing an internal lens surface from external
 curvature alone. They do justify looking for weak, repeated internal CT signal
 across homologous facets before declaring the surface absent. If part of the
 boundary survives in the same specimen, a repeat-aligned template may help
-complete a local missing region. Anatomical identification and transfer to an
-independent fossil are still required.
+complete a local missing region. The measured normals describe the fossil as
+preserved, not the living visual field. Anatomical identification,
+retrodeformation constraints and transfer to an independent fossil are still
+required.
 
 The numerical limits of that statement are collected in
 [claim boundaries](docs/claim-boundaries.md). The less tidy development history,
@@ -225,9 +236,11 @@ prospective region, reduced to 3.12 degrees by the frozen field. But the
 whole-eye leave-one-region-out result succeeds for only 17/34 traces, so a
 complete field of view is not solved. The next deployable test is the same idea
 evaluated against the requested InSegtCone author labels or an independently
-annotated apposition eye. Experiment 52 provides the fossil-side baseline but
-shows why external curvature alone cannot close that gap. Moth superposition
-eyes will be tested separately.
+annotated apposition eye. Experiment 52 provides the preserved-state fossil
+baseline but shows why external curvature alone cannot close that gap.
+Experiment 53 adds the missing taphonomic sensitivity audit: processing choices
+are measurable, while unknown deformation is large enough to preclude a precise
+living-eye claim. Moth superposition eyes will be tested separately.
 
 The modern-eye work builds on the open-source
 [ODA project](https://github.com/jpcurrea/ODA) and the public

@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Estimate the geometric Asaphus visual field and its axis uncertainty.
+"""Measure preserved-state angular geometry of the Asaphus facet surface.
 
 This experiment deliberately uses only the preserved outer surface.  Its
-surface normals are a geometric baseline, not anatomically verified optical
-axes.  The sensitivity table gives assumption-free bounds when the unknown
-internal axes may depart from those normals by a stated angle.
+surface normals are geometric measurements of the fossil as preserved, not
+anatomically verified optical axes or a reconstruction of the living field of
+view.  The sensitivity table shows how an assumed internal-axis departure
+would widen the angular bounds.
 """
 
 from __future__ import annotations
@@ -114,7 +115,7 @@ def spherical_hull_area(
     return area, hull.vertices
 
 
-def surface_and_points(smoothed: np.ndarray, threshold: float):
+def subvoxel_surface(smoothed: np.ndarray, threshold: float) -> tuple[np.ndarray, np.ndarray]:
     above = smoothed >= threshold
     reverse_index = np.argmax(above[::-1, :, :], axis=0)
     any_above = above.any(axis=0)
@@ -141,6 +142,11 @@ def surface_and_points(smoothed: np.ndarray, threshold: float):
         ~finite, return_distances=False, return_indices=True
     )
     filled = surface[tuple(nearest)]
+    return surface, filled
+
+
+def surface_and_points(smoothed: np.ndarray, threshold: float):
+    surface, filled = subvoxel_surface(smoothed, threshold)
     relief = filled - ndi.gaussian_filter(filled, sigma=CURVATURE_SIGMA)
     patch = relief[PATCH_Y[0] : PATCH_Y[1], PATCH_Z[0] : PATCH_Z[1]]
     # Equivalent to the square-footprint peak search used in Experiment 36,
@@ -276,7 +282,7 @@ def main() -> None:
                 "guaranteed_maximum_possible_maximum_span_degrees": min(
                     180.0, maximum_span + 2.0 * bound
                 ),
-                "field_centroid_direction_uncertainty_degrees": bound,
+                "mean_normal_direction_uncertainty_degrees": bound,
                 "individual_axis_uncertainty_degrees": bound,
             }
         )
@@ -305,12 +311,14 @@ def main() -> None:
         writer.writeheader()
         writer.writerows(threshold_rows)
     with (args.output_dir / "axis_uncertainty_bounds.csv").open("w", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(uncertainty_rows[0]))
+        writer = csv.DictWriter(
+            handle, fieldnames=list(uncertainty_rows[0]), lineterminator="\n"
+        )
         writer.writeheader()
         writer.writerows(uncertainty_rows)
 
     summary = {
-        "status": "outer-surface geometric baseline with anatomical-axis sensitivity",
+        "status": "preserved-state outer-surface geometry with anatomical-axis sensitivity",
         "facets": len(points),
         "surface_threshold": CENTRAL_T,
         "spacing_um": SPACING_UM,
@@ -335,15 +343,18 @@ def main() -> None:
             ),
         },
         "interpretation": (
-            "The outer surface defines a reproducible geometric viewing-direction baseline, "
-            "but Experiment 51 shows that surface normals need not equal internal optical axes. "
-            "The uncertainty table therefore bounds conclusions without transferring Pieris anatomy to Asaphus."
+            "The outer surface defines a reproducible preserved-state normal baseline. "
+            "It is not retrodeformed, and Experiment 51 shows that surface normals need not equal "
+            "internal optical axes. The uncertainty table therefore bounds angular geometry without "
+            "transferring Pieris anatomy to Asaphus."
         ),
         "claim_limits": [
             "Surface normals are not anatomically verified optical axes.",
             "The analysed crop is part of one Asaphus specimen, not the complete eye or an independent sample.",
             "The solid angle is the convex envelope of sampled surface normals, not a validated biological field of view.",
             "The bounded-axis sensitivity calculation is geometric and does not assert a Pieris-like tilt in Asaphus.",
+            "No taphonomic retrodeformation is estimated from this unilateral crop.",
+            "No refraction, birefringence, sensitivity or acuity is modelled.",
         ],
         "axis_uncertainty_bounds": uncertainty_rows,
     }
@@ -371,9 +382,9 @@ def main() -> None:
         color="#D55E00", linewidth=1.5,
     )
     axis.set_aspect("equal")
-    axis.set_xlabel("Tangent viewing angle 1 (degrees)")
-    axis.set_ylabel("Tangent viewing angle 2 (degrees)")
-    axis.set_title("B  Surface-normal viewing envelope")
+    axis.set_xlabel("Tangent normal angle 1 (degrees)")
+    axis.set_ylabel("Tangent normal angle 2 (degrees)")
+    axis.set_title("B  Preserved surface-normal envelope")
 
     axis = axes[1, 0]
     axis.hist(neighbour_angles, bins=18, color="#009E73", alpha=0.85)
@@ -395,7 +406,7 @@ def main() -> None:
     axis.plot(bounds, upper, color="#CC79A7")
     axis.axhline(maximum_span, color="black", linestyle="--", label="Surface-normal baseline")
     axis.set_xlabel("Allowed optical-axis departure (degrees)")
-    axis.set_ylabel("Possible maximum field span (degrees)")
+    axis.set_ylabel("Possible maximum axis span (degrees)")
     axis.set_title("D  Sensitivity to unknown internal axes")
     axis.legend(frameon=False, fontsize=8)
 
