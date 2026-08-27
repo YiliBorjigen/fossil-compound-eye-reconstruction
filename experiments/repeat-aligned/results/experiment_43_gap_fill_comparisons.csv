@@ -1,0 +1,16 @@
+mask,baseline,median_paired_hierarchical_advantage_um,blocks_favouring_hierarchical,exact_block_sign_flip_p
+central_disk,local_quadratic,0.5519206361390172,5,0.0625
+central_disk,local_rbf,0.2879851746258967,5,0.0625
+central_disk,template_calibrated,0.8961182900026781,5,0.0625
+diagonal_band,local_quadratic,0.8422103302247053,5,0.0625
+diagonal_band,local_rbf,0.02208916993314569,2,1.0
+diagonal_band,template_calibrated,1.258824449676852,5,0.0625
+half_plane,local_quadratic,5.2761608730261305,5,0.0625
+half_plane,local_rbf,274.2358212457639,5,0.0625
+half_plane,template_calibrated,-0.2839240413845143,0,0.0625
+offset_disk_confirmation,local_quadratic,0.6490841291438568,5,0.0625
+offset_disk_confirmation,local_rbf,-0.05616608108101917,2,0.9375
+offset_disk_confirmation,template_calibrated,1.4514357594930798,5,0.0625
+quadrant,local_quadratic,0.3858692718195964,3,0.625
+quadrant,local_rbf,10.53999017418526,5,0.0625
+quadrant,template_calibrated,-0.12716700352460464,2,0.25

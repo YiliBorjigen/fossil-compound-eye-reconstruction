@@ -1,0 +1,7 @@
+{
+  "radial_median_facet_MAE_um": 12.755102515558939,
+  "canonical_median_facet_MAE_um": 12.698316767024192,
+  "canonical_median_paired_advantage_um": 0.0059198011019558905,
+  "blocks_favouring_canonical": 4,
+  "exact_block_sign_flip_p": 0.5
+}

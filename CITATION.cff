@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this research code, please cite the repository and the source datasets listed in NOTICE.md."
+title: "Fossil compound-eye reconstruction"
+type: software
+authors:
+  - family-names: "Li"
+    given-names: "Yi"
+    alias: "Yili Borjigen"
+year: 2026
+license: MIT
+repository-code: "https://github.com/YiliBorjigen/fossil-compound-eye-reconstruction"
+keywords:
+  - compound eye
+  - fossil
+  - micro-CT
+  - reconstruction
+  - trilobite

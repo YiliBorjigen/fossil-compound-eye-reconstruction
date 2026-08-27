@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Raw volumes and image stacks
+*.nrrd
+*.tif
+*.tiff
+*.h5
+*.hdf5
+*.memmap
+
+# Large intermediate analysis products
+*feature_table.csv
+*predictions.csv
+*facet_MAE.csv
+*.npz
+
+# Generated local outputs
+results-local/
+output/
+*.log
+
+# Operating systems and editors
+.DS_Store
+Thumbs.db
+*.swp
