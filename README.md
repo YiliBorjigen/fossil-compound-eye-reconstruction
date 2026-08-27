@@ -64,6 +64,17 @@ of 15 spatial blocks. The repeated crystalline-cone lattice is clearly visible
 after unfolding; what failed is prediction of a held-out cone by the current
 template.
 
+Experiment 46 then separated intensity error from registration error. Removing
+the local depth profile and aligning scale and hexagonal orientation did not
+rescue the deployable model: its median normalised error was 0.162, versus
+0.140 for local background. But a diagnostic supplied with the true internal
+centre reached 0.111 and beat background for 49 of 62 targets. This does not
+validate reconstruction—the targets are still two-dimensional CT peaks—but it
+points to the next problem: tracing and matching each cone's three-dimensional
+axis before fitting another intensity template.
+
+![Experiment 46 error decomposition](experiments/anatomy-aware-residual/results/experiment_46_error_decomposition.png)
+
 ![Blind modern-eye population-prior result across 15 spatial blocks](figures/population-prior-modern-metrics.png)
 
 ![Independent Pieris transfer result](figures/population-prior-pieris-transfer.png)
@@ -98,6 +109,8 @@ including failed tests and missing records, is retained in
   reconstruction from repeated optical units.
 - `experiments/population-prior-pieris/` contains the independent-specimen
   transfer, including its failed strict run and adapted negative result.
+- `experiments/anatomy-aware-residual/` decomposes cone intensity and
+  registration error after that transfer and records the diagnostic result.
 - `reports/` preserves the decisive audits, including the *Archegonus* and
   *Pieris* transfer failures.
 - `figures/` contains selected, publication-size outputs. Large intermediate
@@ -123,10 +136,13 @@ are recorded in [`data/README.md`](data/README.md).
 This is an exploratory research record by Li Yi (Yili Borjigen), not a finished
 anatomical reconstruction package. The next useful fossil evidence would be an expert or author-provided
 segmentation of the relevant lens/cone boundary. The independent *Pieris*
-transfer has now shown that the present population template is not general.
-The next method should model residual structure beyond the depth profile and
-align local axis, scale and rotation; those choices must be locked before a
-third specimen is examined.
+transfer has shown that the present population template is not general.
+Experiment 46 suggests that centre and axis definition, rather than another
+intensity-template variant, is the immediate bottleneck. The next method will
+trace three-dimensional cone centre-lines, lengths, radii and tilts in the
+already examined modern scans, then lock those rules before a third apposition
+eye is used for biological replication. Moth superposition eyes will be tested
+separately.
 
 The modern-eye work builds on the open-source
 [ODA project](https://github.com/jpcurrea/ODA) and the public

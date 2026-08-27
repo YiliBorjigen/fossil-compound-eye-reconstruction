@@ -74,3 +74,15 @@ using held-out error. Across 62 cones and 15 spatial blocks, the global
 population template was worse than depth-matched background and won only four
 blocks. Two post-hoc diagnostics did not reverse the result. The positive Apis
 result is therefore specimen-specific under the current method.
+
+## Error decomposition and anatomy-first redesign (Experiment 46)
+
+Experiment 46 revisited the failed *Pieris* regions as method development. It
+removed the local depth profile, aligned residuals by hexagonal orientation and
+facet spacing, and kept spatial holdouts. The feasible model remained worse
+than local background. A diagnostic given the true internal centre was better
+for 49 of 62 targets, while feasible error increased with centre error. This
+suggests that centre and axis registration is the immediate bottleneck, but the
+current targets are only two-dimensional CT peaks. The next experiment must
+trace three-dimensional cone centre-lines before another transfer claim is
+tested.

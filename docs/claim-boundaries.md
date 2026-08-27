@@ -14,6 +14,9 @@
 - In one modern *Apis mellifera* eye, a population template reconstructed
   held-out cone intensity better than depth-matched background in all 15
   spatial blocks and better than an axisymmetric template in 13 of 15 blocks.
+- In post-transfer method development on the examined *Pieris* regions, a
+  diagnostic residual supplied with the true internal centre beat local
+  background for 49 of 62 targets and 10 of 15 spatial blocks.
 
 ## Not established
 
@@ -31,6 +34,12 @@
 - Independent transfer to *Pieris napi* failed: after a pre-scoring imaging
   adapter, the global population template was worse than depth-matched
   background and won only 4 of 15 spatial blocks.
+- The deployable anatomy-aware residual remains worse than local background;
+  only the oracle-centred diagnostic improved.
+- Current internal targets are two-dimensional CT intensity peaks, not verified
+  three-dimensional cone centre-lines or homologous anatomical landmarks.
+- Apposition and superposition eyes have not been shown to share one
+  transferable cone model and will be analysed separately.
 
 ## Results that must travel with their caveats
 
@@ -50,3 +59,9 @@ scope is one *Apis* eye. On independent *Pieris*, the strict pipeline failed at
 a scanner-specific outer threshold and the adapted reconstruction did not beat
 the depth-matched background. It cannot support a transferable population-prior
 claim.
+
+The Experiment 46 oracle-centred result is a mechanistic diagnostic on the same
+*Pieris* regions used after the transfer failed. It supports centre/axis
+registration as a working hypothesis for the error source; it is not an
+independent replication, a deployable method, or evidence about fossil cone
+identity.

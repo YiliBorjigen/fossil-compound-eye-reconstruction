@@ -1,0 +1,59 @@
+{
+  "status": "mechanistic method development on previously examined Pieris data",
+  "claim_boundary": "not independent validation and not fossil anatomical reconstruction",
+  "matched_cones": 62,
+  "spatial_blocks": 15,
+  "methods": {
+    "local_depth_background": {
+      "median_normalised_mae": 0.14041445280529552,
+      "median_fold_normalised_mae": 0.1495265761807115,
+      "beats_background_cones": null,
+      "beats_background_folds": null
+    },
+    "raw_population": {
+      "median_normalised_mae": 0.18437921737162793,
+      "median_fold_normalised_mae": 0.20797811303178315,
+      "beats_background_cones": 8,
+      "beats_background_folds": 0
+    },
+    "axisymmetric_residual": {
+      "median_normalised_mae": 0.15398075732176814,
+      "median_fold_normalised_mae": 0.1647932928664329,
+      "beats_background_cones": 8,
+      "beats_background_folds": 0
+    },
+    "anatomy_residual": {
+      "median_normalised_mae": 0.16150807670766754,
+      "median_fold_normalised_mae": 0.16636405615956812,
+      "beats_background_cones": 10,
+      "beats_background_folds": 2
+    },
+    "oracle_centred_residual": {
+      "median_normalised_mae": 0.11135764282782265,
+      "median_fold_normalised_mae": 0.1195165896274046,
+      "beats_background_cones": 49,
+      "beats_background_folds": 10
+    }
+  },
+  "comparisons": {
+    "anatomy_residual": {
+      "median_fold_delta_vs_background": 0.02062385751242682,
+      "bootstrap_95_interval": [
+        0.0159627499862032,
+        0.024731976299826097
+      ],
+      "paired_wilcoxon_two_sided_p": 0.00030517578125
+    },
+    "oracle_centred_residual": {
+      "median_fold_delta_vs_background": -0.027752028467696505,
+      "bootstrap_95_interval": [
+        -0.03193724084993399,
+        0.006465013042889656
+      ],
+      "paired_wilcoxon_two_sided_p": 0.02557373046875
+    }
+  },
+  "centre_error_vs_anatomy_delta_spearman_r": 0.3296064062854121,
+  "centre_error_vs_anatomy_delta_p": 0.00889530038524704,
+  "interpretation": "Depth-only local background remains the best feasible method. The diagnostic oracle-centred residual is substantially better for most cones, which is consistent with centre/axis definition and registration being the dominant remaining bottleneck; the present two-dimensional peak targets still require three-dimensional anatomical validation."
+}
