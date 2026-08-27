@@ -91,7 +91,7 @@ listed before that contribution is received and confirmed.
 ## Sources
 
 - Tichit P, Zhou T, Lihoreau M, et al. (2022). InSegtCone: interactive
-  segmentation of crystalline cones in compound eyes. *BMC Bioinformatics*.
+  segmentation of crystalline cones in compound eyes. *BMC Zoology*.
   <https://doi.org/10.1186/s40850-021-00101-w>
 - Taylor GJ, Tichit P, Schmidt MD, Bodey AJ, Rau C, Baird E. (2019). Bumblebee
   visual allometry results. Dryad dataset. <https://doi.org/10.5061/dryad.23rj4pm>
