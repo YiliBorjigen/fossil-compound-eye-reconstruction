@@ -124,6 +124,11 @@ including failed tests and missing records, is retained in
   registration error after that transfer and records the diagnostic result.
 - `experiments/centerline-pieris/` tests candidate 3D paths, curvature and
   cornea-to-internal continuity without calling intensity ridges cone labels.
+- `apps/cone-centerline-annotator/` is a clickable tool for manually marking
+  curved three-dimensional cone axes and exporting reproducible training
+  labels. Its preliminary mask is annotation assistance, not validation.
+- `experiments/bombus-frozen-transfer/` records the prospective independent
+  apposition-eye test before its data are scored.
 - `reports/` preserves the decisive audits, including the *Archegonus* and
   *Pieris* transfer failures.
 - `figures/` contains selected, publication-size outputs. Large intermediate
@@ -154,10 +159,12 @@ Experiment 46 identified centre and axis definition as the immediate
 bottleneck. Experiment 47 showed that allowing gentle curvature is appropriate
 but insufficient: candidate curvature is sub-error-scale and raw peaks do not
 provide reliable anatomical continuity. The next required input is a trained
-or manually validated three-dimensional cone segmentation. Only then can
-centre-lines, lengths, radii and tilts be locked before a third apposition eye
-is used for biological replication. Moth superposition eyes will be tested
-separately.
+or manually validated three-dimensional cone segmentation. A clickable manual
+centre-line annotator is now included as a fallback, and the exact published
+Pieris cone-label files and trained dictionaries are being requested from the
+InSegtCone authors. Only after those labels have been checked will centre-lines,
+lengths, radii and tilts be locked for the prospective Bombus replication.
+Moth superposition eyes will be tested separately.
 
 The modern-eye work builds on the open-source
 [ODA project](https://github.com/jpcurrea/ODA) and the public
