@@ -1,0 +1,168 @@
+{
+  "status": "frozen before reading or scoring Patch 4 annotations",
+  "frozen_at_utc": "2026-08-27T18:40:01.003592+00:00",
+  "protocol_sha256": "69896be2a8c0eac8463974d7a18efdaec47fea38911fde4a0ce0bac0299473fb",
+  "registered_label_sha256": "435a26649a9bbd2e640ef25f3f06bc4f810c11661721d6c8c26d7a1cd9113c4c",
+  "coordinate_system": "whole-eye PCA tangent frame",
+  "voxel_size_micrometres": 1.08,
+  "training": [
+    {
+      "region": 1,
+      "seed_xyz": [
+        118.0,
+        372.0,
+        863.0
+      ],
+      "tracks": 5,
+      "regional_median_skew": [
+        -0.1755390335467471,
+        -0.1678942498892555
+      ],
+      "annotations_sha256": "22b83e63343946978afad19aecff10add52cd5599a178363112d0f4f25176895"
+    },
+    {
+      "region": 2,
+      "seed_xyz": [
+        227.0,
+        112.0,
+        848.0
+      ],
+      "tracks": 5,
+      "regional_median_skew": [
+        -0.2534501240810368,
+        -0.24879513949414991
+      ],
+      "annotations_sha256": "73b3200900829720b29f181dda0b39a11f469199d0ffe122a991547818d96692"
+    },
+    {
+      "region": 3,
+      "seed_xyz": [
+        87.0,
+        87.0,
+        614.0
+      ],
+      "tracks": 11,
+      "regional_median_skew": [
+        -0.21730714988569155,
+        0.5296379493174104
+      ],
+      "annotations_sha256": "694cef3d7afca7c8d78d6722f614ada4becba53ce316b1c5c11b4d5139b0833b"
+    }
+  ],
+  "patch_4_seed_xyz": [
+    234.0,
+    277.0,
+    913.0
+  ],
+  "primary_model": {
+    "name": "inverse-distance-squared regional-median field",
+    "distance": "3-D Euclidean scanner-coordinate distance between frozen surface seeds",
+    "exponent": 2,
+    "weights_patch_1_to_3": [
+      0.5094543256324061,
+      0.40403436644411383,
+      0.08651130792347998
+    ],
+    "predicted_skew": [
+      -0.21063120602372098,
+      -0.14023656669342413
+    ]
+  },
+  "secondary_affine_model": {
+    "name": "affine field in first two whole-eye PCA coordinates",
+    "training_coordinates": [
+      [
+        567.8080210740114,
+        654.0603317127204
+      ],
+      [
+        295.9175099410621,
+        717.8047216155868
+      ],
+      [
+        243.16637462864608,
+        460.2592140699431
+      ]
+    ],
+    "patch_4_coordinate": [
+      462.53005986743625,
+      771.3450537349323
+    ],
+    "coefficients": [
+      [
+        -0.1887530010679172,
+        1.9791768672546834
+      ],
+      [
+        0.000242029181129279,
+        -0.00039223803135260383
+      ],
+      [
+        -0.0001899093047467773,
+        -0.0029421677534433865
+      ]
+    ],
+    "predicted_skew": [
+      -0.22329283230519179,
+      -0.4716715567460959
+    ]
+  },
+  "secondary_constant_model": {
+    "name": "median skew over all 21 training tracks",
+    "predicted_skew": [
+      -0.20759115899454766,
+      0.3527668914274708
+    ]
+  },
+  "training_only_leave_one_region_out": [
+    {
+      "held_out_region": 1,
+      "predicted_skew": [
+        -0.24058321041596378,
+        0.028327359989148922
+      ],
+      "observed_regional_median_skew": [
+        -0.1755390335467471,
+        -0.1678942498892555
+      ],
+      "euclidean_skew_error": 0.20672122563458906,
+      "weights_on_remaining_regions": [
+        0.6439995890894311,
+        0.3560004109105689
+      ]
+    },
+    {
+      "held_out_region": 2,
+      "predicted_skew": [
+        -0.1970610068277074,
+        0.19152510319126517
+      ],
+      "observed_regional_median_skew": [
+        -0.2534501240810368,
+        -0.24879513949414991
+      ],
+      "euclidean_skew_error": 0.4439162631208194,
+      "weights_on_remaining_regions": [
+        0.48472722336072205,
+        0.515272776639278
+      ]
+    },
+    {
+      "held_out_region": 3,
+      "predicted_skew": [
+        -0.2267954505915147,
+        -0.22111760626181404
+      ],
+      "observed_regional_median_skew": [
+        -0.21730714988569155,
+        0.5296379493174104
+      ],
+      "euclidean_skew_error": 0.7508155113497283,
+      "weights_on_remaining_regions": [
+        0.3421165498612937,
+        0.6578834501387063
+      ]
+    }
+  ],
+  "claim_limit": "This is a same-specimen three-region interpolation model. Patch 4 is a regional test, not independent biological validation."
+}

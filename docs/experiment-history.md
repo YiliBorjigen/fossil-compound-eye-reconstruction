@@ -98,3 +98,19 @@ raw intensity tracks remained continuous from the shallow lattice to the old
 internal target depths. Because the public label contains no individual cone
 masks, the tracked ridges cannot be called anatomical cone axes. A trained or
 manually validated 3D cone segmentation is now the next required evidence.
+
+## Manual axes and a frozen spatial test (Experiments 48–50)
+
+Experiment 48 replaced ambiguous intensity ridges with manually traced paths.
+Within one region, following a fitted straight path improved the intensity
+diagnostic; allowing curvature added little. Experiment 49 repeated the manual
+measurement in two more regions. One fixed eye-wide tilt transferred from
+Patch 1 to Patch 2 and then failed completely in Patch 3, showing that cone
+direction changes across the eye.
+
+Patch 4 was selected from surface geometry and reserved before annotation. A
+minimal distance-weighted field was frozen on the first three regional median
+directions before Patch 4 was scored. It reduced median held-out path RMSE from
+5.02 to 1.44 voxels and improved all 13 usable traces. This is a prospective
+regional success within one specimen. It does not replace author-provided cone
+labels or an independent-eye test.

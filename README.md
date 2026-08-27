@@ -107,6 +107,17 @@ spatially varying across this eye; one global tilt correction is not sufficient.
 
 ![Experiment 49 cross-region axis transfer](experiments/manual-axis-pieris/results/cross_region/experiment_49_cross_region_axis_transfer.png)
 
+Experiment 50 then froze a spatially varying predictor before a fourth region
+was opened. The direction at Patch 4 was estimated only from the locations and
+median manual skews of Patches 1–3. On 13 usable Patch 4 traces, it reduced
+median held-out 3D path error from 5.02 voxels for the surface normal to 1.44
+voxels and improved every trace. This is a genuine prospective regional result,
+but it is still one eye and one annotator. It supports local interpolation of
+cone direction; it does not yet validate automatic cone discovery or fossil
+transfer.
+
+![Experiment 50 frozen Patch 4 test](experiments/manual-axis-pieris/results/patch_4_spatial_field/experiment_50_patch4_spatial_field.png)
+
 ![Blind modern-eye population-prior result across 15 spatial blocks](figures/population-prior-modern-metrics.png)
 
 ![Independent Pieris transfer result](figures/population-prior-pieris-transfer.png)
@@ -183,12 +194,12 @@ bottleneck. Experiment 47 showed that candidate curvature is sub-error-scale.
 Experiment 48 shows directly that the regional cone axis tilts by several
 voxels through depth. Experiment 49 confirms that manually measured tilt helps
 in three regions, but also shows that a constant correction fails on the third:
-the orientation field varies across the eye. The clickable annotator is now
-providing training paths for a spatially varying axis model, while the exact
-published Pieris labels and trained dictionaries are being requested from the
-InSegtCone authors. The next deployable task is to fit that field on Patches
-1–3 and freeze it before a fourth-region or author-label test. Moth
-superposition eyes will be tested separately.
+the orientation field varies across the eye. Experiment 50 shows that a simple
+field frozen on Patches 1–3 can predict a nearby fourth region, reducing median
+path error by 71.6%. The next deployable test is no longer another hand-traced
+region from this specimen. It is the same frozen idea evaluated against the
+requested InSegtCone author labels or an independently annotated apposition
+eye. Moth superposition eyes will be tested separately.
 
 The modern-eye work builds on the open-source
 [ODA project](https://github.com/jpcurrea/ODA) and the public

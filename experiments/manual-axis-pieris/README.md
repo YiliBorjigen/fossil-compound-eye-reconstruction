@@ -1,10 +1,11 @@
 # Manual-axis Pieris experiments
 
-Experiments 48–49 use Li Yi's manually traced cone centre-lines from three
+Experiments 48–50 use Li Yi's manually traced cone centre-lines from four
 pre-selected *Pieris napi* regions. Experiment 48 asks whether a leave-one-cone-
 out residual template improves when it is placed on the traced 3D path rather
 than held on a static surface normal. Experiment 49 asks whether a simple skew
-model learned in one or two regions transfers to a held-out region.
+model learned in one or two regions transfers to a held-out region. Experiment
+50 freezes a spatially varying field on Patches 1–3 before testing it in Patch 4.
 
 The intensity reconstructions are oracle-axis diagnostics within previously
 examined data. The regional transfer test withholds the test-region paths from
@@ -33,12 +34,20 @@ five-cone common windows, a straight axis reduces median NMAE from 0.185 to
 0.114 and from 0.268 to 0.221. Thus all three regions support the existence of
 cone skew relative to the surface normal.
 
-The cross-region result is more restrictive. A constant eye-relative skew
+The first cross-region result is restrictive. A constant eye-relative skew
 learned in Patch 1 reduces Patch 2 path RMSE from 5.63 to 1.86 voxels. However,
 the model learned from Patches 1–2 increases held-out Patch 3 RMSE from 2.89 to
 3.52 voxels and loses for all 11 usable tracks. Patch 3 reverses one tangent
-component of the manual skew. The next predictor must therefore be a spatially
-varying orientation field; one global tilt correction is not sufficient.
+component of the manual skew. One global tilt correction is not sufficient.
+
+The prospectively selected Patch 4 gives the first positive test of the
+spatially varying alternative. Before its annotations were opened, the three
+regional median skews were combined by inverse-squared distance from the frozen
+Patch 4 seed. That field reduces median held-out path RMSE from 5.02 voxels for
+the surface normal to 1.44 voxels and wins for all 13 usable traces. An affine
+field and an eye-wide constant field do not reproduce that gain. This supports
+local interpolation of regional cone direction within this specimen; it does
+not yet validate anatomy, another eye or a fossil.
 
 None of the uploaded preliminary random-forest masks is used. They label 53.3%,
 59.8% and 95.2% of Patches 1–3 as cone, respectively, despite high internal OOB
@@ -59,3 +68,9 @@ python run_manual_axis_pilot.py \
 The cross-region script takes the registered whole-eye label, each patch's
 `surface_xyz.npy` and `inward_normals.npy`, and the three annotation files. Run
 `python run_cross_region_axis_transfer.py --help` for the explicit inputs.
+
+For the frozen fourth-region test, run `freeze_patch4_spatial_field.py` with
+Patches 1–3 and the already selected Patch 4 seed. Preserve the resulting JSON,
+then pass it unchanged to `run_patch4_spatial_field_test.py`. The scripts expose
+all paths through `--help`; raw CT and annotation archives are intentionally not
+stored in Git.

@@ -17,6 +17,9 @@
 - In post-transfer method development on the examined *Pieris* regions, a
   diagnostic residual supplied with the true internal centre beat local
   background for 49 of 62 targets and 10 of 15 spatial blocks.
+- In a prospectively selected fourth *Pieris* region, a spatial direction field
+  frozen on three earlier manually traced regions reduced median held-out path
+  RMSE from 5.02 to 1.44 voxels and improved all 13 usable traces.
 
 ## Not established
 
@@ -41,6 +44,9 @@
 - Candidate ridge tracking in Pieris does not establish cone identity: only 24,
   8 and 0 tracks in the three regions spanned the old shallow-to-internal depth
   interval, and the public label contains no individual cone masks.
+- The positive Patch 4 direction result is still one specimen, one region and
+  one annotator. It does not validate the clicked paths as crystalline cones or
+  establish transfer to another eye.
 - Apposition and superposition eyes have not been shown to share one
   transferable cone model and will be analysed separately.
 
@@ -75,3 +81,10 @@ the third, and its typical deviation from a straight path was about 0.6
 micrometres. This supports permitting gentle curvature in a future segmenter;
 it does not show that the tracked ridges are crystalline-cone axes or explain
 the earlier approximately 3.2 micrometre registration error.
+
+The Experiment 50 field was frozen before Patch 4 scoring, so its improvement
+is not an in-region tuning result. Its scope is nevertheless local: Patch 4 is
+near the two training regions with similar directions, while training-only
+leave-one-region-out prediction was poor for the distant sign-changing region.
+The result supports local interpolation of manual directions, not a solved
+whole-eye field, automatic segmentation or fossil reconstruction.

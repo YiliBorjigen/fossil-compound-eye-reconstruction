@@ -1,0 +1,67 @@
+{
+  "status": "frozen Patch 4 held-out regional test",
+  "frozen_model_sha256": "9b928934271ecfc553a14c8f8af842dfad531c3e77f150c5789385664b4170a9",
+  "patch_4_annotation_archive_sha256": "3d061ff2aad266c7001ef9a382ebf5ec7cbee6c37f9e58b9c83e7ed8e68c4ed4",
+  "patch_4_annotations_json_sha256": "67cfbf39ec860ffc748ba14c40fa06a95301bc84055bf7b559bf90b89e74ce54",
+  "annotation_source_sha256_recorded": "316b8446cffe3a3d9bca59ad1770b972563f091735e95891eaad9f8160c81c45",
+  "annotation_source_sha256_actual": "316b8446cffe3a3d9bca59ad1770b972563f091735e95891eaad9f8160c81c45",
+  "annotation_source_match": true,
+  "tracks_in_archive": 15,
+  "tracks_passing_continuity_audit": 13,
+  "tracks_excluded_by_audit": [
+    {
+      "cone_id": 5,
+      "nodes": 4,
+      "depth_start": 0.0,
+      "depth_stop": 9.0,
+      "maximum_uv_step_voxels": 0.9631147540983633,
+      "continuity_pass": false,
+      "audit_note": "fewer than 6 nodes"
+    },
+    {
+      "cone_id": 8,
+      "nodes": 3,
+      "depth_start": 0.0,
+      "depth_stop": 2.0,
+      "maximum_uv_step_voxels": 0.43071801205939325,
+      "continuity_pass": false,
+      "audit_note": "fewer than 6 nodes"
+    }
+  ],
+  "primary": {
+    "model": {
+      "name": "inverse-distance-squared regional-median field",
+      "distance": "3-D Euclidean scanner-coordinate distance between frozen surface seeds",
+      "exponent": 2,
+      "weights_patch_1_to_3": [
+        0.5094543256324061,
+        0.40403436644411383,
+        0.08651130792347998
+      ],
+      "predicted_skew": [
+        -0.21063120602372098,
+        -0.14023656669342413
+      ]
+    },
+    "median_normal_rmse_voxels": 5.019622769671453,
+    "median_primary_rmse_voxels": 1.4378686218528909,
+    "median_normal_rmse_micrometres": 5.42119259124517,
+    "median_primary_rmse_micrometres": 1.5528981116011222,
+    "median_paired_change_voxels": -3.6912963903442684,
+    "median_fractional_change_vs_normal": -0.7162303183098188,
+    "wins_vs_normal": 13,
+    "ties_vs_normal": 0,
+    "tracks": 13,
+    "two_sided_exact_sign_test_p": 0.000244140625
+  },
+  "secondary": {
+    "median_affine_field_rmse_voxels": 4.861645690503858,
+    "affine_wins_vs_normal": 5,
+    "median_constant_field_rmse_voxels": 8.681988701005567,
+    "constant_wins_vs_normal": 0,
+    "median_oracle_straight_rmse_voxels": 0.4695971748516417,
+    "median_oracle_quadratic_rmse_voxels": 0.4371472845482417,
+    "quadratic_better_than_straight_tracks": 13
+  },
+  "claim_limit": "Same specimen and same annotator. A positive result would validate regional interpolation of manual axes, not automatic cone discovery or fossil transfer."
+}
