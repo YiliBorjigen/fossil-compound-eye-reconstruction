@@ -1,0 +1,14 @@
+{
+  "volume": "upload/1652a_0000_1_cropped_CORRECT_3p7um.nrrd",
+  "volume_sha256": "d1ae2067f8439ffd6ac50faa2e01c0837eeed55944ce949eaf7c77bea675b668",
+  "samples": "experiment_40_spatial_audit/feature_export/reconstruction_samples.csv",
+  "samples_sha256": "76a42873098f3f0b850ba07bb7c4762eb1974f91ef30fd0b6d8945d37e95d3ff",
+  "centers": "experiment_40_spatial_audit/feature_export/robust_facet_centers.csv",
+  "centers_sha256": "5bf12c29c1f76410cafde4eef4cf5e66f639ab9439d1a221d5bb24bdb74ac0cc",
+  "spacing_um": 3.7,
+  "surface_threshold": 50.0,
+  "surface_feature_count": 31,
+  "outer_shell_feature_count": 10,
+  "rows": 9840,
+  "facets": 74
+}

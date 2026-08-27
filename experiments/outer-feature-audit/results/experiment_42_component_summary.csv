@@ -1,0 +1,3 @@
+task,baseline_median_MAE_um,augmented_median_MAE_um,median_paired_improvement_um,blocks_improved,block_sign_flip_p
+between_facet_mean_depth,7.205559823512396,7.230221771696683,0.006701824398594347,4,0.75
+within_facet_shape_diagnostic,4.976552655375709,4.974075922747791,0.0026692562767882677,3,0.625

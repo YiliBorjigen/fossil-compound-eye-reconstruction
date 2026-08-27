@@ -1,0 +1,13 @@
+{
+  "template_edge_norm_pitch": 0.8399999999999999,
+  "template_edge_um_at_global_median_pitch": 48.03050153833159,
+  "bootstrap_edge_norm_ci95": [
+    0.7599999999999998,
+    1.0799999999999998
+  ],
+  "bootstrap_edge_um_ci95": [
+    43.456168058490476,
+    61.7535019778549
+  ],
+  "median_pitch_vox_all_facets": 15.453829323787515
+}
