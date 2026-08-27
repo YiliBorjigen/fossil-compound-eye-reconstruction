@@ -123,3 +123,14 @@ for all 13 paths. Sparse pairwise angular-geometry error also fell from 4.25 to
 prediction improved only 17/34 paths and failed throughout Patches 2–3. Thus
 internal-axis correction matters locally, but the current field model cannot
 yet reconstruct the complete eye.
+
+## Fossil visual-field sensitivity (Experiment 52)
+
+Experiment 52 used the preserved *Asaphus* facet field to calculate a geometric
+surface-normal envelope, then separated threshold precision from anatomical
+uncertainty. The 116 robust facets produced a 34.64-degree maximum sampled span
+and 2.31-degree median adjacent-normal separation. Matched normals varied by a
+median 0.22 degrees across neighbouring intensity thresholds. However, an
+unknown axis departure bounded at 15 degrees permits a maximum span anywhere
+from 4.64 to 64.64 degrees. The outer measurement is reproducible; the optical
+interpretation remains underdetermined without internal-axis evidence.

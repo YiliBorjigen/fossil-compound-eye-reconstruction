@@ -23,6 +23,9 @@
 - In the same prospective fourth-region test, using surface normals as visual
   directions produced a median angular error of 15.26 degrees; the frozen
   field reduced it to 3.12 degrees and improved all 13 usable traces.
+- The 116 robust *Asaphus* facets define a reproducible outer-surface geometric
+  envelope: matched normals change by a median 0.22 degrees across neighbouring
+  thresholds, and the cropped surface-normal field spans 34.64 degrees.
 
 ## Not established
 
@@ -55,6 +58,10 @@
   and failed for every usable path in Patches 2–3.
 - Sparse local angular span and nearest traced-neighbour measurements are not
   full-eye field of view or adjacent-facet interommatidial angles.
+- The 34.64-degree *Asaphus* span and 2.31-degree adjacent-normal separation are
+  surface-normal baselines for a cropped field, not validated optical field of
+  view or interommatidial angle. With a 15-degree axis-departure allowance, the
+  maximum span is only bounded between 4.64 and 64.64 degrees.
 - Apposition and superposition eyes have not been shown to share one
   transferable cone model and will be analysed separately.
 
@@ -104,3 +111,9 @@ to a local viewing-direction estimate. It must travel with the negative
 whole-eye diagnostic (17/34 improvements, including complete failures in
 Patches 2–3) and with the fact that the manual paths lack independent
 anatomical validation.
+
+Experiment 52 deliberately does not copy the *Pieris* tilt into *Asaphus*. Its
+bounded sensitivity calculation says instead: if the unknown fossil axes may
+depart from the measured normals by beta degrees, the maximum field span may
+change by as much as 2 beta. Threshold stability therefore establishes precise
+outer geometry, not precise biological sight direction.

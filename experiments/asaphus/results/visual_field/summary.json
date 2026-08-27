@@ -1,0 +1,64 @@
+{
+  "status": "outer-surface geometric baseline with anatomical-axis sensitivity",
+  "facets": 116,
+  "surface_threshold": 50,
+  "spacing_um": 3.7,
+  "surface_normal_baseline": {
+    "maximum_pairwise_angular_span_degrees": 34.642111168906574,
+    "maximum_off_mean_axis_degrees": 23.51876325839687,
+    "spherical_convex_hull_solid_angle_sr": 0.16684158329878607,
+    "spherical_convex_hull_fraction_of_full_sphere": 0.013276831347640006,
+    "adjacent_surface_pairs": 196,
+    "median_surface_normal_neighbour_angle_degrees": 2.309158545356195,
+    "median_adjacent_facet_spacing_um": 64.16688439967584
+  },
+  "measurement_stability": {
+    "matched_normal_comparisons": 568,
+    "median_change_across_neighbouring_thresholds_degrees": 0.21943239480773546,
+    "p95_change_across_neighbouring_thresholds_degrees": 1.6682994420142088
+  },
+  "interpretation": "The outer surface defines a reproducible geometric viewing-direction baseline, but Experiment 51 shows that surface normals need not equal internal optical axes. The uncertainty table therefore bounds conclusions without transferring Pieris anatomy to Asaphus.",
+  "claim_limits": [
+    "Surface normals are not anatomically verified optical axes.",
+    "The analysed crop is part of one Asaphus specimen, not the complete eye or an independent sample.",
+    "The solid angle is the convex envelope of sampled surface normals, not a validated biological field of view.",
+    "The bounded-axis sensitivity calculation is geometric and does not assert a Pieris-like tilt in Asaphus."
+  ],
+  "axis_uncertainty_bounds": [
+    {
+      "axis_departure_bound_degrees": 0,
+      "guaranteed_minimum_possible_maximum_span_degrees": 34.642111168906574,
+      "guaranteed_maximum_possible_maximum_span_degrees": 34.642111168906574,
+      "field_centroid_direction_uncertainty_degrees": 0,
+      "individual_axis_uncertainty_degrees": 0
+    },
+    {
+      "axis_departure_bound_degrees": 5,
+      "guaranteed_minimum_possible_maximum_span_degrees": 24.642111168906574,
+      "guaranteed_maximum_possible_maximum_span_degrees": 44.642111168906574,
+      "field_centroid_direction_uncertainty_degrees": 5,
+      "individual_axis_uncertainty_degrees": 5
+    },
+    {
+      "axis_departure_bound_degrees": 10,
+      "guaranteed_minimum_possible_maximum_span_degrees": 14.642111168906574,
+      "guaranteed_maximum_possible_maximum_span_degrees": 54.642111168906574,
+      "field_centroid_direction_uncertainty_degrees": 10,
+      "individual_axis_uncertainty_degrees": 10
+    },
+    {
+      "axis_departure_bound_degrees": 15,
+      "guaranteed_minimum_possible_maximum_span_degrees": 4.642111168906574,
+      "guaranteed_maximum_possible_maximum_span_degrees": 64.64211116890658,
+      "field_centroid_direction_uncertainty_degrees": 15,
+      "individual_axis_uncertainty_degrees": 15
+    },
+    {
+      "axis_departure_bound_degrees": 20,
+      "guaranteed_minimum_possible_maximum_span_degrees": 0.0,
+      "guaranteed_maximum_possible_maximum_span_degrees": 74.64211116890658,
+      "field_centroid_direction_uncertainty_degrees": 20,
+      "individual_axis_uncertainty_degrees": 20
+    }
+  ]
+}

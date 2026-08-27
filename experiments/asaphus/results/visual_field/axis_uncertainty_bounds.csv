@@ -1,0 +1,6 @@
+axis_departure_bound_degrees,guaranteed_minimum_possible_maximum_span_degrees,guaranteed_maximum_possible_maximum_span_degrees,field_centroid_direction_uncertainty_degrees,individual_axis_uncertainty_degrees
+0,34.642111168906574,34.642111168906574,0,0
+5,24.642111168906574,44.642111168906574,5,5
+10,14.642111168906574,54.642111168906574,10,10
+15,4.642111168906574,64.64211116890658,15,15
+20,0.0,74.64211116890658,20,20
