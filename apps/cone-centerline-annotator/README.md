@@ -9,7 +9,8 @@ not available. It does not require command-line use.
 - Windows: double-click `RUN_ANNOTATOR.bat`.
 - On the first run, the launcher installs the required scientific packages in
   its own `.venv` folder if they are not already available. This can take a few
-  minutes; later runs open directly.
+  minutes; later runs open directly. The included annotator requirements work
+  with Python 3.10 and later.
 - Select one folder named `patch_1`, `patch_2` or `patch_3`. The selected folder
   must contain `unfolded_intensity.npy`.
 
