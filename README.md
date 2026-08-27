@@ -52,6 +52,16 @@ consistently beat a flexible local RBF interpolator. This is a candidate method
 for partly preserved boundaries within this specimen, not reconstruction of a
 completely invisible lens.
 
+I then tested the population-prior idea where the answer is visible: a modern
+*Apis mellifera* micro-CT scan. In a blind spatial-block test of 147 cones, a
+population template reduced median normalised error from 0.228 for a
+depth-matched background to 0.171, about 25%, and improved median correlation
+from -0.096 to 0.624. It beat the background in all 15 held-out blocks and an
+axisymmetric template in 13. This is a genuine controlled result, but all cones
+belong to one bee; frozen transfer to another animal is the next test.
+
+![Blind modern-eye population-prior result across 15 spatial blocks](figures/population-prior-modern-metrics.png)
+
 ## What I would tell a palaeontologist
 
 The experiments do not justify drawing an internal lens surface from external
@@ -78,8 +88,10 @@ including failed tests and missing records, is retained in
   predictive information beyond spatial smoothness.
 - `experiments/repeat-aligned/` tests the shared CT template and deliberate
   local gap filling.
+- `experiments/population-prior-modern/` contains the blind modern-eye test of
+  reconstruction from repeated optical units.
 - `reports/` preserves the two decisive audits: the spatial-only control and
-  the frozen transfer to *Archegonus*.
+  the frozen transfer to *Archegonus*, plus the modern population-prior result.
 - `figures/` contains selected, publication-size outputs. Large intermediate
   tables and raw CT data are deliberately excluded.
 
@@ -102,10 +114,12 @@ are recorded in [`data/README.md`](data/README.md).
 
 This is an exploratory research record by Li Yi (Yili Borjigen), not a finished
 anatomical reconstruction package. The next useful evidence would be an expert
-or author-provided segmentation of the relevant lens/cone boundary, followed
-by a frozen test on another independently preserved specimen. More tuning on
-the same *Asaphus* scan would not answer the generalisation question.
+or author-provided segmentation of the relevant fossil lens/cone boundary.
+For the population-prior route, the immediate next step is a frozen transfer to
+the independent *Pieris napi* micro-CT scan. More tuning on the same *Asaphus*
+or *Apis* specimen would not answer the generalisation question.
 
 The modern-eye work builds on the open-source
-[ODA project](https://github.com/jpcurrea/ODA). Fossil CT provenance and the
-associated publications are listed in [NOTICE.md](NOTICE.md).
+[ODA project](https://github.com/jpcurrea/ODA) and the public
+[InSegtCone dataset](https://doi.org/10.1186/s40850-021-00101-w). Data
+provenance and the associated publications are listed in [NOTICE.md](NOTICE.md).

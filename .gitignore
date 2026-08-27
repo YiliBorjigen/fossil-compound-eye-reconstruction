@@ -18,6 +18,9 @@ venv/
 *predictions.csv
 *facet_MAE.csv
 *.npz
+*.npy
+*.nii
+*.nii.gz
 
 # Generated local outputs
 results-local/

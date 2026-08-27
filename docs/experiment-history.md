@@ -53,3 +53,13 @@ region. That narrower route remains scientifically plausible.
 
 The failed and limiting experiments are part of the result, not discarded
 preliminary noise.
+
+## Testing a population prior in visible anatomy (Experiment 44)
+
+The fossil audits shifted the question from prediction by external curvature
+to reconstruction from repeated homologous units. Experiment 44 tested that
+idea in a modern *Apis mellifera* scan, where held-out cone intensity provides
+real ground truth. A population template outperformed a depth-matched
+background in all 15 spatial blocks across 147 cones. Because every cone came
+from one animal, the result remains a within-specimen proof of principle; the
+next test is frozen transfer to *Pieris napi*.

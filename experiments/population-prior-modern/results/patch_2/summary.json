@@ -1,0 +1,63 @@
+{
+  "status": "exploratory pilot; not independent validation",
+  "outer_centres_detected": 100,
+  "internal_centres_detected_for_ground_truth": 85,
+  "matched_cones": 64,
+  "exploratory_global_shift_row_column": [
+    -5.0,
+    -3.0
+  ],
+  "association_distance_voxels_median": 2.097963779309892,
+  "cone_layer_peak_depth_voxels": 22,
+  "internal_ground_truth_detection_depth_voxels": 20,
+  "reconstruction_depth_range_voxels": [
+    14,
+    38
+  ],
+  "voxel_size_micrometres": 1.6,
+  "voxel_calibration_note": "Uses the 1.6 micrometre bee-eye acquisition voxel size reported in Tichit et al. (2022); the supplied NIfTI label header is unitless.",
+  "centre_mapping": {
+    "centre_error_voxels_outer_only": {
+      "median_voxels": 6.3638397788848025,
+      "median_micrometres": 10.182143646215685,
+      "p90_voxels": 7.795800977573662
+    },
+    "centre_error_voxels_translation": {
+      "median_voxels": 2.0077822185373186,
+      "median_micrometres": 3.21245154965971,
+      "p90_voxels": 3.500000000000008
+    },
+    "centre_error_voxels_affine": {
+      "median_voxels": 1.4285897767554085,
+      "median_micrometres": 2.285743642808654,
+      "p90_voxels": 2.9707551648784363
+    }
+  },
+  "reconstruction": {
+    "background": {
+      "median_mae_intensity": 23.846607669616517,
+      "median_normalised_mae": 0.2290587063194917,
+      "median_correlation": -0.17740854984925641
+    },
+    "axisymmetric_population": {
+      "median_mae_intensity": 20.372930521014318,
+      "median_normalised_mae": 0.19425979331929055,
+      "median_correlation": 0.42058101320423136
+    },
+    "global_population": {
+      "median_mae_intensity": 17.31143967228362,
+      "median_normalised_mae": 0.16614136063798024,
+      "median_correlation": 0.6472033226414289
+    },
+    "nearest_cone": {
+      "median_mae_intensity": 20.06377253434887,
+      "median_normalised_mae": 0.196493223886622,
+      "median_correlation": 0.5689747523566202
+    },
+    "local_population": {
+      "median_mae_intensity": 17.366511420858004,
+      "median_normalised_mae": 0.16820115037455308,
+      "median_correlation": 0.6576158613898695
+    }
+  }
+}

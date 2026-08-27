@@ -11,6 +11,9 @@
   after leaving out complete spatial blocks.
 - When part of the same boundary remains visible, a guarded repeat template is
   a plausible aid for filling a local gap within this specimen.
+- In one modern *Apis mellifera* eye, a population template reconstructed
+  held-out cone intensity better than depth-matched background in all 15
+  spatial blocks and better than an axisymmetric template in 13 of 15 blocks.
 
 ## Not established
 
@@ -23,6 +26,8 @@
   tested *Archegonus* volume.
 - Seventy-four facets from one *Asaphus* scan are repeated observations, not
   74 independent fossils.
+- The 147 modern cones are repeated observations within one bee, not 147
+  independent biological samples; cross-specimen transfer is not yet tested.
 
 ## Results that must travel with their caveats
 
@@ -35,3 +40,8 @@ The repeat-aligned local gap-filling result is also within one specimen. On the
 off-centre confirmation mask it improved over a quadratic fit, but did not
 consistently beat a flexible local RBF interpolator. It remains a candidate
 method, not an independently validated reconstruction.
+
+The modern population-prior result is a controlled reconstruction of visible
+cone intensity, not anatomical validation of the fossil boundary. Its current
+scope is within one modern eye. A frozen transfer to another specimen and
+species is required before making a broader reconstruction claim.

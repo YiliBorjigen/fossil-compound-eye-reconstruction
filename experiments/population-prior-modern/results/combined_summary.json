@@ -1,0 +1,29 @@
+{
+  "status": "three within-specimen patches; exploratory, not independent-specimen validation",
+  "matched_cones": 147,
+  "folds": 15,
+  "global_beats_background_folds": 15,
+  "global_beats_axisymmetric_folds": 13,
+  "methods": {
+    "background": {
+      "median_normalised_mae": 0.22772595261989478,
+      "median_correlation": -0.09623656223155358
+    },
+    "axisymmetric_population": {
+      "median_normalised_mae": 0.19495844595188747,
+      "median_correlation": 0.44317857368832
+    },
+    "global_population": {
+      "median_normalised_mae": 0.17064314828521576,
+      "median_correlation": 0.62425849740715
+    },
+    "nearest_cone": {
+      "median_normalised_mae": 0.20060538462420352,
+      "median_correlation": 0.5458233102904478
+    },
+    "local_population": {
+      "median_normalised_mae": 0.17304878253289063,
+      "median_correlation": 0.6281304368791293
+    }
+  }
+}

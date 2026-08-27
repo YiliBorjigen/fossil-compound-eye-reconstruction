@@ -19,5 +19,18 @@ of some deeper structures. The image-domain boundary detected here is therefore
 reported as a candidate internal CT boundary unless independent anatomical
 evidence is supplied.
 
+The modern population-prior experiment uses the public InSegtCone bee scan and
+published layer label:
+
+- Tichit et al. (2022), *BioData Mining*,
+  [InSegtCone](https://doi.org/10.1186/s40850-021-00101-w).
+- [MorphoSource project 000377798](https://www.morphosource.org/projects/000377798),
+  raw *Apis mellifera* media `000396182`.
+- [InSegtCone source and labels](https://github.com/zhoutunhe/InSegtCone).
+
+The raw MorphoSource media are not redistributed here. Users must obtain them
+from MorphoSource and follow the media-specific download agreement and citation
+requirements.
+
 Code in this repository is released under the MIT licence. The ODA project
 retains its own copyright and licence.

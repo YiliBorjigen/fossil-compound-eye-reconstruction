@@ -38,6 +38,26 @@ The outer-only modern experiment expects `labeled_lens_points.npz`, a derived
 segmented-lens dataset that is not included here. Its absence is stated rather
 than silently replacing it with another file.
 
+## Modern micro-CT population-prior input
+
+Experiment 44 uses the public *Apis mellifera* scan from InSegtCone:
+
+- MorphoSource media: `000396182`
+- specimen: `LU:3_14:AM_F_5`
+- raw archive used: `60185_AM_F.zip`
+- published label: `60185_AM_F_manLabel.nii`
+- CT dimensions: `1694 × 916 × 551`, unsigned 8-bit
+- acquisition voxel size reported by Tichit et al. (2022): 1.6 micrometres
+
+The NIfTI label header stores unit voxel dimensions, so physical calibration is
+taken from the paper and primary measurements remain in voxels. The label marks
+the external corneal surface and cone-bearing layer, not individual cones.
+Individual centres and reconstruction targets are derived from the untouched
+CT signal during the controlled test.
+
+The next frozen-transfer input is the independent *Pieris napi* media
+`000397558`, with published label media `000397561`.
+
 ## Public fossil source
 
 The source deposit is available at
