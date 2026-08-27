@@ -61,5 +61,16 @@ to reconstruction from repeated homologous units. Experiment 44 tested that
 idea in a modern *Apis mellifera* scan, where held-out cone intensity provides
 real ground truth. A population template outperformed a depth-matched
 background in all 15 spatial blocks across 147 cones. Because every cone came
-from one animal, the result remains a within-specimen proof of principle; the
-next test is frozen transfer to *Pieris napi*.
+from one animal, the result remained a within-specimen proof of principle.
+
+
+## Independent-specimen transfer (Experiment 45)
+
+Experiment 45 applied the same idea to a public *Pieris napi* micro-CT scan.
+The crystalline-cone lattice was visible after local surface unfolding, but the
+strict Apis pipeline failed at its absolute surface-intensity threshold. A
+pre-scoring imaging adapter allowed the reconstruction test to proceed without
+using held-out error. Across 62 cones and 15 spatial blocks, the global
+population template was worse than depth-matched background and won only four
+blocks. Two post-hoc diagnostics did not reverse the result. The positive Apis
+result is therefore specimen-specific under the current method.

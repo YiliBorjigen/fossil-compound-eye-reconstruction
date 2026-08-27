@@ -1,0 +1,40 @@
+{
+  "status": "negative independent-specimen transfer after pre-scoring imaging adapter",
+  "strict_frozen_status": "failed before reconstruction because the absolute surface threshold detected zero outer centres",
+  "matched_cones": 62,
+  "matched_cones_by_patch": {
+    "1": 35,
+    "2": 21,
+    "3": 6
+  },
+  "folds": 15,
+  "global_beats_background_folds": 4,
+  "axisymmetric_beats_background_folds": 5,
+  "global_beats_background_cones": 15,
+  "median_relative_global_change_vs_background": 0.17877694975401054,
+  "methods": {
+    "background": {
+      "median_normalised_mae": 0.17638916823098233,
+      "median_correlation": 0.6696699537837867
+    },
+    "axisymmetric_population": {
+      "median_normalised_mae": 0.17947970419925735,
+      "median_correlation": 0.5864827400226464
+    },
+    "global_population": {
+      "median_normalised_mae": 0.2039356801338249,
+      "median_correlation": 0.5093791306446069
+    },
+    "nearest_cone": {
+      "median_normalised_mae": 0.2180645090875341,
+      "median_correlation": 0.5116477043178294
+    },
+    "local_population": {
+      "median_normalised_mae": 0.19757346600235048,
+      "median_correlation": 0.5290461791131786
+    }
+  },
+  "posthoc_training_selected_mapping": "did not reverse the result",
+  "posthoc_four_voxel_core": "did not reverse the result"
+}
+

@@ -1,0 +1,27 @@
+{
+  "raw_outer_archive": {
+    "file": "morphosource_media-id-000397558_download-681a4dea.zip",
+    "sha256": "ca4c371e3e565a274c7b093d71dd4db0de4a109b8a5f96f18a7833206ad4aea8",
+    "media_id": "000397558"
+  },
+  "label_outer_archive": {
+    "file": "morphosource_media-id-000397561_download-2230f275.zip",
+    "sha256": "370ba0b923b34fbb6a2031356196b32af4f9f95bc455ec55812ad3a51f2434da",
+    "media_id": "000397561"
+  },
+  "raw_stack": {
+    "shape_xyz": [368, 496, 992],
+    "dtype": "unsigned 16-bit big-endian",
+    "voxel_size_micrometres": 1.08
+  },
+  "published_label": {
+    "shape_xyz": [368, 496, 366],
+    "dtype": "uint8",
+    "gzip_sha256": "9b1e2c5f596a35708b73cd83ef5fe3e09a166102fe4b73efc32caf62deb55b7b",
+    "registered_raw_z_offset": 550,
+    "material_values": {
+      "1": "full eye volume",
+      "2": "external corneal surface"
+    }
+  }
+}

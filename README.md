@@ -57,10 +57,16 @@ I then tested the population-prior idea where the answer is visible: a modern
 population template reduced median normalised error from 0.228 for a
 depth-matched background to 0.171, about 25%, and improved median correlation
 from -0.096 to 0.624. It beat the background in all 15 held-out blocks and an
-axisymmetric template in 13. This is a genuine controlled result, but all cones
-belong to one bee; frozen transfer to another animal is the next test.
+axisymmetric template in 13. This was a genuine within-eye result, but it did not transfer. In an independent
+*Pieris napi* scan, the global population template had a median normalised error
+of 0.204, compared with 0.176 for a depth-matched background. It won in only 4
+of 15 spatial blocks. The repeated crystalline-cone lattice is clearly visible
+after unfolding; what failed is prediction of a held-out cone by the current
+template.
 
 ![Blind modern-eye population-prior result across 15 spatial blocks](figures/population-prior-modern-metrics.png)
+
+![Independent Pieris transfer result](figures/population-prior-pieris-transfer.png)
 
 ## What I would tell a palaeontologist
 
@@ -88,10 +94,12 @@ including failed tests and missing records, is retained in
   predictive information beyond spatial smoothness.
 - `experiments/repeat-aligned/` tests the shared CT template and deliberate
   local gap filling.
-- `experiments/population-prior-modern/` contains the blind modern-eye test of
+- `experiments/population-prior-modern/` contains the blind within-eye test of
   reconstruction from repeated optical units.
-- `reports/` preserves the two decisive audits: the spatial-only control and
-  the frozen transfer to *Archegonus*, plus the modern population-prior result.
+- `experiments/population-prior-pieris/` contains the independent-specimen
+  transfer, including its failed strict run and adapted negative result.
+- `reports/` preserves the decisive audits, including the *Archegonus* and
+  *Pieris* transfer failures.
 - `figures/` contains selected, publication-size outputs. Large intermediate
   tables and raw CT data are deliberately excluded.
 
@@ -113,11 +121,12 @@ are recorded in [`data/README.md`](data/README.md).
 ## Present status
 
 This is an exploratory research record by Li Yi (Yili Borjigen), not a finished
-anatomical reconstruction package. The next useful evidence would be an expert
-or author-provided segmentation of the relevant fossil lens/cone boundary.
-For the population-prior route, the immediate next step is a frozen transfer to
-the independent *Pieris napi* micro-CT scan. More tuning on the same *Asaphus*
-or *Apis* specimen would not answer the generalisation question.
+anatomical reconstruction package. The next useful fossil evidence would be an expert or author-provided
+segmentation of the relevant lens/cone boundary. The independent *Pieris*
+transfer has now shown that the present population template is not general.
+The next method should model residual structure beyond the depth profile and
+align local axis, scale and rotation; those choices must be locked before a
+third specimen is examined.
 
 The modern-eye work builds on the open-source
 [ODA project](https://github.com/jpcurrea/ODA) and the public

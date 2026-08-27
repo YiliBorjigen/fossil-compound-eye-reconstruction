@@ -5,7 +5,7 @@ outer facet lattice survives, can other cones in the same eye provide a useful
 prior for the missing internal CT signal beneath one facet?
 
 The test uses one *Apis mellifera* micro-CT scan and its published InSegtCone
-layer labels. The labels identify the corneal surface and cone-bearing layer;
+input labels. The labels identify the external cornea and full eye volume;
 they do not segment individual cones. Individual outer and inner centres are
 therefore detected from the original CT intensity. The inner centre and target
 voxels of every held-out cone are hidden during reconstruction.
@@ -48,7 +48,7 @@ population prior for its internal CT appearance.
   `Apis mellifera LU:3_14:AM_F_5`
 - published label: `60185_AM_F_manLabel.nii`
 - acquisition voxel size reported by Tichit et al. (2022): 1.6 micrometres
-- label values used: 7, external corneal surface; 3, cone-bearing layer
+- label values used: 7, external corneal surface; 3, full eye volume
 
 Raw TIFFs, NIfTI labels and generated NumPy volumes are deliberately excluded
 from Git. See [`../../data/README.md`](../../data/README.md) for provenance.
@@ -90,6 +90,6 @@ python run_blind_pilot.py --patch-dir /path/to/work/patch_3 \
   --output-dir results/patch_3
 ```
 
-The committed JSON and CSV files contain the reported summaries. The next
-decisive test is to freeze this procedure and transfer it to the independent
-*Pieris napi* scan from the same published dataset.
+The committed JSON and CSV files contain the reported summaries. Experiment 45
+performed the independent *Pieris napi* transfer. The current method did not
+replicate: the population template was worse than a depth-matched background.

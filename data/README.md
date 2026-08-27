@@ -50,13 +50,26 @@ Experiment 44 uses the public *Apis mellifera* scan from InSegtCone:
 - acquisition voxel size reported by Tichit et al. (2022): 1.6 micrometres
 
 The NIfTI label header stores unit voxel dimensions, so physical calibration is
-taken from the paper and primary measurements remain in voxels. The label marks
-the external corneal surface and cone-bearing layer, not individual cones.
+taken from the paper and primary measurements remain in voxels. The input label marks
+the external cornea and full eye volume, not individual cones.
 Individual centres and reconstruction targets are derived from the untouched
 CT signal during the controlled test.
 
-The next frozen-transfer input is the independent *Pieris napi* media
-`000397558`, with published label media `000397561`.
+Experiment 45 used the independent *Pieris napi* media `000397558`, with
+published label media `000397561`:
+
+- raw stack: 992 unsigned 16-bit TIFF slices, each `368 × 496`
+- reported voxel size: 1.08 micrometres isotropic
+- label: `368 × 496 × 366`, values 1 (full eye volume) and 2 (external cornea)
+- registered label crop offset: raw slice 550
+- raw download archive SHA-256:
+  `ca4c371e3e565a274c7b093d71dd4db0de4a109b8a5f96f18a7833206ad4aea8`
+- label download archive SHA-256:
+  `370ba0b923b34fbb6a2031356196b32af4f9f95bc455ec55812ad3a51f2434da`
+- decompressed label SHA-256:
+  `3ef96ff8e26fa96663dc814536ba594c47167b65fd95cd4992139c17fe5fd98b`
+
+The raw MorphoSource files are not redistributed.
 
 ## Public fossil source
 

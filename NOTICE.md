@@ -25,7 +25,8 @@ published layer label:
 - Tichit et al. (2022), *BioData Mining*,
   [InSegtCone](https://doi.org/10.1186/s40850-021-00101-w).
 - [MorphoSource project 000377798](https://www.morphosource.org/projects/000377798),
-  raw *Apis mellifera* media `000396182`.
+  raw *Apis mellifera* media `000396182`, and *Pieris napi* raw media
+  `000397558` with label media `000397561`.
 - [InSegtCone source and labels](https://github.com/zhoutunhe/InSegtCone).
 
 The raw MorphoSource media are not redistributed here. Users must obtain them

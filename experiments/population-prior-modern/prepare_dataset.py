@@ -76,7 +76,7 @@ def main() -> None:
         "last_slice": tiffs[-1].name,
         "label_file": label_path.name,
         "label_values": {
-            "3": "cone-bearing layer (published InSegtCone setting)",
+            "3": "full eye volume (published InSegtCone input label)",
             "7": "external corneal/lens surface (published InSegtCone setting)",
         },
     }

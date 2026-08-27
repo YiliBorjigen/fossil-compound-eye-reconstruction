@@ -1,0 +1,66 @@
+{
+  "status": "independent-specimen transfer with a pre-scoring Pieris imaging adapter",
+  "outer_detection": "local maxima in the shallow corneal lattice",
+  "outer_detection_depth_voxels": 8,
+  "outer_centres_detected": 43,
+  "internal_centres_detected_for_ground_truth": 109,
+  "matched_cones": 21,
+  "exploratory_global_shift_row_column": [
+    -4.5,
+    3.5
+  ],
+  "association_distance_voxels_median": 2.5495097567963922,
+  "cone_layer_peak_depth_voxels": 20,
+  "internal_ground_truth_detection_depth_voxels": 18,
+  "reconstruction_depth_range_voxels": [
+    12,
+    36
+  ],
+  "voxel_size_micrometres": 1.08,
+  "voxel_calibration_note": "Uses the 1.08 micrometre Pieris acquisition voxel size from the MorphoSource manifest; the supplied NIfTI label header is unitless.",
+  "centre_mapping": {
+    "centre_error_voxels_outer_only": {
+      "median_voxels": 5.656854249492381,
+      "median_micrometres": 6.109402589451771,
+      "p90_voxels": 7.615773105863909
+    },
+    "centre_error_voxels_translation": {
+      "median_voxels": 2.8284271247461903,
+      "median_micrometres": 3.0547012947258856,
+      "p90_voxels": 3.905124837953327
+    },
+    "centre_error_voxels_affine": {
+      "median_voxels": 3.144636664054567,
+      "median_micrometres": 3.3962075971789325,
+      "p90_voxels": 5.331595438149275
+    }
+  },
+  "reconstruction": {
+    "background": {
+      "median_mae_intensity": 9.293694690265486,
+      "median_normalised_mae": 0.18178789525436007,
+      "median_correlation": 0.647084318360626
+    },
+    "axisymmetric_population": {
+      "median_mae_intensity": 9.43302810989519,
+      "median_normalised_mae": 0.18391183802224764,
+      "median_correlation": 0.5746366446922616
+    },
+    "global_population": {
+      "median_mae_intensity": 10.783188249537343,
+      "median_normalised_mae": 0.21633166849302768,
+      "median_correlation": 0.49136050140760634
+    },
+    "nearest_cone": {
+      "median_mae_intensity": 11.858792794372912,
+      "median_normalised_mae": 0.22916752276972366,
+      "median_correlation": 0.47424398171123733
+    },
+    "local_population": {
+      "median_mae_intensity": 10.66876024460082,
+      "median_normalised_mae": 0.21772980091022082,
+      "median_correlation": 0.47687356290286986
+    }
+  }
+}
+

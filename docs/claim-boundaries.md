@@ -27,7 +27,10 @@
 - Seventy-four facets from one *Asaphus* scan are repeated observations, not
   74 independent fossils.
 - The 147 modern cones are repeated observations within one bee, not 147
-  independent biological samples; cross-specimen transfer is not yet tested.
+  independent biological samples.
+- Independent transfer to *Pieris napi* failed: after a pre-scoring imaging
+  adapter, the global population template was worse than depth-matched
+  background and won only 4 of 15 spatial blocks.
 
 ## Results that must travel with their caveats
 
@@ -42,6 +45,8 @@ consistently beat a flexible local RBF interpolator. It remains a candidate
 method, not an independently validated reconstruction.
 
 The modern population-prior result is a controlled reconstruction of visible
-cone intensity, not anatomical validation of the fossil boundary. Its current
-scope is within one modern eye. A frozen transfer to another specimen and
-species is required before making a broader reconstruction claim.
+cone intensity, not anatomical validation of the fossil boundary. Its positive
+scope is one *Apis* eye. On independent *Pieris*, the strict pipeline failed at
+a scanner-specific outer threshold and the adapted reconstruction did not beat
+the depth-matched background. It cannot support a transferable population-prior
+claim.
