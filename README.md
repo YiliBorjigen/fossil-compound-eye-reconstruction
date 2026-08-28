@@ -143,11 +143,18 @@ with the outer-feature audit and Experiment 54. The committed
 [`experiment_54_six_neighbor_surfaces.npz`](experiments/repeat-aligned/results/experiment_54_six_neighbor_surfaces.npz)
 contains complete fixed-grid predictions for the 74 held-out facets.
 
+These predictions are internal-boundary surface grids, not watertight
+two-surface lens solids. The repository does not currently perform refractive
+ray tracing. A mesh exporter and an anisotropic optical model would be useful
+downstream tools, but they cannot determine anatomical identity, lens thickness
+or focal position from the outer surface alone.
+
 ## Current status
 
-The computational question is answered for the analysed *Asaphus* specimen:
+The missing-surface benchmark is answered for the analysed *Asaphus* specimen:
 a wholly missing candidate surface can be approximated from nearby preserved
-surfaces, but not reliably from outer curvature alone.
+surfaces, but not reliably from outer curvature alone. The broader problem of
+reconstructing a closed anatomical lens and its optical function is not solved.
 
 The next decisive work is biological rather than cosmetic: independently label
 the relevant internal anatomy and repeat the frozen test in another fossil with
