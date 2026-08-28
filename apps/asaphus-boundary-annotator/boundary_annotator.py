@@ -126,12 +126,19 @@ class BoundaryAnnotator(tk.Tk):
 
         self.case_label = ttk.Label(controls, text="No case", font=("TkDefaultFont", 15, "bold"))
         self.case_label.pack(anchor="w", pady=(0, 8))
+        self.reviewed = tk.BooleanVar(value=False)
+        ttk.Checkbutton(
+            controls,
+            text="I have reviewed this case",
+            variable=self.reviewed,
+            command=self.capture_fields,
+        ).pack(anchor="w", pady=(0, 8))
         ttk.Label(controls, text="Boundary visibility").pack(anchor="w")
         self.visibility = tk.StringVar(value="uncertain")
         for value in ("visible", "uncertain", "not visible"):
             ttk.Radiobutton(controls, text=value.capitalize(), value=value,
                             variable=self.visibility,
-                            command=self.capture_fields).pack(anchor="w")
+                            command=self.mark_reviewed).pack(anchor="w")
 
         ttk.Separator(controls).pack(fill="x", pady=8)
         ttk.Label(controls, text="Most plausible interpretation").pack(anchor="w")
@@ -206,6 +213,7 @@ class BoundaryAnnotator(tk.Tk):
         if not self.cases:
             return
         row = self.records[self.current().case_id]
+        row["reviewed"] = bool(self.reviewed.get())
         row["visibility"] = self.visibility.get()
         row["structure_class"] = self.structure.get()
         row["confidence"] = int(self.confidence.get())
@@ -215,6 +223,7 @@ class BoundaryAnnotator(tk.Tk):
         if not self.cases:
             return
         row = self.records[self.current().case_id]
+        self.reviewed.set(bool(row.get("reviewed", False)))
         self.visibility.set(row["visibility"])
         self.structure.set(row["structure_class"])
         self.confidence.set(row["confidence"])
@@ -242,7 +251,14 @@ class BoundaryAnnotator(tk.Tk):
                                   lateral, case.depth_vox)
         field = "u_depth_points" if view == "u" else "v_depth_points"
         self.records[case.case_id][field].append(point)
+        self.reviewed.set(True)
+        self.visibility.set("visible")
+        self.capture_fields()
         self.render()
+
+    def mark_reviewed(self) -> None:
+        self.reviewed.set(True)
+        self.capture_fields()
 
     def clear_points(self) -> None:
         if not self.cases:
@@ -298,11 +314,8 @@ class BoundaryAnnotator(tk.Tk):
         depth = case.depth_vox[index]
         spacing = float(self.manifest["voxel_spacing_um"])
         self.depth_label.configure(text=f"{depth:.1f} vox / {depth * spacing:.1f} µm")
-        completed = sum(
-            bool(row["u_depth_points"] or row["v_depth_points"])
-            or row["visibility"] == "not visible"
-            for row in self.records.values()
-        )
+        completed = sum(bool(row.get("reviewed", False))
+                        for row in self.records.values())
         self.status.set(f"{completed}/{len(self.cases)} cases annotated")
 
     def save(self) -> None:
@@ -314,6 +327,16 @@ class BoundaryAnnotator(tk.Tk):
                                 "Enter your name or an anonymous annotator code.")
             return
         self.capture_fields()
+        completed = sum(bool(row.get("reviewed", False))
+                        for row in self.records.values())
+        if completed < len(self.cases):
+            proceed = messagebox.askyesno(
+                "Incomplete annotations",
+                f"Only {completed}/{len(self.cases)} cases are marked reviewed. "
+                "Save this as an unfinished draft anyway?",
+            )
+            if not proceed:
+                return
         if self.output_path is None:
             chosen = filedialog.asksaveasfilename(
                 title="Save annotations",

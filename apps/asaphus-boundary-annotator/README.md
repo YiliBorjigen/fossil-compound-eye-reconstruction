@@ -16,7 +16,11 @@ first time. On Windows, double-click `RUN_BOUNDARY_ANNOTATOR.bat`.
 3. Click several points along any visible boundary in the U-depth and V-depth
    sections. Leave the sections unmarked if no boundary is visible.
 4. Record visibility, the most plausible interpretation, confidence and notes.
+   Selecting a visibility option or clicking a boundary marks the case as
+   reviewed. You can also use the explicit **I have reviewed this case** box.
 5. Click **Save and export**. The app writes both JSON and CSV.
+
+The app warns before saving if any of the 30 cases remain unreviewed.
 
 The tangential preview helps follow repeated structures through depth. It does
 not contain an algorithm overlay.

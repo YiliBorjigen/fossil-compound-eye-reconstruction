@@ -41,6 +41,8 @@ class AnnotationCoreTests(unittest.TestCase):
             loaded, cases = load_pack(root)
             self.assertEqual([case.case_id for case in cases], ["F001"])
             record = empty_annotation("F001")
+            self.assertFalse(record["reviewed"])
+            record["reviewed"] = True
             record["u_depth_points"] = [
                 point_from_canvas(50, 50, 100, 100, np.arange(3), np.arange(4))
             ]

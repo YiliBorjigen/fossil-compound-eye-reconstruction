@@ -73,6 +73,7 @@ def load_pack(folder: Path) -> tuple[dict, list[Case]]:
 def empty_annotation(case_id: str) -> dict:
     return {
         "case_id": case_id,
+        "reviewed": False,
         "visibility": "uncertain",
         "structure_class": "other or uncertain structure",
         "confidence": 1,
@@ -116,7 +117,7 @@ def save_annotations(
 
     csv_path = path.with_suffix(".csv")
     fields = [
-        "case_id", "visibility", "structure_class", "confidence", "notes",
+        "case_id", "reviewed", "visibility", "structure_class", "confidence", "notes",
         "view", "lateral_vox", "depth_vox", "depth_um",
     ]
     spacing = float(pack_manifest["voxel_spacing_um"])
@@ -136,6 +137,7 @@ def save_annotations(
                 depth = point.get("depth_vox", "")
                 writer.writerow({
                     "case_id": case_id,
+                    "reviewed": bool(row.get("reviewed", False)),
                     "visibility": row.get("visibility", ""),
                     "structure_class": row.get("structure_class", ""),
                     "confidence": row.get("confidence", ""),
@@ -160,4 +162,3 @@ def point_from_canvas(
     depth_value = float(np.interp(y, [0, max(height - 1, 1)],
                                   [depth[0], depth[-1]]))
     return {"lateral_vox": lateral_value, "depth_vox": depth_value}
-
