@@ -1,227 +1,130 @@
-# Fossil compound-eye reconstruction
+# Reconstructing missing internal surfaces in fossil compound eyes
 
-This project began with a practical question: if a fossil lens keeps its outer
-curvature but loses an internal surface, can that hidden surface be recovered?
+This project asks a simple question with a difficult limit: if the outer
+surface of a fossil eye lens survives but its internal surface is missing, can
+the lost surface be reconstructed?
 
-The short answer is now clearer than it was at the start. **Outer curvature
-alone was not enough to determine a wholly missing internal surface in the
-data tested here.** But a missing surface can be approximated when neighbouring
-facets retain the same internal boundary. In *Asaphus*, a fixed six-neighbour
-depth prior plus a shared quadratic shape reached 6.59 micrometres median error
-for an isolated missing facet and 8.10 micrometres when whole spatial regions
-were hidden.
+## Answer so far
 
-That distinction is the main result of this repository.
+**Not from outer curvature alone.** In the *Asaphus* scan studied here, local
+outer-surface curvature did not predict a wholly missing internal boundary
+better than simple geometric baselines.
 
-![Repeat-aligned CT boundary and its stability across spatial blocks](figures/repeat-aligned-boundary.png)
+**A useful approximation is possible when neighbouring facets retain the same
+internal boundary.** The most practical method estimates the missing facet's
+depth from its six nearest preserved neighbours and combines that estimate with
+a shared within-facet shape. In the strict test, complete contiguous regions
+were hidden from fitting, tuning and uncertainty calibration.
 
-## How the answer developed
+| Reconstruction of a wholly hidden surface | Median facet error |
+|---|---:|
+| Position-only smoother | 8.01 µm |
+| Six-neighbour depth prior + shared shape | 8.10 µm |
+| Axisymmetric ellipsoid | 12.88 µm |
+| General quadratic surface | 12.94 µm |
+| Strictly local outer curvature | 13.09 µm |
 
-I first tested the easier geometric problem: removing known ommatidial centres
-from a modern ODA-3D dataset and asking whether their positions could be found
-again. Internal single holes were recovered reliably (97.7% top-1 detection),
-and 94.0% of adjacent missing pairs were reconstructed within 10% of local
-facet spacing. The same method failed on torn outer edges: only 2.5% of true
-torn regions were ranked first. This showed early that interpolation inside a
-surviving lattice and extrapolation beyond a broken boundary are different
-problems.
+The position smoother and the six-neighbour method have similar median error,
+but the six-neighbour method has the lower 90th-percentile error (12.00 versus
+17.73 µm) and directly represents the usable biological assumption: nearby
+homologous facets can supply missing depth information. Its calibrated 90%
+error half-width is still broad at 20.31 µm. In a less independent,
+leave-one-facet-out scenario, it reaches 6.59 µm median error.
 
-I then moved from missing centres to the actual surface question. On segmented
-modern lenses, an outer-only regularised model produced a median hidden-surface
-error equal to 28.2% of local lens depth. This was useful as a controlled
-warning, not as evidence that fossil anatomy had been solved.
+![Wholly held-out surface reconstruction in Asaphus](experiments/repeat-aligned/results/experiment_54_whole_facet_reconstruction.png)
 
-In the *Asaphus* CT volume, 116 facet centres were stable across neighbouring
-surface thresholds. Seventy-four facets passed the internal-edge quality
-checks, with a repeated candidate boundary roughly 52 micrometres beneath the
-outer surface. Facet-versus-inter-facet controls support a facet-associated CT
-feature, but they do not establish that it is the proximal lens surface; a
-diagenetic or mineral-replacement boundary remains possible.
+The result answers the computational part of the original question within one
+specimen. It does not yet identify the reconstructed feature anatomically or
+show that the method transfers to another fossil.
 
-The strongest apparent reconstruction result did not survive a stricter
-control. A model using geometry and specimen position had a median held-out
-error of 6.90 micrometres, while a nonlinear position-only smoother achieved
-6.79 micrometres. Richer outer-surface features also failed to add a stable
-signal. On *Archegonus*, the outer-facet detector transferred, but the frozen
-internal-boundary stage did not.
+## What is being reconstructed
 
-Experiment 43 therefore used repeated internal CT evidence rather than
-claiming prediction from the outside alone. Alignment of 116 *Asaphus* facets
-gave a shared boundary at 48.03 micrometres, with a broad facet-bootstrap 95%
-interval of 43.46–61.75 micrometres. A guarded template method improved local
-gap filling over a quadratic fit in a frozen off-centre mask, but it did not
-consistently beat a flexible local RBF interpolator. This is a candidate method
-for partly preserved boundaries within this specimen, not reconstruction of a
-completely invisible lens.
+The corrected 3.7 µm *Asaphus* volume contains 116 facet centres that remain
+stable across neighbouring surface thresholds. Seventy-four facets pass the
+internal-edge quality checks. Their aligned CT data contain a repeated
+candidate boundary approximately 48–52 µm beneath the outer surface.
 
-I then tested the population-prior idea where the answer is visible: a modern
-*Apis mellifera* micro-CT scan. In a blind spatial-block test of 147 cones, a
-population template reduced median normalised error from 0.228 for a
-depth-matched background to 0.171, about 25%, and improved median correlation
-from -0.096 to 0.624. It beat the background in all 15 held-out blocks and an
-axisymmetric template in 13. This was a genuine within-eye result, but it did not transfer. In an independent
-*Pieris napi* scan, the global population template had a median normalised error
-of 0.204, compared with 0.176 for a depth-matched background. It won in only 4
-of 15 spatial blocks. The repeated crystalline-cone lattice is clearly visible
-after unfolding; what failed is prediction of a held-out cone by the current
-template.
+That boundary is facet-associated, but it has not been independently confirmed
+as the proximal lens surface. A preservational or mineral-replacement front
+could follow the same anatomy. The repository therefore calls it a **candidate
+internal CT boundary**, not a recovered lens.
 
-Experiment 46 then separated intensity error from registration error. Removing
-the local depth profile and aligning scale and hexagonal orientation did not
-rescue the deployable model: its median normalised error was 0.162, versus
-0.140 for local background. But a diagnostic supplied with the true internal
-centre reached 0.111 and beat background for 49 of 62 targets. This does not
-validate reconstruction—the targets are still two-dimensional CT peaks—but it
-points to the next problem: tracing and matching each cone's three-dimensional
-axis before fitting another intensity template.
+The 74 facets are repeated observations within one fossil, not 74 independent
+specimens.
 
-![Experiment 46 error decomposition](experiments/anatomy-aware-residual/results/experiment_46_error_decomposition.png)
+## Why the conclusion changed
 
-Experiment 47 tested whether gently curved axes or unequal z sampling explained
-the remaining error. The Pieris acquisition is sampled isotropically at 1.08
-micrometres. Candidate intensity ridges showed a small quadratic-path advantage
-in two regions, with typical curvature around 0.6 micrometres, but not in the
-third. Only 24, 8 and 0 tracks in the three regions remained continuous between
-the earlier shallow and internal depths. Curvature is therefore too small to
-explain the roughly 3.2 micrometre registration error, and raw intensity maxima
-cannot substitute for a validated three-dimensional cone segmentation.
+The early fossil model appeared to predict boundary depth with 6.90 µm median
+held-out error, compared with 12.76 µm for a radial baseline. A stronger audit
+showed that a nonlinear coordinates-only smoother achieved 6.79 µm. The
+apparent improvement therefore came mainly from interpolation across the
+specimen, not from learning the outer lens geometry.
 
-![Experiment 47 centre-line audit](experiments/centerline-pieris/results/experiment_47_centerline_audit.png)
+A frozen transfer to *Archegonus* reinforced that limit. The outer facet
+detector transferred, but the internal-boundary stage did not: only one of 76
+facets passed the original quality criteria, and the candidate edge was
+indistinguishable from inter-facet controls.
 
-Experiment 48 used seven manually traced cone paths from the first *Pieris*
-region. Five overlap through depths 34–50 and move by a median 4.87 voxels
-(5.26 micrometres). In a leave-one-cone-out diagnostic, placing the residual
-template on a fitted straight axis reduced median normalised error from 0.399
-for local background to 0.282 and improved four of five cones. A quadratic
-axis also gave 0.282 and beat the straight axis for only one cone. The missing
-information is therefore regional axis tilt, not demonstrably cone-specific
-curvature.
+Experiment 54 then tested the missing-surface problem directly. It hid complete
+candidate surfaces and showed where useful information actually comes from:
+neighbouring preserved homologues, not the surviving outer curve by itself.
 
-![Experiment 48 manual-axis pilot](experiments/manual-axis-pieris/results/experiment_48_manual_axis_pilot.png)
-
-Experiment 49 extended the manual-axis test to two more pre-selected regions.
-A constant eye-relative skew learned in Patch 1 transferred to Patch 2, reducing
-median 3D path RMSE from 5.63 to 1.86 voxels. It then failed the held-out Patch
-3 test: the model learned from Patches 1–2 increased RMSE from 2.89 to 3.52
-voxels and lost for all 11 usable tracks. Manual axes still improved the
-within-region intensity diagnostic in Patch 3. Cone skew is therefore real but
-spatially varying across this eye; one global tilt correction is not sufficient.
-
-![Experiment 49 cross-region axis transfer](experiments/manual-axis-pieris/results/cross_region/experiment_49_cross_region_axis_transfer.png)
-
-Experiment 50 then froze a spatially varying predictor before a fourth region
-was opened. The direction at Patch 4 was estimated only from the locations and
-median manual skews of Patches 1–3. On 13 usable Patch 4 traces, it reduced
-median held-out 3D path error from 5.02 voxels for the surface normal to 1.44
-voxels and improved every trace. This is a genuine prospective regional result,
-but it is still one eye and one annotator. It supports local interpolation of
-cone direction; it does not yet validate automatic cone discovery or fossil
-transfer.
-
-![Experiment 50 frozen Patch 4 test](experiments/manual-axis-pieris/results/patch_4_spatial_field/experiment_50_patch4_spatial_field.png)
-
-Experiment 51 asked whether this axis correction matters for functional eye
-reconstruction. In the prospective Patch 4 test, treating the surface normals
-as visual axes gave a median angular error of 15.26 degrees. The frozen field
-reduced it to 3.12 degrees and improved all 13 traces; pairwise angular-geometry
-RMSE fell from 4.25 to 3.56 degrees. This demonstrates a meaningful local
-functional consequence. It does not yet give a whole-eye field: the same
-region-held-out predictor improved only 17 of 34 traces across all four regions
-and failed in Patches 2–3.
-
-![Experiment 51 functional axis consequence](experiments/manual-axis-pieris/results/functional_axis/experiment_51_functional_axis_consequence.png)
-
-Experiment 52 then returned to the fossil without importing *Pieris* anatomy.
-The 116 robust *Asaphus* facets give a stable preserved-state surface-normal
-baseline: matched normals change by a median 0.22 degrees across neighbouring
-thresholds. The cropped normal envelope spans 34.64 degrees and adjacent
-normals differ by a median 2.31 degrees. But these are geometric, not verified
-optical, axes. If the unknown internal axes are allowed to depart by at most 15
-degrees, the maximum span is only bounded between 4.64 and 64.64 degrees.
-
-Experiment 53 tested whether image-processing choices or fossil deformation
-could undermine even that geometric result. Normal estimation was generally
-stable under the tested threshold, smoothing and half-voxel sampling choices.
-The taphonomic uncertainty is more serious: transparent 10% affine
-scaling/shear scenarios changed the p95 facet normal by as much as 5.72 degrees,
-and 20% scenarios by 11.42 degrees. These are sensitivity tests, not estimates
-of actual strain. Because the scan is a unilateral crop without independent
-strain markers, the code does not recover the living eye shape or field of view.
-
-Experiment 54 returned to the original missing-surface question. Entire
-candidate internal surfaces were hidden, including complete contiguous regions.
-An axisymmetric ellipsoid gave 12.88 micrometres median facet error, and a
-general quadratic gave 12.94 micrometres. Strictly local outer curvature did
-not improve that result. A fixed six-neighbour anatomical prior reduced the
-error to 8.10 micrometres and beat the quadratic surface in all five held-out
-blocks. In the more practical isolated-loss test it reached 6.59 micrometres.
-The result is a within-specimen reconstruction of a candidate CT boundary: its
-useful information comes from neighbouring homologous facets, not from outer
-curvature alone. The full numbers and claim limits are in the
+The detailed evidence and target-leakage controls are in the
 [Experiment 54 report](reports/EXPERIMENT_54_WHOLE_FACET_RECONSTRUCTION.md).
 
-![Experiment 54 wholly held-out surface reconstruction](experiments/repeat-aligned/results/experiment_54_whole_facet_reconstruction.png)
+## Supporting modern-eye work
 
-![Experiment 52 Asaphus preserved-surface angular sensitivity](experiments/asaphus/results/visual_field/experiment_52_asaphus_visual_field_sensitivity.png)
+Modern scans were used to separate problems that cannot be distinguished in a
+fossil:
 
-![Experiment 53 preservation-geometry audit](experiments/asaphus/results/preservation_geometry/experiment_53_preservation_geometry_audit.png)
+- Missing facet centres can be interpolated inside an intact lattice, but the
+  same method fails at a torn outer edge.
+- A within-eye population template helped reconstruct held-out cone intensity
+  in one *Apis mellifera* scan, but failed to transfer to an independent
+  *Pieris napi* scan.
+- Manual *Pieris* traces showed that internal cone direction can differ from
+  the surface normal. A locally frozen direction field succeeded in one
+  prospective region, but the whole-eye test remained negative.
 
-![Blind modern-eye population-prior result across 15 spatial blocks](figures/population-prior-modern-metrics.png)
+These results explain why a surface-only visual-field model would be premature.
+They do not supply missing soft tissue or validate the identity of the fossil
+boundary. The full development trail, including negative results, is kept in
+the [experiment history](docs/experiment-history.md).
 
-![Independent Pieris transfer result](figures/population-prior-pieris-transfer.png)
+## What this project does not claim
 
-## What I would tell a palaeontologist
+The current evidence does not establish:
 
-The experiments do not justify drawing an internal lens surface from external
-curvature alone. They now support a narrower, practical method: estimate the
-missing facet's depth from its nearest preserved neighbours and apply a shared
-within-facet shape. That reconstructed the candidate CT boundary within this
-one *Asaphus* specimen, including held-out spatial regions. The measured
-normals still describe the fossil as preserved, not the living visual field.
-Anatomical identification, retrodeformation constraints and transfer to an
-independent fossil are still required.
+- that the candidate CT boundary is the proximal lens surface;
+- that the reconstruction transfers across fossils, taxa or preservation
+  states;
+- the undeformed geometry of the living eye;
+- true optical axes, field of view, acuity or sensitivity;
+- optical behaviour of calcitic lenses, including birefringence;
+- missing rhabdoms or other soft-tissue anatomy.
 
-The numerical limits of that statement are collected in
-[claim boundaries](docs/claim-boundaries.md). The less tidy development history,
-including failed tests and missing records, is retained in
-[experiment history](docs/experiment-history.md).
+The precise supported and unsupported statements are maintained in
+[claim boundaries](docs/claim-boundaries.md).
 
-## Repository contents
+## Repository guide
 
-- `experiments/synthetic-centres/` contains representative controlled tests of
-  missing facet centres, including the torn-edge failure.
-- `experiments/outer-only-modern/` contains the controlled outer-to-inner
-  surface test on segmented modern lenses.
-- `experiments/asaphus/` contains the fossil surface and candidate-boundary
-  extraction code.
-- `experiments/outer-feature-audit/` asks whether external measurements add
-  predictive information beyond spatial smoothness.
-- `experiments/repeat-aligned/` tests the shared CT template, local gap filling
-  and complete held-out-surface reconstruction.
-- `experiments/population-prior-modern/` contains the blind within-eye test of
-  reconstruction from repeated optical units.
-- `experiments/population-prior-pieris/` contains the independent-specimen
-  transfer, including its failed strict run and adapted negative result.
-- `experiments/anatomy-aware-residual/` decomposes cone intensity and
-  registration error after that transfer and records the diagnostic result.
-- `experiments/centerline-pieris/` tests candidate 3D paths, curvature and
-  cornea-to-internal continuity without calling intensity ridges cone labels.
-- `experiments/manual-axis-pieris/` tests human-traced cone axes and separates
-  regional tilt from curvature and tests whether that tilt transfers between regions.
-- `apps/cone-centerline-annotator/` is a clickable tool for manually marking
-  curved three-dimensional cone axes and exporting reproducible training
-  labels. Its preliminary mask is annotation assistance, not validation.
-- `experiments/bombus-frozen-transfer/` records the prospective independent
-  apposition-eye test before its data are scored.
-- `reports/` preserves the decisive audits, including the *Archegonus* and
-  *Pieris* transfer failures.
-- `figures/` contains selected, publication-size outputs. Large intermediate
-  tables and raw CT data are deliberately excluded.
+| Location | Purpose |
+|---|---|
+| [`experiments/asaphus/`](experiments/asaphus/) | Surface extraction, stable facet detection and candidate-boundary measurements |
+| [`experiments/outer-feature-audit/`](experiments/outer-feature-audit/) | Tests of outer geometry against spatial-only controls |
+| [`experiments/repeat-aligned/`](experiments/repeat-aligned/) | Shared-boundary analysis, local gap filling and complete held-out-surface reconstruction |
+| [`experiments/synthetic-centres/`](experiments/synthetic-centres/) | Controlled missing-centre and torn-edge tests |
+| [`experiments/outer-only-modern/`](experiments/outer-only-modern/) | Outer-to-inner surface tests on segmented modern lenses |
+| [`experiments/population-prior-modern/`](experiments/population-prior-modern/) | Blind within-eye *Apis* test |
+| [`experiments/population-prior-pieris/`](experiments/population-prior-pieris/) | Independent *Pieris* transfer and negative result |
+| [`experiments/manual-axis-pieris/`](experiments/manual-axis-pieris/) | Human-traced 3D axis and regional-transfer tests |
+| [`apps/cone-centerline-annotator/`](apps/cone-centerline-annotator/) | Clickable tool for collecting 3D cone-axis annotations |
+| [`reports/`](reports/) | Complete reports for the decisive audits |
+| [`data/README.md`](data/README.md) | Input provenance, filenames, dimensions and hashes |
 
 ## Running the code
 
-The later fossil experiments use Python 3.10 or newer and the packages in
-`requirements.txt`:
+Python 3.10 or newer is supported.
 
 ```bash
 python -m venv .venv
@@ -229,38 +132,30 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 
-Each experiment directory has its own short input and run notes. The raw
-volumes are not stored in Git. Their provenance, expected filenames and hashes
-are recorded in [`data/README.md`](data/README.md).
+Raw CT volumes are not stored in this repository. Obtain them from their source
+repositories, follow the applicable licences, and verify them against the
+metadata in [`data/README.md`](data/README.md). Each experiment directory has
+its own inputs and run command.
 
-## Present status
+For the main fossil workflow, begin with
+[`experiments/asaphus/README.md`](experiments/asaphus/README.md), then continue
+with the outer-feature audit and Experiment 54. The committed
+[`experiment_54_six_neighbor_surfaces.npz`](experiments/repeat-aligned/results/experiment_54_six_neighbor_surfaces.npz)
+contains complete fixed-grid predictions for the 74 held-out facets.
 
-This is an exploratory research record by Li Yi (Yili Borjigen), not a finished
-anatomical reconstruction package. Experiment 54 answers the practical
-missing-surface question within one specimen, but the next useful fossil
-evidence would be an expert or author-provided
-segmentation of the relevant lens/cone boundary. The independent *Pieris*
-transfer has shown that the present population template is not general.
-Experiment 46 identified centre and axis definition as the immediate
-bottleneck. Experiment 47 showed that candidate curvature is sub-error-scale.
-Experiment 48 shows directly that the regional cone axis tilts by several
-voxels through depth. Experiment 49 confirms that manually measured tilt helps
-in three regions, but also shows that a constant correction fails on the third:
-the orientation field varies across the eye. Experiment 50 shows that a simple
-field frozen on Patches 1–3 can predict a nearby fourth region, reducing median
-path error by 71.6%. Experiment 51 shows why the correction matters: the
-surface-normal approximation is wrong by a median 15.26 degrees in the
-prospective region, reduced to 3.12 degrees by the frozen field. But the
-whole-eye leave-one-region-out result succeeds for only 17/34 traces, so a
-complete field of view is not solved. The next deployable test is the same idea
-evaluated against the requested InSegtCone author labels or an independently
-annotated apposition eye. Experiment 52 provides the preserved-state fossil
-baseline but shows why external curvature alone cannot close that gap.
-Experiment 53 adds the missing taphonomic sensitivity audit: processing choices
-are measurable, while unknown deformation is large enough to preclude a precise
-living-eye claim. Moth superposition eyes will be tested separately.
+## Current status
 
-The modern-eye work builds on the open-source
-[ODA project](https://github.com/jpcurrea/ODA) and the public
-[InSegtCone dataset](https://doi.org/10.1186/s40850-021-00101-w). Data
-provenance and the associated publications are listed in [NOTICE.md](NOTICE.md).
+The computational question is answered for the analysed *Asaphus* specimen:
+a wholly missing candidate surface can be approximated from nearby preserved
+surfaces, but not reliably from outer curvature alone.
+
+The next decisive work is biological rather than cosmetic: independently label
+the relevant internal anatomy and repeat the frozen test in another fossil with
+comparable preserved boundaries. Any claim about the living visual field would
+also require specimen-specific deformation constraints and an appropriate
+optical model.
+
+This is an exploratory research repository by Li Yi (Yili Borjigen), not a
+finished anatomical reconstruction package. Dataset and software provenance is
+listed in [`NOTICE.md`](NOTICE.md). Code in this repository is released under
+the MIT licence.
