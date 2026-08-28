@@ -5,9 +5,11 @@ curvature but loses an internal surface, can that hidden surface be recovered?
 
 The short answer is now clearer than it was at the start. **Outer curvature
 alone was not enough to determine a wholly missing internal surface in the
-data tested here.** A second, narrower route did show promise: when weak traces
-of the same internal boundary remain across repeated facets, aligning those
-facets can reveal a shared CT signal and help fill a local gap.
+data tested here.** But a missing surface can be approximated when neighbouring
+facets retain the same internal boundary. In *Asaphus*, a fixed six-neighbour
+depth prior plus a shared quadratic shape reached 6.59 micrometres median error
+for an isolated missing facet and 8.10 micrometres when whole spatial regions
+were hidden.
 
 That distinction is the main result of this repository.
 
@@ -43,7 +45,7 @@ error of 6.90 micrometres, while a nonlinear position-only smoother achieved
 signal. On *Archegonus*, the outer-facet detector transferred, but the frozen
 internal-boundary stage did not.
 
-The final experiment therefore used repeated internal CT evidence rather than
+Experiment 43 therefore used repeated internal CT evidence rather than
 claiming prediction from the outside alone. Alignment of 116 *Asaphus* facets
 gave a shared boundary at 48.03 micrometres, with a broad facet-bootstrap 95%
 interval of 43.46–61.75 micrometres. A guarded template method improved local
@@ -146,6 +148,20 @@ and 20% scenarios by 11.42 degrees. These are sensitivity tests, not estimates
 of actual strain. Because the scan is a unilateral crop without independent
 strain markers, the code does not recover the living eye shape or field of view.
 
+Experiment 54 returned to the original missing-surface question. Entire
+candidate internal surfaces were hidden, including complete contiguous regions.
+An axisymmetric ellipsoid gave 12.88 micrometres median facet error, and a
+general quadratic gave 12.94 micrometres. Strictly local outer curvature did
+not improve that result. A fixed six-neighbour anatomical prior reduced the
+error to 8.10 micrometres and beat the quadratic surface in all five held-out
+blocks. In the more practical isolated-loss test it reached 6.59 micrometres.
+The result is a within-specimen reconstruction of a candidate CT boundary: its
+useful information comes from neighbouring homologous facets, not from outer
+curvature alone. The full numbers and claim limits are in the
+[Experiment 54 report](reports/EXPERIMENT_54_WHOLE_FACET_RECONSTRUCTION.md).
+
+![Experiment 54 wholly held-out surface reconstruction](experiments/repeat-aligned/results/experiment_54_whole_facet_reconstruction.png)
+
 ![Experiment 52 Asaphus preserved-surface angular sensitivity](experiments/asaphus/results/visual_field/experiment_52_asaphus_visual_field_sensitivity.png)
 
 ![Experiment 53 preservation-geometry audit](experiments/asaphus/results/preservation_geometry/experiment_53_preservation_geometry_audit.png)
@@ -157,13 +173,13 @@ strain markers, the code does not recover the living eye shape or field of view.
 ## What I would tell a palaeontologist
 
 The experiments do not justify drawing an internal lens surface from external
-curvature alone. They do justify looking for weak, repeated internal CT signal
-across homologous facets before declaring the surface absent. If part of the
-boundary survives in the same specimen, a repeat-aligned template may help
-complete a local missing region. The measured normals describe the fossil as
-preserved, not the living visual field. Anatomical identification,
-retrodeformation constraints and transfer to an independent fossil are still
-required.
+curvature alone. They now support a narrower, practical method: estimate the
+missing facet's depth from its nearest preserved neighbours and apply a shared
+within-facet shape. That reconstructed the candidate CT boundary within this
+one *Asaphus* specimen, including held-out spatial regions. The measured
+normals still describe the fossil as preserved, not the living visual field.
+Anatomical identification, retrodeformation constraints and transfer to an
+independent fossil are still required.
 
 The numerical limits of that statement are collected in
 [claim boundaries](docs/claim-boundaries.md). The less tidy development history,
@@ -180,8 +196,8 @@ including failed tests and missing records, is retained in
   extraction code.
 - `experiments/outer-feature-audit/` asks whether external measurements add
   predictive information beyond spatial smoothness.
-- `experiments/repeat-aligned/` tests the shared CT template and deliberate
-  local gap filling.
+- `experiments/repeat-aligned/` tests the shared CT template, local gap filling
+  and complete held-out-surface reconstruction.
 - `experiments/population-prior-modern/` contains the blind within-eye test of
   reconstruction from repeated optical units.
 - `experiments/population-prior-pieris/` contains the independent-specimen
@@ -204,7 +220,7 @@ including failed tests and missing records, is retained in
 
 ## Running the code
 
-The later fossil experiments use Python 3.11 and the packages in
+The later fossil experiments use Python 3.10 or newer and the packages in
 `requirements.txt`:
 
 ```bash
@@ -220,7 +236,9 @@ are recorded in [`data/README.md`](data/README.md).
 ## Present status
 
 This is an exploratory research record by Li Yi (Yili Borjigen), not a finished
-anatomical reconstruction package. The next useful fossil evidence would be an expert or author-provided
+anatomical reconstruction package. Experiment 54 answers the practical
+missing-surface question within one specimen, but the next useful fossil
+evidence would be an expert or author-provided
 segmentation of the relevant lens/cone boundary. The independent *Pieris*
 transfer has shown that the present population template is not general.
 Experiment 46 identified centre and axis definition as the immediate

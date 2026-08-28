@@ -11,6 +11,11 @@
   after leaving out complete spatial blocks.
 - When part of the same boundary remains visible, a guarded repeat template is
   a plausible aid for filling a local gap within this specimen.
+- When a complete candidate boundary is hidden, a fixed six-neighbour depth
+  prior plus shared quadratic shape reaches 8.10 micrometres median error for
+  held-out spatial regions and improves on the quadratic baseline in all five
+  blocks. In an exploratory isolated-facet scenario it reaches 6.59
+  micrometres.
 - In one modern *Apis mellifera* eye, a population template reconstructed
   held-out cone intensity better than depth-matched background in all 15
   spatial blocks and better than an axisymmetric template in 13 of 15 blocks.
@@ -37,7 +42,10 @@
   surface. A preservational or mineral-replacement front has not been excluded.
 - External curvature does not yet predict the internal boundary better than a
   strong spatial smoother.
-- The method does not reconstruct a wholly absent inner lens surface.
+- Strictly local outer curvature does not reconstruct a wholly absent surface:
+  it gives 13.09 micrometres median error versus 12.94 micrometres for the
+  quadratic surface. The positive complete-surface result borrows depth from
+  neighbouring preserved internal boundaries.
 - The internal-boundary stage did not transfer under frozen criteria to the
   tested *Archegonus* volume.
 - Seventy-four facets from one *Asaphus* scan are repeated observations, not
@@ -88,6 +96,14 @@ The repeat-aligned local gap-filling result is also within one specimen. On the
 off-centre confirmation mask it improved over a quadratic fit, but did not
 consistently beat a flexible local RBF interpolator. It remains a candidate
 method, not an independently validated reconstruction.
+
+Experiment 54 is also within one specimen and its target is the candidate CT
+boundary, not verified lens anatomy. The six-neighbour prior improves complete
+held-out regions, but its 8.10 micrometre median error is 14.6% of median target
+depth and its calibrated 90% half-width is 20.31 micrometres. The 6.59
+micrometre isolated-loss result is exploratory and less independent than the
+spatial-block test. These numbers support an approximate neighbourhood prior,
+not exact lens recovery, anatomical identity or independent-fossil transfer.
 
 The modern population-prior result is a controlled reconstruction of visible
 cone intensity, not anatomical validation of the fossil boundary. Its positive

@@ -1,0 +1,10 @@
+method,reference,median_paired_advantage_um,blocks_favouring_method,exact_block_sign_flip_p
+flat_depth,quadratic_surface,-0.993141031375532,0,0.0625
+axisymmetric_ellipsoid,quadratic_surface,0.004261015093402154,3,0.375
+local_outer_curvature,quadratic_surface,-0.09874226794790708,2,0.8125
+outer_curvature,quadratic_surface,1.397400333457277,5,0.0625
+repeat_template,quadratic_surface,0.01179988208476379,3,0.25
+six_neighbor_prior,quadratic_surface,6.2468441821473295,5,0.0625
+position_smoother,quadratic_surface,2.9557384015622623,5,0.0625
+position_plus_outer,quadratic_surface,2.1293703401908584,4,0.4375
+position_plus_outer,position_smoother,-0.5333472294310742,1,0.125

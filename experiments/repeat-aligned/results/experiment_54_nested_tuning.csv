@@ -1,0 +1,46 @@
+method,heldout_block,inner_median_facet_MAE_um,parameters
+flat_depth,0,17.12299437702108,{}
+flat_depth,1,14.06307541418735,{}
+flat_depth,2,13.768654547995773,{}
+flat_depth,3,10.295360773645161,{}
+flat_depth,4,15.144777667497577,{}
+axisymmetric_ellipsoid,0,15.567145895652306,"{""alpha"": 1000.0}"
+axisymmetric_ellipsoid,1,12.66138098080662,"{""alpha"": 1000.0}"
+axisymmetric_ellipsoid,2,12.475229988291455,"{""alpha"": 0.1}"
+axisymmetric_ellipsoid,3,9.285387545872439,"{""alpha"": 0.1}"
+axisymmetric_ellipsoid,4,14.47506277937131,"{""alpha"": 1000.0}"
+quadratic_surface,0,15.5492884644812,"{""alpha"": 1000.0}"
+quadratic_surface,1,12.804293515380586,"{""alpha"": 1000.0}"
+quadratic_surface,2,12.514667446115231,"{""alpha"": 0.1}"
+quadratic_surface,3,9.277497776399166,"{""alpha"": 10.0}"
+quadratic_surface,4,14.472032048942747,"{""alpha"": 1000.0}"
+local_outer_curvature,0,15.584909549164845,"{""alpha"": 100.0}"
+local_outer_curvature,1,11.776726747858556,"{""alpha"": 1000.0}"
+local_outer_curvature,2,13.971612930960406,"{""alpha"": 1000.0}"
+local_outer_curvature,3,9.896750707163031,"{""alpha"": 1000.0}"
+local_outer_curvature,4,13.186182279834366,"{""alpha"": 0.1}"
+outer_curvature,0,14.341071497324574,"{""alpha"": 0.1}"
+outer_curvature,1,11.414846170752375,"{""alpha"": 1.0}"
+outer_curvature,2,8.641396029036766,"{""alpha"": 1000.0}"
+outer_curvature,3,9.261601333162119,"{""alpha"": 1000.0}"
+outer_curvature,4,9.465563734601274,"{""alpha"": 0.1}"
+repeat_template,0,15.525843840658041,"{""alpha"": 1000.0, ""sigma"": 0.15}"
+repeat_template,1,12.830412926338525,"{""alpha"": 1000.0, ""sigma"": 0.4}"
+repeat_template,2,12.591829588636251,"{""alpha"": 10.0, ""sigma"": 0.4}"
+repeat_template,3,9.290130781639412,"{""alpha"": 1000.0, ""sigma"": 0.4}"
+repeat_template,4,14.450846822294494,"{""alpha"": 1000.0, ""sigma"": 0.15}"
+six_neighbor_prior,0,9.346404913849687,{}
+six_neighbor_prior,1,9.649360158382155,{}
+six_neighbor_prior,2,8.786537323328913,{}
+six_neighbor_prior,3,6.886679300063545,{}
+six_neighbor_prior,4,9.007494997459728,{}
+position_smoother,0,9.32224611707112,"{""alpha"": 100.0, ""degree"": 3}"
+position_smoother,1,5.937757027160476,"{""alpha"": 1.0, ""degree"": 3}"
+position_smoother,2,6.663905590775939,"{""alpha"": 1000.0, ""degree"": 3}"
+position_smoother,3,7.432445698985617,"{""alpha"": 100.0, ""degree"": 3}"
+position_smoother,4,7.517760243388155,"{""alpha"": 100.0, ""degree"": 2}"
+position_plus_outer,0,10.36637844081186,"{""alpha"": 100.0, ""degree"": 3}"
+position_plus_outer,1,7.00589400957407,"{""alpha"": 100.0, ""degree"": 2}"
+position_plus_outer,2,6.456875216067429,"{""alpha"": 1000.0, ""degree"": 2}"
+position_plus_outer,3,7.816334802789708,"{""alpha"": 100.0, ""degree"": 3}"
+position_plus_outer,4,7.548910450555317,"{""alpha"": 100.0, ""degree"": 2}"

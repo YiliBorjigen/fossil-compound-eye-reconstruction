@@ -14,18 +14,25 @@ they were primary data.
 The original TIFF stack and corrected NRRD contain the same scan after
 reorientation and a small edge crop; they are not independent specimens.
 
-## Inputs inherited by Experiments 42 and 43
+## Inputs inherited by Experiments 42–54
 
 - `reconstruction_samples.csv`
   - 9,840 rows from 74 quality-controlled facets
-  - SHA-256: `76a42873098f3f0b850ba07bb7c4762eb1974f91ef30fd0b6d8945d37e95d3ff`
+  - current pipeline SHA-256: `75be2fe2f5ac724da96439169a42cfc8fa58351cf1cf7523b5756198f7ad0dc3`
+  - legacy Experiment 40 export SHA-256: `76a42873098f3f0b850ba07bb7c4762eb1974f91ef30fd0b6d8945d37e95d3ff`
 - `robust_facet_centers.csv`
   - 116 threshold-stable facet centres
   - SHA-256: `5bf12c29c1f76410cafde4eef4cf5e66f639ab9439d1a221d5bb24bdb74ac0cc`
 
 These intermediate files are not committed because they are generated analysis
 products. Their hashes are recorded so that a restored copy can be checked
-before use.
+before use. The current exporter adds the explicit spatial-block column; it
+reproduces the archived Experiment 43 full-facet metrics exactly.
+
+Experiment 54 consumes `experiment_42_feature_table.csv`, generated from these
+two files and the raw NRRD by the documented Experiment 42 script. The table
+used for the reported run has 9,840 rows and SHA-256
+`e0b673faa0774238c0f1cdb38afd1c9ea143ee81b1060dca71ca375359856373`.
 
 ## Modern ODA input
 

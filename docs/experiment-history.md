@@ -143,3 +143,17 @@ gave 31.38–37.84-degree spans and up to 5.72-degree p95 normal changes; 20%
 scenarios gave 28.05–40.97 degrees and up to 11.42 degrees. These are
 sensitivity bounds, not a recovered retrodeformation. A unilateral crop without
 strain markers cannot identify the original geometry.
+
+## Returning to the missing-surface problem (Experiment 54)
+
+Experiment 54 hid complete candidate internal surfaces rather than local gaps.
+The primary test removed contiguous spatial blocks, so neither fitting,
+parameter selection nor uncertainty calibration could use internal points from
+the target region. Ellipsoid-like and repeat-template models remained near
+12.9 micrometres median facet error. Strictly local outer curvature did not
+improve them. A fixed six-neighbour depth prior plus a shared quadratic shape
+reached 8.10 micrometres and improved on the quadratic surface in all five
+blocks. An exploratory leave-one-facet-out version reached 6.59 micrometres.
+This provides a practical within-specimen reconstruction of the candidate CT
+boundary when neighbouring homologous surfaces survive; it does not show that
+outer curvature alone determines an invisible lens.

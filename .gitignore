@@ -18,6 +18,7 @@ venv/
 *predictions.csv
 *facet_MAE.csv
 *.npz
+!experiments/repeat-aligned/results/experiment_54_six_neighbor_surfaces.npz
 *.npy
 *.nii
 *.nii.gz
