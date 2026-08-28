@@ -49,6 +49,14 @@ as the proximal lens surface. A preservational or mineral-replacement front
 could follow the same anatomy. The repository therefore calls it a **candidate
 internal CT boundary**, not a recovered lens.
 
+A blinded internal observer pilot provides additional image-domain support.
+Nineteen of 23 reviewed QC-accepted facets contained a recognisable transition,
+compared with one of five failed-QC controls. Human clicks lay within a median
+6.01 µm of the extractor, but were systematically 5.66 µm deeper. The result
+supports visual repeatability and exposes a boundary-definition ambiguity; it
+does not establish anatomical identity. See the
+[Experiment 55 report](reports/EXPERIMENT_55_BLINDED_BOUNDARY_PILOT.md).
+
 The 74 facets are repeated observations within one fossil, not 74 independent
 specimens.
 
@@ -113,6 +121,7 @@ The precise supported and unsupported statements are maintained in
 | [`experiments/asaphus/`](experiments/asaphus/) | Surface extraction, stable facet detection and candidate-boundary measurements |
 | [`experiments/outer-feature-audit/`](experiments/outer-feature-audit/) | Tests of outer geometry against spatial-only controls |
 | [`experiments/repeat-aligned/`](experiments/repeat-aligned/) | Shared-boundary analysis, local gap filling and complete held-out-surface reconstruction |
+| [`experiments/blinded-boundary-pilot/`](experiments/blinded-boundary-pilot/) | Frozen observer test of boundary visibility and depth agreement |
 | [`experiments/synthetic-centres/`](experiments/synthetic-centres/) | Controlled missing-centre and torn-edge tests |
 | [`experiments/outer-only-modern/`](experiments/outer-only-modern/) | Outer-to-inner surface tests on segmented modern lenses |
 | [`experiments/population-prior-modern/`](experiments/population-prior-modern/) | Blind within-eye *Apis* test |

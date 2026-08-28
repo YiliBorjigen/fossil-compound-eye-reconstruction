@@ -157,3 +157,20 @@ blocks. An exploratory leave-one-facet-out version reached 6.59 micrometres.
 This provides a practical within-specimen reconstruction of the candidate CT
 boundary when neighbouring homologous surfaces survive; it does not show that
 outer curvature alone determines an invisible lens.
+
+## Blinded human boundary pilot (Experiment 55)
+
+Experiment 55 froze one observer's labels before revealing which local CT
+patches had passed the original edge quality controls. Nineteen of 23 reviewed
+accepted facets were called visible, compared with one of five failed-QC
+controls (Fisher exact p = 0.0148). In 16 accepted cases with clicks, the median
+human–algorithm absolute difference was 6.01 micrometres and the two
+perpendicular human views differed by a median 1.86 micrometres.
+
+The observer placed the transition deeper than the gradient extractor in 15 of
+16 cases, with a median offset of 5.66 micrometres. This supports the existence
+of a visually repeatable CT transition and the utility of the QC procedure, but
+also shows that "boundary" needs a stricter operational definition. Because
+the observer developed the project and all confidence values remained at the
+default minimum, the run is an internal pilot rather than independent
+anatomical validation.
