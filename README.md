@@ -119,6 +119,8 @@ The precise supported and unsupported statements are maintained in
 | [`experiments/population-prior-pieris/`](experiments/population-prior-pieris/) | Independent *Pieris* transfer and negative result |
 | [`experiments/manual-axis-pieris/`](experiments/manual-axis-pieris/) | Human-traced 3D axis and regional-transfer tests |
 | [`apps/cone-centerline-annotator/`](apps/cone-centerline-annotator/) | Clickable tool for collecting 3D cone-axis annotations |
+| [`apps/asaphus-boundary-annotator/`](apps/asaphus-boundary-annotator/) | Blinded GUI for tracing the candidate Asaphus CT boundary |
+| [`protocols/`](protocols/) | Prespecified boundary-label and independent-fossil validation protocol |
 | [`reports/`](reports/) | Complete reports for the decisive audits |
 | [`data/README.md`](data/README.md) | Input provenance, filenames, dimensions and hashes |
 
@@ -161,6 +163,9 @@ the relevant internal anatomy and repeat the frozen test in another fossil with
 comparable preserved boundaries. Any claim about the living visual field would
 also require specimen-specific deformation constraints and an appropriate
 optical model.
+
+The blinded annotation tool and the frozen transfer plan are now specified in
+the [boundary annotation and independent-validation protocol](protocols/BOUNDARY_ANNOTATION_AND_INDEPENDENT_VALIDATION.md).
 
 This is an exploratory research repository by Li Yi (Yili Borjigen), not a
 finished anatomical reconstruction package. Dataset and software provenance is

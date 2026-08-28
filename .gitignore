@@ -27,6 +27,11 @@ venv/
 results-local/
 output/
 *.log
+annotation_pack/
+*boundary_pack*/
+*_PRIVATE_KEY.csv
+*_annotations.json
+*_annotations.csv
 
 # Operating systems and editors
 .DS_Store
