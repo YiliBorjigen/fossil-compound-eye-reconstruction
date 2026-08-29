@@ -174,3 +174,19 @@ also shows that "boundary" needs a stricter operational definition. Because
 the observer developed the project and all confidence values remained at the
 default minimum, the run is an internal pilot rather than independent
 anatomical validation.
+
+## Boundary-definition sensitivity (Experiment 56)
+
+Experiment 56 asked whether the systematic observer–gradient offset invalidates
+the Experiment 54 reconstruction comparison. For each held-out spatial block,
+the median translation was estimated from the other four blocks. The correction
+reduced median case-level disagreement from 5.66 to 2.30 micrometres and helped
+14 of 16 cases, although its p90 residual remained 8.89 micrometres.
+
+The observer-centred translation moves the median operational depth from 55.50
+to 61.16 micrometres. Applying the same shift to targets and predictions leaves
+absolute reconstruction errors unchanged by definition and was verified across
+all nine Experiment 54 methods. Thus a uniform landmark choice does not alter
+the model ranking, but it does alter absolute depth. The remaining non-uniform
+ambiguity is separate from prediction error and cannot be mapped reliably from
+16 cases from one informed observer.

@@ -6,9 +6,18 @@
   accurately in controlled deletion tests.
 - The same centre-finding method does not work at a torn outer edge.
 - The analysed *Asaphus* scan contains a repeatable, facet-associated internal
-  CT boundary around 48–52 micrometres beneath the surface.
+  CT transition. Its onset/strongest-gradient summaries lie around 48–52
+  micrometres and the complete Experiment 54 target has a 55.50 micrometre
+  median depth.
 - Aligning repeated facets retains that signal after facet bootstrapping and
   after leaving out complete spatial blocks.
+- One blinded internal observer saw a transition in 19/23 QC-accepted facets
+  versus 1/5 failed-QC controls. A translation learned without the test spatial
+  block reduced median observer–extractor depth disagreement from 5.66 to 2.30
+  micrometres in 14/16 accepted cases.
+- A common observer-centred boundary translation changes absolute depth but
+  leaves Experiment 54 reconstruction errors and model ranking unchanged. This
+  invariance was checked across all nine methods.
 - When part of the same boundary remains visible, a guarded repeat template is
   a plausible aid for filling a local gap within this specimen.
 - When a complete candidate boundary is hidden, a fixed six-neighbour depth
@@ -40,6 +49,10 @@
 
 - The CT boundary has not been anatomically identified as the proximal lens
   surface. A preservational or mineral-replacement front has not been excluded.
+- The observer-centred 61.16 micrometre median is an operational landmark, not
+  a lens-thickness estimate. Its held-out p90 disagreement remains 8.89
+  micrometres, and 16 labels from one informed observer cannot resolve a
+  spatially varying definition shift.
 - External curvature does not yet predict the internal boundary better than a
   strong spatial smoother.
 - Strictly local outer curvature does not reconstruct a wholly absent surface:
@@ -104,6 +117,13 @@ depth and its calibrated 90% half-width is 20.31 micrometres. The 6.59
 micrometre isolated-loss result is exploratory and less independent than the
 spatial-block test. These numbers support an approximate neighbourhood prior,
 not exact lens recovery, anatomical identity or independent-fossil transfer.
+
+Experiments 55–56 establish image-domain visibility and quantify one
+observer's boundary-definition offset. The 5.66 micrometre median translation
+can recalibrate an absolute depth but cannot identify an anatomical interface.
+The improved 2.30 micrometre median after spatially held-out calibration must
+travel with the 8.89 micrometre p90 residual, the informed-observer limitation
+and the unresolved possibility of non-uniform definition shifts.
 
 The modern population-prior result is a controlled reconstruction of visible
 cone intensity, not anatomical validation of the fossil boundary. Its positive

@@ -42,7 +42,9 @@ show that the method transfers to another fossil.
 The corrected 3.7 µm *Asaphus* volume contains 116 facet centres that remain
 stable across neighbouring surface thresholds. Seventy-four facets pass the
 internal-edge quality checks. Their aligned CT data contain a repeated
-candidate boundary approximately 48–52 µm beneath the outer surface.
+candidate transition. Profile summaries place its onset/strongest gradient
+around 48–52 µm beneath the outer surface; the complete Experiment 54 target
+table has a 55.50 µm median depth.
 
 That boundary is facet-associated, but it has not been independently confirmed
 as the proximal lens surface. A preservational or mineral-replacement front
@@ -56,6 +58,15 @@ compared with one of five failed-QC controls. Human clicks lay within a median
 supports visual repeatability and exposes a boundary-definition ambiguity; it
 does not establish anatomical identity. See the
 [Experiment 55 report](reports/EXPERIMENT_55_BLINDED_BOUNDARY_PILOT.md).
+
+Experiment 56 treated that offset as a measurement-definition problem. A
+translation estimated without the held-out spatial block reduced median
+case-level human–extractor disagreement from 5.66 to 2.30 µm in 14 of 16
+cases. It moves the operational median depth from 55.50 to 61.16 µm, but a
+common shift applied to both targets and predictions leaves every Experiment
+54 reconstruction error unchanged. The remaining p90 disagreement is 8.89 µm,
+so definition uncertainty must stay separate from reconstruction error. See
+the [Experiment 56 report](reports/EXPERIMENT_56_BOUNDARY_DEFINITION_SENSITIVITY.md).
 
 The 74 facets are repeated observations within one fossil, not 74 independent
 specimens.
@@ -122,6 +133,7 @@ The precise supported and unsupported statements are maintained in
 | [`experiments/outer-feature-audit/`](experiments/outer-feature-audit/) | Tests of outer geometry against spatial-only controls |
 | [`experiments/repeat-aligned/`](experiments/repeat-aligned/) | Shared-boundary analysis, local gap filling and complete held-out-surface reconstruction |
 | [`experiments/blinded-boundary-pilot/`](experiments/blinded-boundary-pilot/) | Frozen observer test of boundary visibility and depth agreement |
+| [`experiments/boundary-definition-sensitivity/`](experiments/boundary-definition-sensitivity/) | Spatially held-out calibration of the observer–gradient landmark offset |
 | [`experiments/synthetic-centres/`](experiments/synthetic-centres/) | Controlled missing-centre and torn-edge tests |
 | [`experiments/outer-only-modern/`](experiments/outer-only-modern/) | Outer-to-inner surface tests on segmented modern lenses |
 | [`experiments/population-prior-modern/`](experiments/population-prior-modern/) | Blind within-eye *Apis* test |
