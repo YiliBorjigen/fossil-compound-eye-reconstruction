@@ -132,6 +132,17 @@ a scanner-specific outer threshold and the adapted reconstruction did not beat
 the depth-matched background. It cannot support a transferable population-prior
 claim.
 
+Experiments 57–58 use verified modern *Drosophila* lens surfaces and directly
+test distal-only reconstruction. The 20240530 transfer result supports a useful
+population prior on one similar independent volume, but 20231107 exposes a
+large depth-domain shift. After removing an invalid target-depth ceiling,
+1,508/1,632 lenses pass QC in that scan. Outer curvature improves the population
+template by only 0.084 and 0.225
+micrometres on the two tests. These are modern computational-validation results,
+not evidence that a Drosophila prior transfers to trilobites or that the fossil
+candidate boundary is a proximal lens surface. Lens-level bootstrap intervals
+do not turn two test volumes into biological replication.
+
 The Experiment 46 oracle-centred result is a mechanistic diagnostic on the same
 *Pieris* regions used after the transfer failed. It supports centre/axis
 registration as a working hypothesis for the error source; it is not an

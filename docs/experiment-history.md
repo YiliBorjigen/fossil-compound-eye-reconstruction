@@ -190,3 +190,27 @@ all nine Experiment 54 methods. Thus a uniform landmark choice does not alter
 the model ranking, but it does alter absolute depth. The remaining non-uniform
 ambiguity is separate from prediction error and cannot be mapped reliably from
 16 cases from one informed observer.
+
+## Verified modern proximal surfaces (Experiments 57–58)
+
+Arthur Zhao supplied complete lens and photoreceptor-tip surface meshes for
+three *Drosophila* micro-CT volumes. Experiment 57 used the 20240701 volume to
+freeze a strict outer-only mask and predictor boundary. Tip coordinates and
+complete geometry labelled the hidden truth, but all prediction frames and
+features were recomputed from the retained distal surface. In two whole-eye
+holdouts, an opposite-eye thickness template and an outer-curvature ridge both
+reached about 0.86–0.89 micrometres median error; paired performance showed no
+consistent added value from curvature within that volume. An axisymmetric
+ellipsoid reached 8.53 micrometres.
+
+Experiment 58 inverted the PCA transform stored in the public eyemap RData
+files to recover exact raw-coordinate landmarks, then froze 20240701 as the
+only training volume. On untouched 20240530, the population template reached
+2.72 micrometres median error and the outer-curvature ridge 2.49 micrometres.
+On the coarser 20231107 mesh, the corresponding errors were 15.23 and 15.03
+micrometres because its median target depth was much larger. The ellipsoid
+errors were 11.53 and 27.04 micrometres. Thus a population prior can
+transfer to a similar scan, while outer curvature contributes only a small
+increment and cannot absorb major between-volume depth shifts. A target-depth
+ceiling inherited from development initially hid much of that shift; removing
+the outcome-dependent cutoff raised 20231107 coverage to 1,508/1,632 lenses.

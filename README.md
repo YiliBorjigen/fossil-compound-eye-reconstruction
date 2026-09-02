@@ -37,6 +37,30 @@ The result answers the computational part of the original question within one
 specimen. It does not yet identify the reconstructed feature anatomically or
 show that the method transfers to another fossil.
 
+### Verified modern-lens test
+
+Arthur Zhao's complete *Drosophila* lens meshes now provide verified proximal
+surfaces for a stricter test. The method was developed on 20240701, then frozen
+and transferred to two untouched volumes using only the retained distal
+surface at prediction time.
+
+| Held-out modern volume | Median true depth | Outer-only ellipsoid | 20240701 population template | Outer-curvature model |
+|---|---:|---:|---:|---:|
+| 20240530 | 16.35 µm | 11.53 µm | 2.72 µm | 2.49 µm |
+| 20231107 | 28.97 µm | 27.04 µm | 15.23 µm | 15.03 µm |
+
+The population prior transfers well to the similar 20240530 scan but not across
+the much larger 20231107 depth shift. Outer curvature adds only 0.084 and 0.225
+µm median paired improvement over the template. The 2023 mesh is coarse, but
+1,508/1,632 lenses pass the corrected QC. The
+modern result sharpens the answer: an ellipsoid is insufficient, and a learned
+outer-curvature mapping does not remove the need for a matched population
+prior, domain-shift checks and uncertainty.
+
+![Independent-volume modern validation](experiments/arthur-modern-ground-truth/results/experiment_58_comparison.png)
+
+See the [Experiment 58 report](reports/EXPERIMENT_58_ARTHUR_CROSS_VOLUME_VALIDATION.md).
+
 ## What is being reconstructed
 
 The corrected 3.7 µm *Asaphus* volume contains 116 facet centres that remain

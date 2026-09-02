@@ -1,0 +1,134 @@
+[
+  {
+    "n_landmarks": 1632,
+    "n_eye_0": 818,
+    "n_eye_1": 814,
+    "median_lens_tip_distance_um": 24.087499291419185,
+    "median_landmark_mesh_distance_um": 12.13010733175444,
+    "n_raw_patches": 1598,
+    "n_qc_records": 1508,
+    "qc_failure_counts": {
+      "patch_support": 34,
+      "layer_support": 0,
+      "outer_scale": 2,
+      "central_support": 18,
+      "nonfinite_target": 0,
+      "target_nonpositive": 63,
+      "outer_fit_rmse": 7,
+      "inner_fit_rmse": 0
+    },
+    "candidate_scale_q05_q50_q95_um": [
+      7.958235478468548,
+      8.815035920960291,
+      9.806227859496865
+    ],
+    "candidate_depth_q05_q50_q95_um": [
+      15.26328379191713,
+      28.792912069778676,
+      35.66971438957856
+    ],
+    "candidate_outer_rmse_q05_q50_q95_um": [
+      0.020044321065301327,
+      0.0560894976139735,
+      1.3889575965681618
+    ],
+    "candidate_inner_rmse_q05_q50_q95_um": [
+      0.014285572884477422,
+      0.03336088106933584,
+      0.25568924148698785
+    ],
+    "volume": "20231107",
+    "median_tip_landmark_mesh_distance_um": 5.033715540411946,
+    "lens_mesh_sha256": "1a9e5b150208d7f71bc4848b798d988ee52d17bd1aa12d063e5e38dbce7c6b20",
+    "tip_mesh_sha256": "3498710995d31ebfbcab7437a8df92069ca27728e2347ac01380a46288fa68b5",
+    "rdata_sha256": "e8cf395625b5fa2a415206614bd4e1a4d74d5372820038135bf77f312349a9ba"
+  },
+  {
+    "n_landmarks": 1611,
+    "n_eye_0": 802,
+    "n_eye_1": 809,
+    "median_lens_tip_distance_um": 24.952063261381802,
+    "median_landmark_mesh_distance_um": 7.900446361953273,
+    "n_raw_patches": 1611,
+    "n_qc_records": 1575,
+    "qc_failure_counts": {
+      "patch_support": 0,
+      "layer_support": 0,
+      "outer_scale": 6,
+      "central_support": 0,
+      "nonfinite_target": 0,
+      "target_nonpositive": 23,
+      "outer_fit_rmse": 6,
+      "inner_fit_rmse": 1
+    },
+    "candidate_scale_q05_q50_q95_um": [
+      8.104894009572067,
+      8.775889698038624,
+      9.43050573110399
+    ],
+    "candidate_depth_q05_q50_q95_um": [
+      10.926849745130085,
+      16.322747573347925,
+      17.74638157488882
+    ],
+    "candidate_outer_rmse_q05_q50_q95_um": [
+      0.07973846503654121,
+      0.11720649506724257,
+      1.2965297828358069
+    ],
+    "candidate_inner_rmse_q05_q50_q95_um": [
+      0.07648347765657476,
+      0.20873081774402155,
+      0.8258624371100945
+    ],
+    "volume": "20240530",
+    "median_tip_landmark_mesh_distance_um": 6.243173878124826,
+    "lens_mesh_sha256": "671cebccc1561ed453e23f0cc58180dd29140f00fe80cc1fabed4054e2093c40",
+    "tip_mesh_sha256": "aa7f7da9fbb424c7e15d59e14505b39bf64095bc43555717128cce3cd6acc55c",
+    "rdata_sha256": "6921aa284338b476cd7db14aea1e0fef19cc45bb141ea19d4baaf03f8d6ca684"
+  },
+  {
+    "n_landmarks": 1709,
+    "n_eye_0": 852,
+    "n_eye_1": 857,
+    "median_lens_tip_distance_um": 24.375561265538156,
+    "median_landmark_mesh_distance_um": 6.387090398811955,
+    "n_raw_patches": 1709,
+    "n_qc_records": 1679,
+    "qc_failure_counts": {
+      "patch_support": 0,
+      "layer_support": 0,
+      "outer_scale": 0,
+      "central_support": 0,
+      "nonfinite_target": 0,
+      "target_nonpositive": 30,
+      "outer_fit_rmse": 0,
+      "inner_fit_rmse": 0
+    },
+    "candidate_scale_q05_q50_q95_um": [
+      7.951481680072536,
+      8.640957322640729,
+      9.331033271592739
+    ],
+    "candidate_depth_q05_q50_q95_um": [
+      9.97077360214565,
+      13.784692785216995,
+      15.655413884896891
+    ],
+    "candidate_outer_rmse_q05_q50_q95_um": [
+      0.09831647356783514,
+      0.160876213757653,
+      1.6636793727450503
+    ],
+    "candidate_inner_rmse_q05_q50_q95_um": [
+      0.08132561923876869,
+      0.3380327672877071,
+      0.9548111644964192
+    ],
+    "volume": "20240701",
+    "median_tip_landmark_mesh_distance_um": 5.665311508990617,
+    "lens_mesh_sha256": "d4d7ab34517e744c5ce1a1d56f6b4fba0deaffcb32b4c9dbbfebf87529beecfa",
+    "tip_mesh_sha256": "1948916674147559ed23751016717b9b3cfc205eb37d4e691b70cd59b6253f08",
+    "rdata_sha256": "8408447f8c5798fbc6d751de79ef4983d08c342a500c9a55b2a3b4b38d92deec"
+  }
+]
