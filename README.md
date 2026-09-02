@@ -110,6 +110,18 @@ They do not supply missing soft tissue or validate the identity of the fossil
 boundary. The full development trail, including negative results, is kept in
 the [experiment history](docs/experiment-history.md).
 
+## Acknowledgements and contributed data
+
+Arthur Zhao kindly provided the surface meshes for all three *Drosophila*
+µCT volumes used by Zhao et al., covering the corneal-lens and photoreceptor-tip
+segmentations. These directly shared meshes are used for registration and
+method validation but are not redistributed here pending explicit confirmation
+of their redistribution terms. The corresponding processed lens–tip positions
+and analysis code are available from the
+[Reiser Lab eyemap repository](https://github.com/reiserlab/eyemap_T4), and the
+raw imaging data are archived in the
+[Janelia dataset](https://doi.org/10.25378/janelia.29111339.v1).
+
 ## What this project does not claim
 
 The current evidence does not establish:
