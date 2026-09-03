@@ -8,6 +8,13 @@ conclusions.
 
 ## Data access and technical contributions
 
+- **Maike Kittelmann** (Oxford Brookes University) located and directly shared
+  twelve manually cleaned binary corneal-lens TIFF stacks corresponding to the
+  *Drosophila simulans* M3 and *D. mauritiana* RED3 eyes analysed by
+  [Buffry et al. (2024)](https://doi.org/10.1186/s12915-024-01864-7): three
+  female and three male eyes for each species. These data make possible a
+  planned multi-eye modern validation. The directly supplied archives are not
+  redistributed here pending confirmation of their applicable reuse terms.
 - **Arthur Zhao** (Janelia Research Campus) exported and shared surface meshes
   for all three *Drosophila* µCT volumes used by Zhao et al., including the
   corneal-lens and photoreceptor-tip segmentations. These files support
@@ -16,6 +23,12 @@ conclusions.
 - **Michael Reiser** (Janelia Research Campus) responded to the initial data
   request, connected Li Yi with Arthur Zhao, and directed the project towards
   the relevant *Drosophila* eyemap resources.
+
+## Scientific framing
+
+- **Lauren Sumner-Rooney** helped frame the fossil compound-eye reconstruction
+  question through correspondence, particularly the difficult case in which
+  outer lens curvature survives but the internal/proximal lens surface is lost.
 
 ## Public datasets and software
 
