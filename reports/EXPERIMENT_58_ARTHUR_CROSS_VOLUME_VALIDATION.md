@@ -12,7 +12,7 @@ outer-only reconstruction reliable by itself.
 
 Across the three supplied volumes, the outer-curvature result is **0.86 µm**
 for the 20240701 whole-eye development holdouts, **2.49 µm** for the independent
-20240530 test, and **15.03 µm** for the independent 20231107 test.
+20240530 test, and **14.96 µm** for the independent 20231107 test.
 
 ## Why this experiment was run
 
@@ -42,6 +42,13 @@ quality variable, so the ceiling was removed and every volume was rerun. The
 predictors and training data were unchanged. The final result is therefore a
 frozen-model external validation, not a preregistered confirmatory test.
 
+A later Experiment 59 leakage audit found a second target-dependent support
+gate: the original 80-vertex patch minimum counted distal and hidden proximal
+vertices together. It was replaced by a distal-cap support test after oracle
+layer separation. This adds 20 target-QC lenses in the coarse 20231107 mesh
+and changes its ridge median from 15.03 to 14.96 µm; the scientific conclusion
+is unchanged. The corrected result below supersedes the earlier table.
+
 The complete lens layer is a connected surface rather than a set of labelled
 individual lenses. Target construction therefore uses the annotated lens
 positions to partition the layer into nearest-landmark patches and the matched
@@ -56,7 +63,8 @@ checks, not as a prediction feature.
 
 The proximal target and each prediction are compared on the same central
 canonical disk. The reported score is the median, across lenses, of each
-lens's mean absolute surface error.
+lens's mean absolute axial error at corresponding canonical-grid locations;
+it is not a symmetric three-dimensional surface distance.
 
 Three fixed methods are compared:
 
@@ -69,15 +77,15 @@ Three fixed methods are compared:
 
 ## Data and QC
 
-| Volume | Role | Annotated lenses | Patches passing frozen QC |
+| Volume | Role | Annotated lenses | Patches passing corrected QC |
 |---|---|---:|---:|
 | 20240701 | training | 1,709 | 1,679 |
-| 20240530 | untouched test | 1,611 | 1,575 |
-| 20231107 | untouched test | 1,632 | 1,508 |
+| 20240530 | external test | 1,611 | 1,575 |
+| 20231107 | external test | 1,632 | 1,528 |
 
 The 2023 mesh is substantially more coarsely tessellated. Its median
 lens-landmark-to-mesh distance is 12.13 µm, compared with 7.90 µm for 20240530
-and 6.39 µm for 20240701. Nevertheless, 92.4% of its annotated lenses pass the
+and 6.39 µm for 20240701. Nevertheless, 93.6% of its annotated lenses pass the
 corrected support, orientation and surface-fit criteria.
 
 ## Results
@@ -86,9 +94,10 @@ corrected support, orientation and surface-fit criteria.
 |---|---:|---:|---:|---:|
 | 20240701 development, whole-eye holdout | 13.81 µm | 8.53 µm (61.2%) | 0.89 µm (6.4%) | 0.86 µm (6.3%) |
 | 20240530 independent test | 16.35 µm | 11.53 µm (72.8%) | 2.72 µm (16.5%) | 2.49 µm (15.4%) |
-| 20231107 independent test | 28.97 µm | 27.04 µm (97.4%) | 15.23 µm (52.6%) | 15.03 µm (51.9%) |
+| 20231107 independent test | 28.91 µm | 26.99 µm (97.4%) | 15.18 µm (52.6%) | 14.96 µm (51.7%) |
 
-Percentages are median per-lens MAE divided by median target depth. For
+Percentages are the median, across lenses, of each lens's MAE divided by its
+target depth. For
 20240701, the template is learned from the opposite training eye; this is
 development evidence, not an independent-volume result. The 20240530 result
 shows that a population thickness prior can transfer across a similar modern
@@ -101,12 +110,12 @@ median paired advantage of:
 
 - **0.084 µm** on 20240530 (bootstrap interval 0.075–0.094 µm; wins 1,004/1,575
   lenses);
-- **0.225 µm** on 20231107 (0.210–0.237 µm; wins 1,146/1,508);
+- **0.221 µm** on 20231107 (0.207–0.234 µm; wins 1,156/1,528);
 - **0.139 µm** pooled descriptively across both tests (0.129–0.151 µm).
 
 Those bootstrap intervals resample lenses and therefore measure facet-level
 stability, not biological replication. There are only two independent test
-volumes, and the pooled number must not be described as 3,083 independent
+volumes, and the pooled number must not be described as 3,103 independent
 animals or scans.
 
 ![Experiment 58 comparison](../experiments/arthur-modern-ground-truth/results/experiment_58_comparison.png)

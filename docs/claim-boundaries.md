@@ -25,6 +25,11 @@
   held-out spatial regions and improves on the quadratic baseline in all five
   blocks. In an exploratory isolated-facet scenario it reaches 6.59
   micrometres.
+- In all three Arthur Zhao modern *Drosophila* volumes, a prespecified
+  six-neighbour adaptation reconstructed target-QC, quadratic-smoothed central
+  proximal caps inside contiguous 19-lens interior masks with median axial
+  errors of 1.32, 0.36 and 0.52 micrometres. The same-eye template was worse in
+  all six eye summaries.
 - In one modern *Apis mellifera* eye, a population template reconstructed
   held-out cone intensity better than depth-matched background in all 15
   spatial blocks and better than an axisymmetric template in 13 of 15 blocks.
@@ -138,12 +143,24 @@ whole-eye development holdouts, not an independent volume. The 20240530
 transfer result supports a useful population prior on one similar independent
 volume, but 20231107 exposes a large depth-domain shift. After removing an
 invalid target-depth ceiling,
-1,508/1,632 lenses pass QC in that scan. Outer curvature improves the population
-template by only 0.084 and 0.225
+1,528/1,632 lenses pass QC in that scan. Outer curvature improves the population
+template by only 0.084 and 0.221
 micrometres on the two tests. These are modern computational-validation results,
 not evidence that a Drosophila prior transfers to trilobites or that the fossil
 candidate boundary is a proximal lens surface. Lens-level bootstrap intervals
 do not turn two test volumes into biological replication.
+
+Experiment 59 uses verified modern targets, but its positive result is
+same-eye, transductive interpolation: proximal surfaces outside each hidden
+interior patch remain visible. All selected mask lenses passed target QC, so
+the all-resolvable sensitivity cohort is identical to the primary cohort and
+does not test marginal targets. The result does not cover torn edges, complete
+eye-wide proximal loss, transfer between animals or taxa, or a fossil target.
+Its nominal point-error bands have 88.96% pooled marginal coverage but only
+721/912 lenses have at least 90% of grid points covered. The new graph-harmonic
+comparator is method-development evidence. Three volumes and six eyes, with
+biological independence not established by the available metadata, limit the
+inference.
 
 The Experiment 46 oracle-centred result is a mechanistic diagnostic on the same
 *Pieris* regions used after the transfer failed. It supports centre/axis

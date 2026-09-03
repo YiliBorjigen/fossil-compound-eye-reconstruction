@@ -31,9 +31,9 @@ from sklearn.preprocessing import StandardScaler
 SEED = 20260902
 GRID_LIMIT = 0.65
 GRID_STEP = 0.13
-# The three supplied meshes have different tessellation densities. These are
-# support-count checks, not physical thresholds; physical QC remains shared.
-MIN_PATCH_VERTICES = 80
+# The three supplied meshes have different tessellation densities. Cap support
+# is checked after the oracle layer split so proximal tessellation cannot decide
+# whether a retained distal cap enters an outer-only prediction universe.
 MIN_CAP_VERTICES = 25
 RIDGE_ALPHAS = np.logspace(-2, 3, 12)
 
@@ -198,7 +198,10 @@ def axisymmetric_ellipsoid_prediction(
 
 
 def prepare_records(
-    lens_surfaces: list[np.ndarray], lens_positions: np.ndarray, tip_positions: np.ndarray
+    lens_surfaces: list[np.ndarray],
+    lens_positions: np.ndarray,
+    tip_positions: np.ndarray,
+    include_invalid_targets: bool = False,
 ) -> tuple[list[dict], dict]:
     if len(lens_positions) != len(tip_positions):
         raise ValueError("Lens and tip landmark tables must have equal lengths")
@@ -235,7 +238,10 @@ def prepare_records(
 
         for local_id, landmark_id in enumerate(landmark_ids):
             patch = surface_sorted[starts[local_id] : stops[local_id]]
-            if len(patch) < MIN_PATCH_VERTICES:
+            # Two vertices are the mathematical minimum for the deterministic
+            # oracle split. Eligibility after that split depends on retained
+            # distal support, never on total (distal + hidden proximal) count.
+            if len(patch) < 2:
                 failure_counts["patch_support"] += 1
                 continue
 
@@ -246,15 +252,19 @@ def prepare_records(
             is_outer = split_two_layers(oracle_depth)
             outer = patch[is_outer]
             inner = patch[~is_outer]
-            if min(len(outer), len(inner)) < MIN_CAP_VERTICES:
+            if len(outer) < MIN_CAP_VERTICES:
                 failure_counts["layer_support"] += 1
                 continue
+            target_support = len(inner) >= MIN_CAP_VERTICES
+            if not target_support:
+                failure_counts["layer_support"] += 1
             raw_records.append(
                 {
                     "eye": eye_id,
                     "landmark_id": int(landmark_id),
                     "outer": outer,
                     "inner": inner,
+                    "target_support": target_support,
                     "patch_vertices": len(patch),
                 }
             )
@@ -273,6 +283,9 @@ def prepare_records(
     candidate_depth = []
     candidate_outer_rmse = []
     candidate_inner_rmse = []
+    n_outer_qc = 0
+    n_target_resolvable = 0
+    n_target_qc = 0
     for record in raw_records:
         outer = record["outer"]
         inner = record["inner"]
@@ -295,7 +308,7 @@ def prepare_records(
         outer_keep = outer_rho <= scale
         inner_rho = np.linalg.norm(inner_local[:, :2], axis=1)
         inner_keep = inner_rho <= scale
-        if min(outer_keep.sum(), inner_keep.sum()) < MIN_CAP_VERTICES:
+        if outer_keep.sum() < MIN_CAP_VERTICES:
             failure_counts["central_support"] += 1
             continue
 
@@ -304,33 +317,11 @@ def prepare_records(
             outer_local[outer_keep, 1] / scale,
             outer_local[outer_keep, 2],
         )
-        inner_beta, inner_rmse = robust_quadratic(
-            inner_local[inner_keep, 0] / scale,
-            inner_local[inner_keep, 1] / scale,
-            inner_local[inner_keep, 2],
-        )
         design_grid = polynomial_design(grid_x, grid_y)
         outer_grid = design_grid @ outer_beta
-        inner_grid = design_grid @ inner_beta
-        thickness = outer_grid - inner_grid
-        candidate_depth.append(float(np.median(thickness)))
         candidate_outer_rmse.append(outer_rmse)
-        candidate_inner_rmse.append(inner_rmse)
-
-        if not np.all(np.isfinite(thickness)):
-            failure_counts["nonfinite_target"] += 1
-            continue
-        # The target must lie inside the retained distal surface, but its
-        # magnitude is not a QC variable. A former 30 µm ceiling silently
-        # removed the real 20231107 depth shift and was therefore deleted.
-        if np.quantile(thickness, 0.05) <= 0.0:
-            failure_counts["target_nonpositive"] += 1
-            continue
         if outer_rmse > 2.5:
             failure_counts["outer_fit_rmse"] += 1
-            continue
-        if inner_rmse > 2.5:
-            failure_counts["inner_fit_rmse"] += 1
             continue
 
         ellipsoid_inner = axisymmetric_ellipsoid_prediction(
@@ -339,9 +330,61 @@ def prepare_records(
         # Predictor features: retained outer surface only.  The constant term
         # is removed because the local origin is arbitrary.
         outer_features = np.r_[scale, outer_beta[1:], outer_rmse]
+
+        # Target availability and target quality are deliberately separate.
+        # Experiment 59 assigns masks to every outer-QC record without looking
+        # at either flag.  A finite target can still be retained for the
+        # prespecified sensitivity analysis even when it fails anatomical QC.
+        target_resolvable = False
+        target_qc_pass = False
+        target_reason = "valid"
+        inner_rmse = float("nan")
+        inner_grid = np.full_like(outer_grid, np.nan)
+        thickness = np.full_like(outer_grid, np.nan)
+        if not record["target_support"]:
+            target_reason = "layer_support"
+        elif inner_keep.sum() < MIN_CAP_VERTICES:
+            failure_counts["central_support"] += 1
+            target_reason = "central_support"
+        else:
+            inner_beta, inner_rmse = robust_quadratic(
+                inner_local[inner_keep, 0] / scale,
+                inner_local[inner_keep, 1] / scale,
+                inner_local[inner_keep, 2],
+            )
+            inner_grid = design_grid @ inner_beta
+            thickness = outer_grid - inner_grid
+            candidate_inner_rmse.append(inner_rmse)
+            if not np.all(np.isfinite(thickness)):
+                failure_counts["nonfinite_target"] += 1
+                target_reason = "nonfinite_target"
+            else:
+                target_resolvable = True
+                candidate_depth.append(float(np.median(thickness)))
+                # Target magnitude is not an outer-data QC variable.  It is
+                # nevertheless an anatomical target-quality check: a fitted
+                # proximal surface should lie inside the distal surface.
+                if np.quantile(thickness, 0.05) <= 0.0:
+                    failure_counts["target_nonpositive"] += 1
+                    target_reason = "target_nonpositive"
+                elif inner_rmse > 2.5:
+                    failure_counts["inner_fit_rmse"] += 1
+                    target_reason = "inner_fit_rmse"
+                else:
+                    target_qc_pass = True
+
+        n_outer_qc += 1
+        n_target_resolvable += int(target_resolvable)
+        n_target_qc += int(target_qc_pass)
+        if not target_qc_pass and not include_invalid_targets:
+            continue
         records.append(
             {
                 **record,
+                # Retained for outer-only spatial blocking and neighbour
+                # selection in Experiment 59. This centroid is computed after
+                # the hidden proximal vertices have been discarded.
+                "outer_origin": outer_origin,
                 "scale": scale,
                 "outer_rmse": outer_rmse,
                 "inner_rmse": inner_rmse,
@@ -350,6 +393,12 @@ def prepare_records(
                 "inner_grid": inner_grid,
                 "thickness": thickness,
                 "ellipsoid_inner": ellipsoid_inner,
+                # ``target_valid`` remains as a compatibility alias for the
+                # Experiment 57/58 code and their frozen result tables.
+                "target_valid": target_qc_pass,
+                "target_resolvable": target_resolvable,
+                "target_qc_pass": target_qc_pass,
+                "target_reason": target_reason,
             }
         )
 
@@ -359,6 +408,8 @@ def prepare_records(
         return [float(value) for value in np.quantile(values, [0.05, 0.5, 0.95])]
 
     diagnostics = {
+        "include_invalid_targets": bool(include_invalid_targets),
+        "n_records_returned": int(len(records)),
         "n_landmarks": int(len(lens_positions)),
         "n_eye_0": int(np.sum(eye == 0)),
         "n_eye_1": int(np.sum(eye == 1)),
@@ -367,7 +418,9 @@ def prepare_records(
             np.median(surface_distance[np.arange(len(lens_positions)), eye])
         ),
         "n_raw_patches": int(len(raw_records)),
-        "n_qc_records": int(len(records)),
+        "n_outer_qc_records": int(n_outer_qc),
+        "n_target_resolvable": int(n_target_resolvable),
+        "n_qc_records": int(n_target_qc),
         "qc_failure_counts": failure_counts,
         "candidate_scale_q05_q50_q95_um": quantiles(candidate_scale),
         "candidate_depth_q05_q50_q95_um": quantiles(candidate_depth),
@@ -384,6 +437,12 @@ def bootstrap_ci(values: np.ndarray, rng: np.random.Generator) -> tuple[float, f
 
 
 def run_cross_eye(records: list[dict]) -> tuple[pd.DataFrame, pd.DataFrame]:
+    if any(
+        not record.get("target_valid", True)
+        or not np.all(np.isfinite(record["thickness"]))
+        for record in records
+    ):
+        raise ValueError("run_cross_eye requires target-QC records only")
     rows = []
     for test_eye in [0, 1]:
         train = [record for record in records if record["eye"] != test_eye]

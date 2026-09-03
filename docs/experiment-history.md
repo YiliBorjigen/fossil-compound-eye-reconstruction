@@ -205,12 +205,37 @@ ellipsoid reached 8.53 micrometres.
 
 Experiment 58 inverted the PCA transform stored in the public eyemap RData
 files to recover exact raw-coordinate landmarks, then froze 20240701 as the
-only training volume. On untouched 20240530, the population template reached
+only training volume. On external 20240530, the population template reached
 2.72 micrometres median error and the outer-curvature ridge 2.49 micrometres.
-On the coarser 20231107 mesh, the corresponding errors were 15.23 and 15.03
+On the coarser 20231107 mesh, the corresponding errors were 15.18 and 14.96
 micrometres because its median target depth was much larger. The ellipsoid
-errors were 11.53 and 27.04 micrometres. Thus a population prior can
+errors were 11.53 and 26.99 micrometres. Thus a population prior can
 transfer to a similar scan, while outer curvature contributes only a small
 increment and cannot absorb major between-volume depth shifts. A target-depth
 ceiling inherited from development initially hid much of that shift; removing
-the outcome-dependent cutoff raised 20231107 coverage to 1,508/1,632 lenses.
+the outcome-dependent cutoff and a later complete-patch support gate raised
+20231107 coverage to 1,528/1,632 lenses.
+
+## Same-eye patch reconstruction (Experiment 59)
+
+Experiment 59 tested the remaining practical route: borrow information from
+proximal surfaces that survive elsewhere in the same eye. Eight deterministic
+interior seeds per eye defined non-overlapping graph neighbourhoods; nested
+7-, 19- and 37-lens regions were hidden in both eyes of all three Arthur Zhao
+volumes. Graphs and masks used retained distal centroids without consulting
+target availability, quality, depth or error.
+
+For the primary 19-lens regions, a prespecified six-neighbour inverse-square
+depth rule plus a shared within-lens shape reached median axial errors of 1.32,
+0.36 and 0.52 micrometres against quadratic-smoothed central proximal targets
+on 20231107, 20240530 and 20240701. It improved on a
+same-eye template in all six eye summaries and remained accurate across the
+2023 depth shift. A new graph-harmonic comparator was modestly lower in all six
+eye summaries and remains method-development evidence. Nominal 90% point-error
+bands attained 88.96% pooled marginal coverage, but patch-specific coverage
+ranged from 46% to 100%.
+
+This is a positive modern within-eye interpolation result for well-supported
+interior loss. It does not solve edge loss, total absence of proximal surfaces,
+cross-specimen transfer or fossil anatomical identity. Three volumes and six
+eyes—not hundreds of hidden lenses—set the biological evidence scale.

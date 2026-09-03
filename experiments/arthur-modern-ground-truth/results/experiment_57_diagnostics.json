@@ -1,10 +1,14 @@
 {
+  "include_invalid_targets": false,
+  "n_records_returned": 1679,
   "n_landmarks": 1709,
   "n_eye_0": 852,
   "n_eye_1": 857,
   "median_lens_tip_distance_um": 24.37556126553804,
   "median_landmark_mesh_distance_um": 6.387090398812273,
   "n_raw_patches": 1709,
+  "n_outer_qc_records": 1700,
+  "n_target_resolvable": 1700,
   "n_qc_records": 1679,
   "qc_failure_counts": {
     "patch_support": 0,
@@ -12,8 +16,8 @@
     "outer_scale": 0,
     "central_support": 0,
     "nonfinite_target": 0,
-    "target_nonpositive": 30,
-    "outer_fit_rmse": 0,
+    "target_nonpositive": 21,
+    "outer_fit_rmse": 9,
     "inner_fit_rmse": 0
   },
   "candidate_scale_q05_q50_q95_um": [
@@ -22,9 +26,9 @@
     9.331033271592974
   ],
   "candidate_depth_q05_q50_q95_um": [
-    9.970773602145432,
-    13.78469278521695,
-    15.655413884896989
+    10.035065852669865,
+    13.79386237642031,
+    15.663287431902171
   ],
   "candidate_outer_rmse_q05_q50_q95_um": [
     0.0983164735678351,
@@ -32,9 +36,9 @@
     1.6636793727450456
   ],
   "candidate_inner_rmse_q05_q50_q95_um": [
-    0.08132561923876869,
-    0.33803276728770704,
-    0.9548111644964206
+    0.08127827822535891,
+    0.3378017680005422,
+    0.9554766737936614
   ],
   "tip_mesh_eye_surfaces": 2,
   "lens_mesh_sha256": "d4d7ab34517e744c5ce1a1d56f6b4fba0deaffcb32b4c9dbbfebf87529beecfa",

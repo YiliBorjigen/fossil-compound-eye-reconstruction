@@ -1,0 +1,5 @@
+volume,method,radius_hops,patches,median_calibrated_half_width_um,point_coverage,lenses_with_at_least_90pct_point_coverage,fraction_lenses_with_at_least_90pct_point_coverage,heldout_qc_lenses
+20231107,six_neighbor_depth_shared_shape,2,16,3.323692173839147,0.8929905782975958,241,0.7927631578947368,304
+20240530,six_neighbor_depth_shared_shape,2,16,1.060981503628458,0.886127355425601,242,0.7960526315789473,304
+20240701,six_neighbor_depth_shared_shape,2,16,1.5263571571978236,0.8898229369720596,238,0.7828947368421053,304
+pooled_descriptive,six_neighbor_depth_shared_shape,2,48,1.5263571571978236,0.8896469568984188,721,0.7905701754385965,912

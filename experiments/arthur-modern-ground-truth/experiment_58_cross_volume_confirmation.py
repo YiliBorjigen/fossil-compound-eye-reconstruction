@@ -58,7 +58,9 @@ def load_manifest(path: Path) -> list[dict]:
     return rows
 
 
-def prepare_all(rows: list[dict]) -> tuple[list[dict], list[dict]]:
+def prepare_all(
+    rows: list[dict], include_invalid_targets: bool = False
+) -> tuple[list[dict], list[dict]]:
     all_records: list[dict] = []
     all_diagnostics: list[dict] = []
     for row in rows:
@@ -70,7 +72,12 @@ def prepare_all(rows: list[dict]) -> tuple[list[dict], list[dict]]:
         _, tip_surfaces = parse_wrl_surfaces(tip_mesh)
         lens_positions, tip_positions = raw_positions_from_rdata(rdata_path)
 
-        records, diagnostics = prepare_records(lens_surfaces, lens_positions, tip_positions)
+        records, diagnostics = prepare_records(
+            lens_surfaces,
+            lens_positions,
+            tip_positions,
+            include_invalid_targets=include_invalid_targets,
+        )
         for record in records:
             record["volume"] = volume
 
@@ -97,6 +104,12 @@ def prepare_all(rows: list[dict]) -> tuple[list[dict], list[dict]]:
 def run_frozen_transfer(
     records: list[dict], training_volume: str
 ) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+    if any(
+        not record.get("target_valid", True)
+        or not np.all(np.isfinite(record["thickness"]))
+        for record in records
+    ):
+        raise ValueError("run_frozen_transfer requires target-QC records only")
     train = [record for record in records if record["volume"] == training_volume]
     tests = [record for record in records if record["volume"] != training_volume]
     if not train or not tests:

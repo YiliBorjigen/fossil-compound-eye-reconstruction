@@ -81,3 +81,29 @@ python experiments/arthur-modern-ground-truth/experiment_58_cross_volume_confirm
   --manifest /path/to/local_manifest.json \
   --training-volume 20240701
 ```
+
+## Contiguous same-eye loss
+
+`experiment_59_neighbor_block_validation.py` tests the usable case in which a
+contiguous group of proximal surfaces is missing but other proximal surfaces
+remain visible in the same eye. After oracle separation of the connected lens
+layer, all graph construction and mask selection use retained distal-cap
+centroids only. Target availability, QC, depth and error cannot affect the
+masks.
+
+Each eye contributes eight separated seeds and nested graph-radius 1, 2 and 3
+masks containing 7, 19 and 37 lenses. The fixed primary adapts the earlier
+six-neighbour inverse-square depth rule; same-eye templates, outer curvature,
+nearest/full-surface interpolation, an ellipsoid and graph-harmonic depth are
+comparators. The score is axial error against a robust-quadratic proximal fit
+on the central canonical disk, not whole-mesh or watertight-lens distance.
+
+Run all three supplied pairs with:
+
+```bash
+python experiments/arthur-modern-ground-truth/experiment_59_neighbor_block_validation.py \
+  --manifest /path/to/local_manifest.json
+```
+
+The aggregate result files and full interpretation are in the
+[Experiment 59 report](../../reports/EXPERIMENT_59_ARTHUR_NEIGHBOUR_RECONSTRUCTION.md).

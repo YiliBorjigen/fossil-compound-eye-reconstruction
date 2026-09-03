@@ -29,7 +29,11 @@ but the six-neighbour method has the lower 90th-percentile error (12.00 versus
 17.73 µm) and directly represents the usable biological assumption: nearby
 homologous facets can supply missing depth information. Its calibrated 90%
 error half-width is still broad at 20.31 µm. In a less independent,
-leave-one-facet-out scenario, it reaches 6.59 µm median error.
+leave-one-facet-out scenario, it reaches 6.59 µm median error. The same
+mechanism has now been checked against verified modern proximal surfaces in
+all three Arthur Zhao volumes: quadratic-smoothed central proximal targets in
+contiguous 19-lens-scale regions are reconstructed at 0.36–1.32 µm median axial
+error when same-eye proximal neighbours remain visible.
 
 ![Wholly held-out surface reconstruction in Asaphus](experiments/repeat-aligned/results/experiment_54_whole_facet_reconstruction.png)
 
@@ -48,14 +52,14 @@ surface at prediction time.
 |---|---:|---:|---:|---:|
 | 20240701 development, whole-eye holdout | 13.81 µm | 8.53 µm | 0.89 µm | 0.86 µm |
 | 20240530 independent test | 16.35 µm | 11.53 µm | 2.72 µm | 2.49 µm |
-| 20231107 independent test | 28.97 µm | 27.04 µm | 15.23 µm | 15.03 µm |
+| 20231107 independent test | 28.91 µm | 26.99 µm | 15.18 µm | 14.96 µm |
 
 The 20240701 value is a within-volume development result: each whole eye was
 held out in turn. The frozen model then transferred well to the similar
 20240530 scan but not across the much larger 20231107 depth shift. Outer
-curvature adds only 0.084 and 0.225 µm median paired improvement over the
+curvature adds only 0.084 and 0.221 µm median paired improvement over the
 template in the two independent tests. The 2023 mesh is coarse, but
-1,508/1,632 lenses pass the corrected QC. The
+1,528/1,632 lenses pass the corrected QC. The
 modern result sharpens the answer: an ellipsoid is insufficient, and a learned
 outer-curvature mapping does not remove the need for a matched population
 prior, domain-shift checks and uncertainty.
@@ -63,6 +67,34 @@ prior, domain-shift checks and uncertainty.
 ![Independent-volume modern validation](experiments/arthur-modern-ground-truth/results/experiment_58_comparison.png)
 
 See the [Experiment 58 report](reports/EXPERIMENT_58_ARTHUR_CROSS_VOLUME_VALIDATION.md).
+
+### Verified same-eye neighbour test
+
+Experiment 59 asks a different and narrower question than Experiment 58. It
+hides eight separated, contiguous regions in each of both eyes in all three
+volumes, then permits surviving proximal surfaces elsewhere in that same eye
+to guide the reconstruction. The masks are selected from distal geometry
+only after oracle layer separation, and before target availability, quality,
+depth or error is examined. Scores compare corresponding axial heights on a
+quadratic-smoothed central cap; they do not measure the raw rim, full proximal
+mesh or a watertight lens.
+
+| Volume | Fixed six-neighbour primary | Graph-harmonic secondary | Same-eye template | Outer-only ellipsoid |
+|---|---:|---:|---:|---:|
+| 20231107 | 1.32 µm | **1.18 µm** | 2.40 µm | 28.22 µm |
+| 20240530 | 0.36 µm | **0.32 µm** | 0.49 µm | 11.82 µm |
+| 20240701 | 0.52 µm | **0.51 µm** | 0.67 µm | 10.16 µm |
+
+The prespecified modern adaptation of the neighbour rule therefore survives
+the large 2023 depth shift that defeated cross-volume outer-only transfer. The
+new graph-harmonic comparator is
+modestly lower in all six eye summaries, but remains method-development
+evidence. The validated scope is patchy interior loss:
+it requires preserved proximal surfaces in the same eye and does not solve the
+case in which only outer curvatures remain everywhere. See the
+[Experiment 59 report](reports/EXPERIMENT_59_ARTHUR_NEIGHBOUR_RECONSTRUCTION.md).
+
+![Verified modern neighbour reconstruction](experiments/arthur-modern-ground-truth/results/experiment_59_comparison.png)
 
 ## What is being reconstructed
 
@@ -176,6 +208,7 @@ The precise supported and unsupported statements are maintained in
 | [`experiments/boundary-definition-sensitivity/`](experiments/boundary-definition-sensitivity/) | Spatially held-out calibration of the observer–gradient landmark offset |
 | [`experiments/synthetic-centres/`](experiments/synthetic-centres/) | Controlled missing-centre and torn-edge tests |
 | [`experiments/outer-only-modern/`](experiments/outer-only-modern/) | Outer-to-inner surface tests on segmented modern lenses |
+| [`experiments/arthur-modern-ground-truth/`](experiments/arthur-modern-ground-truth/) | Verified modern distal-only transfer and same-eye patch-loss tests |
 | [`experiments/population-prior-modern/`](experiments/population-prior-modern/) | Blind within-eye *Apis* test |
 | [`experiments/population-prior-pieris/`](experiments/population-prior-pieris/) | Independent *Pieris* transfer and negative result |
 | [`experiments/manual-axis-pieris/`](experiments/manual-axis-pieris/) | Human-traced 3D axis and regional-transfer tests |
@@ -214,10 +247,12 @@ or focal position from the outer surface alone.
 
 ## Current status
 
-The missing-surface benchmark is answered for the analysed *Asaphus* specimen:
-a wholly missing candidate surface can be approximated from nearby preserved
-surfaces, but not reliably from outer curvature alone. The broader problem of
-reconstructing a closed anatomical lens and its optical function is not solved.
+The missing-surface benchmark is answered for the analysed *Asaphus* specimen
+and now checked against verified modern *Drosophila* surfaces: a wholly missing
+surface can be approximated from nearby preserved homologues, but not reliably
+from outer curvature alone. The broader problem of reconstructing a closed
+anatomical lens when all internal surfaces are absent—and then inferring its
+optical function—is not solved.
 
 The next decisive work is biological rather than cosmetic: independently label
 the relevant internal anatomy and repeat the frozen test in another fossil with
