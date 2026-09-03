@@ -178,9 +178,12 @@ be credited as the work develops.
 
 Current contributors include Arthur Zhao, who provided the *Drosophila* lens
 and photoreceptor-tip surface meshes, and Michael Reiser, who connected the
-project with the relevant eyemap resources and researchers. Their
-acknowledgement does not imply endorsement of this project's analyses or
-conclusions.
+project with the relevant eyemap resources and researchers. Maike Kittelmann
+located and shared twelve cleaned M3 and RED3 binary corneal-lens stacks for
+the planned multi-eye validation. Lauren Sumner-Rooney helped frame the fossil
+reconstruction question, particularly the case in which outer lens curvature
+survives but the internal/proximal surface is lost. Their acknowledgement does
+not imply endorsement of this project's analyses or conclusions.
 
 ## What this project does not claim
 
