@@ -33,5 +33,20 @@ The raw MorphoSource media are not redistributed here. Users must obtain them
 from MorphoSource and follow the media-specific download agreement and citation
 requirements.
 
+Twelve manually cleaned binary corneal-lens TIFF stacks from three female and
+three male eyes of each of *Drosophila simulans* M3 and *D. mauritiana* RED3
+were supplied directly by Maike Kittelmann for planned modern validation. The
+associated publication and public analysis material are:
+
+- Buffry et al. (2024), *BMC Biology*,
+  [Evolution of compound eye morphology underlies differences in vision between closely related Drosophila species](https://doi.org/10.1186/s12915-024-01864-7).
+- Buffry et al. (2024), Figshare,
+  [Data and code for the publication](https://doi.org/10.6084/m9.figshare.24769677.v6).
+
+The article and Figshare record are released under CC BY 4.0. The directly
+shared TIFF archives are not redistributed unless their applicable terms are
+confirmed explicitly; the public licence is not silently assumed to cover
+files received outside the Figshare deposit.
+
 Code in this repository is released under the MIT licence. The ODA project
 retains its own copyright and licence.
