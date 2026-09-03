@@ -10,6 +10,10 @@ does not survive a large between-volume depth shift. Local outer curvature
 adds a small, consistent improvement to that template; it does not make the
 outer-only reconstruction reliable by itself.
 
+Across the three supplied volumes, the outer-curvature result is **0.86 µm**
+for the 20240701 whole-eye development holdouts, **2.49 µm** for the independent
+20240530 test, and **15.03 µm** for the independent 20231107 test.
+
 ## Why this experiment was run
 
 Lauren Sumner-Rooney identified the biologically important failure mode: fossil
@@ -78,16 +82,19 @@ corrected support, orientation and surface-fit criteria.
 
 ## Results
 
-| Held-out volume | Median target depth | Ellipsoid MAE | 20240701 template MAE | Outer-curvature ridge MAE |
+| Volume and role | Median target depth | Ellipsoid MAE | Population template MAE | Outer-curvature ridge MAE |
 |---|---:|---:|---:|---:|
-| 20240530 | 16.35 µm | 11.53 µm (72.8%) | 2.72 µm (16.5%) | 2.49 µm (15.4%) |
-| 20231107 | 28.97 µm | 27.04 µm (97.4%) | 15.23 µm (52.6%) | 15.03 µm (51.9%) |
+| 20240701 development, whole-eye holdout | 13.81 µm | 8.53 µm (61.2%) | 0.89 µm (6.4%) | 0.86 µm (6.3%) |
+| 20240530 independent test | 16.35 µm | 11.53 µm (72.8%) | 2.72 µm (16.5%) | 2.49 µm (15.4%) |
+| 20231107 independent test | 28.97 µm | 27.04 µm (97.4%) | 15.23 µm (52.6%) | 15.03 µm (51.9%) |
 
-Percentages are median per-lens MAE divided by median target depth. The
-20240530 result shows that a population thickness prior can transfer across a
-similar modern scan. The 20231107 result shows the limit: its proximal surface
-is much deeper than in the training volume, and neither the fixed template nor
-the outer-curvature model recovers that shift.
+Percentages are median per-lens MAE divided by median target depth. For
+20240701, the template is learned from the opposite training eye; this is
+development evidence, not an independent-volume result. The 20240530 result
+shows that a population thickness prior can transfer across a similar modern
+scan. The 20231107 result shows the limit: its proximal surface is much deeper
+than in the training volume, and neither the fixed template nor the outer-
+curvature model recovers that shift.
 
 Relative to the training-volume template, the outer-curvature ridge has a
 median paired advantage of:

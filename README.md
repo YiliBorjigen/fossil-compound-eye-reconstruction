@@ -44,14 +44,17 @@ surfaces for a stricter test. The method was developed on 20240701, then frozen
 and transferred to two untouched volumes using only the retained distal
 surface at prediction time.
 
-| Held-out modern volume | Median true depth | Outer-only ellipsoid | 20240701 population template | Outer-curvature model |
+| Volume and role | Median true depth | Outer-only ellipsoid | Population template | Outer-curvature model |
 |---|---:|---:|---:|---:|
-| 20240530 | 16.35 µm | 11.53 µm | 2.72 µm | 2.49 µm |
-| 20231107 | 28.97 µm | 27.04 µm | 15.23 µm | 15.03 µm |
+| 20240701 development, whole-eye holdout | 13.81 µm | 8.53 µm | 0.89 µm | 0.86 µm |
+| 20240530 independent test | 16.35 µm | 11.53 µm | 2.72 µm | 2.49 µm |
+| 20231107 independent test | 28.97 µm | 27.04 µm | 15.23 µm | 15.03 µm |
 
-The population prior transfers well to the similar 20240530 scan but not across
-the much larger 20231107 depth shift. Outer curvature adds only 0.084 and 0.225
-µm median paired improvement over the template. The 2023 mesh is coarse, but
+The 20240701 value is a within-volume development result: each whole eye was
+held out in turn. The frozen model then transferred well to the similar
+20240530 scan but not across the much larger 20231107 depth shift. Outer
+curvature adds only 0.084 and 0.225 µm median paired improvement over the
+template in the two independent tests. The 2023 mesh is coarse, but
 1,508/1,632 lenses pass the corrected QC. The
 modern result sharpens the answer: an ellipsoid is insufficient, and a learned
 outer-curvature mapping does not remove the need for a matched population

@@ -133,9 +133,11 @@ the depth-matched background. It cannot support a transferable population-prior
 claim.
 
 Experiments 57–58 use verified modern *Drosophila* lens surfaces and directly
-test distal-only reconstruction. The 20240530 transfer result supports a useful
-population prior on one similar independent volume, but 20231107 exposes a
-large depth-domain shift. After removing an invalid target-depth ceiling,
+test distal-only reconstruction. The 0.86 micrometre 20240701 result comes from
+whole-eye development holdouts, not an independent volume. The 20240530
+transfer result supports a useful population prior on one similar independent
+volume, but 20231107 exposes a large depth-domain shift. After removing an
+invalid target-depth ceiling,
 1,508/1,632 lenses pass QC in that scan. Outer curvature improves the population
 template by only 0.084 and 0.225
 micrometres on the two tests. These are modern computational-validation results,
