@@ -31,7 +31,7 @@ reproduced an isolated scalar would create false provenance.
 
 The selected 0.01 is the lower boundary of the tested grid, not an identified
 interior optimum.  The equal-volume score is also nearly flat at that end:
-0.3945297 at alpha 0.01 versus 0.3945330 at 0.02848.  The deterministic grid
+0.3945305 at alpha 0.01 versus 0.3945338 at 0.02848.  The deterministic grid
 choice is adequate for this reconstructed comparator, but it is not evidence
 that 0.01 is a generally optimal penalty.
 
