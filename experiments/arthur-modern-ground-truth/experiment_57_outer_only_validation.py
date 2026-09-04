@@ -197,14 +197,37 @@ def axisymmetric_ellipsoid_prediction(
     return rim_z - vertical_axis * np.sqrt(fraction)
 
 
-def prepare_records(
+def _prepare_oracle_split_records_core(
     lens_surfaces: list[np.ndarray],
     lens_positions: np.ndarray,
     tip_positions: np.ndarray,
-    include_invalid_targets: bool = False,
 ) -> tuple[list[dict], dict]:
+    """Return the pre-QC distal/proximal split used by Experiment 57.
+
+    This is the Stage-1 adapter boundary used by later experiments.  Complete
+    lens geometry and matched tip landmarks are used only to assign a mesh
+    patch to each annotated lens and to identify its two surface layers.  A
+    record enters this returned cohort solely when the retained distal layer
+    has at least ``MIN_CAP_VERTICES`` vertices.  No distal-frame, scale,
+    curvature, fit-residual, target-availability, or target-quality criterion
+    is applied here.
+
+    Keeping this function separate makes it possible to feed exactly the same
+    raw oracle-split caps to a newer distal-only geometry/QC implementation
+    without changing Experiment 57's historical downstream calculations.
+    """
     if len(lens_positions) != len(tip_positions):
         raise ValueError("Lens and tip landmark tables must have equal lengths")
+    if len(lens_surfaces) != 2:
+        raise ValueError("Exactly two eye surfaces are required")
+    if len(lens_positions) == 0:
+        raise ValueError("At least one matched lens/tip landmark is required")
+    if not (
+        np.all(np.isfinite(lens_positions))
+        and np.all(np.isfinite(tip_positions))
+        and all(np.all(np.isfinite(surface)) for surface in lens_surfaces)
+    ):
+        raise ValueError("Mesh and landmark coordinates must be finite")
 
     tip_rows, lens_columns = linear_sum_assignment(distance.cdist(tip_positions, lens_positions))
     tip_for_lens = np.empty_like(lens_positions)
@@ -217,6 +240,10 @@ def prepare_records(
     eye = np.argmin(surface_distance, axis=1)
 
     raw_records: list[dict] = []
+    stage1_failure_counts = {
+        "patch_support": 0,
+        "distal_layer_support": 0,
+    }
     failure_counts = {
         "patch_support": 0,
         "layer_support": 0,
@@ -242,6 +269,7 @@ def prepare_records(
             # oracle split. Eligibility after that split depends on retained
             # distal support, never on total (distal + hidden proximal) count.
             if len(patch) < 2:
+                stage1_failure_counts["patch_support"] += 1
                 failure_counts["patch_support"] += 1
                 continue
 
@@ -253,6 +281,7 @@ def prepare_records(
             outer = patch[is_outer]
             inner = patch[~is_outer]
             if len(outer) < MIN_CAP_VERTICES:
+                stage1_failure_counts["distal_layer_support"] += 1
                 failure_counts["layer_support"] += 1
                 continue
             target_support = len(inner) >= MIN_CAP_VERTICES
@@ -268,6 +297,49 @@ def prepare_records(
                     "patch_vertices": len(patch),
                 }
             )
+
+    diagnostics = {
+        "n_landmarks": int(len(lens_positions)),
+        "n_eye_0": int(np.sum(eye == 0)),
+        "n_eye_1": int(np.sum(eye == 1)),
+        "median_lens_tip_distance_um": float(np.median(pair_distance)),
+        "median_landmark_mesh_distance_um": float(
+            np.median(surface_distance[np.arange(len(lens_positions)), eye])
+        ),
+        "n_raw_patches": int(len(raw_records)),
+        "stage1_failure_counts": stage1_failure_counts,
+        # Private compatibility state consumed only by prepare_records below.
+        # A copy is made there before any public diagnostics are emitted.
+        "_failure_counts": failure_counts,
+    }
+    return raw_records, diagnostics
+
+
+def prepare_oracle_split_records(
+    lens_surfaces: list[np.ndarray],
+    lens_positions: np.ndarray,
+    tip_positions: np.ndarray,
+) -> tuple[list[dict], dict]:
+    """Expose Stage-1 caps without Experiment 57's private QC accumulator."""
+    records, diagnostics = _prepare_oracle_split_records_core(
+        lens_surfaces, lens_positions, tip_positions
+    )
+    diagnostics = {
+        key: value for key, value in diagnostics.items() if not key.startswith("_")
+    }
+    return records, diagnostics
+
+
+def prepare_records(
+    lens_surfaces: list[np.ndarray],
+    lens_positions: np.ndarray,
+    tip_positions: np.ndarray,
+    include_invalid_targets: bool = False,
+) -> tuple[list[dict], dict]:
+    raw_records, stage1 = _prepare_oracle_split_records_core(
+        lens_surfaces, lens_positions, tip_positions
+    )
+    failure_counts = dict(stage1["_failure_counts"])
 
     # This operational centre is fitted only after all hidden inner vertices
     # and all tip landmarks have been discarded from the predictor input.
@@ -410,13 +482,13 @@ def prepare_records(
     diagnostics = {
         "include_invalid_targets": bool(include_invalid_targets),
         "n_records_returned": int(len(records)),
-        "n_landmarks": int(len(lens_positions)),
-        "n_eye_0": int(np.sum(eye == 0)),
-        "n_eye_1": int(np.sum(eye == 1)),
-        "median_lens_tip_distance_um": float(np.median(pair_distance)),
-        "median_landmark_mesh_distance_um": float(
-            np.median(surface_distance[np.arange(len(lens_positions)), eye])
-        ),
+        "n_landmarks": stage1["n_landmarks"],
+        "n_eye_0": stage1["n_eye_0"],
+        "n_eye_1": stage1["n_eye_1"],
+        "median_lens_tip_distance_um": stage1["median_lens_tip_distance_um"],
+        "median_landmark_mesh_distance_um": stage1[
+            "median_landmark_mesh_distance_um"
+        ],
         "n_raw_patches": int(len(raw_records)),
         "n_outer_qc_records": int(n_outer_qc),
         "n_target_resolvable": int(n_target_resolvable),

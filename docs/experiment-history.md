@@ -239,3 +239,43 @@ This is a positive modern within-eye interpolation result for well-supported
 interior loss. It does not solve edge loss, total absence of proximal surfaces,
 cross-specimen transfer or fossil anatomical identity. Three volumes and six
 eyes—not hundreds of hidden lenses—set the biological evidence scale.
+
+## Reconstructed margin, donor-survival and zero-donor tests (Experiments 60–62)
+
+The original unpushed Experiment 60–62 worktree was lost. The scientific
+questions and two orphan Experiment 62 scalars survived, but the exact
+historical specifications and results did not. The replacements below freeze
+new, transparent protocols and do not claim byte-for-byte historical recovery.
+
+Experiment 60 moved Experiment 59's hidden regions to the distal-defined eye
+margin. For graph-radius-two patches, the fixed six-neighbour method reached
+2.64, 1.20 and 1.45 micrometres median central-cap MAE on 20231107, 20240530
+and 20240701, with corresponding p90 lens errors of 11.71, 5.30 and 4.08
+micrometres. Preserved same-eye surfaces still constrain margin loss, but the
+larger error tail rules out treating the edge like a guarded interior patch.
+
+Experiment 61 deterministically thinned potential proximal donors without
+consulting proximal availability or quality. Two percent was the smallest
+tested fraction for which every one of 25 repeats in all six eyes retained the
+required six target-QC donors and every eye stayed below 10% median normalized
+MAE. Median eye-level errors at that fraction were 2.26, 0.74 and 0.94
+micrometres. This is a descriptive threshold for these densely sampled modern
+eyes, not a biological constant, and the method remains undefined at zero
+donors.
+
+Experiment 62 addressed zero donors by refusing a unique reconstruction. Its
+rebuilt, reflection-even outer model uses five distal descriptors and
+whole-volume holdout. Median errors were 13.79, 3.64 and 6.36 micrometres. The
+replacement alpha selection chose 0.01, the lower boundary of a nearly flat
+low-alpha grid; it did not reproduce the recovered orphan alpha
+123.28467394420659, whose historical definition remains unknown. Three named
+held-out residual morphologies span an average 19.71 micrometres on the
+canonical grid. They are sensitivity scenarios, not confidence or
+identification intervals.
+
+Experiments 60 and 61 preserve Experiment 59's legacy extraction and target-QC
+contract to isolate their missingness interventions. Experiment 62 instead
+uses the rebuilt Experiment 63 q90 source table and its `distal_qc AND
+target_resolvable` cohort. Their numerical differences are therefore not a
+row-matched donor-count ablation. None of these modern-eye tests establishes
+fossil transfer, anatomical identity or optical function.

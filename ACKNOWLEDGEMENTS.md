@@ -12,8 +12,9 @@ conclusions.
   twelve manually cleaned binary corneal-lens TIFF stacks corresponding to the
   *Drosophila simulans* M3 and *D. mauritiana* RED3 eyes analysed by
   [Buffry et al. (2024)](https://doi.org/10.1186/s12915-024-01864-7): three
-  female and three male eyes for each species. These data make possible a
-  planned multi-eye modern validation. The directly supplied archives are not
+  female and three male flies for each species, with one eye stack per fly.
+  These twelve independent animals make possible a multi-eye modern
+  validation. The directly supplied archives are not
   redistributed here pending confirmation of their applicable reuse terms.
 - **Arthur Zhao** (Janelia Research Campus) exported and shared surface meshes
   for all three *Drosophila* µCT volumes used by Zhao et al., including the

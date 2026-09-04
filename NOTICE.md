@@ -34,9 +34,9 @@ from MorphoSource and follow the media-specific download agreement and citation
 requirements.
 
 Twelve manually cleaned binary corneal-lens TIFF stacks from three female and
-three male eyes of each of *Drosophila simulans* M3 and *D. mauritiana* RED3
-were supplied directly by Maike Kittelmann for planned modern validation. The
-associated publication and public analysis material are:
+three male flies of each of *Drosophila simulans* M3 and *D. mauritiana* RED3,
+one eye stack per fly, were supplied directly by Maike Kittelmann for modern
+validation. The associated publication and public analysis material are:
 
 - Buffry et al. (2024), *BMC Biology*,
   [Evolution of compound eye morphology underlies differences in vision between closely related Drosophila species](https://doi.org/10.1186/s12915-024-01864-7).

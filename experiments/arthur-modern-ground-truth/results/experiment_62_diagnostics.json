@@ -1,0 +1,46 @@
+{
+  "experiment": 62,
+  "specification_status": "reconstructed_after_unpushed_worktree_loss",
+  "scope": "outer-only source model with no same-eye proximal donors",
+  "source_table_binding": {
+    "filename": "arthur_source_table.csv",
+    "bytes": 2541299,
+    "sha256": "ca3e4aa9f70469abf23abd6a82d99c826788995fa2feea0db7bfd88b478d9f3e",
+    "n_rows_total": 4942,
+    "n_primary_distal_qc_target_resolvable_rows": 4875,
+    "n_primary_rows_by_volume": {
+      "20231107": 1584,
+      "20240530": 1592,
+      "20240701": 1699
+    }
+  },
+  "outer_features": [
+    "distal_scale_um",
+    "distal_gradient_magnitude",
+    "distal_curvature_eigenvalue_1",
+    "distal_curvature_eigenvalue_2",
+    "distal_normalized_fit_residual"
+  ],
+  "selected_alpha": 0.01,
+  "selected_alpha_is_lower_grid_boundary": true,
+  "recovered_historical_selected_alpha": 123.28467394420659,
+  "recovered_alpha_reproduced": false,
+  "selected_alpha_status": "unresolved: reconstructed protocol does not reproduce the recovered scalar; historical feature/score definition was lost",
+  "recovered_support_threshold": 3.095098748914439,
+  "support_threshold_status": "orphan scalar only: historical score derivation unresolved and the scalar is not applied to the reconstructed score",
+  "reconstructed_support_threshold": 5.265457846042338,
+  "reconstructed_support_threshold_definition": "unweighted q95 source standardized Euclidean feature radius; descriptive only and never removes a row",
+  "reconstructed_source_support_radius_q50_q90_q95_q99": [
+    1.2558059569252082,
+    3.588993470099952,
+    5.265457846042338,
+    7.0438275123854055
+  ],
+  "alternative_morphology_scenarios": [
+    "heldout_residual_20231107",
+    "heldout_residual_20240530",
+    "heldout_residual_20240701"
+  ],
+  "scenario_status": "explicit held-out-volume median-residual sensitivity scenarios; not confidence intervals and not unique reconstructions",
+  "scenario_grid_envelope_mean_width_um": 19.705666931494726
+}

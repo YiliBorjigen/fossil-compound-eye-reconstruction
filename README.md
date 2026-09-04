@@ -6,9 +6,11 @@ the lost surface be reconstructed?
 
 ## Answer so far
 
-**Not from outer curvature alone.** In the *Asaphus* scan studied here, local
-outer-surface curvature did not predict a wholly missing internal boundary
-better than simple geometric baselines.
+**Not reliably with the tested outer-only methods.** In the *Asaphus* scan
+studied here, local outer-surface curvature did not predict a wholly missing
+internal boundary better than simple geometric baselines. This is evidence
+about the methods and data tested here, not a proof that every possible
+outer-only method must fail.
 
 **A useful approximation is possible when neighbouring facets retain the same
 internal boundary.** The most practical method estimates the missing facet's
@@ -179,8 +181,9 @@ be credited as the work develops.
 Current contributors include Arthur Zhao, who provided the *Drosophila* lens
 and photoreceptor-tip surface meshes, and Michael Reiser, who connected the
 project with the relevant eyemap resources and researchers. Maike Kittelmann
-located and shared twelve cleaned M3 and RED3 binary corneal-lens stacks for
-the planned multi-eye validation. Lauren Sumner-Rooney helped frame the fossil
+located and shared twelve cleaned M3 and RED3 binary corneal-lens stacks from
+twelve flies, one eye per fly, for the multi-eye validation. Lauren
+Sumner-Rooney helped frame the fossil
 reconstruction question, particularly the case in which outer lens curvature
 survives but the internal/proximal surface is lost. Their acknowledgement does
 not imply endorsement of this project's analyses or conclusions.
@@ -212,6 +215,7 @@ The precise supported and unsupported statements are maintained in
 | [`experiments/synthetic-centres/`](experiments/synthetic-centres/) | Controlled missing-centre and torn-edge tests |
 | [`experiments/outer-only-modern/`](experiments/outer-only-modern/) | Outer-to-inner surface tests on segmented modern lenses |
 | [`experiments/arthur-modern-ground-truth/`](experiments/arthur-modern-ground-truth/) | Verified modern distal-only transfer and same-eye patch-loss tests |
+| [`experiments/maike-modern-ground-truth/`](experiments/maike-modern-ground-truth/) | Oracle-conditioned, twelve-animal external validation from cleaned binary lens stacks |
 | [`experiments/population-prior-modern/`](experiments/population-prior-modern/) | Blind within-eye *Apis* test |
 | [`experiments/population-prior-pieris/`](experiments/population-prior-pieris/) | Independent *Pieris* transfer and negative result |
 | [`experiments/manual-axis-pieris/`](experiments/manual-axis-pieris/) | Human-traced 3D axis and regional-transfer tests |
