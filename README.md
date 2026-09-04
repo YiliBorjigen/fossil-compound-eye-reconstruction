@@ -98,6 +98,22 @@ case in which only outer curvatures remain everywhere. See the
 
 ![Verified modern neighbour reconstruction](experiments/arthur-modern-ground-truth/results/experiment_59_comparison.png)
 
+### Twelve-animal validation: stopped before scoring
+
+Maike Kittelmann supplied one cleaned binary lens stack from each of twelve M3
+and RED3 flies. Experiment 63 froze an Arthur-trained test of whether distal
+shape descriptors improve on eye position and distal scale. All twelve builds
+and target-blind frame audits completed, but the predetermined visual gate
+found noncoherent distal caps in four eyes. Under the frozen rule, the entire
+experiment stopped: no passing attestations were issued, the primary backend
+was not run, and no prediction error or model comparison was inspected.
+
+This is a preprocessing/QC result, not evidence that distal shape did or did
+not help. A separately numbered revision may be developed while outcomes stay
+sealed, but reuse of these inputs would be a post-QC evaluation; untouched
+confirmation of the revised complete pipeline requires new animals. See the
+[Experiment 63 stop report](reports/EXPERIMENT_63_MAIKE_PRE_OUTCOME_QC_STOP.md).
+
 ## What is being reconstructed
 
 The corrected 3.7 µm *Asaphus* volume contains 116 facet centres that remain
@@ -260,6 +276,11 @@ surface can be approximated from nearby preserved homologues, but not reliably
 from outer curvature alone. The broader problem of reconstructing a closed
 anatomical lens when all internal surfaces are absent—and then inferring its
 optical function—is not solved.
+
+The new twelve-animal M3/RED3 cohort has not yet yielded an outer-only model
+result. Its first frozen run stopped at pre-outcome visual QC, exposing a
+distal-cap producer defect before scoring. That distinction is important: it
+does not add a positive or negative transfer result to the evidence above.
 
 The next decisive work is biological rather than cosmetic: independently label
 the relevant internal anatomy and repeat the frozen test in another fossil with

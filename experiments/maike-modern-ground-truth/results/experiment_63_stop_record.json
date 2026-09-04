@@ -1,0 +1,133 @@
+{
+  "schema_version": "experiment63.pre_outcome_stop.v1",
+  "experiment": 63,
+  "status": "stopped_before_model_outcome_evaluation",
+  "frozen_git_commit": "0e1479740d37b7f25d9fcb66b33e952340515400",
+  "recorded_utc_date": "2026-09-04",
+  "review_mode": "ai_assisted_visual_review_without_model_outputs",
+  "review_scope": "frozen_stratified_sample_with_stop_at_first_nonpass",
+  "outcome_access": {
+    "targets_opened_during_review": false,
+    "predictions_opened": false,
+    "errors_opened": false,
+    "model_comparisons_opened": false,
+    "primary_backend_executed": false
+  },
+  "automatic_preflight": {
+    "expected_lenses": 11369,
+    "distal_qc_pass": 11350,
+    "target_resolvable": 11345,
+    "target_qc_pass": 11345,
+    "all_twelve_frame_audits_passed": true,
+    "all_twelve_primary_retention_fractions_above_0_80": true
+  },
+  "eyes": [
+    {
+      "eye_id": "M3_F_24_01",
+      "sample_manifest_sha256": "755fd776c285db01bebf4d9f30c406bd8dc0c3c36095eb7c5b4565d2d2fc0159",
+      "visual_status": "pass",
+      "samples_reviewed": 32
+    },
+    {
+      "eye_id": "M3_F_28_03",
+      "sample_manifest_sha256": "07f1a7a5df65101097f724e94a47bfeb7078299b573e1c26949d8f4781974a11",
+      "visual_status": "pass",
+      "samples_reviewed": 32
+    },
+    {
+      "eye_id": "M3_F_35_03",
+      "sample_manifest_sha256": "4f734267bccc7ef94128ed50da8ff21f0be875e20619e27f52b336f8d744594e",
+      "visual_status": "pass",
+      "samples_reviewed": 32
+    },
+    {
+      "eye_id": "M3_M_26_01",
+      "sample_manifest_sha256": "66e3d512f6abea6ba2f2a1825068f97ad685d578ca940a4cc858d44c62deb7f1",
+      "visual_status": "fail",
+      "samples_reviewed": 2,
+      "first_nonpass": {
+        "sample_ordinal_zero_based": 1,
+        "sample_filename": "sample_01_r0_s0_lens_000026.png",
+        "lens_index": 26,
+        "reason": "narrow cyan satellite or tail inconsistent with one coherent cap",
+        "render_sha256": "7af84a507e39d4e9dfaf661ffbf07067d6421ffb6a56d87940dffd0ee108b4ec"
+      }
+    },
+    {
+      "eye_id": "M3_M_32_01",
+      "sample_manifest_sha256": "97e03196b1523fa8df023a4e8ae8f197921b2115234b227b34e2487e38074d48",
+      "visual_status": "fail",
+      "samples_reviewed": 1,
+      "first_nonpass": {
+        "sample_ordinal_zero_based": 0,
+        "sample_filename": "sample_00_r0_s0_lens_000621.png",
+        "lens_index": 621,
+        "reason": "narrow cyan spikes inconsistent with one coherent cap",
+        "render_sha256": "155038e8f7da0a5ddc4c527f74c03b25cabfd3189922c07b1a2914635eb1f7b9"
+      }
+    },
+    {
+      "eye_id": "M3_M_36_01",
+      "sample_manifest_sha256": "161c3b1d1b329b20903d75c27f00b296b6832f022f278bb4c0f3359538837110",
+      "visual_status": "fail",
+      "samples_reviewed": 1,
+      "first_nonpass": {
+        "sample_ordinal_zero_based": 0,
+        "sample_filename": "sample_00_r0_s0_lens_000499.png",
+        "lens_index": 499,
+        "reason": "multiple narrow cyan prongs inconsistent with one coherent cap",
+        "render_sha256": "26ecc45a80d9d19393376705ca63d797e1a46fe38a11aa1ce4a9b95d9eef4079"
+      }
+    },
+    {
+      "eye_id": "RED3_25_F_36",
+      "sample_manifest_sha256": "b1010601a221372174ffb7d0ab772f179b669d2fbdfde1698aa2e18cb0066d59",
+      "visual_status": "fail",
+      "samples_reviewed": 23,
+      "first_nonpass": {
+        "sample_ordinal_zero_based": 22,
+        "sample_filename": "sample_22_r2_s3_lens_000776.png",
+        "lens_index": 776,
+        "reason": "shelf-like cyan lobe consistent with a neighbouring-lens merge",
+        "render_sha256": "542f919f1383bdd74ca4ff0402c41ad212f012d5e02df69d69acdf6b31b3a5ae"
+      }
+    },
+    {
+      "eye_id": "RED3_25_F_37",
+      "sample_manifest_sha256": "cc4b1472fcc2826f68e8fa41b73a35ea3c6045dc409d5e8a8b4a6940f739b8b3",
+      "visual_status": "pass",
+      "samples_reviewed": 32
+    },
+    {
+      "eye_id": "RED3_25_F_38",
+      "sample_manifest_sha256": "cda1ee551f21fee69e0d34cef5c3e37a5e907936814b81c2dd2423bc4be6f1ea",
+      "visual_status": "pass",
+      "samples_reviewed": 32
+    },
+    {
+      "eye_id": "RED3_25_M_26",
+      "sample_manifest_sha256": "1753862ab1d562cb3679e16524e8fda6e033ffc73194ac90d2a9b4210f55dba6",
+      "visual_status": "pass",
+      "samples_reviewed": 32
+    },
+    {
+      "eye_id": "RED3_25_M_27",
+      "sample_manifest_sha256": "64ab53c14aada0f654b1b064cf1b39568b7895ebae75fef5bcf01c9d7e4d2a98",
+      "visual_status": "pass",
+      "samples_reviewed": 32
+    },
+    {
+      "eye_id": "RED3_25_M_28",
+      "sample_manifest_sha256": "4492621ad1652d76aaec9e5bd1eb2796c9798c7aa94484dac506568ed7a6a066",
+      "visual_status": "pass",
+      "samples_reviewed": 32
+    }
+  ],
+  "decision": {
+    "visual_gate_passed": false,
+    "passing_attestations_issued": false,
+    "experiment_63_may_be_scored": false,
+    "scientific_model_comparison_available": false
+  },
+  "interpretation": "Experiment 63 identified a technical failure of the frozen distal-cap extraction and visual-QC pipeline; it produced no result about shape descriptors versus the nested control."
+}

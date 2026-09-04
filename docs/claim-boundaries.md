@@ -66,6 +66,10 @@
   neighbouring preserved internal boundaries.
 - The internal-boundary stage did not transfer under frozen criteria to the
   tested *Archegonus* volume.
+- Experiment 63 produced no twelve-animal shape-versus-control result. Its
+  frozen M3/RED3 workflow stopped at the prespecified visual-instance gate
+  after four eyes contained a nonpassing distal cap; no predictions, errors or
+  model comparisons were opened.
 - Seventy-four facets from one *Asaphus* scan are repeated observations, not
   74 independent fossils.
 - The 147 modern cones are repeated observations within one bee, not 147
@@ -161,6 +165,14 @@ Its nominal point-error bands have 88.96% pooled marginal coverage but only
 comparator is method-development evidence. Three volumes and six eyes, with
 biological independence not established by the available metadata, limit the
 inference.
+
+Experiment 63's automatic preprocessing retained 11,345 of 11,369 fixed
+ODA-matched M3/RED3 lenses for the potential primary cohort, but high numerical
+coverage did not guarantee plausible individual caps. Four deterministic
+stratified samples violated the visual coherence rule, causing the complete
+pre-outcome stop. “Four of twelve eyes” is a stopping record, not a population
+failure-rate estimate, and it must not be reported as an outer-information
+model failure because that model comparison was never run.
 
 The Experiment 46 oracle-centred result is a mechanistic diagnostic on the same
 *Pieris* regions used after the transfer failed. It supports centre/axis

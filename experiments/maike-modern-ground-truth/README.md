@@ -1,5 +1,12 @@
 # Experiment 63 independent modern validation
 
+> **Status: stopped before model-outcome evaluation.** The frozen visual-QC
+> gate found a nonpassing distal cap in four of twelve eyes. No passing
+> attestations were issued, and the primary backend was not run. Experiment 63
+> therefore has no shape-versus-control result. See the
+> [stop report](../../reports/EXPERIMENT_63_MAIKE_PRE_OUTCOME_QC_STOP.md) and
+> [machine-readable record](results/experiment_63_stop_record.json).
+
 This directory implements the source preparation, validation-data preparation,
 visual quality control and one-time backend for Experiment 63. The scientific
 question, cohorts, thresholds and decision rules are frozen in the

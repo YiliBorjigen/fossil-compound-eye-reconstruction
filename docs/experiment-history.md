@@ -279,3 +279,26 @@ uses the rebuilt Experiment 63 q90 source table and its `distal_qc AND
 target_resolvable` cohort. Their numerical differences are therefore not a
 row-matched donor-count ablation. None of these modern-eye tests establishes
 fossil transfer, anatomical identity or optical function.
+
+## Twelve-animal validation stopped at technical QC (Experiment 63)
+
+Experiment 63 prospectively froze an Arthur-trained comparison between four
+distal-cap shape descriptors and a nested position-and-scale control, with the
+twelve independently supplied M3 and RED3 eye stacks as one-eye-per-animal
+validation data. At commit `0e1479740d37b7f25d9fcb66b33e952340515400`, all
+twelve builds and distal-frame audits completed. Of 11,369 ODA-matched lenses,
+11,350 passed automatic distal QC and 11,345 were target-resolvable.
+
+The predetermined 32-per-eye visual gate then found noncoherent cyan distal
+caps in `M3_M_26_01/lens_26`, `M3_M_32_01/lens_621`,
+`M3_M_36_01/lens_499` and `RED3_25_F_36/lens_776`. The frozen rule made any
+failed or indeterminate sample a whole-experiment stop. No passing attestations
+were issued, the primary backend was not executed, and no prediction error or
+model comparison was inspected. Experiment 63 therefore reports a pre-outcome
+technical producer failure—not a negative result for distal shape information.
+
+A revised producer must be developed and frozen as a new experiment, exclude
+all 384 viewed sample identities from a fresh lens-level QC draw, and retain
+the no-replacement whole-run stop. Reusing these twelve animals after their
+inputs informed preprocessing is a post-QC evaluation; untouched confirmation
+of the complete revised pipeline requires new animals.
