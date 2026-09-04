@@ -1,0 +1,3950 @@
+{
+  "schema_version": "experiment64.visual-exposure-ledger.v1",
+  "experiment": 64,
+  "frozen_git_commit": "7ad346c8bde08c81d49e9c417441d825719c6de8",
+  "status": "all_rendered_identities_conservatively_exposed",
+  "recorded_utc_date": "2026-09-04",
+  "exposure_scope": "All 384 rendered Experiment 64 sample identities are treated as viewed development cases because AI visual assessments ran concurrently before the global stop.",
+  "future_use_rule": "A later experiment reusing these animals must exclude these 384 identities in addition to the 384 Experiment 63 development identities.",
+  "total_eyes": 12,
+  "identities_per_eye": 32,
+  "total_identities": 384,
+  "eyes": [
+    {
+      "eye_id": "M3_F_24_01",
+      "sample_schema_version": "experiment64.instance-qc-sample.v1",
+      "n_identities": 32,
+      "identities": [
+        {
+          "ordinal": 0,
+          "lens_index": 588,
+          "seed_id": "589",
+          "radial_stratum": 0,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_00_r0_s0_lens_000588.png",
+          "render_sha256": "54bca7ce4f10a6fafe8aa6278e12fac2b44a3773ca4ddb3cdc5cd80911f6e4e3"
+        },
+        {
+          "ordinal": 1,
+          "lens_index": 482,
+          "seed_id": "483",
+          "radial_stratum": 0,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_01_r0_s0_lens_000482.png",
+          "render_sha256": "aa2940c459c7b585ebf0531d102fa94cf74965305e6383c0a6496dda5f09bd6e"
+        },
+        {
+          "ordinal": 2,
+          "lens_index": 700,
+          "seed_id": "701",
+          "radial_stratum": 0,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_02_r0_s1_lens_000700.png",
+          "render_sha256": "c86dc8376249459ca1851620e0859435304d37ba0003590015377f76fdc0700a"
+        },
+        {
+          "ordinal": 3,
+          "lens_index": 664,
+          "seed_id": "665",
+          "radial_stratum": 0,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_03_r0_s1_lens_000664.png",
+          "render_sha256": "241bdc513c475130c7f6cc3a74f7206c26188e35df85a15ac14d2699b4808a4d"
+        },
+        {
+          "ordinal": 4,
+          "lens_index": 645,
+          "seed_id": "646",
+          "radial_stratum": 0,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_04_r0_s2_lens_000645.png",
+          "render_sha256": "00c212692b558caba039a0f77a5a06be6de0be9329cffcc9505fd2b336dd6be3"
+        },
+        {
+          "ordinal": 5,
+          "lens_index": 755,
+          "seed_id": "756",
+          "radial_stratum": 0,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_05_r0_s2_lens_000755.png",
+          "render_sha256": "4ef31515024817caaefde47fc928b8741966a1432b97498399f5dcc47c3f1629"
+        },
+        {
+          "ordinal": 6,
+          "lens_index": 333,
+          "seed_id": "334",
+          "radial_stratum": 0,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_06_r0_s3_lens_000333.png",
+          "render_sha256": "563803db89b8bcc44f6307a4d7f8486da8b23daacfcdc6fdf2ddeaa392df17ef"
+        },
+        {
+          "ordinal": 7,
+          "lens_index": 747,
+          "seed_id": "748",
+          "radial_stratum": 0,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_07_r0_s3_lens_000747.png",
+          "render_sha256": "67094007ce84a2b6ba69bc547937c7577c543fc9213a88a6bce32c439ef2ac3f"
+        },
+        {
+          "ordinal": 8,
+          "lens_index": 880,
+          "seed_id": "881",
+          "radial_stratum": 1,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_08_r1_s0_lens_000880.png",
+          "render_sha256": "9f778f7c886444816238e38dfccb496d51618e30ac4f5b1a9aec5eea850c591e"
+        },
+        {
+          "ordinal": 9,
+          "lens_index": 847,
+          "seed_id": "848",
+          "radial_stratum": 1,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_09_r1_s0_lens_000847.png",
+          "render_sha256": "8e6c5b79b91114c62cf40947b077a5a664011b0345522c1cf57feff1a93beedc"
+        },
+        {
+          "ordinal": 10,
+          "lens_index": 927,
+          "seed_id": "928",
+          "radial_stratum": 1,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_10_r1_s1_lens_000927.png",
+          "render_sha256": "5494684292de66ee2fe1b8ec62e9a47f69f24b367feba9ab1b5b819e5244bf3f"
+        },
+        {
+          "ordinal": 11,
+          "lens_index": 383,
+          "seed_id": "384",
+          "radial_stratum": 1,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_11_r1_s1_lens_000383.png",
+          "render_sha256": "3a6a4a754409f6131ae10b2990fd094f649cff91d1ff7b0b479a3cbe4274ac41"
+        },
+        {
+          "ordinal": 12,
+          "lens_index": 515,
+          "seed_id": "516",
+          "radial_stratum": 1,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_12_r1_s2_lens_000515.png",
+          "render_sha256": "36c3cd1e5f25ac56b35989109bd553e470413ca466cbc8f1885b0a2cdafcbe21"
+        },
+        {
+          "ordinal": 13,
+          "lens_index": 387,
+          "seed_id": "388",
+          "radial_stratum": 1,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_13_r1_s2_lens_000387.png",
+          "render_sha256": "1d0743413f40486691280e92981922faf5281ae099e3896f1f1216e98f770905"
+        },
+        {
+          "ordinal": 14,
+          "lens_index": 240,
+          "seed_id": "241",
+          "radial_stratum": 1,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_14_r1_s3_lens_000240.png",
+          "render_sha256": "eae4f0057dd8cd8737aa5e703574450692dbcadb2b30999a2322db83f9c49c6d"
+        },
+        {
+          "ordinal": 15,
+          "lens_index": 204,
+          "seed_id": "205",
+          "radial_stratum": 1,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_15_r1_s3_lens_000204.png",
+          "render_sha256": "ce75c0b9498eee18a26f2f84a05d8fa03bde79a0a7e883cb2dca61989d2fb8ce"
+        },
+        {
+          "ordinal": 16,
+          "lens_index": 775,
+          "seed_id": "776",
+          "radial_stratum": 2,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_16_r2_s0_lens_000775.png",
+          "render_sha256": "da87696342ed89465fcbc9100d6958fd599d8804e7b2f30e4a16676e8cd19aa8"
+        },
+        {
+          "ordinal": 17,
+          "lens_index": 760,
+          "seed_id": "761",
+          "radial_stratum": 2,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_17_r2_s0_lens_000760.png",
+          "render_sha256": "45a76b9df93af8c9ef6e403348b89c494307a31db01017763145c4256958c3cd"
+        },
+        {
+          "ordinal": 18,
+          "lens_index": 795,
+          "seed_id": "796",
+          "radial_stratum": 2,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_18_r2_s1_lens_000795.png",
+          "render_sha256": "bb6fac6fdc77722411d0a9433b007003d185122b069e6cc6ddd022c819f4e452"
+        },
+        {
+          "ordinal": 19,
+          "lens_index": 974,
+          "seed_id": "975",
+          "radial_stratum": 2,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_19_r2_s1_lens_000974.png",
+          "render_sha256": "c0a6fce1763fb9d256f3ebc5f78a68e4f188bd3b3bf0f2b6e2649d9d9c9fa01f"
+        },
+        {
+          "ordinal": 20,
+          "lens_index": 233,
+          "seed_id": "234",
+          "radial_stratum": 2,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_20_r2_s2_lens_000233.png",
+          "render_sha256": "028fc55408f9d75a722301848f177e7dcc87134376eb3423f4adc04b8dcab6c7"
+        },
+        {
+          "ordinal": 21,
+          "lens_index": 727,
+          "seed_id": "728",
+          "radial_stratum": 2,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_21_r2_s2_lens_000727.png",
+          "render_sha256": "3ad63cb90c8ab435b6a0e1fc55573b30aa215289e5050e5540dfda7a15efcafe"
+        },
+        {
+          "ordinal": 22,
+          "lens_index": 9,
+          "seed_id": "10",
+          "radial_stratum": 2,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_22_r2_s3_lens_000009.png",
+          "render_sha256": "246341f9e4cf9a353fdc489bca95a00adb4f77adfb6e91e23aecbdf96329d7f3"
+        },
+        {
+          "ordinal": 23,
+          "lens_index": 212,
+          "seed_id": "213",
+          "radial_stratum": 2,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_23_r2_s3_lens_000212.png",
+          "render_sha256": "506a8fc6888bc1cb467b63df1d5d1664f92d26ad3b08bc156bf08b0fdbdfe109"
+        },
+        {
+          "ordinal": 24,
+          "lens_index": 950,
+          "seed_id": "951",
+          "radial_stratum": 3,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_24_r3_s0_lens_000950.png",
+          "render_sha256": "83d85afe20d978082f2be0678cb9fb7d601e0d487fa7290f8c106d061e5f3f04"
+        },
+        {
+          "ordinal": 25,
+          "lens_index": 939,
+          "seed_id": "940",
+          "radial_stratum": 3,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_25_r3_s0_lens_000939.png",
+          "render_sha256": "a8d31f157beb01adbabe8fdf683c84aca2618433d4a4da4c9264524af3fa010f"
+        },
+        {
+          "ordinal": 26,
+          "lens_index": 921,
+          "seed_id": "922",
+          "radial_stratum": 3,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_26_r3_s1_lens_000921.png",
+          "render_sha256": "55a11da5f09647c5b5d60b4e56763ccd12b5e40c4eb30a7c288532e3edef90ed"
+        },
+        {
+          "ordinal": 27,
+          "lens_index": 997,
+          "seed_id": "998",
+          "radial_stratum": 3,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_27_r3_s1_lens_000997.png",
+          "render_sha256": "59e2a7e29e496ae50a223cb14301919ccfee5bb1ebc1f4218273bda659bcf528"
+        },
+        {
+          "ordinal": 28,
+          "lens_index": 24,
+          "seed_id": "25",
+          "radial_stratum": 3,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_28_r3_s2_lens_000024.png",
+          "render_sha256": "6de95f1db9c78638c0df632cc5b3b312575c22165d04ccb26803fb5a5205f4b1"
+        },
+        {
+          "ordinal": 29,
+          "lens_index": 237,
+          "seed_id": "238",
+          "radial_stratum": 3,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_29_r3_s2_lens_000237.png",
+          "render_sha256": "38cbc02e862d7be01b73b1655f95504170a48f89ff66aa6c107973ecb2dc2237"
+        },
+        {
+          "ordinal": 30,
+          "lens_index": 17,
+          "seed_id": "18",
+          "radial_stratum": 3,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_30_r3_s3_lens_000017.png",
+          "render_sha256": "6bb57f8a45742a5e4d7b28be81d884157c229f0453b8de410ac94a25e5c6267f"
+        },
+        {
+          "ordinal": 31,
+          "lens_index": 1,
+          "seed_id": "2",
+          "radial_stratum": 3,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_31_r3_s3_lens_000001.png",
+          "render_sha256": "38822b7c51e839401d42c60141941ea14ce1425393f82a2d5015b0b1d3f4713d"
+        }
+      ],
+      "sample_manifest_sha256": "f298e73de413f464024cd6383ed875d17a487211c432b99339ef22b890d70a62"
+    },
+    {
+      "eye_id": "M3_F_28_03",
+      "sample_schema_version": "experiment64.instance-qc-sample.v1",
+      "n_identities": 32,
+      "identities": [
+        {
+          "ordinal": 0,
+          "lens_index": 118,
+          "seed_id": "119",
+          "radial_stratum": 0,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_00_r0_s0_lens_000118.png",
+          "render_sha256": "8d375c02513927a34e14bb1cf2e983a6b451f8e8ceb5de9043f65ba645bae949"
+        },
+        {
+          "ordinal": 1,
+          "lens_index": 628,
+          "seed_id": "629",
+          "radial_stratum": 0,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_01_r0_s0_lens_000628.png",
+          "render_sha256": "204e1d79ee141cd915bbf20551ba821707e67bdb6c4f63d7310a9b31aca70ab8"
+        },
+        {
+          "ordinal": 2,
+          "lens_index": 367,
+          "seed_id": "368",
+          "radial_stratum": 0,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_02_r0_s1_lens_000367.png",
+          "render_sha256": "c415010862e2076fde441d756bcb88584d12917637d0df86a41ceae524fab5e1"
+        },
+        {
+          "ordinal": 3,
+          "lens_index": 554,
+          "seed_id": "555",
+          "radial_stratum": 0,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_03_r0_s1_lens_000554.png",
+          "render_sha256": "599bfb89cc0ebd7972771859c6fed1aef49a94b9429d0a6ec8d764ed1bef077f"
+        },
+        {
+          "ordinal": 4,
+          "lens_index": 241,
+          "seed_id": "242",
+          "radial_stratum": 0,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_04_r0_s2_lens_000241.png",
+          "render_sha256": "92ae495d8cf7910287a74b13066ce4e37b8eb0c52ea67358e635e38026097d49"
+        },
+        {
+          "ordinal": 5,
+          "lens_index": 561,
+          "seed_id": "562",
+          "radial_stratum": 0,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_05_r0_s2_lens_000561.png",
+          "render_sha256": "dcb0caabcb59a9aaac5de9cddef4d27ae58e59afb36c82079ee6c2f2c6c4f45b"
+        },
+        {
+          "ordinal": 6,
+          "lens_index": 569,
+          "seed_id": "570",
+          "radial_stratum": 0,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_06_r0_s3_lens_000569.png",
+          "render_sha256": "84fed4c69b7ccf530486b8363b2001c0fadad66db2fffa05ae152fd81e653fb2"
+        },
+        {
+          "ordinal": 7,
+          "lens_index": 959,
+          "seed_id": "960",
+          "radial_stratum": 0,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_07_r0_s3_lens_000959.png",
+          "render_sha256": "e80d4fe568c570a3cabe55b34830567ed608b5a840602e0bfbda1fe69f1924ca"
+        },
+        {
+          "ordinal": 8,
+          "lens_index": 224,
+          "seed_id": "225",
+          "radial_stratum": 1,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_08_r1_s0_lens_000224.png",
+          "render_sha256": "aa0e1aa3416fc0ad40cd55d3b162f412594f5e0bb865902909b47dc2639d7dad"
+        },
+        {
+          "ordinal": 9,
+          "lens_index": 94,
+          "seed_id": "95",
+          "radial_stratum": 1,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_09_r1_s0_lens_000094.png",
+          "render_sha256": "1e37ee751322cfee64a3d8530f96c33668da0006ac02b426e275281b391f0d1f"
+        },
+        {
+          "ordinal": 10,
+          "lens_index": 562,
+          "seed_id": "563",
+          "radial_stratum": 1,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_10_r1_s1_lens_000562.png",
+          "render_sha256": "00932f49e40b8b4dee7a8286db781a81b5dba4f9e23067ad405cd4071012f6b1"
+        },
+        {
+          "ordinal": 11,
+          "lens_index": 6,
+          "seed_id": "7",
+          "radial_stratum": 1,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_11_r1_s1_lens_000006.png",
+          "render_sha256": "24e5a35ad209c250637822903ba792539ed78fc682e6bc00ba575064345406be"
+        },
+        {
+          "ordinal": 12,
+          "lens_index": 548,
+          "seed_id": "549",
+          "radial_stratum": 1,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_12_r1_s2_lens_000548.png",
+          "render_sha256": "22e1832dd964cac494902a8c8e6278637ffc5f9d6e3b3809735c382352f23923"
+        },
+        {
+          "ordinal": 13,
+          "lens_index": 524,
+          "seed_id": "525",
+          "radial_stratum": 1,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_13_r1_s2_lens_000524.png",
+          "render_sha256": "05c6612045389efc3e05f507c9c4ca64032126473bffaac94b02be9704ee8b4a"
+        },
+        {
+          "ordinal": 14,
+          "lens_index": 626,
+          "seed_id": "627",
+          "radial_stratum": 1,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_14_r1_s3_lens_000626.png",
+          "render_sha256": "7f12f619c30934f5b671ce13da5d6650439d865b2d572682e8b253b4f65e7489"
+        },
+        {
+          "ordinal": 15,
+          "lens_index": 643,
+          "seed_id": "644",
+          "radial_stratum": 1,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_15_r1_s3_lens_000643.png",
+          "render_sha256": "822eca420af049832a0043ed61d110128d1a9e4cffaf98a95b811982c1334e31"
+        },
+        {
+          "ordinal": 16,
+          "lens_index": 376,
+          "seed_id": "377",
+          "radial_stratum": 2,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_16_r2_s0_lens_000376.png",
+          "render_sha256": "a245749bce7c7f29f9d07bf972c9e9cd47f0d2a4f77d702ac4ef77194ccaf4fd"
+        },
+        {
+          "ordinal": 17,
+          "lens_index": 696,
+          "seed_id": "697",
+          "radial_stratum": 2,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_17_r2_s0_lens_000696.png",
+          "render_sha256": "acd9162e81ce6497f488b5d5a1be61d92f0cf350d682b08291b9c1019cd0621a"
+        },
+        {
+          "ordinal": 18,
+          "lens_index": 350,
+          "seed_id": "351",
+          "radial_stratum": 2,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_18_r2_s1_lens_000350.png",
+          "render_sha256": "eeb0dd40462f675964ffad1815b00e397cb55efabf893d8ff9966dee95bf53a3"
+        },
+        {
+          "ordinal": 19,
+          "lens_index": 557,
+          "seed_id": "558",
+          "radial_stratum": 2,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_19_r2_s1_lens_000557.png",
+          "render_sha256": "99a64be8efaffeb6d69b5b01eed6e2bd50e63b975dc659eba4e362b7701d874d"
+        },
+        {
+          "ordinal": 20,
+          "lens_index": 405,
+          "seed_id": "406",
+          "radial_stratum": 2,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_20_r2_s2_lens_000405.png",
+          "render_sha256": "74db0421590ad67bfb3f3196ca89b6661559a3363c7da6b606fd4fda887b2731"
+        },
+        {
+          "ordinal": 21,
+          "lens_index": 538,
+          "seed_id": "539",
+          "radial_stratum": 2,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_21_r2_s2_lens_000538.png",
+          "render_sha256": "d27be46ffd94f5aa2805e15c586215b1e6113b82c32f6f5b9e2b37107527c355"
+        },
+        {
+          "ordinal": 22,
+          "lens_index": 908,
+          "seed_id": "909",
+          "radial_stratum": 2,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_22_r2_s3_lens_000908.png",
+          "render_sha256": "cea481d1d529dc0354017e0ca150f358b732d3db190698442dd8444b11a74716"
+        },
+        {
+          "ordinal": 23,
+          "lens_index": 754,
+          "seed_id": "755",
+          "radial_stratum": 2,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_23_r2_s3_lens_000754.png",
+          "render_sha256": "a50054f11b3c15e3687c3fc43b284b9df3b0592d545426226948f12e43ae8bba"
+        },
+        {
+          "ordinal": 24,
+          "lens_index": 221,
+          "seed_id": "222",
+          "radial_stratum": 3,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_24_r3_s0_lens_000221.png",
+          "render_sha256": "b86b0d476856198bf42d918cf37382e2145604f09e6b33415caf6b2227a3969b"
+        },
+        {
+          "ordinal": 25,
+          "lens_index": 179,
+          "seed_id": "180",
+          "radial_stratum": 3,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_25_r3_s0_lens_000179.png",
+          "render_sha256": "8f837a35ab1fbf8e15100ad4e7be84db3ced74cd5ae1fedbcc4dc803c74c95f0"
+        },
+        {
+          "ordinal": 26,
+          "lens_index": 445,
+          "seed_id": "446",
+          "radial_stratum": 3,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_26_r3_s1_lens_000445.png",
+          "render_sha256": "6ed656baa0a4611a85d42807e6591b4622e55477be1afe176ac1e69a61894ce2"
+        },
+        {
+          "ordinal": 27,
+          "lens_index": 102,
+          "seed_id": "103",
+          "radial_stratum": 3,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_27_r3_s1_lens_000102.png",
+          "render_sha256": "7d0e140d6faf5400ebfb19bc10002a02c64e8abdc0a800ba10e8744c1a659b44"
+        },
+        {
+          "ordinal": 28,
+          "lens_index": 817,
+          "seed_id": "818",
+          "radial_stratum": 3,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_28_r3_s2_lens_000817.png",
+          "render_sha256": "53935b96dcac3897ed64584b8f72f232707c8dd682c9835711eebedb33a474b8"
+        },
+        {
+          "ordinal": 29,
+          "lens_index": 1004,
+          "seed_id": "1005",
+          "radial_stratum": 3,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_29_r3_s2_lens_001004.png",
+          "render_sha256": "09f98ca1d11da38acd09c919af9a2ffc1c4efd875a67182925d3368f399b07d3"
+        },
+        {
+          "ordinal": 30,
+          "lens_index": 945,
+          "seed_id": "946",
+          "radial_stratum": 3,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_30_r3_s3_lens_000945.png",
+          "render_sha256": "a8dd406ba1f4f2c930abbe4d8dc32681329f6743ad2fdf55f42ac77df4520aaf"
+        },
+        {
+          "ordinal": 31,
+          "lens_index": 818,
+          "seed_id": "819",
+          "radial_stratum": 3,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_31_r3_s3_lens_000818.png",
+          "render_sha256": "cc39ad0ef120f232c58181628471c966d1d410f85a5ab2227c06debc407580bb"
+        }
+      ],
+      "sample_manifest_sha256": "0ca017cf55a95d7e235f92212944a955fbe5f8cf9fee2cf6998f9733cc2818f2"
+    },
+    {
+      "eye_id": "M3_F_35_03",
+      "sample_schema_version": "experiment64.instance-qc-sample.v1",
+      "n_identities": 32,
+      "identities": [
+        {
+          "ordinal": 0,
+          "lens_index": 663,
+          "seed_id": "664",
+          "radial_stratum": 0,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_00_r0_s0_lens_000663.png",
+          "render_sha256": "84092e96bd76c9d1ddbebb3c64c3f6f5c76396e4be126b7f369b0218aea08b92"
+        },
+        {
+          "ordinal": 1,
+          "lens_index": 569,
+          "seed_id": "570",
+          "radial_stratum": 0,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_01_r0_s0_lens_000569.png",
+          "render_sha256": "250678043a53d05d16dca0a83ad56b8a06c697aca96ebf3a8783544edc459786"
+        },
+        {
+          "ordinal": 2,
+          "lens_index": 164,
+          "seed_id": "165",
+          "radial_stratum": 0,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_02_r0_s1_lens_000164.png",
+          "render_sha256": "1d6be97cdbb6a0bfcec4165767e716b693feee79facafa2cfad7199f78e24ada"
+        },
+        {
+          "ordinal": 3,
+          "lens_index": 623,
+          "seed_id": "624",
+          "radial_stratum": 0,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_03_r0_s1_lens_000623.png",
+          "render_sha256": "e01dc37ed5c37edd76a281400c9b85a172720dc7092f1bffb36ef5c812bd8b40"
+        },
+        {
+          "ordinal": 4,
+          "lens_index": 734,
+          "seed_id": "735",
+          "radial_stratum": 0,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_04_r0_s2_lens_000734.png",
+          "render_sha256": "dc7b70a191bf9d3f874473bca82db0472be56c36fd615023158f7e7571bf8561"
+        },
+        {
+          "ordinal": 5,
+          "lens_index": 382,
+          "seed_id": "383",
+          "radial_stratum": 0,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_05_r0_s2_lens_000382.png",
+          "render_sha256": "4b7b7a66ef95c8a89ab66788a59fbce82e94edf74d0d6a8db42a080e9426283b"
+        },
+        {
+          "ordinal": 6,
+          "lens_index": 344,
+          "seed_id": "345",
+          "radial_stratum": 0,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_06_r0_s3_lens_000344.png",
+          "render_sha256": "9921630d6b51123b607777881a3f996dcd16880ebadb11d10af3870e51b773b7"
+        },
+        {
+          "ordinal": 7,
+          "lens_index": 969,
+          "seed_id": "970",
+          "radial_stratum": 0,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_07_r0_s3_lens_000969.png",
+          "render_sha256": "6cd636b5924be42963a3d1f64583b79176c5e9c59eb495630343428b8d76fd3d"
+        },
+        {
+          "ordinal": 8,
+          "lens_index": 671,
+          "seed_id": "672",
+          "radial_stratum": 1,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_08_r1_s0_lens_000671.png",
+          "render_sha256": "07425ddd07c264255c78f74a375fa328f41da18f7e1ad5c6f012dd2d4bf85fb7"
+        },
+        {
+          "ordinal": 9,
+          "lens_index": 520,
+          "seed_id": "521",
+          "radial_stratum": 1,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_09_r1_s0_lens_000520.png",
+          "render_sha256": "4d9177e5e4335a36af6a8b25096679bc64864dcbf00af66d2e2d2afa439a4069"
+        },
+        {
+          "ordinal": 10,
+          "lens_index": 202,
+          "seed_id": "203",
+          "radial_stratum": 1,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_10_r1_s1_lens_000202.png",
+          "render_sha256": "9350d5bfcf296db1d1c66d3b38c21fce38315e2f73347c06e0654ea04f039c51"
+        },
+        {
+          "ordinal": 11,
+          "lens_index": 12,
+          "seed_id": "13",
+          "radial_stratum": 1,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_11_r1_s1_lens_000012.png",
+          "render_sha256": "2672e99683bef490edc6f1cb17943e5f8a2f85286605b7e82b2716a2daf7abc7"
+        },
+        {
+          "ordinal": 12,
+          "lens_index": 115,
+          "seed_id": "116",
+          "radial_stratum": 1,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_12_r1_s2_lens_000115.png",
+          "render_sha256": "58d3221d47c6c1d6afd2fabe2184a908c639bede49cae9680561c57f19b40ddd"
+        },
+        {
+          "ordinal": 13,
+          "lens_index": 2,
+          "seed_id": "3",
+          "radial_stratum": 1,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_13_r1_s2_lens_000002.png",
+          "render_sha256": "5079ad2465ee977a8151b47719fffbc3af9266265184a2ce05488fd966a93de5"
+        },
+        {
+          "ordinal": 14,
+          "lens_index": 870,
+          "seed_id": "871",
+          "radial_stratum": 1,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_14_r1_s3_lens_000870.png",
+          "render_sha256": "09fad72fc586af034223731dd0062b17f4a0abd42ec18fedd4496a5702639dd3"
+        },
+        {
+          "ordinal": 15,
+          "lens_index": 914,
+          "seed_id": "915",
+          "radial_stratum": 1,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_15_r1_s3_lens_000914.png",
+          "render_sha256": "e7238930e65ad733b293a7d517025c55a28dfc1a5e42bfc14d42fbccfbefd675"
+        },
+        {
+          "ordinal": 16,
+          "lens_index": 46,
+          "seed_id": "47",
+          "radial_stratum": 2,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_16_r2_s0_lens_000046.png",
+          "render_sha256": "23c5fe136d071dcb43308feb6d552f97f711f5a0033320ec9fb4cbeb08859371"
+        },
+        {
+          "ordinal": 17,
+          "lens_index": 576,
+          "seed_id": "577",
+          "radial_stratum": 2,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_17_r2_s0_lens_000576.png",
+          "render_sha256": "a233d96abf359307f68b3099213a515f06c87c53b3315d6c53a77f0e4c5ba648"
+        },
+        {
+          "ordinal": 18,
+          "lens_index": 49,
+          "seed_id": "50",
+          "radial_stratum": 2,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_18_r2_s1_lens_000049.png",
+          "render_sha256": "1bed90b4548ecd5d91a3192161eafb53beeeac2698aa6866c7303ee01893e048"
+        },
+        {
+          "ordinal": 19,
+          "lens_index": 920,
+          "seed_id": "921",
+          "radial_stratum": 2,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_19_r2_s1_lens_000920.png",
+          "render_sha256": "59f2bc7817a7d4e6a7a9b3ba54a33e8c6ba4fd4059bcf6ab7747960bc9353970"
+        },
+        {
+          "ordinal": 20,
+          "lens_index": 104,
+          "seed_id": "105",
+          "radial_stratum": 2,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_20_r2_s2_lens_000104.png",
+          "render_sha256": "da7fc543695a369ddce7979d8f392f1f950f31bac9193639af865d757f2dadc0"
+        },
+        {
+          "ordinal": 21,
+          "lens_index": 110,
+          "seed_id": "111",
+          "radial_stratum": 2,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_21_r2_s2_lens_000110.png",
+          "render_sha256": "16b80c2818e5c57741e5d7af72dd50f861b6a07aad5b2bbdba985c117791b34b"
+        },
+        {
+          "ordinal": 22,
+          "lens_index": 836,
+          "seed_id": "837",
+          "radial_stratum": 2,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_22_r2_s3_lens_000836.png",
+          "render_sha256": "c25d646857e32459a1d2c03a88a3bf097094ed03d23c575311c60f6f5e7c6c3e"
+        },
+        {
+          "ordinal": 23,
+          "lens_index": 339,
+          "seed_id": "340",
+          "radial_stratum": 2,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_23_r2_s3_lens_000339.png",
+          "render_sha256": "d72d87a770cad9c3856f19f3ed26e0a826987cf674265c218201cc388552739a"
+        },
+        {
+          "ordinal": 24,
+          "lens_index": 796,
+          "seed_id": "797",
+          "radial_stratum": 3,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_24_r3_s0_lens_000796.png",
+          "render_sha256": "442d75f954d967226a06ba17ffa5172580c047085c56f4008ed00723131ad3b6"
+        },
+        {
+          "ordinal": 25,
+          "lens_index": 799,
+          "seed_id": "800",
+          "radial_stratum": 3,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_25_r3_s0_lens_000799.png",
+          "render_sha256": "a7678323acdab198479632da09e8cd83e5e5b937707b8519f659968c3651ee52"
+        },
+        {
+          "ordinal": 26,
+          "lens_index": 138,
+          "seed_id": "139",
+          "radial_stratum": 3,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_26_r3_s1_lens_000138.png",
+          "render_sha256": "a2a61025cc243db40616181cc6944e80953ed72d349d501e1d218c2bd6d75a56"
+        },
+        {
+          "ordinal": 27,
+          "lens_index": 215,
+          "seed_id": "216",
+          "radial_stratum": 3,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_27_r3_s1_lens_000215.png",
+          "render_sha256": "b92ae096375dec68fd94b630430e96afd8cfb642bfe699e4bcbbc6edc0204c67"
+        },
+        {
+          "ordinal": 28,
+          "lens_index": 16,
+          "seed_id": "17",
+          "radial_stratum": 3,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_28_r3_s2_lens_000016.png",
+          "render_sha256": "f48d4e19ca51fbeb9730cee396b2cea1ecf8d76874dc38d202d17bdc575dd480"
+        },
+        {
+          "ordinal": 29,
+          "lens_index": 489,
+          "seed_id": "490",
+          "radial_stratum": 3,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_29_r3_s2_lens_000489.png",
+          "render_sha256": "9803d01a91b49c4b3d9fcbe14bf08bb5e091fbf83b83bcef4cf45ddca721ae98"
+        },
+        {
+          "ordinal": 30,
+          "lens_index": 31,
+          "seed_id": "32",
+          "radial_stratum": 3,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_30_r3_s3_lens_000031.png",
+          "render_sha256": "e9a54981786be50950d33a8199e7a63aff1fd1d1b929f3ed409c2fce43f93185"
+        },
+        {
+          "ordinal": 31,
+          "lens_index": 460,
+          "seed_id": "461",
+          "radial_stratum": 3,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_31_r3_s3_lens_000460.png",
+          "render_sha256": "a21f07c396738f7810f22c27ed7ee25d314e35207531af7e70c2480f83f22fdd"
+        }
+      ],
+      "sample_manifest_sha256": "627c1f6d0dfabb3fcab132f90172fce827023e1956f936e8ce67323d9843aad1"
+    },
+    {
+      "eye_id": "M3_M_26_01",
+      "sample_schema_version": "experiment64.instance-qc-sample.v1",
+      "n_identities": 32,
+      "identities": [
+        {
+          "ordinal": 0,
+          "lens_index": 635,
+          "seed_id": "636",
+          "radial_stratum": 0,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_00_r0_s0_lens_000635.png",
+          "render_sha256": "d4bb9daac7535f7bb5c5c3c30ff446f9070aa3f882dd167e4df4b2a3b3c9714b"
+        },
+        {
+          "ordinal": 1,
+          "lens_index": 374,
+          "seed_id": "375",
+          "radial_stratum": 0,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_01_r0_s0_lens_000374.png",
+          "render_sha256": "97806109b21c49bb5178da10bd9cc2c766f59a0b84c5f6292e1c23ddd3573816"
+        },
+        {
+          "ordinal": 2,
+          "lens_index": 326,
+          "seed_id": "327",
+          "radial_stratum": 0,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_02_r0_s1_lens_000326.png",
+          "render_sha256": "ec12a157ff473fddc981c2a995029e8b53e0ce054359eae304e5d93a18981444"
+        },
+        {
+          "ordinal": 3,
+          "lens_index": 304,
+          "seed_id": "305",
+          "radial_stratum": 0,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_03_r0_s1_lens_000304.png",
+          "render_sha256": "5e64109d2e509a6e97b3576dd17cf0128425b68f02ea6211e423e86879601f48"
+        },
+        {
+          "ordinal": 4,
+          "lens_index": 423,
+          "seed_id": "424",
+          "radial_stratum": 0,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_04_r0_s2_lens_000423.png",
+          "render_sha256": "4bd3c430d653ff6e9a4985438502a7f12c0cccc91cef4ba91cb5fe1c65941d63"
+        },
+        {
+          "ordinal": 5,
+          "lens_index": 813,
+          "seed_id": "814",
+          "radial_stratum": 0,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_05_r0_s2_lens_000813.png",
+          "render_sha256": "a1e690510dbbed0210ecdb58ea3eff7d86cb0c821a993cf58a4be64693e88910"
+        },
+        {
+          "ordinal": 6,
+          "lens_index": 745,
+          "seed_id": "746",
+          "radial_stratum": 0,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_06_r0_s3_lens_000745.png",
+          "render_sha256": "4e48598e81a686428bb5c450cb6c727870f70712d9815ce48fb1f32214197007"
+        },
+        {
+          "ordinal": 7,
+          "lens_index": 680,
+          "seed_id": "681",
+          "radial_stratum": 0,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_07_r0_s3_lens_000680.png",
+          "render_sha256": "d091338759ddcf7fe4d0646d49fb1c78d6176347a20a18e7d51eaeb02001b9bf"
+        },
+        {
+          "ordinal": 8,
+          "lens_index": 29,
+          "seed_id": "30",
+          "radial_stratum": 1,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_08_r1_s0_lens_000029.png",
+          "render_sha256": "3bbd7f86ed103e7a245e170c07a2b4686e2cc941c035fcb9ad2cc27fd70fab33"
+        },
+        {
+          "ordinal": 9,
+          "lens_index": 328,
+          "seed_id": "329",
+          "radial_stratum": 1,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_09_r1_s0_lens_000328.png",
+          "render_sha256": "f07d7b534da36b59364e187b32323941be105d216b9b56d5d1f4153add2a9561"
+        },
+        {
+          "ordinal": 10,
+          "lens_index": 840,
+          "seed_id": "841",
+          "radial_stratum": 1,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_10_r1_s1_lens_000840.png",
+          "render_sha256": "c5c22319696291678550347a307d1304fac9172916bef286b67700f22bab5750"
+        },
+        {
+          "ordinal": 11,
+          "lens_index": 774,
+          "seed_id": "775",
+          "radial_stratum": 1,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_11_r1_s1_lens_000774.png",
+          "render_sha256": "05ce18d3d901375fb20b939518db02fe23447ec23c17372053cb4d979fa06ce2"
+        },
+        {
+          "ordinal": 12,
+          "lens_index": 341,
+          "seed_id": "342",
+          "radial_stratum": 1,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_12_r1_s2_lens_000341.png",
+          "render_sha256": "6e716835a405bd6f59195a7aaf45baffba2af6fc33de77975fbb8a2cbc5ecbca"
+        },
+        {
+          "ordinal": 13,
+          "lens_index": 265,
+          "seed_id": "266",
+          "radial_stratum": 1,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_13_r1_s2_lens_000265.png",
+          "render_sha256": "cb6eb4bdc36f42f18cb88c2fb6c352d13596179a3a4735cbad7bb1495b116001"
+        },
+        {
+          "ordinal": 14,
+          "lens_index": 518,
+          "seed_id": "519",
+          "radial_stratum": 1,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_14_r1_s3_lens_000518.png",
+          "render_sha256": "a9bd450083c5306f26b372efdf6ba878d2a72ff2aa8700e836ba824b5af588e5"
+        },
+        {
+          "ordinal": 15,
+          "lens_index": 673,
+          "seed_id": "674",
+          "radial_stratum": 1,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_15_r1_s3_lens_000673.png",
+          "render_sha256": "d748eb96da13e4b33c0231d66036c0806adabb9a7fe879d283ca1ccbf9cfac52"
+        },
+        {
+          "ordinal": 16,
+          "lens_index": 131,
+          "seed_id": "132",
+          "radial_stratum": 2,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_16_r2_s0_lens_000131.png",
+          "render_sha256": "d0ef64c7b1d28e1d628aa422f90b1abce2fd3d9af3975cd43cf06f47452e6a6e"
+        },
+        {
+          "ordinal": 17,
+          "lens_index": 91,
+          "seed_id": "92",
+          "radial_stratum": 2,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_17_r2_s0_lens_000091.png",
+          "render_sha256": "1138e95ab9c4c36f993f183fc66e87877487b9d1330eadc39ea0ff68eebdba93"
+        },
+        {
+          "ordinal": 18,
+          "lens_index": 455,
+          "seed_id": "456",
+          "radial_stratum": 2,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_18_r2_s1_lens_000455.png",
+          "render_sha256": "05ca5bd9a7549a52e98678ebc60f5ecaf8c3bd591b660aad7dcd0b798675e1ab"
+        },
+        {
+          "ordinal": 19,
+          "lens_index": 332,
+          "seed_id": "333",
+          "radial_stratum": 2,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_19_r2_s1_lens_000332.png",
+          "render_sha256": "62f478b1e479b9b15613b2fe0995f1f66e02ca98cc25fba92924b669b045e71a"
+        },
+        {
+          "ordinal": 20,
+          "lens_index": 470,
+          "seed_id": "471",
+          "radial_stratum": 2,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_20_r2_s2_lens_000470.png",
+          "render_sha256": "a456d5c2c11ba66dde488b15323b7f35c3c266f80fd00898ae96d2d101c9c277"
+        },
+        {
+          "ordinal": 21,
+          "lens_index": 240,
+          "seed_id": "241",
+          "radial_stratum": 2,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_21_r2_s2_lens_000240.png",
+          "render_sha256": "0f38729d7e846b4c4ba7e4a9a66f207ed3c5d15f6394bb8b275af68064869b8a"
+        },
+        {
+          "ordinal": 22,
+          "lens_index": 646,
+          "seed_id": "647",
+          "radial_stratum": 2,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_22_r2_s3_lens_000646.png",
+          "render_sha256": "14ebc1290a6605317065f55c4066dcc69b859345d72f2834ece7001b488c4e3c"
+        },
+        {
+          "ordinal": 23,
+          "lens_index": 627,
+          "seed_id": "628",
+          "radial_stratum": 2,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_23_r2_s3_lens_000627.png",
+          "render_sha256": "3289074ec0f967025e81267c68926502c31abdb4ed601ce3d2752ffdde8f32a3"
+        },
+        {
+          "ordinal": 24,
+          "lens_index": 846,
+          "seed_id": "847",
+          "radial_stratum": 3,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_24_r3_s0_lens_000846.png",
+          "render_sha256": "19bcac9e28f77802e67e5f749f127558a0ac7b34b2421e911a8fc732505e57e9"
+        },
+        {
+          "ordinal": 25,
+          "lens_index": 192,
+          "seed_id": "193",
+          "radial_stratum": 3,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_25_r3_s0_lens_000192.png",
+          "render_sha256": "60ffe961b7e02b7657167a1bcaaf6aaada58b16613d076d38fd51ffd306af98f"
+        },
+        {
+          "ordinal": 26,
+          "lens_index": 170,
+          "seed_id": "171",
+          "radial_stratum": 3,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_26_r3_s1_lens_000170.png",
+          "render_sha256": "defc9ccd06be15c7d75b7cd39f4642eaa4c412a50e0125439249818761d3b11c"
+        },
+        {
+          "ordinal": 27,
+          "lens_index": 151,
+          "seed_id": "152",
+          "radial_stratum": 3,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_27_r3_s1_lens_000151.png",
+          "render_sha256": "7d7359581590e2bb0a0dd539914535f544e38b6720a20cf9d0b2c13d19d7110e"
+        },
+        {
+          "ordinal": 28,
+          "lens_index": 785,
+          "seed_id": "786",
+          "radial_stratum": 3,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_28_r3_s2_lens_000785.png",
+          "render_sha256": "ad3d6d516af8c5025e6862ee9a05df835fe15a1b48c72b4345e7d234538ebeb9"
+        },
+        {
+          "ordinal": 29,
+          "lens_index": 804,
+          "seed_id": "805",
+          "radial_stratum": 3,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_29_r3_s2_lens_000804.png",
+          "render_sha256": "012b3c92a341e29f1a0f678906a12b98b91d193d19144e46b579e1244bccfdef"
+        },
+        {
+          "ordinal": 30,
+          "lens_index": 517,
+          "seed_id": "518",
+          "radial_stratum": 3,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_30_r3_s3_lens_000517.png",
+          "render_sha256": "3c82e7b84fa124ced200414550d8f736c412dbd3b05e8dc8574a284532740dfc"
+        },
+        {
+          "ordinal": 31,
+          "lens_index": 749,
+          "seed_id": "750",
+          "radial_stratum": 3,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_31_r3_s3_lens_000749.png",
+          "render_sha256": "c2d4ea1f7306d100edc851e7e3fc1711480ccfb20c0e7b045bc2421e2f96c0d6"
+        }
+      ],
+      "sample_manifest_sha256": "a9fbe4134894d3f833081119b622dab2c4c4d909281792b65e88cba882381d81"
+    },
+    {
+      "eye_id": "M3_M_32_01",
+      "sample_schema_version": "experiment64.instance-qc-sample.v1",
+      "n_identities": 32,
+      "identities": [
+        {
+          "ordinal": 0,
+          "lens_index": 495,
+          "seed_id": "496",
+          "radial_stratum": 0,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_00_r0_s0_lens_000495.png",
+          "render_sha256": "b1f99f0ae2b6e0d0b957374ab628d0f1ff75d9e0fb3133b3b2077b1bacc9ef5b"
+        },
+        {
+          "ordinal": 1,
+          "lens_index": 542,
+          "seed_id": "543",
+          "radial_stratum": 0,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_01_r0_s0_lens_000542.png",
+          "render_sha256": "75b66793d93a18c09d8f2b9b13dc8eede73020f35602d5538d58a6ade1459392"
+        },
+        {
+          "ordinal": 2,
+          "lens_index": 171,
+          "seed_id": "172",
+          "radial_stratum": 0,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_02_r0_s1_lens_000171.png",
+          "render_sha256": "b5a6f9dc78f775caf66bbae910af9eab843fbb0a06cb95dad10ae18a5b9089e9"
+        },
+        {
+          "ordinal": 3,
+          "lens_index": 628,
+          "seed_id": "629",
+          "radial_stratum": 0,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_03_r0_s1_lens_000628.png",
+          "render_sha256": "cfe38c441dd21553f4c6fdbd259a8c4e49d8d38d8d0b146f3e59c97e4c206fe1"
+        },
+        {
+          "ordinal": 4,
+          "lens_index": 186,
+          "seed_id": "187",
+          "radial_stratum": 0,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_04_r0_s2_lens_000186.png",
+          "render_sha256": "ad05c8a39a4f94934c954a9094793164b6d30881e4cce687b7ee098a25aed945"
+        },
+        {
+          "ordinal": 5,
+          "lens_index": 143,
+          "seed_id": "144",
+          "radial_stratum": 0,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_05_r0_s2_lens_000143.png",
+          "render_sha256": "49d55c7a2f3f14d1acdef7653b9afabb53fbed8dc234f7ff760e922c5c3f1545"
+        },
+        {
+          "ordinal": 6,
+          "lens_index": 909,
+          "seed_id": "910",
+          "radial_stratum": 0,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_06_r0_s3_lens_000909.png",
+          "render_sha256": "4929cf13cf74ca5783b42447af296200f12860882e7c6a94d271e7344b772b47"
+        },
+        {
+          "ordinal": 7,
+          "lens_index": 411,
+          "seed_id": "412",
+          "radial_stratum": 0,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_07_r0_s3_lens_000411.png",
+          "render_sha256": "d121873b1c71fd546f8d68612c46e48433630e873a3ed15244d34eedb9590f6b"
+        },
+        {
+          "ordinal": 8,
+          "lens_index": 444,
+          "seed_id": "445",
+          "radial_stratum": 1,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_08_r1_s0_lens_000444.png",
+          "render_sha256": "2e1faaaabccdf8a1e870a14f3fcee9d2697ce67377895823b319d5334692ca74"
+        },
+        {
+          "ordinal": 9,
+          "lens_index": 818,
+          "seed_id": "819",
+          "radial_stratum": 1,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_09_r1_s0_lens_000818.png",
+          "render_sha256": "ab3a74dfe5f13735f7b00133bfb0509a8409d87a457cd3e8f6f7810fea4903ca"
+        },
+        {
+          "ordinal": 10,
+          "lens_index": 735,
+          "seed_id": "736",
+          "radial_stratum": 1,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_10_r1_s1_lens_000735.png",
+          "render_sha256": "2a6b79a18ba2af7ea121d5b94a2c8bc9aeec8bf41c32fefc5983e547a5fcf862"
+        },
+        {
+          "ordinal": 11,
+          "lens_index": 4,
+          "seed_id": "5",
+          "radial_stratum": 1,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_11_r1_s1_lens_000004.png",
+          "render_sha256": "ad1d9e7d1eac17d9818416db3098c2a507f5134bff569db0df50176ffa0a3a21"
+        },
+        {
+          "ordinal": 12,
+          "lens_index": 692,
+          "seed_id": "693",
+          "radial_stratum": 1,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_12_r1_s2_lens_000692.png",
+          "render_sha256": "97124f87a44549d3c83a299fcf3d695baf9345aab7b42d79338fe3a9341166dd"
+        },
+        {
+          "ordinal": 13,
+          "lens_index": 41,
+          "seed_id": "42",
+          "radial_stratum": 1,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_13_r1_s2_lens_000041.png",
+          "render_sha256": "9f8e7f3cd5162e70a5a4e897450e85292a37468c003b09c847279bee96907f63"
+        },
+        {
+          "ordinal": 14,
+          "lens_index": 914,
+          "seed_id": "915",
+          "radial_stratum": 1,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_14_r1_s3_lens_000914.png",
+          "render_sha256": "9ff18ff120995d063c0c725672b0322bcd9f3b6b87f23d8c222583de6209ef0b"
+        },
+        {
+          "ordinal": 15,
+          "lens_index": 269,
+          "seed_id": "270",
+          "radial_stratum": 1,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_15_r1_s3_lens_000269.png",
+          "render_sha256": "77aa3e31088fbb22de12615f47514a68cd74d01824d89848db65eb2d3b5a44a9"
+        },
+        {
+          "ordinal": 16,
+          "lens_index": 204,
+          "seed_id": "205",
+          "radial_stratum": 2,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_16_r2_s0_lens_000204.png",
+          "render_sha256": "170e3159a7e9ae42b6782823c4205a9d97ead7f1068df9ddcd6ea4265e4ce423"
+        },
+        {
+          "ordinal": 17,
+          "lens_index": 559,
+          "seed_id": "560",
+          "radial_stratum": 2,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_17_r2_s0_lens_000559.png",
+          "render_sha256": "5e327256750d97020ebf060217aecbb74deb28ab42065b9d46afd12dd8594eab"
+        },
+        {
+          "ordinal": 18,
+          "lens_index": 104,
+          "seed_id": "105",
+          "radial_stratum": 2,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_18_r2_s1_lens_000104.png",
+          "render_sha256": "a6b28d4ba581385cc7c20016f934ac389749ef6f0c4243317ebcf620a439c46e"
+        },
+        {
+          "ordinal": 19,
+          "lens_index": 59,
+          "seed_id": "60",
+          "radial_stratum": 2,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_19_r2_s1_lens_000059.png",
+          "render_sha256": "0df56e28146e4fd3f0c233e117f06f3fb44e86d2a238e447e6635296837db070"
+        },
+        {
+          "ordinal": 20,
+          "lens_index": 826,
+          "seed_id": "827",
+          "radial_stratum": 2,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_20_r2_s2_lens_000826.png",
+          "render_sha256": "d419e185b48b245670ac1153a7d0ced7a3b5e43c13ce8d804f6a8d87e4bfe2cd"
+        },
+        {
+          "ordinal": 21,
+          "lens_index": 771,
+          "seed_id": "772",
+          "radial_stratum": 2,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_21_r2_s2_lens_000771.png",
+          "render_sha256": "d342e902543306c4c05b8c2c392a8dde68a902da7f7881f763b83cd2e9a1c919"
+        },
+        {
+          "ordinal": 22,
+          "lens_index": 437,
+          "seed_id": "438",
+          "radial_stratum": 2,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_22_r2_s3_lens_000437.png",
+          "render_sha256": "4087ff707733065866039b860eb83414933c128392018920f1479f98a5f68d5c"
+        },
+        {
+          "ordinal": 23,
+          "lens_index": 221,
+          "seed_id": "222",
+          "radial_stratum": 2,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_23_r2_s3_lens_000221.png",
+          "render_sha256": "241b1fa8b66ebcaa0321385c07f7bd4386f44ae19a5710c82c2f169fac1a8764"
+        },
+        {
+          "ordinal": 24,
+          "lens_index": 731,
+          "seed_id": "732",
+          "radial_stratum": 3,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_24_r3_s0_lens_000731.png",
+          "render_sha256": "afda2e93c993d6c3f018c19a3afd5769f9cbf4b5f17717c609ef6afe22896b4a"
+        },
+        {
+          "ordinal": 25,
+          "lens_index": 939,
+          "seed_id": "940",
+          "radial_stratum": 3,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_25_r3_s0_lens_000939.png",
+          "render_sha256": "767a4c981f3a48860abfcde8fcbd8b36f619930143f22c8f4a08b18df33af88a"
+        },
+        {
+          "ordinal": 26,
+          "lens_index": 62,
+          "seed_id": "63",
+          "radial_stratum": 3,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_26_r3_s1_lens_000062.png",
+          "render_sha256": "8fd70ed65bd94fb157272bfd4ec9e2db50e5fdf74041b5b76877bf789abdd2c0"
+        },
+        {
+          "ordinal": 27,
+          "lens_index": 842,
+          "seed_id": "843",
+          "radial_stratum": 3,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_27_r3_s1_lens_000842.png",
+          "render_sha256": "eeb34c648c5abfc5b267fec7e6fc256347e40f147d34ea0b54a1362c77ff09fb"
+        },
+        {
+          "ordinal": 28,
+          "lens_index": 440,
+          "seed_id": "441",
+          "radial_stratum": 3,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_28_r3_s2_lens_000440.png",
+          "render_sha256": "da672d4cd12e769dbcd310f0b4fd132ba6955225b0c1ec010952fd6de974bca3"
+        },
+        {
+          "ordinal": 29,
+          "lens_index": 441,
+          "seed_id": "442",
+          "radial_stratum": 3,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_29_r3_s2_lens_000441.png",
+          "render_sha256": "ca15ced32a738563060a44d2378f91eb6cb3f686b7d34f1aa079c7673d4669ff"
+        },
+        {
+          "ordinal": 30,
+          "lens_index": 209,
+          "seed_id": "210",
+          "radial_stratum": 3,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_30_r3_s3_lens_000209.png",
+          "render_sha256": "27928275a3dbcb6c00b414a51c89a454af4a7afbf7a286bc4ac667b45650dc50"
+        },
+        {
+          "ordinal": 31,
+          "lens_index": 317,
+          "seed_id": "318",
+          "radial_stratum": 3,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_31_r3_s3_lens_000317.png",
+          "render_sha256": "79fbfe26e3e4afe1bebcad30eda211a152413d02506e70f8a8e1825758448d0f"
+        }
+      ],
+      "sample_manifest_sha256": "73a084bf7baf3bebf6216f29184e90d136f1bcab57ec3a5f09c1aa0f0354d515"
+    },
+    {
+      "eye_id": "M3_M_36_01",
+      "sample_schema_version": "experiment64.instance-qc-sample.v1",
+      "n_identities": 32,
+      "identities": [
+        {
+          "ordinal": 0,
+          "lens_index": 758,
+          "seed_id": "759",
+          "radial_stratum": 0,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_00_r0_s0_lens_000758.png",
+          "render_sha256": "2200e9f18504058b354a09eca46480f9f1101087d13eb2baf05486c9f0f2e579"
+        },
+        {
+          "ordinal": 1,
+          "lens_index": 567,
+          "seed_id": "568",
+          "radial_stratum": 0,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_01_r0_s0_lens_000567.png",
+          "render_sha256": "4ecb906ed32f4a0903c101276ee8d1ce5b12eab8c7cbc309c7c00a6f88627f0f"
+        },
+        {
+          "ordinal": 2,
+          "lens_index": 199,
+          "seed_id": "200",
+          "radial_stratum": 0,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_02_r0_s1_lens_000199.png",
+          "render_sha256": "1dee307ed1d54a41e1772a64cbd4a1ec53643b2170f92e9993b2400ca4af0d14"
+        },
+        {
+          "ordinal": 3,
+          "lens_index": 712,
+          "seed_id": "713",
+          "radial_stratum": 0,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_03_r0_s1_lens_000712.png",
+          "render_sha256": "2ae2aafdc4ed684bbe83d2da01ee30166f2cb6fbe76eafeb204606a7a87bf9e5"
+        },
+        {
+          "ordinal": 4,
+          "lens_index": 62,
+          "seed_id": "63",
+          "radial_stratum": 0,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_04_r0_s2_lens_000062.png",
+          "render_sha256": "313e101851111fb65885a80e642263ba47989305dc1c0b69caded834ee78965a"
+        },
+        {
+          "ordinal": 5,
+          "lens_index": 56,
+          "seed_id": "57",
+          "radial_stratum": 0,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_05_r0_s2_lens_000056.png",
+          "render_sha256": "82e4fd8433367471730c85712b02ae73d2283048458048011c379904df2d1b31"
+        },
+        {
+          "ordinal": 6,
+          "lens_index": 298,
+          "seed_id": "299",
+          "radial_stratum": 0,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_06_r0_s3_lens_000298.png",
+          "render_sha256": "ec364ab9c16545626c03874027b8f632f8db7832f9973adc4e3ebc245ba36c95"
+        },
+        {
+          "ordinal": 7,
+          "lens_index": 310,
+          "seed_id": "311",
+          "radial_stratum": 0,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_07_r0_s3_lens_000310.png",
+          "render_sha256": "72f61bc261e1b65edc27d383596b56f97998d4a6c0c4d1addff2dd2a10703326"
+        },
+        {
+          "ordinal": 8,
+          "lens_index": 482,
+          "seed_id": "483",
+          "radial_stratum": 1,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_08_r1_s0_lens_000482.png",
+          "render_sha256": "ac7b5ae1f48ef2e0dae62f4574e5e9c5103da9d4ee99fade193479ae291838ec"
+        },
+        {
+          "ordinal": 9,
+          "lens_index": 467,
+          "seed_id": "468",
+          "radial_stratum": 1,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_09_r1_s0_lens_000467.png",
+          "render_sha256": "375e77cefe3f6ad7036901650a1c70e39d3e7a29466f91cd72e352c77180df8e"
+        },
+        {
+          "ordinal": 10,
+          "lens_index": 731,
+          "seed_id": "732",
+          "radial_stratum": 1,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_10_r1_s1_lens_000731.png",
+          "render_sha256": "ea93fc1d9c0a874e790b5929bdee94a4807d45119fa363b6fe3c98ee0a7f8e30"
+        },
+        {
+          "ordinal": 11,
+          "lens_index": 774,
+          "seed_id": "775",
+          "radial_stratum": 1,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_11_r1_s1_lens_000774.png",
+          "render_sha256": "896daa645fc6a001c2364d89085e67b7c918cd49218b0771e9caa3383c8f3ccc"
+        },
+        {
+          "ordinal": 12,
+          "lens_index": 747,
+          "seed_id": "748",
+          "radial_stratum": 1,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_12_r1_s2_lens_000747.png",
+          "render_sha256": "cc19e6b7c83181424c240ea57faf270c4e2028fd29ef0c27dd13904be6ed4ea6"
+        },
+        {
+          "ordinal": 13,
+          "lens_index": 133,
+          "seed_id": "134",
+          "radial_stratum": 1,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_13_r1_s2_lens_000133.png",
+          "render_sha256": "bae84546473309d08b20ca4d8686176283f4ef4777ebf96644e19a3143f55ad2"
+        },
+        {
+          "ordinal": 14,
+          "lens_index": 909,
+          "seed_id": "910",
+          "radial_stratum": 1,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_14_r1_s3_lens_000909.png",
+          "render_sha256": "3e54bc2db7d44905bf8ce6608be99abf57d8b1c140137779a1d8da5c2519197c"
+        },
+        {
+          "ordinal": 15,
+          "lens_index": 265,
+          "seed_id": "266",
+          "radial_stratum": 1,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_15_r1_s3_lens_000265.png",
+          "render_sha256": "1769c47a509fb9abcfa348e0fe06d38d98125f66fb4c6c5446dbf84d852fdb65"
+        },
+        {
+          "ordinal": 16,
+          "lens_index": 153,
+          "seed_id": "154",
+          "radial_stratum": 2,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_16_r2_s0_lens_000153.png",
+          "render_sha256": "72c780ca84caea27a34e5827b8f81fc5905cab882f41862093f732d12bbfdbdb"
+        },
+        {
+          "ordinal": 17,
+          "lens_index": 882,
+          "seed_id": "883",
+          "radial_stratum": 2,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_17_r2_s0_lens_000882.png",
+          "render_sha256": "5c34debcd30d57bf990b253f3d55b26a248ad67fd885c17fe876f9adee42bf0c"
+        },
+        {
+          "ordinal": 18,
+          "lens_index": 575,
+          "seed_id": "576",
+          "radial_stratum": 2,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_18_r2_s1_lens_000575.png",
+          "render_sha256": "d5624f44ac40d4800ea30edfa17b21261d8fe1ccf6e0c5c12cf3b7e29a2b10d3"
+        },
+        {
+          "ordinal": 19,
+          "lens_index": 177,
+          "seed_id": "178",
+          "radial_stratum": 2,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_19_r2_s1_lens_000177.png",
+          "render_sha256": "62b09a456457ba8ab85d361329b971ad880ee42fe2b221d9963f853ecfc470a2"
+        },
+        {
+          "ordinal": 20,
+          "lens_index": 614,
+          "seed_id": "615",
+          "radial_stratum": 2,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_20_r2_s2_lens_000614.png",
+          "render_sha256": "d1aea70515a0053242e5b6f5ccfc362574b9f6ed5206e2b176992e4655280bed"
+        },
+        {
+          "ordinal": 21,
+          "lens_index": 713,
+          "seed_id": "714",
+          "radial_stratum": 2,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_21_r2_s2_lens_000713.png",
+          "render_sha256": "f328fbf0134ae3b81e0bf8b934751610086734a378a34db022935af01a6b3814"
+        },
+        {
+          "ordinal": 22,
+          "lens_index": 224,
+          "seed_id": "225",
+          "radial_stratum": 2,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_22_r2_s3_lens_000224.png",
+          "render_sha256": "dbef06766b6fc0414beddd87237eca0ab19a11c7d26110fc6d5005db779d4666"
+        },
+        {
+          "ordinal": 23,
+          "lens_index": 857,
+          "seed_id": "858",
+          "radial_stratum": 2,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_23_r2_s3_lens_000857.png",
+          "render_sha256": "3b7eccc861adb221e358f76facaab552b134a13569c7111b7aa0bd0104f22fa2"
+        },
+        {
+          "ordinal": 24,
+          "lens_index": 745,
+          "seed_id": "746",
+          "radial_stratum": 3,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_24_r3_s0_lens_000745.png",
+          "render_sha256": "801f3c75b21323efe892f17dba520628c309e87e137b9a990726c733ee7c447b"
+        },
+        {
+          "ordinal": 25,
+          "lens_index": 937,
+          "seed_id": "938",
+          "radial_stratum": 3,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_25_r3_s0_lens_000937.png",
+          "render_sha256": "7bec89de93a3c31f702ab5b8abfaada8564a437299e995d1fe61f8627b7a18a4"
+        },
+        {
+          "ordinal": 26,
+          "lens_index": 185,
+          "seed_id": "186",
+          "radial_stratum": 3,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_26_r3_s1_lens_000185.png",
+          "render_sha256": "115433254bc2463e04192388c4944fa0741b5bb781a232adfb23cb54fc000610"
+        },
+        {
+          "ordinal": 27,
+          "lens_index": 900,
+          "seed_id": "901",
+          "radial_stratum": 3,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_27_r3_s1_lens_000900.png",
+          "render_sha256": "51ee994e2d5c0ae17c40fcb29f57b87df9d149e756cfbaab67497f045b3e85ce"
+        },
+        {
+          "ordinal": 28,
+          "lens_index": 760,
+          "seed_id": "761",
+          "radial_stratum": 3,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_28_r3_s2_lens_000760.png",
+          "render_sha256": "1cdc05da176ce304a7a42bd756e63e7113f2480a83c0533ad4a78fe72bdd8261"
+        },
+        {
+          "ordinal": 29,
+          "lens_index": 421,
+          "seed_id": "422",
+          "radial_stratum": 3,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_29_r3_s2_lens_000421.png",
+          "render_sha256": "939b9848fbc96e71a8039bbdcbc458c12996d776b17eba4e5684d591a76b4fd0"
+        },
+        {
+          "ordinal": 30,
+          "lens_index": 400,
+          "seed_id": "401",
+          "radial_stratum": 3,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_30_r3_s3_lens_000400.png",
+          "render_sha256": "6570495e7b1eac42556def083c437fc5b559254cd4e670ea65507a6c0082198d"
+        },
+        {
+          "ordinal": 31,
+          "lens_index": 255,
+          "seed_id": "256",
+          "radial_stratum": 3,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_31_r3_s3_lens_000255.png",
+          "render_sha256": "f31d4a45c8eec8a4cd1bd8f08a61100fb11df99c7f1f71c20ce439683758345c"
+        }
+      ],
+      "sample_manifest_sha256": "134198b1890273f90fe6772569aa0aff61826b64b6ca036e8a42d7552269fd8e"
+    },
+    {
+      "eye_id": "RED3_25_F_36",
+      "sample_schema_version": "experiment64.instance-qc-sample.v1",
+      "n_identities": 32,
+      "identities": [
+        {
+          "ordinal": 0,
+          "lens_index": 542,
+          "seed_id": "543",
+          "radial_stratum": 0,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_00_r0_s0_lens_000542.png",
+          "render_sha256": "bfca19e50ca096f12643e9956b13052a0d30b911e3f5e2dc21d9a04c5fc4fb76"
+        },
+        {
+          "ordinal": 1,
+          "lens_index": 647,
+          "seed_id": "648",
+          "radial_stratum": 0,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_01_r0_s0_lens_000647.png",
+          "render_sha256": "ade02073ba8ccff8ee0d80f35d796f1af665f51c9eebb613ffe07ab0ce770446"
+        },
+        {
+          "ordinal": 2,
+          "lens_index": 48,
+          "seed_id": "49",
+          "radial_stratum": 0,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_02_r0_s1_lens_000048.png",
+          "render_sha256": "408dc1fdd35684862cae167a6872345e08f4151d3eeb8f94f390de852bdbe084"
+        },
+        {
+          "ordinal": 3,
+          "lens_index": 973,
+          "seed_id": "974",
+          "radial_stratum": 0,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_03_r0_s1_lens_000973.png",
+          "render_sha256": "fea2c3e9dc414552ea73d7af16c4ef9c448e1bd85595b8e9584b40722f2f9f2d"
+        },
+        {
+          "ordinal": 4,
+          "lens_index": 210,
+          "seed_id": "211",
+          "radial_stratum": 0,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_04_r0_s2_lens_000210.png",
+          "render_sha256": "7790fe77dde6c44cc3431c72df388a0ab4b69e3cce262f936343f728d771e755"
+        },
+        {
+          "ordinal": 5,
+          "lens_index": 250,
+          "seed_id": "251",
+          "radial_stratum": 0,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_05_r0_s2_lens_000250.png",
+          "render_sha256": "df5cbeb876dd9d9bd61ac26a66247e735999b04e456186f6b892cfe2262cc2ca"
+        },
+        {
+          "ordinal": 6,
+          "lens_index": 81,
+          "seed_id": "82",
+          "radial_stratum": 0,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_06_r0_s3_lens_000081.png",
+          "render_sha256": "ced3e6e9720a09297fc96a1427212975e240ca1812b85ca150fcaf91d002a3b2"
+        },
+        {
+          "ordinal": 7,
+          "lens_index": 464,
+          "seed_id": "465",
+          "radial_stratum": 0,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_07_r0_s3_lens_000464.png",
+          "render_sha256": "e4495f91bb79dad2d09577b1faedbea0acf20fd7f13f352173c6d5a7a689737b"
+        },
+        {
+          "ordinal": 8,
+          "lens_index": 602,
+          "seed_id": "603",
+          "radial_stratum": 1,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_08_r1_s0_lens_000602.png",
+          "render_sha256": "b1fffccc242b82b6678ac0f988f2498519efccc38e70b3ffc92715a68ca96689"
+        },
+        {
+          "ordinal": 9,
+          "lens_index": 687,
+          "seed_id": "688",
+          "radial_stratum": 1,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_09_r1_s0_lens_000687.png",
+          "render_sha256": "33777e943ea62f5bc97ffd50b7cdfb186e281dc71bc16ada80139a03d4bbf29e"
+        },
+        {
+          "ordinal": 10,
+          "lens_index": 347,
+          "seed_id": "348",
+          "radial_stratum": 1,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_10_r1_s1_lens_000347.png",
+          "render_sha256": "7e08878cf6817e5f366844c3077d243d1c31554417e15dbac4a990b738b094f6"
+        },
+        {
+          "ordinal": 11,
+          "lens_index": 527,
+          "seed_id": "528",
+          "radial_stratum": 1,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_11_r1_s1_lens_000527.png",
+          "render_sha256": "65d5ed7dbd1e3e262d9096a31189ec4c7c78312c1f5abaf314624c3596b69e53"
+        },
+        {
+          "ordinal": 12,
+          "lens_index": 434,
+          "seed_id": "435",
+          "radial_stratum": 1,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_12_r1_s2_lens_000434.png",
+          "render_sha256": "09f5f84a120b559f1fa388eb62409c85ae34b38a9986209674d060d36ec8bf4a"
+        },
+        {
+          "ordinal": 13,
+          "lens_index": 541,
+          "seed_id": "542",
+          "radial_stratum": 1,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_13_r1_s2_lens_000541.png",
+          "render_sha256": "7d35f5144404f416d02212d61b3a408a065104e611a61786d2aa2a3e0c14e87a"
+        },
+        {
+          "ordinal": 14,
+          "lens_index": 149,
+          "seed_id": "150",
+          "radial_stratum": 1,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_14_r1_s3_lens_000149.png",
+          "render_sha256": "90a1cac143295ee3ab7ad426d359af8405c6f0c8ffcf7753ca26c740af381a7e"
+        },
+        {
+          "ordinal": 15,
+          "lens_index": 942,
+          "seed_id": "943",
+          "radial_stratum": 1,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_15_r1_s3_lens_000942.png",
+          "render_sha256": "c925dd09f037600106f8745051f1b110817723cf54e5215352ebbf6c4f1f0cbe"
+        },
+        {
+          "ordinal": 16,
+          "lens_index": 638,
+          "seed_id": "639",
+          "radial_stratum": 2,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_16_r2_s0_lens_000638.png",
+          "render_sha256": "29844b4f1b146439da34557914beca26b4a74bdc6e9be26597c5dec310b06568"
+        },
+        {
+          "ordinal": 17,
+          "lens_index": 619,
+          "seed_id": "620",
+          "radial_stratum": 2,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_17_r2_s0_lens_000619.png",
+          "render_sha256": "758402cf42ff8521bbf2fd316407331ebf3ed3e62e0c4f9d7f483a30dd083642"
+        },
+        {
+          "ordinal": 18,
+          "lens_index": 479,
+          "seed_id": "480",
+          "radial_stratum": 2,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_18_r2_s1_lens_000479.png",
+          "render_sha256": "678243a068db7a5ec6cdef6c20319b3971b654ccd1d28cbd99c6300f6e0e4124"
+        },
+        {
+          "ordinal": 19,
+          "lens_index": 662,
+          "seed_id": "663",
+          "radial_stratum": 2,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_19_r2_s1_lens_000662.png",
+          "render_sha256": "34abece36ea30e97a332dab1edaf0cb2c3f4e61f0d1dd6c6950f827d118199e4"
+        },
+        {
+          "ordinal": 20,
+          "lens_index": 466,
+          "seed_id": "467",
+          "radial_stratum": 2,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_20_r2_s2_lens_000466.png",
+          "render_sha256": "e32c4138b71f93112373efebc623051a58ed18548566557b12051ac41893639a"
+        },
+        {
+          "ordinal": 21,
+          "lens_index": 445,
+          "seed_id": "446",
+          "radial_stratum": 2,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_21_r2_s2_lens_000445.png",
+          "render_sha256": "a01453de7a9c1cb1d412d01796f62295a19009cfaed81bbca4bdf192145d7e89"
+        },
+        {
+          "ordinal": 22,
+          "lens_index": 485,
+          "seed_id": "486",
+          "radial_stratum": 2,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_22_r2_s3_lens_000485.png",
+          "render_sha256": "5ffe2775aa9baef8c7550900e937e4bdc5f1a443f2176ec37caab369d6f6f12c"
+        },
+        {
+          "ordinal": 23,
+          "lens_index": 793,
+          "seed_id": "794",
+          "radial_stratum": 2,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_23_r2_s3_lens_000793.png",
+          "render_sha256": "ceec9c501e16546d5d801ec7175e79ff91d7b9853c4ac22d53acd2a77e22992a"
+        },
+        {
+          "ordinal": 24,
+          "lens_index": 163,
+          "seed_id": "164",
+          "radial_stratum": 3,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_24_r3_s0_lens_000163.png",
+          "render_sha256": "c5c88dc2807eb81a606a5bafbb8ad8f4d9bc9a92e3c0c83eab237781a99f4ad3"
+        },
+        {
+          "ordinal": 25,
+          "lens_index": 279,
+          "seed_id": "280",
+          "radial_stratum": 3,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_25_r3_s0_lens_000279.png",
+          "render_sha256": "1a727e27e2bc3f5a8b6f337a7ee5ff22ca1e72f4ff25100f6a7de81dca58b05c"
+        },
+        {
+          "ordinal": 26,
+          "lens_index": 233,
+          "seed_id": "234",
+          "radial_stratum": 3,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_26_r3_s1_lens_000233.png",
+          "render_sha256": "ac2bd4b78e014f360a8002c805a5167a87d1590c9fdc28983590a5eed59bb21a"
+        },
+        {
+          "ordinal": 27,
+          "lens_index": 446,
+          "seed_id": "447",
+          "radial_stratum": 3,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_27_r3_s1_lens_000446.png",
+          "render_sha256": "c67154d8092426545acb9278a82e0e98178c5e42e5e37e110f4a9d34ac753783"
+        },
+        {
+          "ordinal": 28,
+          "lens_index": 254,
+          "seed_id": "255",
+          "radial_stratum": 3,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_28_r3_s2_lens_000254.png",
+          "render_sha256": "075db70069c98ed29958a043f186b66a957e6480e3e9765a9ace9e4bf715d578"
+        },
+        {
+          "ordinal": 29,
+          "lens_index": 510,
+          "seed_id": "511",
+          "radial_stratum": 3,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_29_r3_s2_lens_000510.png",
+          "render_sha256": "5e683152ac45ae303f86c13bf66f3b49d4b4cc0195682d661198f23437f8324d"
+        },
+        {
+          "ordinal": 30,
+          "lens_index": 984,
+          "seed_id": "985",
+          "radial_stratum": 3,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_30_r3_s3_lens_000984.png",
+          "render_sha256": "10291888d511313e91f57e391c0f239718f6687305f7e10542f9c094122a0028"
+        },
+        {
+          "ordinal": 31,
+          "lens_index": 858,
+          "seed_id": "859",
+          "radial_stratum": 3,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_31_r3_s3_lens_000858.png",
+          "render_sha256": "820401b6b00c3d7d48322a22c8a78407e9c1236d59380a5f896d12834aa01410"
+        }
+      ],
+      "sample_manifest_sha256": "455da1c6e793dff37c26b6ee782f9496059c835cf320af1a0df4bc3158e29687"
+    },
+    {
+      "eye_id": "RED3_25_F_37",
+      "sample_schema_version": "experiment64.instance-qc-sample.v1",
+      "n_identities": 32,
+      "identities": [
+        {
+          "ordinal": 0,
+          "lens_index": 916,
+          "seed_id": "917",
+          "radial_stratum": 0,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_00_r0_s0_lens_000916.png",
+          "render_sha256": "6467496dc2a25c3849170ee306c6c84e5ab9225acc34528749890dff0f6f3cd5"
+        },
+        {
+          "ordinal": 1,
+          "lens_index": 629,
+          "seed_id": "630",
+          "radial_stratum": 0,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_01_r0_s0_lens_000629.png",
+          "render_sha256": "4778f3bb9a58e4de24d9360422488015457b62a15e1185130e9db16985db4e2d"
+        },
+        {
+          "ordinal": 2,
+          "lens_index": 636,
+          "seed_id": "637",
+          "radial_stratum": 0,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_02_r0_s1_lens_000636.png",
+          "render_sha256": "5348c74668b97eb61c80419b6c299e9b8b64dcaeea768d23bdecea4a91504409"
+        },
+        {
+          "ordinal": 3,
+          "lens_index": 723,
+          "seed_id": "724",
+          "radial_stratum": 0,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_03_r0_s1_lens_000723.png",
+          "render_sha256": "8ef188effd0ffe06ca32dcbe578c9900f7b5c44254cf9f087b0a06b47ff9f945"
+        },
+        {
+          "ordinal": 4,
+          "lens_index": 584,
+          "seed_id": "585",
+          "radial_stratum": 0,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_04_r0_s2_lens_000584.png",
+          "render_sha256": "163e75f2afa27b370a9b26320fbb0da1e25494242d427fbb81a41c455a2b8054"
+        },
+        {
+          "ordinal": 5,
+          "lens_index": 897,
+          "seed_id": "898",
+          "radial_stratum": 0,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_05_r0_s2_lens_000897.png",
+          "render_sha256": "bcdc22e64b41497a8d8b686f588af6344a9d53077bbd11a591dd749119cdbdf7"
+        },
+        {
+          "ordinal": 6,
+          "lens_index": 413,
+          "seed_id": "414",
+          "radial_stratum": 0,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_06_r0_s3_lens_000413.png",
+          "render_sha256": "b01ab35a6fb85895dfd00f9700a85530ed78983b8acaa3fef777af5040a628c6"
+        },
+        {
+          "ordinal": 7,
+          "lens_index": 126,
+          "seed_id": "127",
+          "radial_stratum": 0,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_07_r0_s3_lens_000126.png",
+          "render_sha256": "c7b81fdb8b69b0af0edeec5712b48f0d159e0aa0b8d1cff0383534733dcec60e"
+        },
+        {
+          "ordinal": 8,
+          "lens_index": 722,
+          "seed_id": "723",
+          "radial_stratum": 1,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_08_r1_s0_lens_000722.png",
+          "render_sha256": "724b4afe9d6390a8f16db85affbc73196c7f1314c16ccb007b82763f13c4ae47"
+        },
+        {
+          "ordinal": 9,
+          "lens_index": 588,
+          "seed_id": "589",
+          "radial_stratum": 1,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_09_r1_s0_lens_000588.png",
+          "render_sha256": "22e953d2cf1a28629a274bc350278aba453d3f84ce5064ab45d05cf03ea79195"
+        },
+        {
+          "ordinal": 10,
+          "lens_index": 590,
+          "seed_id": "591",
+          "radial_stratum": 1,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_10_r1_s1_lens_000590.png",
+          "render_sha256": "0b25ced610dc3732e77981a9e07e661d0b74ab48553bd85228487c8e569bc55f"
+        },
+        {
+          "ordinal": 11,
+          "lens_index": 14,
+          "seed_id": "15",
+          "radial_stratum": 1,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_11_r1_s1_lens_000014.png",
+          "render_sha256": "973e91e02e5fe5ebfe3593e194ec8df38c7257259b7a2297d241ee9d2089bcf9"
+        },
+        {
+          "ordinal": 12,
+          "lens_index": 894,
+          "seed_id": "895",
+          "radial_stratum": 1,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_12_r1_s2_lens_000894.png",
+          "render_sha256": "621ddc308c6bd3f565a70299f26d7026f8852b51c0a70fb2cff67b78f103d498"
+        },
+        {
+          "ordinal": 13,
+          "lens_index": 86,
+          "seed_id": "87",
+          "radial_stratum": 1,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_13_r1_s2_lens_000086.png",
+          "render_sha256": "7a840fd32fb4682d63b9d054f245f4b9d70bfca6ac0e06343819f4da48eb14ea"
+        },
+        {
+          "ordinal": 14,
+          "lens_index": 373,
+          "seed_id": "374",
+          "radial_stratum": 1,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_14_r1_s3_lens_000373.png",
+          "render_sha256": "86d65ff1b678db8b87681266fd09e207b087ce8a875175b45e5b238c9d10449a"
+        },
+        {
+          "ordinal": 15,
+          "lens_index": 884,
+          "seed_id": "885",
+          "radial_stratum": 1,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_15_r1_s3_lens_000884.png",
+          "render_sha256": "68b511ee528fd92952951435e3e2c35d729a2154e59bf81a950c798cd506c0b0"
+        },
+        {
+          "ordinal": 16,
+          "lens_index": 676,
+          "seed_id": "677",
+          "radial_stratum": 2,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_16_r2_s0_lens_000676.png",
+          "render_sha256": "fa3166d19184e44cda6ee762a7624942c19e3e5010c24e17298f3f2504a21621"
+        },
+        {
+          "ordinal": 17,
+          "lens_index": 160,
+          "seed_id": "161",
+          "radial_stratum": 2,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_17_r2_s0_lens_000160.png",
+          "render_sha256": "40547376118088b390727ada069b8e78ad8649e517ae3c2f20cc5583228bdd7d"
+        },
+        {
+          "ordinal": 18,
+          "lens_index": 955,
+          "seed_id": "956",
+          "radial_stratum": 2,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_18_r2_s1_lens_000955.png",
+          "render_sha256": "5b955db8abbb0279ca4a620b9600253011d0167bd2fec263afb0ea1102eddd49"
+        },
+        {
+          "ordinal": 19,
+          "lens_index": 847,
+          "seed_id": "848",
+          "radial_stratum": 2,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_19_r2_s1_lens_000847.png",
+          "render_sha256": "173950f651e2b3f73e911fd936a406a479655860b05fc6d4cdcdd472eca634f2"
+        },
+        {
+          "ordinal": 20,
+          "lens_index": 917,
+          "seed_id": "918",
+          "radial_stratum": 2,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_20_r2_s2_lens_000917.png",
+          "render_sha256": "4e3b0d98aec2a815baec67dde9a6ba941e4d84216c1e074464c7e730e4ac3349"
+        },
+        {
+          "ordinal": 21,
+          "lens_index": 946,
+          "seed_id": "947",
+          "radial_stratum": 2,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_21_r2_s2_lens_000946.png",
+          "render_sha256": "81f00aef3bf5883d0a521c9e650208cdab42e9a2905008a9777938325632d05c"
+        },
+        {
+          "ordinal": 22,
+          "lens_index": 479,
+          "seed_id": "480",
+          "radial_stratum": 2,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_22_r2_s3_lens_000479.png",
+          "render_sha256": "c07f9e8a33fa7d2975fac1bcdf769ca8cf132f3af20893c4297c37d55a24a643"
+        },
+        {
+          "ordinal": 23,
+          "lens_index": 257,
+          "seed_id": "258",
+          "radial_stratum": 2,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_23_r2_s3_lens_000257.png",
+          "render_sha256": "267d070be29311415509f7ce318346f5b8630d31c74d756b899c79da18748b75"
+        },
+        {
+          "ordinal": 24,
+          "lens_index": 686,
+          "seed_id": "687",
+          "radial_stratum": 3,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_24_r3_s0_lens_000686.png",
+          "render_sha256": "0c6bba23576ecccb2d4557cfc39326a4e746b6150f5cb5bd476787a31c199353"
+        },
+        {
+          "ordinal": 25,
+          "lens_index": 765,
+          "seed_id": "766",
+          "radial_stratum": 3,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_25_r3_s0_lens_000765.png",
+          "render_sha256": "c483142b5427bd0c726befc670b147cf93a6eb89dc460c51ad24d461f3032693"
+        },
+        {
+          "ordinal": 26,
+          "lens_index": 739,
+          "seed_id": "740",
+          "radial_stratum": 3,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_26_r3_s1_lens_000739.png",
+          "render_sha256": "f77cbb9a1ebffb21e4839f8e4d1f52cff4a5ec9af776b8ad25324699920901e9"
+        },
+        {
+          "ordinal": 27,
+          "lens_index": 982,
+          "seed_id": "983",
+          "radial_stratum": 3,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_27_r3_s1_lens_000982.png",
+          "render_sha256": "3514c96341df0b5e305a1957fea50f5782e4f6b47523c74fb2ffbb5d95fb3f63"
+        },
+        {
+          "ordinal": 28,
+          "lens_index": 485,
+          "seed_id": "486",
+          "radial_stratum": 3,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_28_r3_s2_lens_000485.png",
+          "render_sha256": "a8cd19b4b6716db98e14bd20c6b25f676ee2209c04212768d06245e38cfcc438"
+        },
+        {
+          "ordinal": 29,
+          "lens_index": 484,
+          "seed_id": "485",
+          "radial_stratum": 3,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_29_r3_s2_lens_000484.png",
+          "render_sha256": "9b12e9ea89f6e93be0cf97b6922355f1b75b7f0c777f52d6faffd1beb4429977"
+        },
+        {
+          "ordinal": 30,
+          "lens_index": 440,
+          "seed_id": "441",
+          "radial_stratum": 3,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_30_r3_s3_lens_000440.png",
+          "render_sha256": "b9ce58baaf1bdbf1078994aadc9398a7908647eb3e949c10adf500e74dd4b295"
+        },
+        {
+          "ordinal": 31,
+          "lens_index": 445,
+          "seed_id": "446",
+          "radial_stratum": 3,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_31_r3_s3_lens_000445.png",
+          "render_sha256": "f2cf3cf2010fbfdfecb3fb61aeea910858061881179b2eb9f1d54d744845ca1b"
+        }
+      ],
+      "sample_manifest_sha256": "152adb9651abc31e8319fffddba8a331ca03d8c51e92b9c86e2551bd2e6fe0fe"
+    },
+    {
+      "eye_id": "RED3_25_F_38",
+      "sample_schema_version": "experiment64.instance-qc-sample.v1",
+      "n_identities": 32,
+      "identities": [
+        {
+          "ordinal": 0,
+          "lens_index": 807,
+          "seed_id": "808",
+          "radial_stratum": 0,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_00_r0_s0_lens_000807.png",
+          "render_sha256": "9bf6cf6e055203c9b32bd6e43ba0effd4002fcc7e0a47a7044663fedb27a72c5"
+        },
+        {
+          "ordinal": 1,
+          "lens_index": 276,
+          "seed_id": "277",
+          "radial_stratum": 0,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_01_r0_s0_lens_000276.png",
+          "render_sha256": "6fff5a0788149bfc30a80eff2e86ed51d54fb205bf8c6f5f6f10a5f89d7bedb2"
+        },
+        {
+          "ordinal": 2,
+          "lens_index": 514,
+          "seed_id": "515",
+          "radial_stratum": 0,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_02_r0_s1_lens_000514.png",
+          "render_sha256": "b1c791d7ab89a7df73b75619f05b154ceaa05367ed69b3a6bb1fdfa43357adc4"
+        },
+        {
+          "ordinal": 3,
+          "lens_index": 594,
+          "seed_id": "595",
+          "radial_stratum": 0,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_03_r0_s1_lens_000594.png",
+          "render_sha256": "faff94dcfa2a19e01758e007d8239b20e3a7dda16864051f2bf560bd7277a7df"
+        },
+        {
+          "ordinal": 4,
+          "lens_index": 481,
+          "seed_id": "482",
+          "radial_stratum": 0,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_04_r0_s2_lens_000481.png",
+          "render_sha256": "780a0138408b6e6a818fd14a7990eb8ecdc577eab4712f09e45bd11f090d99b9"
+        },
+        {
+          "ordinal": 5,
+          "lens_index": 731,
+          "seed_id": "732",
+          "radial_stratum": 0,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_05_r0_s2_lens_000731.png",
+          "render_sha256": "a3157cae5bc67c6f9a48ddc78ba83a59d43eb9a6908ad40dd4cc9e978eaf4de4"
+        },
+        {
+          "ordinal": 6,
+          "lens_index": 484,
+          "seed_id": "485",
+          "radial_stratum": 0,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_06_r0_s3_lens_000484.png",
+          "render_sha256": "dc1a633aaeee22db70e61ba4d2255a5af8e2b6dba18ce9a6f6ef55d4a2354691"
+        },
+        {
+          "ordinal": 7,
+          "lens_index": 435,
+          "seed_id": "436",
+          "radial_stratum": 0,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_07_r0_s3_lens_000435.png",
+          "render_sha256": "2fb4040a28067ba6f1a62561d6e02ab105a713aaed98dbabe23d0f0660948535"
+        },
+        {
+          "ordinal": 8,
+          "lens_index": 424,
+          "seed_id": "425",
+          "radial_stratum": 1,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_08_r1_s0_lens_000424.png",
+          "render_sha256": "44997785d36926b0a196dd4f681fdd8658cc95acbc10e44af9b0d28f9e25cd80"
+        },
+        {
+          "ordinal": 9,
+          "lens_index": 163,
+          "seed_id": "164",
+          "radial_stratum": 1,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_09_r1_s0_lens_000163.png",
+          "render_sha256": "eff8cb95bd7c2e43c76e398c710ddabf9484894f904d7589e725ba7b585e82f5"
+        },
+        {
+          "ordinal": 10,
+          "lens_index": 938,
+          "seed_id": "939",
+          "radial_stratum": 1,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_10_r1_s1_lens_000938.png",
+          "render_sha256": "b38414b7851f30af240283c8e3b537d8ffa3fb04ddf4b4c23c2fbb879d7a2b8f"
+        },
+        {
+          "ordinal": 11,
+          "lens_index": 94,
+          "seed_id": "95",
+          "radial_stratum": 1,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_11_r1_s1_lens_000094.png",
+          "render_sha256": "95251645949da804582593b9b8e0b2f0d13347dbe07187abe439555515507edf"
+        },
+        {
+          "ordinal": 12,
+          "lens_index": 447,
+          "seed_id": "448",
+          "radial_stratum": 1,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_12_r1_s2_lens_000447.png",
+          "render_sha256": "38025b3d8b3ccf93008067d40ef32e555acb41ecb07a5c7a77f593cbcec037b2"
+        },
+        {
+          "ordinal": 13,
+          "lens_index": 520,
+          "seed_id": "521",
+          "radial_stratum": 1,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_13_r1_s2_lens_000520.png",
+          "render_sha256": "a33a40bc9c433fe6a007dfbbbe8f5fa6fa1af2cf0785b29b0caf27b04e8b2dbc"
+        },
+        {
+          "ordinal": 14,
+          "lens_index": 454,
+          "seed_id": "455",
+          "radial_stratum": 1,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_14_r1_s3_lens_000454.png",
+          "render_sha256": "7280b93e8322e4dac77c62e58e778affa382a4cf1f25a242cbbf904f6fbc9ecd"
+        },
+        {
+          "ordinal": 15,
+          "lens_index": 678,
+          "seed_id": "679",
+          "radial_stratum": 1,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_15_r1_s3_lens_000678.png",
+          "render_sha256": "14d5e9380f3ad2968d18af59bbbf19a3c46e8ad7997b003777c79369568d4b6c"
+        },
+        {
+          "ordinal": 16,
+          "lens_index": 535,
+          "seed_id": "536",
+          "radial_stratum": 2,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_16_r2_s0_lens_000535.png",
+          "render_sha256": "8055649b5a68f299073beee0eff449530f93bf05ecda43496d68d12bfdae87cc"
+        },
+        {
+          "ordinal": 17,
+          "lens_index": 240,
+          "seed_id": "241",
+          "radial_stratum": 2,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_17_r2_s0_lens_000240.png",
+          "render_sha256": "f08396235ba2add87e360258f158ea49208bfccde31eaf47e589a7e13154f86e"
+        },
+        {
+          "ordinal": 18,
+          "lens_index": 204,
+          "seed_id": "205",
+          "radial_stratum": 2,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_18_r2_s1_lens_000204.png",
+          "render_sha256": "26ff7163fff2db5e5e9c8776e293332e2ef5c6ce78f7ae9cf11ad4ef001e75ed"
+        },
+        {
+          "ordinal": 19,
+          "lens_index": 606,
+          "seed_id": "607",
+          "radial_stratum": 2,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_19_r2_s1_lens_000606.png",
+          "render_sha256": "f157b0bc69ca0f81fd60c4a328432115ec685843c4cb12d187e4a85df89213e3"
+        },
+        {
+          "ordinal": 20,
+          "lens_index": 474,
+          "seed_id": "475",
+          "radial_stratum": 2,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_20_r2_s2_lens_000474.png",
+          "render_sha256": "49d123a5357d9ad04d1a90ab21be2771613b7f9e7d469db67175982364c3ac9b"
+        },
+        {
+          "ordinal": 21,
+          "lens_index": 768,
+          "seed_id": "769",
+          "radial_stratum": 2,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_21_r2_s2_lens_000768.png",
+          "render_sha256": "229cdf108f365ccfc7d45859400f2aa2c824e5e7833ac281038bdca8e41d0104"
+        },
+        {
+          "ordinal": 22,
+          "lens_index": 853,
+          "seed_id": "854",
+          "radial_stratum": 2,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_22_r2_s3_lens_000853.png",
+          "render_sha256": "e46492df392c6bb34379485797929a2b14287c4eeeacf64ee89bbba4857c6da7"
+        },
+        {
+          "ordinal": 23,
+          "lens_index": 549,
+          "seed_id": "550",
+          "radial_stratum": 2,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_23_r2_s3_lens_000549.png",
+          "render_sha256": "c8a898f8456050855d5b43f19d8acdf73bdfe3e0f5e57031ab7134a98a2df92c"
+        },
+        {
+          "ordinal": 24,
+          "lens_index": 11,
+          "seed_id": "12",
+          "radial_stratum": 3,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_24_r3_s0_lens_000011.png",
+          "render_sha256": "603bb8f09fee907c66befea08e08139c1e5527edc0b0eba3ba5adb0e4a3d5837"
+        },
+        {
+          "ordinal": 25,
+          "lens_index": 313,
+          "seed_id": "314",
+          "radial_stratum": 3,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_25_r3_s0_lens_000313.png",
+          "render_sha256": "cb4d89ae5a6ae0b601025e1f778ed227afb2cca72bf8f4b8b37948f8ec017d6a"
+        },
+        {
+          "ordinal": 26,
+          "lens_index": 190,
+          "seed_id": "191",
+          "radial_stratum": 3,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_26_r3_s1_lens_000190.png",
+          "render_sha256": "bff6f2cedacadbbcfdf7d7cd8919c95fd94c5c736025faeeb5291170c39dbf47"
+        },
+        {
+          "ordinal": 27,
+          "lens_index": 999,
+          "seed_id": "1000",
+          "radial_stratum": 3,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_27_r3_s1_lens_000999.png",
+          "render_sha256": "f178e45f8d3530b50f72b3014d4e7bec750b939f72457c0126fa66237354c05f"
+        },
+        {
+          "ordinal": 28,
+          "lens_index": 510,
+          "seed_id": "511",
+          "radial_stratum": 3,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_28_r3_s2_lens_000510.png",
+          "render_sha256": "257b103334b7d73ae1cf70861f686de2ef097e530d740caec4da6ee2ee5270dd"
+        },
+        {
+          "ordinal": 29,
+          "lens_index": 982,
+          "seed_id": "983",
+          "radial_stratum": 3,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_29_r3_s2_lens_000982.png",
+          "render_sha256": "8122b8bc5facf6ccf4ae7d4291b2fc45c5f9821b368e58fac186474ce8027744"
+        },
+        {
+          "ordinal": 30,
+          "lens_index": 512,
+          "seed_id": "513",
+          "radial_stratum": 3,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_30_r3_s3_lens_000512.png",
+          "render_sha256": "3b603daad67f38a6dcb88be166e2b49529d60550ef59d513276336e442475d2b"
+        },
+        {
+          "ordinal": 31,
+          "lens_index": 917,
+          "seed_id": "918",
+          "radial_stratum": 3,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_31_r3_s3_lens_000917.png",
+          "render_sha256": "b1d20c21c7062be309bae07e32e120d4dd419689f1c9a1f0ec41c2c07979a967"
+        }
+      ],
+      "sample_manifest_sha256": "88c3e0b5b53490df2e787cb2e6cbd1ab3b5cd4af06bf9129a4cea69c74abd971"
+    },
+    {
+      "eye_id": "RED3_25_M_26",
+      "sample_schema_version": "experiment64.instance-qc-sample.v1",
+      "n_identities": 32,
+      "identities": [
+        {
+          "ordinal": 0,
+          "lens_index": 518,
+          "seed_id": "519",
+          "radial_stratum": 0,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_00_r0_s0_lens_000518.png",
+          "render_sha256": "a5dc660d8a44939773dd73fa77e2bfa81b30d80500fa45d135bfc4031bd9d61e"
+        },
+        {
+          "ordinal": 1,
+          "lens_index": 609,
+          "seed_id": "610",
+          "radial_stratum": 0,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_01_r0_s0_lens_000609.png",
+          "render_sha256": "ba69a108d6a4275f94b645ed660a2bd1693225bd734f885444960f95757bfc25"
+        },
+        {
+          "ordinal": 2,
+          "lens_index": 54,
+          "seed_id": "55",
+          "radial_stratum": 0,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_02_r0_s1_lens_000054.png",
+          "render_sha256": "7ef8e472cb55af9bb31ddaf4b66384d476e1ed4c2b2370928a0524c12da6460a"
+        },
+        {
+          "ordinal": 3,
+          "lens_index": 275,
+          "seed_id": "276",
+          "radial_stratum": 0,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_03_r0_s1_lens_000275.png",
+          "render_sha256": "81a6344caf87ac04357dc826830cef4131dba125bf951b578420a7cacf0068e1"
+        },
+        {
+          "ordinal": 4,
+          "lens_index": 152,
+          "seed_id": "153",
+          "radial_stratum": 0,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_04_r0_s2_lens_000152.png",
+          "render_sha256": "fd4473c59e95bad55154b7a2b0f250798e23d2b81eb25b55a7ae6fdac07c5626"
+        },
+        {
+          "ordinal": 5,
+          "lens_index": 212,
+          "seed_id": "213",
+          "radial_stratum": 0,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_05_r0_s2_lens_000212.png",
+          "render_sha256": "8684b2fa99d35347611e9a9e409d1077c8a5566005062d0628210d1edea2aac0"
+        },
+        {
+          "ordinal": 6,
+          "lens_index": 835,
+          "seed_id": "836",
+          "radial_stratum": 0,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_06_r0_s3_lens_000835.png",
+          "render_sha256": "153479e0372fd24ca5f4bdef773e64a3573b84901b45215bf09e4f6dee999801"
+        },
+        {
+          "ordinal": 7,
+          "lens_index": 730,
+          "seed_id": "731",
+          "radial_stratum": 0,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_07_r0_s3_lens_000730.png",
+          "render_sha256": "2edc2c731b6f147014147227b5191e62fc9c822b5674b582e2c2e82812aabab0"
+        },
+        {
+          "ordinal": 8,
+          "lens_index": 260,
+          "seed_id": "261",
+          "radial_stratum": 1,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_08_r1_s0_lens_000260.png",
+          "render_sha256": "61d88111cc60c34b90f2ea9aaf06157aa6adcc8a686e9bf013d43bad611c0669"
+        },
+        {
+          "ordinal": 9,
+          "lens_index": 66,
+          "seed_id": "67",
+          "radial_stratum": 1,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_09_r1_s0_lens_000066.png",
+          "render_sha256": "dfd666c25e68e677ca5917e04dd3f694c323276c336ed7d3067334f80819b2a3"
+        },
+        {
+          "ordinal": 10,
+          "lens_index": 119,
+          "seed_id": "120",
+          "radial_stratum": 1,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_10_r1_s1_lens_000119.png",
+          "render_sha256": "e140eaf57804923f083332517c883035d5a9dd31ebf0b87ab92beacb2d7dda71"
+        },
+        {
+          "ordinal": 11,
+          "lens_index": 405,
+          "seed_id": "406",
+          "radial_stratum": 1,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_11_r1_s1_lens_000405.png",
+          "render_sha256": "fea5e3c149967bbd6f700b181b9d3d93e1fb3f9a7ed9027781c45b8c68a5a8d8"
+        },
+        {
+          "ordinal": 12,
+          "lens_index": 255,
+          "seed_id": "256",
+          "radial_stratum": 1,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_12_r1_s2_lens_000255.png",
+          "render_sha256": "a93b545007d6741334840bd107628df12ca6c6ddb5f9c4e368f5aae0f7b2dd10"
+        },
+        {
+          "ordinal": 13,
+          "lens_index": 40,
+          "seed_id": "41",
+          "radial_stratum": 1,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_13_r1_s2_lens_000040.png",
+          "render_sha256": "1299bffa18351f5ddfe3d9060e795d317c9a554d66b0cba3f7de3b6b8d254583"
+        },
+        {
+          "ordinal": 14,
+          "lens_index": 259,
+          "seed_id": "260",
+          "radial_stratum": 1,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_14_r1_s3_lens_000259.png",
+          "render_sha256": "9e1923a92237391ea422fb70960a4a294294171f543dd8c9ae562c91a0062573"
+        },
+        {
+          "ordinal": 15,
+          "lens_index": 280,
+          "seed_id": "281",
+          "radial_stratum": 1,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_15_r1_s3_lens_000280.png",
+          "render_sha256": "b2d4b61346bb28fc9d2c9d7b610a6b80a348506afba8eb4ffce065263c96df45"
+        },
+        {
+          "ordinal": 16,
+          "lens_index": 203,
+          "seed_id": "204",
+          "radial_stratum": 2,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_16_r2_s0_lens_000203.png",
+          "render_sha256": "a015469e80d5ef91a56a6ed0b8a0c7096a10421903e902d3555568643284a6c1"
+        },
+        {
+          "ordinal": 17,
+          "lens_index": 217,
+          "seed_id": "218",
+          "radial_stratum": 2,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_17_r2_s0_lens_000217.png",
+          "render_sha256": "65ffb93bee6b742d85bb257954cfadf96f484e4805309ec171c5e83d032493f1"
+        },
+        {
+          "ordinal": 18,
+          "lens_index": 137,
+          "seed_id": "138",
+          "radial_stratum": 2,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_18_r2_s1_lens_000137.png",
+          "render_sha256": "8f3e002aa3bde6f15c59d289360596304b9419b4ff489fb0ff143c279f9a7ff4"
+        },
+        {
+          "ordinal": 19,
+          "lens_index": 91,
+          "seed_id": "92",
+          "radial_stratum": 2,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_19_r2_s1_lens_000091.png",
+          "render_sha256": "7643697ce1613aeb4b312bdbd555c80a258461ab94ed76daad64a66f8fbc799f"
+        },
+        {
+          "ordinal": 20,
+          "lens_index": 94,
+          "seed_id": "95",
+          "radial_stratum": 2,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_20_r2_s2_lens_000094.png",
+          "render_sha256": "fb922e7b80570ecd0df592ed02233318ff3f023c2f322c3fca35d5098f068e1a"
+        },
+        {
+          "ordinal": 21,
+          "lens_index": 308,
+          "seed_id": "309",
+          "radial_stratum": 2,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_21_r2_s2_lens_000308.png",
+          "render_sha256": "059bbea6382fa4e33d3f03ffc6697f6e516253831e57338d209f81b06776e938"
+        },
+        {
+          "ordinal": 22,
+          "lens_index": 829,
+          "seed_id": "830",
+          "radial_stratum": 2,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_22_r2_s3_lens_000829.png",
+          "render_sha256": "d7137e41cc2934fe9ce8e230f6a4bc8dd40103afb8b703a1a4a6d6d8eb449a7c"
+        },
+        {
+          "ordinal": 23,
+          "lens_index": 864,
+          "seed_id": "865",
+          "radial_stratum": 2,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_23_r2_s3_lens_000864.png",
+          "render_sha256": "0c3b58ee1eb9c592c2cf2c9cda526dd1f6a7831f1ddf129cf2ff55f4f8d6de4a"
+        },
+        {
+          "ordinal": 24,
+          "lens_index": 228,
+          "seed_id": "229",
+          "radial_stratum": 3,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_24_r3_s0_lens_000228.png",
+          "render_sha256": "fc5c4a9eecf60585094bc69c44a01d02e291cf6283509203ae8f0ff69faf01c4"
+        },
+        {
+          "ordinal": 25,
+          "lens_index": 686,
+          "seed_id": "687",
+          "radial_stratum": 3,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_25_r3_s0_lens_000686.png",
+          "render_sha256": "fd5b8df816818be649a3e847150416e7f3fd2ecdfd293c937c58599851221a9a"
+        },
+        {
+          "ordinal": 26,
+          "lens_index": 89,
+          "seed_id": "90",
+          "radial_stratum": 3,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_26_r3_s1_lens_000089.png",
+          "render_sha256": "5bcb17423a23beaca578cfc1649f1b625260085db5c264dc69d65c9e85ab3afa"
+        },
+        {
+          "ordinal": 27,
+          "lens_index": 568,
+          "seed_id": "569",
+          "radial_stratum": 3,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_27_r3_s1_lens_000568.png",
+          "render_sha256": "6d434a5004fef3782b6d934c6d1dc204688f239eb8cc6c19be3e3b1092705259"
+        },
+        {
+          "ordinal": 28,
+          "lens_index": 815,
+          "seed_id": "816",
+          "radial_stratum": 3,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_28_r3_s2_lens_000815.png",
+          "render_sha256": "08a191238a1edd7cda64ef611195190007486b0452b4614fb9930684e9624225"
+        },
+        {
+          "ordinal": 29,
+          "lens_index": 853,
+          "seed_id": "854",
+          "radial_stratum": 3,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_29_r3_s2_lens_000853.png",
+          "render_sha256": "c9c3896fb808da98c0c3cb9cff034d22609c737741a43ba9d2bee11f68b1ab5f"
+        },
+        {
+          "ordinal": 30,
+          "lens_index": 422,
+          "seed_id": "423",
+          "radial_stratum": 3,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_30_r3_s3_lens_000422.png",
+          "render_sha256": "7d8eebbb4408687b7d47f71843deb280523e255d207237e657bcf921bdb53e0b"
+        },
+        {
+          "ordinal": 31,
+          "lens_index": 747,
+          "seed_id": "748",
+          "radial_stratum": 3,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_31_r3_s3_lens_000747.png",
+          "render_sha256": "0b9ec940772e2088a661675f1bc707aa46702e93cb95386630de5cb6066055bc"
+        }
+      ],
+      "sample_manifest_sha256": "e15ec2733b903068bc2c5dd9977353c6b2d7e3220d1d34c37f9856e00fd4c22d"
+    },
+    {
+      "eye_id": "RED3_25_M_27",
+      "sample_schema_version": "experiment64.instance-qc-sample.v1",
+      "n_identities": 32,
+      "identities": [
+        {
+          "ordinal": 0,
+          "lens_index": 68,
+          "seed_id": "69",
+          "radial_stratum": 0,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_00_r0_s0_lens_000068.png",
+          "render_sha256": "da954e137666966d2ba87a5fbc7c8f1c1fddd2e0894ae15523df9b98ece7c02f"
+        },
+        {
+          "ordinal": 1,
+          "lens_index": 163,
+          "seed_id": "164",
+          "radial_stratum": 0,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_01_r0_s0_lens_000163.png",
+          "render_sha256": "e9801125bfd46f9d88fb91ab5daf35991165088a50f019e40c54edc8849c8a96"
+        },
+        {
+          "ordinal": 2,
+          "lens_index": 23,
+          "seed_id": "24",
+          "radial_stratum": 0,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_02_r0_s1_lens_000023.png",
+          "render_sha256": "f34965f3b379dfd4b763ca06a12682d5a15001dd77bd2a719144f86c116f5559"
+        },
+        {
+          "ordinal": 3,
+          "lens_index": 203,
+          "seed_id": "204",
+          "radial_stratum": 0,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_03_r0_s1_lens_000203.png",
+          "render_sha256": "aece4f48444aad88e7dbd5303ca7f7a9bd33ebb91403fb0f80537361a0f57e6d"
+        },
+        {
+          "ordinal": 4,
+          "lens_index": 84,
+          "seed_id": "85",
+          "radial_stratum": 0,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_04_r0_s2_lens_000084.png",
+          "render_sha256": "bc162d0216411520c6901db0b637977dbb027e6c12d0e13cede3356a8187c831"
+        },
+        {
+          "ordinal": 5,
+          "lens_index": 304,
+          "seed_id": "305",
+          "radial_stratum": 0,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_05_r0_s2_lens_000304.png",
+          "render_sha256": "baad3b736eab672d30c686f0b48f4d70365d169029d7bd2d4168c1fd255a70cc"
+        },
+        {
+          "ordinal": 6,
+          "lens_index": 725,
+          "seed_id": "726",
+          "radial_stratum": 0,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_06_r0_s3_lens_000725.png",
+          "render_sha256": "46840e47a35c69ec0523b6874230c80169affdbf60759a19e4a31e8f8001d18f"
+        },
+        {
+          "ordinal": 7,
+          "lens_index": 363,
+          "seed_id": "364",
+          "radial_stratum": 0,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_07_r0_s3_lens_000363.png",
+          "render_sha256": "feb656e9ed891f621282115e4399db1dcfc5eed26e000cfc60727a3e8b519a50"
+        },
+        {
+          "ordinal": 8,
+          "lens_index": 490,
+          "seed_id": "491",
+          "radial_stratum": 1,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_08_r1_s0_lens_000490.png",
+          "render_sha256": "1504fe0ef19a76bf6d14d0b90529201fd819b4cc92f264d4776d94aed3a6a409"
+        },
+        {
+          "ordinal": 9,
+          "lens_index": 567,
+          "seed_id": "568",
+          "radial_stratum": 1,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_09_r1_s0_lens_000567.png",
+          "render_sha256": "22789a3f636ade7beb8038f7c627bad1f0b680b2bb7200993d3b64ae05c89640"
+        },
+        {
+          "ordinal": 10,
+          "lens_index": 254,
+          "seed_id": "255",
+          "radial_stratum": 1,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_10_r1_s1_lens_000254.png",
+          "render_sha256": "cb4751697b501a5e3932725305b966516acfadf5576ec868ae914083b0ae01c5"
+        },
+        {
+          "ordinal": 11,
+          "lens_index": 334,
+          "seed_id": "335",
+          "radial_stratum": 1,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_11_r1_s1_lens_000334.png",
+          "render_sha256": "bb5f2bde5ce2e816d271f90c068eed7b94e7619d63363b45a4b388d9c8e27d1b"
+        },
+        {
+          "ordinal": 12,
+          "lens_index": 370,
+          "seed_id": "371",
+          "radial_stratum": 1,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_12_r1_s2_lens_000370.png",
+          "render_sha256": "e3e2de253cd2884d5e0a4dfd90d2894723b844e0003db350af21fb9cbd0e0419"
+        },
+        {
+          "ordinal": 13,
+          "lens_index": 511,
+          "seed_id": "512",
+          "radial_stratum": 1,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_13_r1_s2_lens_000511.png",
+          "render_sha256": "cb269e7d65795cb48bc29010ad01cd4a25f88c84270dec46665546c8d5f7f4fe"
+        },
+        {
+          "ordinal": 14,
+          "lens_index": 715,
+          "seed_id": "716",
+          "radial_stratum": 1,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_14_r1_s3_lens_000715.png",
+          "render_sha256": "b3b407812ec6632e89cd1259b076321db40981b9c333516bb9ad352df787eec7"
+        },
+        {
+          "ordinal": 15,
+          "lens_index": 671,
+          "seed_id": "672",
+          "radial_stratum": 1,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_15_r1_s3_lens_000671.png",
+          "render_sha256": "cdca02823954a675a5d0dbb54204d1bd6857dde54e535139c575e739aeb224a5"
+        },
+        {
+          "ordinal": 16,
+          "lens_index": 395,
+          "seed_id": "396",
+          "radial_stratum": 2,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_16_r2_s0_lens_000395.png",
+          "render_sha256": "7e08813bfac71a03184ca7e570da96a322f1985ecf5c870cc6aa466a0a8c629e"
+        },
+        {
+          "ordinal": 17,
+          "lens_index": 618,
+          "seed_id": "619",
+          "radial_stratum": 2,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_17_r2_s0_lens_000618.png",
+          "render_sha256": "421fa34039935dd46ebec1630b2d76eb4ed774228c128400149db89e86f2cfd9"
+        },
+        {
+          "ordinal": 18,
+          "lens_index": 204,
+          "seed_id": "205",
+          "radial_stratum": 2,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_18_r2_s1_lens_000204.png",
+          "render_sha256": "f5c5a266ce26bc1226bd306420b2530dc5d1b6bcb5f3580b0ea4703a2740cacd"
+        },
+        {
+          "ordinal": 19,
+          "lens_index": 320,
+          "seed_id": "321",
+          "radial_stratum": 2,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_19_r2_s1_lens_000320.png",
+          "render_sha256": "6807013bf3f5a24f4dca06d789d47939ccacd1ad22e3517e5f2c5dd38cab5bc2"
+        },
+        {
+          "ordinal": 20,
+          "lens_index": 37,
+          "seed_id": "38",
+          "radial_stratum": 2,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_20_r2_s2_lens_000037.png",
+          "render_sha256": "f11a05d9bd70f2811ef6c801c3199bab122d670a2fe13b58672d894585edd1df"
+        },
+        {
+          "ordinal": 21,
+          "lens_index": 249,
+          "seed_id": "250",
+          "radial_stratum": 2,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_21_r2_s2_lens_000249.png",
+          "render_sha256": "6fe3f2e58c71b4bef7cd644ebb54d8f486aa11d146b1ad691667376af1a8da9a"
+        },
+        {
+          "ordinal": 22,
+          "lens_index": 157,
+          "seed_id": "158",
+          "radial_stratum": 2,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_22_r2_s3_lens_000157.png",
+          "render_sha256": "dca4c73d23ab7904d55ea1e7f6ca1237e8d1627b89c6ea24e2c9b89440b1f54d"
+        },
+        {
+          "ordinal": 23,
+          "lens_index": 649,
+          "seed_id": "650",
+          "radial_stratum": 2,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_23_r2_s3_lens_000649.png",
+          "render_sha256": "f2c525ca2d69e2b2323a0c976ca6130a8ff3d27d95bce3cf0bfcc1cce39c1413"
+        },
+        {
+          "ordinal": 24,
+          "lens_index": 195,
+          "seed_id": "196",
+          "radial_stratum": 3,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_24_r3_s0_lens_000195.png",
+          "render_sha256": "ce9f724f0fdf421d95c611e83755ab71ac67058026d83701c4f3a1ebe87e7258"
+        },
+        {
+          "ordinal": 25,
+          "lens_index": 613,
+          "seed_id": "614",
+          "radial_stratum": 3,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_25_r3_s0_lens_000613.png",
+          "render_sha256": "b14311adceb7a4f0fa669fcb344ac04c473432aa1a0290aa63b5fe3029a287cf"
+        },
+        {
+          "ordinal": 26,
+          "lens_index": 80,
+          "seed_id": "81",
+          "radial_stratum": 3,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_26_r3_s1_lens_000080.png",
+          "render_sha256": "5d6b8707db51b4b8ed92f7a3bf3567cd9d9a65a2761929d2f708cf3c1c53afdb"
+        },
+        {
+          "ordinal": 27,
+          "lens_index": 92,
+          "seed_id": "93",
+          "radial_stratum": 3,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_27_r3_s1_lens_000092.png",
+          "render_sha256": "c5b7fe98b91420c90369c8e706fc37beab82c09bc138799c895f8895ae6bc7f0"
+        },
+        {
+          "ordinal": 28,
+          "lens_index": 108,
+          "seed_id": "109",
+          "radial_stratum": 3,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_28_r3_s2_lens_000108.png",
+          "render_sha256": "7abf3ff0e70adeb8719fc183485b869e45350a02653784b7df47f6866f261ba5"
+        },
+        {
+          "ordinal": 29,
+          "lens_index": 383,
+          "seed_id": "384",
+          "radial_stratum": 3,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_29_r3_s2_lens_000383.png",
+          "render_sha256": "bf48806e862f34314c17c887e97ce3f8c99973a4aa6da918162141c7aa122df5"
+        },
+        {
+          "ordinal": 30,
+          "lens_index": 691,
+          "seed_id": "692",
+          "radial_stratum": 3,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_30_r3_s3_lens_000691.png",
+          "render_sha256": "596b3156d01feac9bdd5ac8b2a108d069ea99d7d01177b5d03355ba7ecf3c384"
+        },
+        {
+          "ordinal": 31,
+          "lens_index": 403,
+          "seed_id": "404",
+          "radial_stratum": 3,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_31_r3_s3_lens_000403.png",
+          "render_sha256": "06a7f5508b4b3d516b2b98216bc75b908d27c5c6995aa707862d0065fefd42e7"
+        }
+      ],
+      "sample_manifest_sha256": "fd4926e1d45434a45d7bd9e7cf0612de2a872d893e84dd07fe8d9860a153586b"
+    },
+    {
+      "eye_id": "RED3_25_M_28",
+      "sample_schema_version": "experiment64.instance-qc-sample.v1",
+      "n_identities": 32,
+      "identities": [
+        {
+          "ordinal": 0,
+          "lens_index": 692,
+          "seed_id": "693",
+          "radial_stratum": 0,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_00_r0_s0_lens_000692.png",
+          "render_sha256": "3bd0e2c58c5b89a2c031ecba8a1aa299449d9e792ff8400d229516356f9f993d"
+        },
+        {
+          "ordinal": 1,
+          "lens_index": 661,
+          "seed_id": "662",
+          "radial_stratum": 0,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_01_r0_s0_lens_000661.png",
+          "render_sha256": "26a9b82fef450b431a67ea329735e1cadaafc65f825a48702512e2f37de3f38c"
+        },
+        {
+          "ordinal": 2,
+          "lens_index": 659,
+          "seed_id": "660",
+          "radial_stratum": 0,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_02_r0_s1_lens_000659.png",
+          "render_sha256": "1381947262f0e3e632c38fe2fe40d8e133b89daece098f74057791a18f0d24bc"
+        },
+        {
+          "ordinal": 3,
+          "lens_index": 723,
+          "seed_id": "724",
+          "radial_stratum": 0,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_03_r0_s1_lens_000723.png",
+          "render_sha256": "1a4e87106b5c627d183c8cb2ebdef4176086467a1e79a98b92d0629e757c6467"
+        },
+        {
+          "ordinal": 4,
+          "lens_index": 793,
+          "seed_id": "794",
+          "radial_stratum": 0,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_04_r0_s2_lens_000793.png",
+          "render_sha256": "060746126957312a53af062ac3793cbfb6fb2c9d9f623c78a012ea23176c28f0"
+        },
+        {
+          "ordinal": 5,
+          "lens_index": 525,
+          "seed_id": "526",
+          "radial_stratum": 0,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_05_r0_s2_lens_000525.png",
+          "render_sha256": "a7a50a495100f61031f02f47d47a79a179024774c4ae5946bb7ddd1b6da741b4"
+        },
+        {
+          "ordinal": 6,
+          "lens_index": 50,
+          "seed_id": "51",
+          "radial_stratum": 0,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_06_r0_s3_lens_000050.png",
+          "render_sha256": "74c4f5120bf715c5303ff78a5762de1d399d85469a0d0bae80fe1640c19ddb99"
+        },
+        {
+          "ordinal": 7,
+          "lens_index": 94,
+          "seed_id": "95",
+          "radial_stratum": 0,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_07_r0_s3_lens_000094.png",
+          "render_sha256": "b1fada87b900c1993b5b3729342df94066bb8f8f630e5ef2536791f32e6ca861"
+        },
+        {
+          "ordinal": 8,
+          "lens_index": 615,
+          "seed_id": "616",
+          "radial_stratum": 1,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_08_r1_s0_lens_000615.png",
+          "render_sha256": "4b9d2737d0abe5988cb4e2b3d6ed1d5fd90150aa7e44ea8fd3b0f83265ef02f9"
+        },
+        {
+          "ordinal": 9,
+          "lens_index": 660,
+          "seed_id": "661",
+          "radial_stratum": 1,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_09_r1_s0_lens_000660.png",
+          "render_sha256": "5019d76ad8ef9346f9176dd1baf310b78963fe9612eb6cf6c7c683f816a45ddf"
+        },
+        {
+          "ordinal": 10,
+          "lens_index": 612,
+          "seed_id": "613",
+          "radial_stratum": 1,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_10_r1_s1_lens_000612.png",
+          "render_sha256": "e006199b079ecfbbdd350185af650a1cbbf7809880a8175adb0b1a0684a59c99"
+        },
+        {
+          "ordinal": 11,
+          "lens_index": 423,
+          "seed_id": "424",
+          "radial_stratum": 1,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_11_r1_s1_lens_000423.png",
+          "render_sha256": "945c6154896965806de24807088ed72c316efbae5018e0b7cb90e8b43f21582a"
+        },
+        {
+          "ordinal": 12,
+          "lens_index": 703,
+          "seed_id": "704",
+          "radial_stratum": 1,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_12_r1_s2_lens_000703.png",
+          "render_sha256": "e95f8cb6e766bb4d7ffc6439f9365948c709fb05dfc7f0f4e2da2bd5764e3e9b"
+        },
+        {
+          "ordinal": 13,
+          "lens_index": 611,
+          "seed_id": "612",
+          "radial_stratum": 1,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_13_r1_s2_lens_000611.png",
+          "render_sha256": "6c278f4f7ecc77b4003611ffb6cdce9b76df1407c18e75deac97672fa7694f01"
+        },
+        {
+          "ordinal": 14,
+          "lens_index": 135,
+          "seed_id": "136",
+          "radial_stratum": 1,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_14_r1_s3_lens_000135.png",
+          "render_sha256": "42e1d1302e41541c723b02042312d973dd820ecb039723b7ee703414b3d1c8f2"
+        },
+        {
+          "ordinal": 15,
+          "lens_index": 230,
+          "seed_id": "231",
+          "radial_stratum": 1,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_15_r1_s3_lens_000230.png",
+          "render_sha256": "9e0a4e4f42643105f76c893dac7465b9865878e4bdf75a19a0109a206fe307ad"
+        },
+        {
+          "ordinal": 16,
+          "lens_index": 650,
+          "seed_id": "651",
+          "radial_stratum": 2,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_16_r2_s0_lens_000650.png",
+          "render_sha256": "3e3c771c8843cbc7a27755185db4d31490d77d9b2bfa0effd2ba43a17bc03017"
+        },
+        {
+          "ordinal": 17,
+          "lens_index": 855,
+          "seed_id": "856",
+          "radial_stratum": 2,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_17_r2_s0_lens_000855.png",
+          "render_sha256": "558452801a3abd183b376cc312442ce260d69024d89426a2cdd93e7d803eecc5"
+        },
+        {
+          "ordinal": 18,
+          "lens_index": 467,
+          "seed_id": "468",
+          "radial_stratum": 2,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_18_r2_s1_lens_000467.png",
+          "render_sha256": "330ffb1a8a039c1231063c2212489d2d689b793574644561a4fbaccb7167644f"
+        },
+        {
+          "ordinal": 19,
+          "lens_index": 495,
+          "seed_id": "496",
+          "radial_stratum": 2,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_19_r2_s1_lens_000495.png",
+          "render_sha256": "c3adbe0d60d05cb9fb4541f13ed49d87a5ab94e879317a319194c5571bbffe9d"
+        },
+        {
+          "ordinal": 20,
+          "lens_index": 459,
+          "seed_id": "460",
+          "radial_stratum": 2,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_20_r2_s2_lens_000459.png",
+          "render_sha256": "76ed8be3aae401a2397d0b764bad2dfbdbbbb309a07d819a15286e61cd20fb3f"
+        },
+        {
+          "ordinal": 21,
+          "lens_index": 280,
+          "seed_id": "281",
+          "radial_stratum": 2,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_21_r2_s2_lens_000280.png",
+          "render_sha256": "a05a9d603bb7f6addaf9c5cf04f3735fe4b22ed90473c7a1109333f0f830f8a2"
+        },
+        {
+          "ordinal": 22,
+          "lens_index": 63,
+          "seed_id": "64",
+          "radial_stratum": 2,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_22_r2_s3_lens_000063.png",
+          "render_sha256": "3f7e5fbc5225f8a9537668a4a30595235cae51b1b465f34da7758abf30a9a88a"
+        },
+        {
+          "ordinal": 23,
+          "lens_index": 56,
+          "seed_id": "57",
+          "radial_stratum": 2,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_23_r2_s3_lens_000056.png",
+          "render_sha256": "7c63506ad505c1037d5e39c14ec5b9a2743da53935e18bf3792a4988402ad305"
+        },
+        {
+          "ordinal": 24,
+          "lens_index": 551,
+          "seed_id": "552",
+          "radial_stratum": 3,
+          "scale_stratum": 0,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_24_r3_s0_lens_000551.png",
+          "render_sha256": "0b82e83406123f83daa31b2e9160a4a0f3d1f5cdce03d6fe1b37cca036ba9e7f"
+        },
+        {
+          "ordinal": 25,
+          "lens_index": 819,
+          "seed_id": "820",
+          "radial_stratum": 3,
+          "scale_stratum": 0,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_25_r3_s0_lens_000819.png",
+          "render_sha256": "5c6d1a8a5f2e6f2b310db8343859ebb75185d98628d932b34a97c723564e9db5"
+        },
+        {
+          "ordinal": 26,
+          "lens_index": 816,
+          "seed_id": "817",
+          "radial_stratum": 3,
+          "scale_stratum": 1,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_26_r3_s1_lens_000816.png",
+          "render_sha256": "1beb471cc16a33147566aa1c2cf32ef2bcafbc30aa14fcf9b93eaeff7f50fa66"
+        },
+        {
+          "ordinal": 27,
+          "lens_index": 515,
+          "seed_id": "516",
+          "radial_stratum": 3,
+          "scale_stratum": 1,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_27_r3_s1_lens_000515.png",
+          "render_sha256": "95fed1435337c8c96a26336784741b04c6482cc3b374657f5c3285e7507ba66c"
+        },
+        {
+          "ordinal": 28,
+          "lens_index": 208,
+          "seed_id": "209",
+          "radial_stratum": 3,
+          "scale_stratum": 2,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_28_r3_s2_lens_000208.png",
+          "render_sha256": "b8afd22ec6c8e409760648b0724181e0643357ab51106cca19c246f775a93a94"
+        },
+        {
+          "ordinal": 29,
+          "lens_index": 288,
+          "seed_id": "289",
+          "radial_stratum": 3,
+          "scale_stratum": 2,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_29_r3_s2_lens_000288.png",
+          "render_sha256": "83caec70fbd7ec9bf0a368f186e7fd8b75131338921f4f8ae4e3f4475738b351"
+        },
+        {
+          "ordinal": 30,
+          "lens_index": 192,
+          "seed_id": "193",
+          "radial_stratum": 3,
+          "scale_stratum": 3,
+          "selection_role": "near_worst_coherence",
+          "render_relative_path": "renders/sample_30_r3_s3_lens_000192.png",
+          "render_sha256": "22469f8ae097a6e11935fe69494c3c6cc05ef9c7ea46626c8693147745bb9dd8"
+        },
+        {
+          "ordinal": 31,
+          "lens_index": 100,
+          "seed_id": "101",
+          "radial_stratum": 3,
+          "scale_stratum": 3,
+          "selection_role": "hash_minimal_remaining",
+          "render_relative_path": "renders/sample_31_r3_s3_lens_000100.png",
+          "render_sha256": "416bcda6e9a02cef02bcfdbe0974a62c178c241eb272c2cc5e6901d7fa33c470"
+        }
+      ],
+      "sample_manifest_sha256": "c60d36bb066eca057af4cea99b9391fbaff87d60c2d75514208b150040d71486"
+    }
+  ]
+}

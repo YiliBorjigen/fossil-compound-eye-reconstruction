@@ -1,0 +1,81 @@
+{
+  "schema_version": "experiment64.pre_outcome_stop.v1",
+  "experiment": 64,
+  "status": "stopped_before_attestation_and_model_outcome_evaluation",
+  "frozen_git_commit": "7ad346c8bde08c81d49e9c417441d825719c6de8",
+  "recorded_utc": "2026-09-04T12:26:35Z",
+  "review_mode": "ai_agent_visual_review_without_model_outputs",
+  "review_scope": "frozen_disjoint_stratified_sample_with_global_stop_on_any_nonpass",
+  "outcome_access": {
+    "sealed_outcome_artifacts_opened": false,
+    "targets_opened_during_review": false,
+    "attestations_issued": false,
+    "outcome_attempt_record_created": false,
+    "backend_pass_1_executed": false,
+    "backend_pass_2_executed": false,
+    "predictions_opened": false,
+    "errors_opened": false,
+    "model_comparisons_opened": false
+  },
+  "automatic_technical_preflight": {
+    "arthur_rows": 4942,
+    "arthur_robust_core_pass": 4934,
+    "arthur_distal_qc_pass": 4904,
+    "maike_expected_lenses": 11369,
+    "maike_robust_core_pass": 11369,
+    "maike_base_distal_qc_pass": 11349,
+    "maike_final_distal_qc_pass": 11343,
+    "sample_manifests_generated": 12,
+    "sample_cases_per_eye": 32,
+    "sample_cases_total": 384,
+    "experiment_63_identity_overlap": 0,
+    "all_sample_manifests_attest_zero_forbidden_outcome_access": true
+  },
+  "decisive_nonpass": {
+    "eye_id": "RED3_25_M_26",
+    "sample_ordinal_zero_based": 8,
+    "sample_filename": "sample_08_r1_s0_lens_000260.png",
+    "lens_index": 260,
+    "seed_id": "261",
+    "radial_stratum": 1,
+    "scale_stratum": 0,
+    "selection_role": "near_worst_coherence",
+    "reason": "large connected cyan lateral shelf or lobe with a narrow neck in both XY and XZ, inconsistent with one coherent central cap",
+    "render_sha256": "61d88111cc60c34b90f2ea9aaf06157aa6adcc8a686e9bf013d43bad611c0669",
+    "sample_manifest_sha256": "e15ec2733b903068bc2c5dd9977353c6b2d7e3220d1d34c37f9856e00fd4c22d",
+    "concordant_ai_visual_assessments": 2
+  },
+  "corroborating_nonpass_seen_during_concurrent_review": {
+    "eye_id": "RED3_25_M_26",
+    "sample_ordinal_zero_based": 12,
+    "sample_filename": "sample_12_r1_s2_lens_000255.png",
+    "lens_index": 255,
+    "seed_id": "256",
+    "reason": "large connected cyan lateral lobe or prong with a neck and concavity in both XY and XZ",
+    "render_sha256": "a93b545007d6741334840bd107628df12ca6c6ddb5f9c4e368f5aae0f7b2dd10",
+    "concordant_ai_visual_assessments": 2,
+    "decision_role": "corroboration_only; the first recorded nonpass already stopped the experiment"
+  },
+  "concurrent_review_disclosure": {
+    "reason": "AI assessments of eye samples ran concurrently, so additional already-rendered cases were seen before the global stop propagated.",
+    "first_pass_nonpass_flags_seen": 41,
+    "first_pass_indeterminate_flags_seen": 6,
+    "fully_adjudicated_prevalence_claim": false,
+    "decision_basis": "Only one nonpass was required. The decisive case and one corroborating case each received two concordant AI visual assessments under the frozen criterion; these were not independent human or anatomical-expert reviews. The remaining first-pass AI flags are unadjudicated workflow telemetry and are not used to estimate a failure rate."
+  },
+  "visual_exposure_ledger": {
+    "relative_path": "experiments/maike-modern-ground-truth/results/experiment_64_visual_exposures.json",
+    "sha256": "16edb0f4c3b29537ebaba651bec4ed82e57988aace59229b1bc8862042436756",
+    "size_bytes": 152683,
+    "total_identities": 384,
+    "future_use_rule": "All rendered identities are treated as viewed development cases even if their review was interrupted."
+  },
+  "decision": {
+    "visual_gate_passed": false,
+    "passing_attestations_may_be_issued": false,
+    "experiment_64_may_open_sealed_outcomes": false,
+    "experiment_64_may_be_scored": false,
+    "scientific_model_comparison_available": false
+  },
+  "interpretation": "At least one automatically eligible sampled core violated the prespecified visual-coherence criterion, so the frozen robust-cap extraction and automatic gates did not guarantee that criterion and Experiment 64 was ineligible for scoring. It produced no result about distal shape descriptors versus the nested position-and-scale control."
+}

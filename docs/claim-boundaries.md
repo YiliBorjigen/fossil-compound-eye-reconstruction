@@ -175,31 +175,29 @@ failure-rate estimate, and it must not be reported as an outer-information
 model failure because that model comparison was never run.
 
 Experiment 64 is a separately frozen robust-cap revision, not a continuation
-or rescue of Experiment 63. Its development used these animals' predictor
-morphology and all 384 old sample identities are excluded from the new visual
-draw. Consequently, even a valid future score is post-QC evidence rather than
-untouched external confirmation of the complete producer. Stage 2 predictors
-and automatic QC are derived only from sealed distal cores, and the backend
-sequesters separately sealed target values, models and errors until all twelve
-technical attestations pass. The producer and visual reviewer still ingest or
-see complete lens components, so this must not be described as proximal-anatomy
-blind or as process-level security. At the freeze point Experiment 64 has no
-QC or model outcome.
+or rescue of Experiment 63. Its new 384-case visual draw excluded all 384 old
+sample identities, but one automatically eligible sampled core retained a
+large connected lateral lobe and failed the frozen criterion in two concordant
+AI visual assessments. These were not independent human or anatomical-expert
+reviews. The complete run therefore stopped before attestations and before
+either backend pass. No separately sealed target value, model, prediction or
+error was opened, and no durable outcome-attempt record was created.
 
-Passing the technical barrier authorizes only one outcome attempt. Before the
-first separately sealed outcome read, the backend writes a durable record bound
-to the frozen commit and input root; it does not remove that record after a
-later stop or crash. The record blocks a second invocation, while the 80%
-target-resolvability gate remains target-dependent and is checked after target
-validation and joining but before model fitting. This is a fail-closed workflow
-control, not an operating-system security guarantee.
+Experiment 64 must be reported as a technical cap-producer failure, not as
+evidence for or against added predictive value of distal shape. Automatic
+connectivity and residual-tail success did not guarantee compliance with the
+prespecified visual-coherence criterion, making the experiment ineligible for
+scoring. The producer and visual reviewer ingested or saw complete lens
+components, so the workflow is not proximal-anatomy blind or process-level
+security even though model/error and sealed target values remained sequestered.
 
-The Experiment 64 primary direction rule has no minimum effect-size threshold
-and permits up to 20% target-unresolvable loss per eye. If it is later met, the
-claim is limited to added predictive value under the fixed metric among the
-retained `distal_qc AND target_resolvable` lenses in these supplied animals;
-it is not by itself evidence of a material biological effect, random
-missingness, cross-taxon transfer, a fossil lens or fossil optical function.
+All 384 Experiment 64 rendered identities are conservatively treated as viewed
+development cases because AI assessments ran concurrently before the stop
+propagated. Any later revision must be separately numbered and exclude all 768
+Experiment 63 and 64 identities if these animals are reused. These animals have
+now informed two rounds of preprocessing development, so an untouched
+confirmation of a later producer requires new animals. Nothing in Experiment
+64 establishes cross-taxon transfer, a fossil lens or fossil optical function.
 
 The Experiment 46 oracle-centred result is a mechanistic diagnostic on the same
 *Pieris* regions used after the transfer failed. It supports centre/axis

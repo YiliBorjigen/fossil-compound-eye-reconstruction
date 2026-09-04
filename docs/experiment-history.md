@@ -297,13 +297,13 @@ were issued, the primary backend was not executed, and no prediction error or
 model comparison was inspected. Experiment 63 therefore reports a pre-outcome
 technical producer failure—not a negative result for distal shape information.
 
-A revised producer must be developed and frozen as a new experiment, exclude
-all 384 viewed sample identities from a fresh lens-level QC draw, and retain
-the no-replacement whole-run stop. Reusing these twelve animals after their
-inputs informed preprocessing is a post-QC evaluation; untouched confirmation
-of the complete revised pipeline requires new animals.
+At that point, the next producer was required to be frozen as a new experiment,
+exclude all 384 viewed sample identities from a fresh lens-level QC draw, and
+retain the no-replacement whole-run stop. Experiment 64 below implemented that
+requirement. Reusing the same twelve animals made it a post-QC evaluation;
+untouched confirmation of a complete revised pipeline requires new animals.
 
-## Robust-cap post-QC validation frozen before execution (Experiment 64)
+## Robust-cap post-QC validation stopped at visual QC (Experiment 64)
 
 Experiment 64 implements that separately numbered revision without reopening
 Experiment 63. Development used only predictor geometry and the already viewed
@@ -316,22 +316,31 @@ support and p99 quadratic residual no greater than 0.75 of robust scale.
 Arthur's irregular mesh vertices cannot receive the voxel-connectivity gate,
 which remains an explicit representation asymmetry.
 
-All 384 Experiment 63 sample identities are committed as a canonical
-development-exclusion ledger. The only Experiment 64 visual draw must be
-disjoint within each eye and contains one worst-coherence and one hash-minimal
-remaining case in every 4 × 4 radial-position-by-scale cell. Any fail or
-indeterminate decision stops the whole run. A guarded backend must complete
-all twelve technical reviews and attestations before it can open any separately
-sealed target value or execute the primary and nonconfirmatory secondary
-models. After that technical pass, the backend rechecks the frozen commit and
-creates a durable attempt record before the first outcome read. The record
-survives a stopped or crashed outcome pass and prevents a second attempt for
-the same Maike input root and commit. The target-dependent 80% per-eye gate is
-then evaluated after target validation and joining, before any model fit.
+All 384 Experiment 63 sample identities were committed as a canonical
+development-exclusion ledger. At frozen commit
+`7ad346c8bde08c81d49e9c417441d825719c6de8`, all six Arthur technical paths
+and all twelve Maike technical bundles completed. The Maike robust core passed
+for all 11,369 fixed rows; 11,343 passed the final automatic distal-QC gates.
+The only Experiment 64 draw then selected one worst-coherence and one
+hash-minimal remaining case in every 4 × 4 radial-position-by-scale cell: 384
+new cases with zero overlap with Experiment 63.
 
-This freeze is not an outcome. Because these animals' input morphology informed
-preprocessing, a later valid score is a post-QC, model/error-sequestered
-evaluation rather than pristine external confirmation. The directional
-10-of-12 rule has no minimum effect-size threshold, applies only to retained
-`distal_qc AND target_resolvable` lenses, and cannot establish fossil transfer
-or reconstruction.
+The visual gate failed. `RED3_25_M_26` sample ordinal 8, lens 260, retained a
+large cyan lateral lobe joined to the putative central cap by a narrow neck in
+two projections. A second AI visual assessment returned the same nonpass
+classification under the frozen criterion; this was not an independent human
+or anatomical-expert review. A second already-rendered case in the same eye
+showed the same pattern. Under the frozen rule, no passing attestation was
+issued, no outcome-attempt record was created and neither backend pass ran. No
+target table, prediction, error or model comparison was opened.
+
+Experiment 64 therefore adds a technical negative result, not a
+shape-versus-control result: the tested robust-core operator plus connectivity
+and residual-tail gates did not guarantee the prespecified visual-coherence
+criterion. At least one automatically eligible sampled core violated that
+criterion, making Experiment 64 ineligible for scoring. Concurrent AI
+assessment exposed additional cases before the global stop propagated; all 384
+new identities are conservatively committed as viewed development cases, but
+the unadjudicated flags are not a failure-rate estimate. Any later revision
+needs another experiment number, must exclude all 768 Experiment 63 and 64
+identities, and should use new animals for untouched confirmation.

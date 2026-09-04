@@ -7,17 +7,22 @@
 > [stop report](../../reports/EXPERIMENT_63_MAIKE_PRE_OUTCOME_QC_STOP.md) and
 > [machine-readable record](results/experiment_63_stop_record.json).
 >
-> **Experiment 64 status: frozen before execution; no QC or model result yet.**
-> It is the separately numbered robust-cap successor described below.
+> **Experiment 64 status: stopped before attestation and model-outcome
+> evaluation.** Its disjoint visual gate found a connected lobe in a final
+> robust core, classified as nonpassing in two concordant AI visual
+> assessments. These were not independent human or anatomical-expert reviews.
+> No sealed outcome was opened and the backend was not run. See the [stop
+> report](../../reports/EXPERIMENT_64_ROBUST_CAP_PRE_OUTCOME_QC_STOP.md) and
+> [machine-readable record](results/experiment_64_stop_record.json).
 
 Experiment 64 is the separately numbered successor. It replaces the failed
 distal-cap observation rule with a fixed geometric-median/q90 robust core,
 commits all 384 previously viewed Experiment 63 identities as exclusions, and
 requires one new disjoint visual sample in every eye. Its implementation and
-protocol are frozen before that sample is viewed. No Experiment 63 result is
-repaired or reinterpreted, and reuse of the same animals makes Experiment 64 a
-post-QC, model/error-sequestered evaluation rather than pristine external
-confirmation.
+protocol were frozen before that sample was viewed. The robust revision still
+failed its visual gate, so no Experiment 63 result is repaired or
+reinterpreted. The negative result concerns the cap producer, not the unrun
+shape-versus-control comparison.
 
 The complete Experiment 64 contract is in the
 [frozen protocol](../../protocols/EXPERIMENT_64_ROBUST_CAP_POST_QC_VALIDATION.md).
@@ -33,15 +38,18 @@ The principal files are:
 | `attest_experiment_64_instance_qc.py` | Immutable all-pass technical attestation |
 | `experiment_64_two_pass_backend.py` | Pass-1 technical barrier and one acknowledged outcome run |
 | `results/experiment_64_development_exclusions.json` | Canonical 12 × 32 development-exclusion ledger |
+| `results/experiment_64_visual_exposures.json` | All 12 × 32 Experiment 64 identities now treated as viewed development cases |
+| `results/experiment_64_stop_record.json` | Immutable pre-outcome stop decision and artifact bindings |
 
 Stage 2 predictor/frame/QC calculations read only sealed distal cores. The
 producers necessarily ingest complete meshes or binary bodies, and the visual
 review shows complete components, so this is artifact/code-path isolation and
 not process security or proximal-anatomy blindness.
 
-The remainder of this README first documents the shared cohorts and input
-provenance, then preserves the immutable Experiment 63 workflow for audit. Use
-the Experiment 64 commands below for the successor run.
+The remainder of this README documents the shared cohorts and preserves both
+stopped workflows for audit. The Experiment 64 commands below record the frozen
+execution contract; they are not instructions to redraw, retune or score the
+stopped experiment.
 
 The scientific question, cohorts, thresholds and original decision rules for
 Experiment 63 remain frozen in the
@@ -145,7 +153,12 @@ itself distinguish voxelization/tessellation effects from acquisition, taxon
 or other biological differences. A transfer success would support only these
 fixed cohorts and observation operators.
 
-## Experiment 64 execution order
+## Archived Experiment 64 execution contract (audit only)
+
+Experiment 64 has already stopped at its visual gate. The commands in this
+section document what was frozen and executed before the stop, plus the backend
+that was deliberately never invoked. Repeating them cannot create another
+Experiment 64 result; any revised analysis needs a new experiment number.
 
 Run the complete warning-as-error test suite, commit the protocol,
 implementation and canonical exclusion ledger, and require a clean tree. Save
@@ -215,9 +228,10 @@ python -W error experiments/maike-modern-ground-truth/attest_experiment_64_insta
   ...
 ```
 
-Only after all twelve attestations exist may the two-pass backend be invoked.
-Its acknowledgement switch is the point at which separately sealed target
-values may first be opened for model evaluation:
+Only after all twelve attestations existed could the two-pass backend have been
+invoked. That condition failed, so the following command was never run. Its
+acknowledgement switch would have been the point at which separately sealed
+target values could first be opened for model evaluation:
 
 ```bash
 python -W error experiments/maike-modern-ground-truth/experiment_64_two_pass_backend.py \

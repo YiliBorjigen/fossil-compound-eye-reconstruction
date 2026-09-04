@@ -109,25 +109,30 @@ experiment stopped: no passing attestations were issued, the primary backend
 was not run, and no prediction error or model comparison was inspected.
 
 This is a preprocessing/QC result, not evidence that distal shape did or did
-not help. A separately numbered revision may be developed while outcomes stay
-sealed, but reuse of these inputs would be a post-QC evaluation; untouched
-confirmation of the revised complete pipeline requires new animals. See the
-[Experiment 63 stop report](reports/EXPERIMENT_63_MAIKE_PRE_OUTCOME_QC_STOP.md).
+not help. It led to the separately numbered Experiment 64 revision while
+outcomes stayed sealed. Reuse of these inputs made that revision a post-QC
+evaluation; untouched confirmation of a complete revised pipeline requires
+new animals. See the [Experiment 63 stop
+report](reports/EXPERIMENT_63_MAIKE_PRE_OUTCOME_QC_STOP.md).
 
-Experiment 64 now freezes that separately numbered revision before viewing a
-new disjoint QC sample. It uses a geometric-median/q90 robust central-cap
-operator, commits all 384 previously viewed lens identities as exclusions, and
-adds final-fit voxel-connectivity and residual-tail gates for the Maike data.
-Its technical and model-evaluation paths are separated, but the producers and
-reviewers necessarily see complete lens components; this is model/error and
-sealed-target-value sequestration, not proximal-anatomy blindness or process
-security. At this freeze point Experiment 64 has no visual-QC or model result.
-Its backend creates a durable, commit-bound attempt record before its first
-sealed outcome read; that record persists after failure and prevents a second
-outcome attempt. The per-eye 80% target-resolvability gate is checked after
-target validation and joining, but before model fitting.
-See the
-[Experiment 64 protocol](protocols/EXPERIMENT_64_ROBUST_CAP_POST_QC_VALIDATION.md).
+Experiment 64 froze and executed that separately numbered robust-cap revision.
+All six Arthur paths and twelve Maike technical bundles completed, and the new
+384-case visual sample had zero overlap with the Experiment 63 development
+sample. The visual gate nevertheless found a large connected cyan lobe in
+`RED3_25_M_26` lens 260; a second AI visual assessment returned the same
+nonpass classification under the frozen criterion. This was not an independent
+human or anatomical-expert review. A second case in the same eye showed the
+same pattern. The run stopped before attestations, sealed-outcome access or
+model fitting, so Experiment 64 also has no shape-versus-control result. The
+useful answer is technical: at least one automatically eligible sampled core
+violated the prespecified visual-coherence criterion, so the tested automatic
+gates did not guarantee that criterion and the experiment was ineligible for
+scoring. All 384 new identities are now conservatively recorded as viewed
+development cases. See the [Experiment 64 stop
+report](reports/EXPERIMENT_64_ROBUST_CAP_PRE_OUTCOME_QC_STOP.md),
+[machine-readable record](experiments/maike-modern-ground-truth/results/experiment_64_stop_record.json)
+and [frozen
+protocol](protocols/EXPERIMENT_64_ROBUST_CAP_POST_QC_VALIDATION.md).
 
 ## What is being reconstructed
 
