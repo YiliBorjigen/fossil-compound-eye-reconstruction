@@ -1,15 +1,50 @@
-# Experiment 63 independent modern validation
+# Twelve-animal modern ground-truth validation
 
-> **Status: stopped before model-outcome evaluation.** The frozen visual-QC
+> **Experiment 63 status: stopped before model-outcome evaluation.** The frozen visual-QC
 > gate found a nonpassing distal cap in four of twelve eyes. No passing
 > attestations were issued, and the primary backend was not run. Experiment 63
 > therefore has no shape-versus-control result. See the
 > [stop report](../../reports/EXPERIMENT_63_MAIKE_PRE_OUTCOME_QC_STOP.md) and
 > [machine-readable record](results/experiment_63_stop_record.json).
+>
+> **Experiment 64 status: frozen before execution; no QC or model result yet.**
+> It is the separately numbered robust-cap successor described below.
 
-This directory implements the source preparation, validation-data preparation,
-visual quality control and one-time backend for Experiment 63. The scientific
-question, cohorts, thresholds and decision rules are frozen in the
+Experiment 64 is the separately numbered successor. It replaces the failed
+distal-cap observation rule with a fixed geometric-median/q90 robust core,
+commits all 384 previously viewed Experiment 63 identities as exclusions, and
+requires one new disjoint visual sample in every eye. Its implementation and
+protocol are frozen before that sample is viewed. No Experiment 63 result is
+repaired or reinterpreted, and reuse of the same animals makes Experiment 64 a
+post-QC, model/error-sequestered evaluation rather than pristine external
+confirmation.
+
+The complete Experiment 64 contract is in the
+[frozen protocol](../../protocols/EXPERIMENT_64_ROBUST_CAP_POST_QC_VALIDATION.md).
+The principal files are:
+
+| File | Role |
+|---|---|
+| `experiment_64_robust_distal_core.py` | Shared physical-coordinate robust-core operator |
+| `experiment_64_technical_metrics.py` | Shared fit diagnostics and modality-specific gates |
+| `experiment_64_prepare_arthur_source_table.py` | Six-eye Arthur source producer with nested animal metadata |
+| `experiment_64_extract_lens_surfaces.py` | Twelve-eye Maike producer with sealed targets separated from technical artifacts |
+| `render_experiment_64_instance_qc_sample.py` | One disjoint 32-case sample per eye |
+| `attest_experiment_64_instance_qc.py` | Immutable all-pass technical attestation |
+| `experiment_64_two_pass_backend.py` | Pass-1 technical barrier and one acknowledged outcome run |
+| `results/experiment_64_development_exclusions.json` | Canonical 12 × 32 development-exclusion ledger |
+
+Stage 2 predictor/frame/QC calculations read only sealed distal cores. The
+producers necessarily ingest complete meshes or binary bodies, and the visual
+review shows complete components, so this is artifact/code-path isolation and
+not process security or proximal-anatomy blindness.
+
+The remainder of this README first documents the shared cohorts and input
+provenance, then preserves the immutable Experiment 63 workflow for audit. Use
+the Experiment 64 commands below for the successor run.
+
+The scientific question, cohorts, thresholds and original decision rules for
+Experiment 63 remain frozen in the
 [Experiment 63 protocol](../../protocols/EXPERIMENT_63_MAIKE_OUTER_INFORMATION_VALIDATION.md).
 
 The narrow question is whether four distal-cap shape descriptors improve
@@ -110,6 +145,105 @@ itself distinguish voxelization/tessellation effects from acquisition, taxon
 or other biological differences. A transfer success would support only these
 fixed cohorts and observation operators.
 
+## Experiment 64 execution order
+
+Run the complete warning-as-error test suite, commit the protocol,
+implementation and canonical exclusion ledger, and require a clean tree. Save
+that commit as `<frozen-commit>`. Every producer and the backend must bind that
+same commit.
+
+Build the Arthur source bundle:
+
+```bash
+python -W error experiments/maike-modern-ground-truth/experiment_64_prepare_arthur_source_table.py \
+  --manifest /path/to/arthur_manifest.json \
+  --eyemap-root /path/to/eyemap_T4 \
+  --output /new/path/experiment64/arthur \
+  --repository-root /path/to/fossil-compound-eye-reconstruction
+```
+
+Build each Maike eye from the already verified mask/mapping pair:
+
+```bash
+python -W error experiments/maike-modern-ground-truth/experiment_64_extract_lens_surfaces.py \
+  --mask /path/to/maike_masks_v2/M3_M_36_01.mask.uint8.npy \
+  --provenance /path/to/maike_masks_v2/M3_M_36_01.mask.json \
+  --seeds /path/to/maike_oda_mappings_v3/M3_M_36_01/seeds.csv \
+  --seed-provenance /path/to/maike_oda_mappings_v3/M3_M_36_01/seeds.json \
+  --eye-id M3_M_36_01 \
+  --species 'Drosophila simulans' \
+  --sex M \
+  --output /new/path/experiment64/maike/M3_M_36_01 \
+  --repository-root /path/to/fossil-compound-eye-reconstruction
+```
+
+Repeat for the twelve fixed eye IDs. M3 is *D. simulans* and RED3 is
+*D. mauritiana*; `_F_` and `_M_` encode the recorded sex. Each atomically
+published bundle separates `technical_inventory.csv`, `instances/` and
+`sealed_distal/` from the hash-bound `sealed_outcomes/` directory.
+
+For each eye, render the single disjoint QC draw. Repeat
+`--prior-sample-manifest` exactly once for each of the twelve Experiment 63
+sample manifests; the command independently reconstructs and verifies the
+committed 384-case ledger before opening a new instance:
+
+The abbreviated example below is not pasteable: replace the literal `...`
+with the remaining ten named `--prior-sample-manifest` arguments.
+
+```bash
+python -W error experiments/maike-modern-ground-truth/render_experiment_64_instance_qc_sample.py \
+  --eye-id M3_M_36_01 \
+  --bundle-root /new/path/experiment64/maike/M3_M_36_01 \
+  --repository-root /path/to/fossil-compound-eye-reconstruction \
+  --prior-sample-manifest M3_F_24_01=/path/to/old/M3_F_24_01/sample_manifest.json \
+  --prior-sample-manifest M3_F_28_03=/path/to/old/M3_F_28_03/sample_manifest.json \
+  ...
+```
+
+Review all 32 renders in manifest order. A fail or indeterminate decision
+stops the whole experiment; there is no replacement draw. A passing review
+uses schema `experiment64.instance-qc-review.v1`, review scope
+`disjoint_stratified_sample_only`, and is then attested with the same twelve
+prior-manifest arguments:
+
+```bash
+python -W error experiments/maike-modern-ground-truth/attest_experiment_64_instance_qc.py \
+  --bundle-root /new/path/experiment64/maike/M3_M_36_01 \
+  --repository-root /path/to/fossil-compound-eye-reconstruction \
+  --prior-sample-manifest M3_F_24_01=/path/to/old/M3_F_24_01/sample_manifest.json \
+  --prior-sample-manifest M3_F_28_03=/path/to/old/M3_F_28_03/sample_manifest.json \
+  ...
+```
+
+Only after all twelve attestations exist may the two-pass backend be invoked.
+Its acknowledgement switch is the point at which separately sealed target
+values may first be opened for model evaluation:
+
+```bash
+python -W error experiments/maike-modern-ground-truth/experiment_64_two_pass_backend.py \
+  --repo /path/to/fossil-compound-eye-reconstruction \
+  --expected-commit <frozen-commit> \
+  --arthur-root /new/path/experiment64/arthur \
+  --maike-root /new/path/experiment64/maike \
+  --output-directory /new/path/experiment64/sealed_first_run \
+  --execute-sealed-first-experiment64
+```
+
+After Pass 1 succeeds, the backend rechecks the clean frozen commit and,
+immediately before any Pass-2 outcome read, atomically creates the sibling
+`experiment64_outcome_attempt_<commit>/attempt.json` record next to the Maike
+root. That record is retained if Pass 2 stops or crashes. Its presence—or an
+existing result directory—blocks another invocation, so changing the output
+path cannot turn the sealed analysis into a trial run. The 80% per-eye
+`distal_qc AND target_resolvable` gate is evaluated after target validation and
+joining but before any model fit. A successful result is bound to the attempt
+record; a failed attempted outcome run is not retried under Experiment 64.
+
+The primary rule is descriptive because Maike predictor morphology informed
+the revised preprocessing. It requires strict shape-model wins in at least 10
+of 12 named animals, counts ties as non-wins, and has no minimum effect-size
+threshold. Secondary analyses cannot rescue that rule.
+
 ## Clean-commit workflow
 
 Install the pinned dependency ranges, run the tests, commit the frozen
@@ -137,7 +271,12 @@ directory removed after provenance and temporary-file issues were found. As
 recorded in the protocol, no target table, prediction, error or model-comparison
 outcome from that pilot was opened; the frozen workflow regenerates the eye.
 
-## 1. Prepare the Maike masks
+## Archived Experiment 63 workflow (audit only)
+
+The numbered subsections below preserve the stopped Experiment 63 workflow;
+they are not Experiment 64 execution instructions.
+
+### 1. Prepare the Maike masks
 
 Prepare the 12 tight, lossless, memory-mapped masks:
 
@@ -150,7 +289,7 @@ python -W error experiments/maike-modern-ground-truth/prepare_maike_masks.py \
 The `/path/to/upload/` placeholder above must contain only the twelve frozen
 directly supplied archives; do not mix `fig3_share.zip` into that directory.
 
-## 2. Map the public ODA centres
+### 2. Map the public ODA centres
 
 Extract the official Figure 3 nested stacks so that `<fig3-public-root>`
 contains the 12 `tiffs_*_eye_lenses_binned/` directories, then replay the ODA
@@ -168,7 +307,7 @@ The mapper publishes `manifest.json` only after all 12 eyes and all 11,369
 published ODA rows pass the frozen coordinate, axis, uniqueness and foreground
 gates.
 
-## 3. Prepare the Arthur source bundle
+### 3. Prepare the Arthur source bundle
 
 Create an external JSON manifest with exactly the three dated volumes and the
 four exact fields illustrated here:
@@ -214,7 +353,7 @@ The primary backend later expects
 `experiment63_arthur_source/arthur_source_table.csv` and
 `experiment63_arthur_source/arthur_source_provenance.json`.
 
-## 4. Build the twelve Maike eye bundles
+### 4. Build the twelve Maike eye bundles
 
 Build one eye bundle with the matching mask and seed pair:
 
@@ -254,7 +393,7 @@ does not match, the foreground is not an exact disjoint partition, the
 distal-only fixed point does not converge, the frame audit fails, or the
 staging directory contains anything outside the exact artifact inventory.
 
-## 5. Verify the distal-frame QC
+### 5. Verify the distal-frame QC
 
 `extract_lens_surfaces.py` runs the target-blind distal-frame audit internally
 and seals its canonical result as `distal_frame_audit.json`; that file must not
@@ -274,7 +413,7 @@ cmp \
 Repeat for all twelve eyes. A nonzero audit exit status or a non-identical
 recheck is a stop condition, not a row-level exclusion.
 
-## 6. Render and review the frozen visual-QC sample
+### 6. Render and review the frozen visual-QC sample
 
 Render exactly 32 outcome-blind, distal-QC-stratified instances for one eye:
 
@@ -332,7 +471,7 @@ Repeat rendering, review and attestation for all twelve eyes. The attester
 revalidates the full automatic inventory and hashes but does not turn the
 sample review into a claim of complete manual validation.
 
-## 7. Execute the frozen backend once
+### 7. Execute the frozen backend once
 
 Only after all source/validation bundles and all twelve attestations pass,
 invoke the backend with the same clean commit. The output directory must not

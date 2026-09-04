@@ -302,3 +302,36 @@ all 384 viewed sample identities from a fresh lens-level QC draw, and retain
 the no-replacement whole-run stop. Reusing these twelve animals after their
 inputs informed preprocessing is a post-QC evaluation; untouched confirmation
 of the complete revised pipeline requires new animals.
+
+## Robust-cap post-QC validation frozen before execution (Experiment 64)
+
+Experiment 64 implements that separately numbered revision without reopening
+Experiment 63. Development used only predictor geometry and the already viewed
+full-component renders; no Maike target table, prediction, error or model
+comparison was opened. A global physical-coordinate operator takes the
+intersection of geometric-median Euclidean-q90 and trimmed-PCA lateral-q90
+sets, then recomputes every Stage 2 feature and frame from the sealed core.
+Maike voxel caps additionally require at least 0.99 final-fit 26-connected
+support and p99 quadratic residual no greater than 0.75 of robust scale.
+Arthur's irregular mesh vertices cannot receive the voxel-connectivity gate,
+which remains an explicit representation asymmetry.
+
+All 384 Experiment 63 sample identities are committed as a canonical
+development-exclusion ledger. The only Experiment 64 visual draw must be
+disjoint within each eye and contains one worst-coherence and one hash-minimal
+remaining case in every 4 × 4 radial-position-by-scale cell. Any fail or
+indeterminate decision stops the whole run. A guarded backend must complete
+all twelve technical reviews and attestations before it can open any separately
+sealed target value or execute the primary and nonconfirmatory secondary
+models. After that technical pass, the backend rechecks the frozen commit and
+creates a durable attempt record before the first outcome read. The record
+survives a stopped or crashed outcome pass and prevents a second attempt for
+the same Maike input root and commit. The target-dependent 80% per-eye gate is
+then evaluated after target validation and joining, before any model fit.
+
+This freeze is not an outcome. Because these animals' input morphology informed
+preprocessing, a later valid score is a post-QC, model/error-sequestered
+evaluation rather than pristine external confirmation. The directional
+10-of-12 rule has no minimum effect-size threshold, applies only to retained
+`distal_qc AND target_resolvable` lenses, and cannot establish fossil transfer
+or reconstruction.

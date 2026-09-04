@@ -114,6 +114,21 @@ sealed, but reuse of these inputs would be a post-QC evaluation; untouched
 confirmation of the revised complete pipeline requires new animals. See the
 [Experiment 63 stop report](reports/EXPERIMENT_63_MAIKE_PRE_OUTCOME_QC_STOP.md).
 
+Experiment 64 now freezes that separately numbered revision before viewing a
+new disjoint QC sample. It uses a geometric-median/q90 robust central-cap
+operator, commits all 384 previously viewed lens identities as exclusions, and
+adds final-fit voxel-connectivity and residual-tail gates for the Maike data.
+Its technical and model-evaluation paths are separated, but the producers and
+reviewers necessarily see complete lens components; this is model/error and
+sealed-target-value sequestration, not proximal-anatomy blindness or process
+security. At this freeze point Experiment 64 has no visual-QC or model result.
+Its backend creates a durable, commit-bound attempt record before its first
+sealed outcome read; that record persists after failure and prevents a second
+outcome attempt. The per-eye 80% target-resolvability gate is checked after
+target validation and joining, but before model fitting.
+See the
+[Experiment 64 protocol](protocols/EXPERIMENT_64_ROBUST_CAP_POST_QC_VALIDATION.md).
+
 ## What is being reconstructed
 
 The corrected 3.7 µm *Asaphus* volume contains 116 facet centres that remain
