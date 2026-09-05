@@ -1,0 +1,726 @@
+{
+  "fig3_archive_sha256": "c4703afb44e3a67fc1565bf613b06e2948b9a12e1887c72d32137590a998a095",
+  "source_member_sha256": {
+    "README.md": "9187ae711fde69f93b5d343fff3d8b3580ac389c3e3fef920ea01417c80fb7ef",
+    "analysis.py": "fec02cf19c8910c999ab37a7ba3b19a1322d7021e54a8590da3a1c24df6ec689",
+    "plot&stats.py": "2cd808a81fe5de7ee2c07220af9676d63b7ca0b80dfc9f3d999651f37fdab9d0",
+    "rescale_imgs.py": "ef2eecdd1aeecfb3fe2cbcda6e614a5d14f0c40c7c390011fff92357e7489ad0"
+  },
+  "all_sampled_pixels_match": true,
+  "calibration_basis": "Author code, with specimen linkage through filenames, bin counts and sampled pixel identity",
+  "native_spacing_xyz_um": [
+    0.325,
+    0.325,
+    0.325
+  ],
+  "fig3_binning_xyz": [
+    4,
+    4,
+    4
+  ],
+  "fig3_binned_spacing_xyz_um": [
+    1.3,
+    1.3,
+    1.3
+  ],
+  "unit_note": "analysis.py comments mm; plot&stats.py explicitly comments um and labels physical outputs in micrometres. The mm comment is inconsistent with those outputs and the published 325 nm scan scale.",
+  "scope": "Three full binned planes per eye; not an exhaustive voxel comparison or independent instrument calibration",
+  "specimens": [
+    {
+      "specimen_folder": "tiffs_M3_F_24_01_eye_lenses_binned",
+      "native_archive": "tiffs_M3_F_24_01_eye_lenses-20260903T135137Z-1-001(1).zip",
+      "native_sha256": "a1af8a4b3f04f9b22f4f416854189072b14dd59b13b6708048d4766580e4a638",
+      "native_slices": 864,
+      "binned_slices": 216,
+      "all_output_names_match": true,
+      "sampled_planes": [
+        {
+          "binned_member": "tiffs_M3_F_24_01_eye_lenses_binned/M3_F_24_01_eye_trim.label247.tif",
+          "native_members": [
+            "tiffs_M3_F_24_01_eye_lenses/M3_F_24_01_eye_trim.label244.tif",
+            "tiffs_M3_F_24_01_eye_lenses/M3_F_24_01_eye_trim.label245.tif",
+            "tiffs_M3_F_24_01_eye_lenses/M3_F_24_01_eye_trim.label246.tif",
+            "tiffs_M3_F_24_01_eye_lenses/M3_F_24_01_eye_trim.label247.tif"
+          ],
+          "shape_yx": [
+            408,
+            435
+          ],
+          "compared_pixels": 177480,
+          "foreground_pixels": 4927,
+          "different_pixels": 0
+        },
+        {
+          "binned_member": "tiffs_M3_F_24_01_eye_lenses_binned/M3_F_24_01_eye_trim.label463.tif",
+          "native_members": [
+            "tiffs_M3_F_24_01_eye_lenses/M3_F_24_01_eye_trim.label460.tif",
+            "tiffs_M3_F_24_01_eye_lenses/M3_F_24_01_eye_trim.label461.tif",
+            "tiffs_M3_F_24_01_eye_lenses/M3_F_24_01_eye_trim.label462.tif",
+            "tiffs_M3_F_24_01_eye_lenses/M3_F_24_01_eye_trim.label463.tif"
+          ],
+          "shape_yx": [
+            408,
+            435
+          ],
+          "compared_pixels": 177480,
+          "foreground_pixels": 3813,
+          "different_pixels": 0
+        },
+        {
+          "binned_member": "tiffs_M3_F_24_01_eye_lenses_binned/M3_F_24_01_eye_trim.label679.tif",
+          "native_members": [
+            "tiffs_M3_F_24_01_eye_lenses/M3_F_24_01_eye_trim.label676.tif",
+            "tiffs_M3_F_24_01_eye_lenses/M3_F_24_01_eye_trim.label677.tif",
+            "tiffs_M3_F_24_01_eye_lenses/M3_F_24_01_eye_trim.label678.tif",
+            "tiffs_M3_F_24_01_eye_lenses/M3_F_24_01_eye_trim.label679.tif"
+          ],
+          "shape_yx": [
+            408,
+            435
+          ],
+          "compared_pixels": 177480,
+          "foreground_pixels": 2710,
+          "different_pixels": 0
+        }
+      ]
+    },
+    {
+      "specimen_folder": "tiffs_M3_F_28_03_eye_lenses_binned",
+      "native_archive": "tiffs_M3_F_28_03_eye_lenses-20260903T135112Z-1-001(2).zip",
+      "native_sha256": "d18763929208c1fff12ada55124e1f489cd420ec66f101ebb9309656fce38ffa",
+      "native_slices": 875,
+      "binned_slices": 218,
+      "all_output_names_match": true,
+      "sampled_planes": [
+        {
+          "binned_member": "tiffs_M3_F_28_03_eye_lenses_binned/M3_F_28_03_eye_trim261.tif",
+          "native_members": [
+            "tiffs_M3_F_28_03_eye_lenses/M3_F_28_03_eye_trim258.tif",
+            "tiffs_M3_F_28_03_eye_lenses/M3_F_28_03_eye_trim259.tif",
+            "tiffs_M3_F_28_03_eye_lenses/M3_F_28_03_eye_trim260.tif",
+            "tiffs_M3_F_28_03_eye_lenses/M3_F_28_03_eye_trim261.tif"
+          ],
+          "shape_yx": [
+            367,
+            478
+          ],
+          "compared_pixels": 175426,
+          "foreground_pixels": 1747,
+          "different_pixels": 0
+        },
+        {
+          "binned_member": "tiffs_M3_F_28_03_eye_lenses_binned/M3_F_28_03_eye_trim481.tif",
+          "native_members": [
+            "tiffs_M3_F_28_03_eye_lenses/M3_F_28_03_eye_trim478.tif",
+            "tiffs_M3_F_28_03_eye_lenses/M3_F_28_03_eye_trim479.tif",
+            "tiffs_M3_F_28_03_eye_lenses/M3_F_28_03_eye_trim480.tif",
+            "tiffs_M3_F_28_03_eye_lenses/M3_F_28_03_eye_trim481.tif"
+          ],
+          "shape_yx": [
+            367,
+            478
+          ],
+          "compared_pixels": 175426,
+          "foreground_pixels": 3028,
+          "different_pixels": 0
+        },
+        {
+          "binned_member": "tiffs_M3_F_28_03_eye_lenses_binned/M3_F_28_03_eye_trim697.tif",
+          "native_members": [
+            "tiffs_M3_F_28_03_eye_lenses/M3_F_28_03_eye_trim694.tif",
+            "tiffs_M3_F_28_03_eye_lenses/M3_F_28_03_eye_trim695.tif",
+            "tiffs_M3_F_28_03_eye_lenses/M3_F_28_03_eye_trim696.tif",
+            "tiffs_M3_F_28_03_eye_lenses/M3_F_28_03_eye_trim697.tif"
+          ],
+          "shape_yx": [
+            367,
+            478
+          ],
+          "compared_pixels": 175426,
+          "foreground_pixels": 6620,
+          "different_pixels": 0
+        }
+      ]
+    },
+    {
+      "specimen_folder": "tiffs_M3_F_35_03_eye_lenses_binned",
+      "native_archive": "tiffs_M3_F_35_03_eye_lenses-20260903T135109Z-1-001(1).zip",
+      "native_sha256": "6a205f1d691e88829861fd56d16269b4c6867d1ae7bd3f14ca558279b18ccef0",
+      "native_slices": 1031,
+      "binned_slices": 257,
+      "all_output_names_match": true,
+      "sampled_planes": [
+        {
+          "binned_member": "tiffs_M3_F_35_03_eye_lenses_binned/M3_F_35_03_eye_trim.mrc0265.tif",
+          "native_members": [
+            "tiffs_M3_F_35_03_eye_lenses/M3_F_35_03_eye_trim.mrc0262.tif",
+            "tiffs_M3_F_35_03_eye_lenses/M3_F_35_03_eye_trim.mrc0263.tif",
+            "tiffs_M3_F_35_03_eye_lenses/M3_F_35_03_eye_trim.mrc0264.tif",
+            "tiffs_M3_F_35_03_eye_lenses/M3_F_35_03_eye_trim.mrc0265.tif"
+          ],
+          "shape_yx": [
+            356,
+            400
+          ],
+          "compared_pixels": 142400,
+          "foreground_pixels": 1842,
+          "different_pixels": 0
+        },
+        {
+          "binned_member": "tiffs_M3_F_35_03_eye_lenses_binned/M3_F_35_03_eye_trim.mrc0521.tif",
+          "native_members": [
+            "tiffs_M3_F_35_03_eye_lenses/M3_F_35_03_eye_trim.mrc0518.tif",
+            "tiffs_M3_F_35_03_eye_lenses/M3_F_35_03_eye_trim.mrc0519.tif",
+            "tiffs_M3_F_35_03_eye_lenses/M3_F_35_03_eye_trim.mrc0520.tif",
+            "tiffs_M3_F_35_03_eye_lenses/M3_F_35_03_eye_trim.mrc0521.tif"
+          ],
+          "shape_yx": [
+            356,
+            400
+          ],
+          "compared_pixels": 142400,
+          "foreground_pixels": 2826,
+          "different_pixels": 0
+        },
+        {
+          "binned_member": "tiffs_M3_F_35_03_eye_lenses_binned/M3_F_35_03_eye_trim.mrc0777.tif",
+          "native_members": [
+            "tiffs_M3_F_35_03_eye_lenses/M3_F_35_03_eye_trim.mrc0774.tif",
+            "tiffs_M3_F_35_03_eye_lenses/M3_F_35_03_eye_trim.mrc0775.tif",
+            "tiffs_M3_F_35_03_eye_lenses/M3_F_35_03_eye_trim.mrc0776.tif",
+            "tiffs_M3_F_35_03_eye_lenses/M3_F_35_03_eye_trim.mrc0777.tif"
+          ],
+          "shape_yx": [
+            356,
+            400
+          ],
+          "compared_pixels": 142400,
+          "foreground_pixels": 4299,
+          "different_pixels": 0
+        }
+      ]
+    },
+    {
+      "specimen_folder": "tiffs_M3_M_26_01_eye_lenses_binned",
+      "native_archive": "tiffs_M3_M_26_01_eye_lenses-20260903T135105Z-1-001(1).zip",
+      "native_sha256": "69b0206668e185d333f5fcdf8302a85cec048e4bb39ad93cd54001d5ec415f37",
+      "native_slices": 694,
+      "binned_slices": 173,
+      "all_output_names_match": true,
+      "sampled_planes": [
+        {
+          "binned_member": "tiffs_M3_M_26_01_eye_lenses_binned/M3_M_26_01_eye_trim_lenses191.tif",
+          "native_members": [
+            "tiffs_M3_M_26_01_eye_lenses/M3_M_26_01_eye_trim_lenses188.tif",
+            "tiffs_M3_M_26_01_eye_lenses/M3_M_26_01_eye_trim_lenses189.tif",
+            "tiffs_M3_M_26_01_eye_lenses/M3_M_26_01_eye_trim_lenses190.tif",
+            "tiffs_M3_M_26_01_eye_lenses/M3_M_26_01_eye_trim_lenses191.tif"
+          ],
+          "shape_yx": [
+            393,
+            422
+          ],
+          "compared_pixels": 165846,
+          "foreground_pixels": 4445,
+          "different_pixels": 0
+        },
+        {
+          "binned_member": "tiffs_M3_M_26_01_eye_lenses_binned/M3_M_26_01_eye_trim_lenses363.tif",
+          "native_members": [
+            "tiffs_M3_M_26_01_eye_lenses/M3_M_26_01_eye_trim_lenses360.tif",
+            "tiffs_M3_M_26_01_eye_lenses/M3_M_26_01_eye_trim_lenses361.tif",
+            "tiffs_M3_M_26_01_eye_lenses/M3_M_26_01_eye_trim_lenses362.tif",
+            "tiffs_M3_M_26_01_eye_lenses/M3_M_26_01_eye_trim_lenses363.tif"
+          ],
+          "shape_yx": [
+            393,
+            422
+          ],
+          "compared_pixels": 165846,
+          "foreground_pixels": 3132,
+          "different_pixels": 0
+        },
+        {
+          "binned_member": "tiffs_M3_M_26_01_eye_lenses_binned/M3_M_26_01_eye_trim_lenses535.tif",
+          "native_members": [
+            "tiffs_M3_M_26_01_eye_lenses/M3_M_26_01_eye_trim_lenses532.tif",
+            "tiffs_M3_M_26_01_eye_lenses/M3_M_26_01_eye_trim_lenses533.tif",
+            "tiffs_M3_M_26_01_eye_lenses/M3_M_26_01_eye_trim_lenses534.tif",
+            "tiffs_M3_M_26_01_eye_lenses/M3_M_26_01_eye_trim_lenses535.tif"
+          ],
+          "shape_yx": [
+            393,
+            422
+          ],
+          "compared_pixels": 165846,
+          "foreground_pixels": 2180,
+          "different_pixels": 0
+        }
+      ]
+    },
+    {
+      "specimen_folder": "tiffs_M3_M_32_01_eye_lenses_binned",
+      "native_archive": "tiffs_M3_M_32_01_eye_lenses-20260903T135052Z-1-001(1).zip",
+      "native_sha256": "adc4aa40945bcba20956679262b211444ec307391361f775e15ab4555e797d51",
+      "native_slices": 714,
+      "binned_slices": 178,
+      "all_output_names_match": true,
+      "sampled_planes": [
+        {
+          "binned_member": "tiffs_M3_M_32_01_eye_lenses_binned/M3_M_32_01_eye_trim_lenses202.tif",
+          "native_members": [
+            "tiffs_M3_M_32_01_eye_lenses/M3_M_32_01_eye_trim_lenses199.tif",
+            "tiffs_M3_M_32_01_eye_lenses/M3_M_32_01_eye_trim_lenses200.tif",
+            "tiffs_M3_M_32_01_eye_lenses/M3_M_32_01_eye_trim_lenses201.tif",
+            "tiffs_M3_M_32_01_eye_lenses/M3_M_32_01_eye_trim_lenses202.tif"
+          ],
+          "shape_yx": [
+            396,
+            371
+          ],
+          "compared_pixels": 146916,
+          "foreground_pixels": 2927,
+          "different_pixels": 0
+        },
+        {
+          "binned_member": "tiffs_M3_M_32_01_eye_lenses_binned/M3_M_32_01_eye_trim_lenses382.tif",
+          "native_members": [
+            "tiffs_M3_M_32_01_eye_lenses/M3_M_32_01_eye_trim_lenses379.tif",
+            "tiffs_M3_M_32_01_eye_lenses/M3_M_32_01_eye_trim_lenses380.tif",
+            "tiffs_M3_M_32_01_eye_lenses/M3_M_32_01_eye_trim_lenses381.tif",
+            "tiffs_M3_M_32_01_eye_lenses/M3_M_32_01_eye_trim_lenses382.tif"
+          ],
+          "shape_yx": [
+            396,
+            371
+          ],
+          "compared_pixels": 146916,
+          "foreground_pixels": 3767,
+          "different_pixels": 0
+        },
+        {
+          "binned_member": "tiffs_M3_M_32_01_eye_lenses_binned/M3_M_32_01_eye_trim_lenses558.tif",
+          "native_members": [
+            "tiffs_M3_M_32_01_eye_lenses/M3_M_32_01_eye_trim_lenses555.tif",
+            "tiffs_M3_M_32_01_eye_lenses/M3_M_32_01_eye_trim_lenses556.tif",
+            "tiffs_M3_M_32_01_eye_lenses/M3_M_32_01_eye_trim_lenses557.tif",
+            "tiffs_M3_M_32_01_eye_lenses/M3_M_32_01_eye_trim_lenses558.tif"
+          ],
+          "shape_yx": [
+            396,
+            371
+          ],
+          "compared_pixels": 146916,
+          "foreground_pixels": 4952,
+          "different_pixels": 0
+        }
+      ]
+    },
+    {
+      "specimen_folder": "tiffs_M3_M_36_01_eye_lenses_binned",
+      "native_archive": "tiffs_M3_M_36_01_eye_lenses-20260903T135121Z-1-001(1).zip",
+      "native_sha256": "024cb4ba7de8c56a98fa96bf881b67d94cdb49a2d0c43160cfdffe8b9a30f2bc",
+      "native_slices": 684,
+      "binned_slices": 171,
+      "all_output_names_match": true,
+      "sampled_planes": [
+        {
+          "binned_member": "tiffs_M3_M_36_01_eye_lenses_binned/M3_M_36_01_eye_lenses197.tif",
+          "native_members": [
+            "tiffs_M3_M_36_01_eye_lenses/M3_M_36_01_eye_lenses194.tif",
+            "tiffs_M3_M_36_01_eye_lenses/M3_M_36_01_eye_lenses195.tif",
+            "tiffs_M3_M_36_01_eye_lenses/M3_M_36_01_eye_lenses196.tif",
+            "tiffs_M3_M_36_01_eye_lenses/M3_M_36_01_eye_lenses197.tif"
+          ],
+          "shape_yx": [
+            414,
+            392
+          ],
+          "compared_pixels": 162288,
+          "foreground_pixels": 3606,
+          "different_pixels": 0
+        },
+        {
+          "binned_member": "tiffs_M3_M_36_01_eye_lenses_binned/M3_M_36_01_eye_lenses369.tif",
+          "native_members": [
+            "tiffs_M3_M_36_01_eye_lenses/M3_M_36_01_eye_lenses366.tif",
+            "tiffs_M3_M_36_01_eye_lenses/M3_M_36_01_eye_lenses367.tif",
+            "tiffs_M3_M_36_01_eye_lenses/M3_M_36_01_eye_lenses368.tif",
+            "tiffs_M3_M_36_01_eye_lenses/M3_M_36_01_eye_lenses369.tif"
+          ],
+          "shape_yx": [
+            414,
+            392
+          ],
+          "compared_pixels": 162288,
+          "foreground_pixels": 4629,
+          "different_pixels": 0
+        },
+        {
+          "binned_member": "tiffs_M3_M_36_01_eye_lenses_binned/M3_M_36_01_eye_lenses541.tif",
+          "native_members": [
+            "tiffs_M3_M_36_01_eye_lenses/M3_M_36_01_eye_lenses538.tif",
+            "tiffs_M3_M_36_01_eye_lenses/M3_M_36_01_eye_lenses539.tif",
+            "tiffs_M3_M_36_01_eye_lenses/M3_M_36_01_eye_lenses540.tif",
+            "tiffs_M3_M_36_01_eye_lenses/M3_M_36_01_eye_lenses541.tif"
+          ],
+          "shape_yx": [
+            414,
+            392
+          ],
+          "compared_pixels": 162288,
+          "foreground_pixels": 5856,
+          "different_pixels": 0
+        }
+      ]
+    },
+    {
+      "specimen_folder": "tiffs_RED3_25_F_36_eye_lenses_binned",
+      "native_archive": "tiffs_RED3_25_F_36_eye_lenses-20260903T135103Z-1-001(1).zip",
+      "native_sha256": "9208899f9c2481ebbe43b760b3efe6dfb60cfeb8b3b7fe156c8ee7884feed495",
+      "native_slices": 1158,
+      "binned_slices": 289,
+      "all_output_names_match": true,
+      "sampled_planes": [
+        {
+          "binned_member": "tiffs_RED3_25_F_36_eye_lenses_binned/RED3_25_F_36_eye_trim_lenses0318.tif",
+          "native_members": [
+            "tiffs_RED3_25_F_36_eye_lenses/RED3_25_F_36_eye_trim_lenses0315.tif",
+            "tiffs_RED3_25_F_36_eye_lenses/RED3_25_F_36_eye_trim_lenses0316.tif",
+            "tiffs_RED3_25_F_36_eye_lenses/RED3_25_F_36_eye_trim_lenses0317.tif",
+            "tiffs_RED3_25_F_36_eye_lenses/RED3_25_F_36_eye_trim_lenses0318.tif"
+          ],
+          "shape_yx": [
+            448,
+            501
+          ],
+          "compared_pixels": 224448,
+          "foreground_pixels": 1707,
+          "different_pixels": 0
+        },
+        {
+          "binned_member": "tiffs_RED3_25_F_36_eye_lenses_binned/RED3_25_F_36_eye_trim_lenses0606.tif",
+          "native_members": [
+            "tiffs_RED3_25_F_36_eye_lenses/RED3_25_F_36_eye_trim_lenses0603.tif",
+            "tiffs_RED3_25_F_36_eye_lenses/RED3_25_F_36_eye_trim_lenses0604.tif",
+            "tiffs_RED3_25_F_36_eye_lenses/RED3_25_F_36_eye_trim_lenses0605.tif",
+            "tiffs_RED3_25_F_36_eye_lenses/RED3_25_F_36_eye_trim_lenses0606.tif"
+          ],
+          "shape_yx": [
+            448,
+            501
+          ],
+          "compared_pixels": 224448,
+          "foreground_pixels": 2695,
+          "different_pixels": 0
+        },
+        {
+          "binned_member": "tiffs_RED3_25_F_36_eye_lenses_binned/RED3_25_F_36_eye_trim_lenses0894.tif",
+          "native_members": [
+            "tiffs_RED3_25_F_36_eye_lenses/RED3_25_F_36_eye_trim_lenses0891.tif",
+            "tiffs_RED3_25_F_36_eye_lenses/RED3_25_F_36_eye_trim_lenses0892.tif",
+            "tiffs_RED3_25_F_36_eye_lenses/RED3_25_F_36_eye_trim_lenses0893.tif",
+            "tiffs_RED3_25_F_36_eye_lenses/RED3_25_F_36_eye_trim_lenses0894.tif"
+          ],
+          "shape_yx": [
+            448,
+            501
+          ],
+          "compared_pixels": 224448,
+          "foreground_pixels": 4061,
+          "different_pixels": 0
+        }
+      ]
+    },
+    {
+      "specimen_folder": "tiffs_RED3_25_F_37_eye_lenses_binned",
+      "native_archive": "tiffs_RED3_25_F_37_eye_lenses-20260903T135100Z-1-001(1).zip",
+      "native_sha256": "1d230daea5bacacc92f5ab5aec4da13c1d4b10e7a2aedc554ed3baf7cc0e3012",
+      "native_slices": 1172,
+      "binned_slices": 293,
+      "all_output_names_match": true,
+      "sampled_planes": [
+        {
+          "binned_member": "tiffs_RED3_25_F_37_eye_lenses_binned/Red3_F_25_37_eye_trim_lenses0315.tif",
+          "native_members": [
+            "tiffs_RED3_25_F_37_eye_lenses/Red3_F_25_37_eye_trim_lenses0312.tif",
+            "tiffs_RED3_25_F_37_eye_lenses/Red3_F_25_37_eye_trim_lenses0313.tif",
+            "tiffs_RED3_25_F_37_eye_lenses/Red3_F_25_37_eye_trim_lenses0314.tif",
+            "tiffs_RED3_25_F_37_eye_lenses/Red3_F_25_37_eye_trim_lenses0315.tif"
+          ],
+          "shape_yx": [
+            362,
+            519
+          ],
+          "compared_pixels": 187878,
+          "foreground_pixels": 1739,
+          "different_pixels": 0
+        },
+        {
+          "binned_member": "tiffs_RED3_25_F_37_eye_lenses_binned/Red3_F_25_37_eye_trim_lenses0607.tif",
+          "native_members": [
+            "tiffs_RED3_25_F_37_eye_lenses/Red3_F_25_37_eye_trim_lenses0604.tif",
+            "tiffs_RED3_25_F_37_eye_lenses/Red3_F_25_37_eye_trim_lenses0605.tif",
+            "tiffs_RED3_25_F_37_eye_lenses/Red3_F_25_37_eye_trim_lenses0606.tif",
+            "tiffs_RED3_25_F_37_eye_lenses/Red3_F_25_37_eye_trim_lenses0607.tif"
+          ],
+          "shape_yx": [
+            362,
+            519
+          ],
+          "compared_pixels": 187878,
+          "foreground_pixels": 2658,
+          "different_pixels": 0
+        },
+        {
+          "binned_member": "tiffs_RED3_25_F_37_eye_lenses_binned/Red3_F_25_37_eye_trim_lenses0899.tif",
+          "native_members": [
+            "tiffs_RED3_25_F_37_eye_lenses/Red3_F_25_37_eye_trim_lenses0896.tif",
+            "tiffs_RED3_25_F_37_eye_lenses/Red3_F_25_37_eye_trim_lenses0897.tif",
+            "tiffs_RED3_25_F_37_eye_lenses/Red3_F_25_37_eye_trim_lenses0898.tif",
+            "tiffs_RED3_25_F_37_eye_lenses/Red3_F_25_37_eye_trim_lenses0899.tif"
+          ],
+          "shape_yx": [
+            362,
+            519
+          ],
+          "compared_pixels": 187878,
+          "foreground_pixels": 4053,
+          "different_pixels": 0
+        }
+      ]
+    },
+    {
+      "specimen_folder": "tiffs_RED3_25_F_38_eye_lenses_binned",
+      "native_archive": "tiffs_RED3_25_F_38_eye_lenses-20260903T135116Z-1-001(1).zip",
+      "native_sha256": "b735f6767029f512ba094a7ffeb4c1d46a3cc04039022890cce1f54b4e8a6b57",
+      "native_slices": 1135,
+      "binned_slices": 283,
+      "all_output_names_match": true,
+      "sampled_planes": [
+        {
+          "binned_member": "tiffs_RED3_25_F_38_eye_lenses_binned/Red3_25_F_38_eye_trim_lenses0338.tif",
+          "native_members": [
+            "tiffs_RED3_25_F_38_eye_lenses/Red3_25_F_38_eye_trim_lenses0335.tif",
+            "tiffs_RED3_25_F_38_eye_lenses/Red3_25_F_38_eye_trim_lenses0336.tif",
+            "tiffs_RED3_25_F_38_eye_lenses/Red3_25_F_38_eye_trim_lenses0337.tif",
+            "tiffs_RED3_25_F_38_eye_lenses/Red3_25_F_38_eye_trim_lenses0338.tif"
+          ],
+          "shape_yx": [
+            461,
+            385
+          ],
+          "compared_pixels": 177485,
+          "foreground_pixels": 3956,
+          "different_pixels": 0
+        },
+        {
+          "binned_member": "tiffs_RED3_25_F_38_eye_lenses_binned/Red3_25_F_38_eye_trim_lenses0622.tif",
+          "native_members": [
+            "tiffs_RED3_25_F_38_eye_lenses/Red3_25_F_38_eye_trim_lenses0619.tif",
+            "tiffs_RED3_25_F_38_eye_lenses/Red3_25_F_38_eye_trim_lenses0620.tif",
+            "tiffs_RED3_25_F_38_eye_lenses/Red3_25_F_38_eye_trim_lenses0621.tif",
+            "tiffs_RED3_25_F_38_eye_lenses/Red3_25_F_38_eye_trim_lenses0622.tif"
+          ],
+          "shape_yx": [
+            461,
+            385
+          ],
+          "compared_pixels": 177485,
+          "foreground_pixels": 3181,
+          "different_pixels": 0
+        },
+        {
+          "binned_member": "tiffs_RED3_25_F_38_eye_lenses_binned/Red3_25_F_38_eye_trim_lenses0906.tif",
+          "native_members": [
+            "tiffs_RED3_25_F_38_eye_lenses/Red3_25_F_38_eye_trim_lenses0903.tif",
+            "tiffs_RED3_25_F_38_eye_lenses/Red3_25_F_38_eye_trim_lenses0904.tif",
+            "tiffs_RED3_25_F_38_eye_lenses/Red3_25_F_38_eye_trim_lenses0905.tif",
+            "tiffs_RED3_25_F_38_eye_lenses/Red3_25_F_38_eye_trim_lenses0906.tif"
+          ],
+          "shape_yx": [
+            461,
+            385
+          ],
+          "compared_pixels": 177485,
+          "foreground_pixels": 2243,
+          "different_pixels": 0
+        }
+      ]
+    },
+    {
+      "specimen_folder": "tiffs_RED3_25_M_26_eye_lenses_binned",
+      "native_archive": "tiffs_RED3_25_M_26_eye_lenses-20260903T135055Z-1-001(1).zip",
+      "native_sha256": "9c1ab44205610e940617e19249df8c5364a0b88115ff736b3c6a3952bd63b3de",
+      "native_slices": 1040,
+      "binned_slices": 260,
+      "all_output_names_match": true,
+      "sampled_planes": [
+        {
+          "binned_member": "tiffs_RED3_25_M_26_eye_lenses_binned/Red3_M_26_lenses0323.tif",
+          "native_members": [
+            "tiffs_RED3_25_M_26_eye_lenses/Red3_M_26_lenses0320.tif",
+            "tiffs_RED3_25_M_26_eye_lenses/Red3_M_26_lenses0321.tif",
+            "tiffs_RED3_25_M_26_eye_lenses/Red3_M_26_lenses0322.tif",
+            "tiffs_RED3_25_M_26_eye_lenses/Red3_M_26_lenses0323.tif"
+          ],
+          "shape_yx": [
+            405,
+            390
+          ],
+          "compared_pixels": 157950,
+          "foreground_pixels": 1565,
+          "different_pixels": 0
+        },
+        {
+          "binned_member": "tiffs_RED3_25_M_26_eye_lenses_binned/Red3_M_26_lenses0583.tif",
+          "native_members": [
+            "tiffs_RED3_25_M_26_eye_lenses/Red3_M_26_lenses0580.tif",
+            "tiffs_RED3_25_M_26_eye_lenses/Red3_M_26_lenses0581.tif",
+            "tiffs_RED3_25_M_26_eye_lenses/Red3_M_26_lenses0582.tif",
+            "tiffs_RED3_25_M_26_eye_lenses/Red3_M_26_lenses0583.tif"
+          ],
+          "shape_yx": [
+            405,
+            390
+          ],
+          "compared_pixels": 157950,
+          "foreground_pixels": 2360,
+          "different_pixels": 0
+        },
+        {
+          "binned_member": "tiffs_RED3_25_M_26_eye_lenses_binned/Red3_M_26_lenses0843.tif",
+          "native_members": [
+            "tiffs_RED3_25_M_26_eye_lenses/Red3_M_26_lenses0840.tif",
+            "tiffs_RED3_25_M_26_eye_lenses/Red3_M_26_lenses0841.tif",
+            "tiffs_RED3_25_M_26_eye_lenses/Red3_M_26_lenses0842.tif",
+            "tiffs_RED3_25_M_26_eye_lenses/Red3_M_26_lenses0843.tif"
+          ],
+          "shape_yx": [
+            405,
+            390
+          ],
+          "compared_pixels": 157950,
+          "foreground_pixels": 3497,
+          "different_pixels": 0
+        }
+      ]
+    },
+    {
+      "specimen_folder": "tiffs_RED3_25_M_27_eye_lenses_binned",
+      "native_archive": "tiffs_RED3_25_M_27_eye_lenses-20260903T135132Z-1-001(1).zip",
+      "native_sha256": "5997775e6366fc4c268eb1cc65e467b101cc07ecaad2c0d8d4363bd16729d4ef",
+      "native_slices": 1252,
+      "binned_slices": 313,
+      "all_output_names_match": true,
+      "sampled_planes": [
+        {
+          "binned_member": "tiffs_RED3_25_M_27_eye_lenses_binned/Red3_25_M_27_eye_trim.separate0352.tif",
+          "native_members": [
+            "tiffs_RED3_25_M_27_eye_lenses/Red3_25_M_27_eye_trim.separate0349.tif",
+            "tiffs_RED3_25_M_27_eye_lenses/Red3_25_M_27_eye_trim.separate0350.tif",
+            "tiffs_RED3_25_M_27_eye_lenses/Red3_25_M_27_eye_trim.separate0351.tif",
+            "tiffs_RED3_25_M_27_eye_lenses/Red3_25_M_27_eye_trim.separate0352.tif"
+          ],
+          "shape_yx": [
+            364,
+            341
+          ],
+          "compared_pixels": 124124,
+          "foreground_pixels": 1354,
+          "different_pixels": 0
+        },
+        {
+          "binned_member": "tiffs_RED3_25_M_27_eye_lenses_binned/Red3_25_M_27_eye_trim.separate0664.tif",
+          "native_members": [
+            "tiffs_RED3_25_M_27_eye_lenses/Red3_25_M_27_eye_trim.separate0661.tif",
+            "tiffs_RED3_25_M_27_eye_lenses/Red3_25_M_27_eye_trim.separate0662.tif",
+            "tiffs_RED3_25_M_27_eye_lenses/Red3_25_M_27_eye_trim.separate0663.tif",
+            "tiffs_RED3_25_M_27_eye_lenses/Red3_25_M_27_eye_trim.separate0664.tif"
+          ],
+          "shape_yx": [
+            364,
+            341
+          ],
+          "compared_pixels": 124124,
+          "foreground_pixels": 1974,
+          "different_pixels": 0
+        },
+        {
+          "binned_member": "tiffs_RED3_25_M_27_eye_lenses_binned/Red3_25_M_27_eye_trim.separate0976.tif",
+          "native_members": [
+            "tiffs_RED3_25_M_27_eye_lenses/Red3_25_M_27_eye_trim.separate0973.tif",
+            "tiffs_RED3_25_M_27_eye_lenses/Red3_25_M_27_eye_trim.separate0974.tif",
+            "tiffs_RED3_25_M_27_eye_lenses/Red3_25_M_27_eye_trim.separate0975.tif",
+            "tiffs_RED3_25_M_27_eye_lenses/Red3_25_M_27_eye_trim.separate0976.tif"
+          ],
+          "shape_yx": [
+            364,
+            341
+          ],
+          "compared_pixels": 124124,
+          "foreground_pixels": 2331,
+          "different_pixels": 0
+        }
+      ]
+    },
+    {
+      "specimen_folder": "tiffs_RED3_25_M_28_eye_lenses_binned",
+      "native_archive": "tiffs_RED3_25_M_28_eye_lenses-20260903T135127Z-1-001(1).zip",
+      "native_sha256": "d3492e58cde9a6182729f0c9803fcc368f3bb7debdeb798d6e633f03febc40ce",
+      "native_slices": 1283,
+      "binned_slices": 320,
+      "all_output_names_match": true,
+      "sampled_planes": [
+        {
+          "binned_member": "tiffs_RED3_25_M_28_eye_lenses_binned/Red3_25_M_28_eye_lenses0339.tif",
+          "native_members": [
+            "tiffs_RED3_25_M_28_eye_lenses/Red3_25_M_28_eye_lenses0336.tif",
+            "tiffs_RED3_25_M_28_eye_lenses/Red3_25_M_28_eye_lenses0337.tif",
+            "tiffs_RED3_25_M_28_eye_lenses/Red3_25_M_28_eye_lenses0338.tif",
+            "tiffs_RED3_25_M_28_eye_lenses/Red3_25_M_28_eye_lenses0339.tif"
+          ],
+          "shape_yx": [
+            265,
+            424
+          ],
+          "compared_pixels": 112360,
+          "foreground_pixels": 1812,
+          "different_pixels": 0
+        },
+        {
+          "binned_member": "tiffs_RED3_25_M_28_eye_lenses_binned/Red3_25_M_28_eye_lenses0659.tif",
+          "native_members": [
+            "tiffs_RED3_25_M_28_eye_lenses/Red3_25_M_28_eye_lenses0656.tif",
+            "tiffs_RED3_25_M_28_eye_lenses/Red3_25_M_28_eye_lenses0657.tif",
+            "tiffs_RED3_25_M_28_eye_lenses/Red3_25_M_28_eye_lenses0658.tif",
+            "tiffs_RED3_25_M_28_eye_lenses/Red3_25_M_28_eye_lenses0659.tif"
+          ],
+          "shape_yx": [
+            265,
+            424
+          ],
+          "compared_pixels": 112360,
+          "foreground_pixels": 2297,
+          "different_pixels": 0
+        },
+        {
+          "binned_member": "tiffs_RED3_25_M_28_eye_lenses_binned/Red3_25_M_28_eye_lenses0979.tif",
+          "native_members": [
+            "tiffs_RED3_25_M_28_eye_lenses/Red3_25_M_28_eye_lenses0976.tif",
+            "tiffs_RED3_25_M_28_eye_lenses/Red3_25_M_28_eye_lenses0977.tif",
+            "tiffs_RED3_25_M_28_eye_lenses/Red3_25_M_28_eye_lenses0978.tif",
+            "tiffs_RED3_25_M_28_eye_lenses/Red3_25_M_28_eye_lenses0979.tif"
+          ],
+          "shape_yx": [
+            265,
+            424
+          ],
+          "compared_pixels": 112360,
+          "foreground_pixels": 2641,
+          "different_pixels": 0
+        }
+      ]
+    }
+  ]
+}

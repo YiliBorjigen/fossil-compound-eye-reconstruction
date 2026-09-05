@@ -163,3 +163,64 @@ status; the eleven-file `archive_inventory.json` and the original report above
 remain preserved as the pilot's historical snapshot. Only ZIP metadata and
 TIFF headers were inspected for this replacement. No voxel calibration was
 found in those headers. The two-file reconstruction results above are unchanged.
+
+## Calibration resolved from the supplied Fig. 3 archive
+
+The subsequently supplied `fig3_share.zip` resolves the earlier calibration
+question for all twelve native M3/RED3 stacks. Use **x = y = z = 0.325 µm**
+for the original TIFF masks. The separate Fig. 3 images in `share/stacks.zip`
+were reduced into **4 × 4 × 4** bins and use **1.3 µm** spacing in every
+direction. The reconstruction pilot used the original masks.
+
+Evidence within the authors' archive:
+
+- `share/README.md` describes the 4 × 4 × 4 binning.
+- `share/plot&stats.py`, lines 107–109, defines a base pixel size of 0.325 µm
+  and multiplies it by a bin size of 4. Lines 125–126 pass that same value as
+  both `pixel_size` and `depth_size`.
+- `share/analysis.py` performs the same calculation and uses equal in-plane
+  and depth spacing. Its `# mm` comment conflicts with the explicit `# um`
+  in the plotting script, its micrometre-labelled outputs, and the published
+  325 nm scan scale; it is treated as a unit-comment error.
+- `share/rescale_imgs.py` implements the three-dimensional binning. For each
+  of twelve matching specimen folders, output slice names and counts match
+  four-slice grouping of the supplied original stack. Repeating that
+  operation on three full planes per eye (quarter, middle, three-quarter)
+  gives **zero differing pixels across 5,863,803 compared pixels**. This
+  comparison reproduces the authors' per-slice rounding before summing in z.
+
+[The calibration evidence](fig3_calibration_evidence.json) records archive and
+script hashes, native archive hashes, exact slice matches and sampling scope.
+This establishes the connection to the authors' stated calibration; it is a
+sampled image-identity check, not an independent measurement of scanner scale.
+The earlier generic Diamond 2× binning possibility is superseded by this
+dataset-specific code and image comparison.
+
+The original voxel scores and fitted model are preserved. Multiplying axial
+errors by 0.325 gives the following values for the same 60 scorable M32 central
+patches out of 71 candidates:
+
+| Method | Median patch MAE, µm | 90th percentile patch MAE, µm |
+|---|---:|---:|
+| Outer ellipsoid continuation | 7.124 | 10.344 |
+| Frozen training template | 1.497 | 1.838 |
+| Frozen outer-geometry ridge | 0.803 | 1.070 |
+
+[Converted results](transfer-results/transfer_summary_um.csv) retain all
+original voxel columns and add micrometre columns. This is a unit conversion,
+with no retraining or new reconstruction experiment. Full lens rims, fossil
+transfer, optical validation and the other stated limitations remain unresolved.
+The earlier calibration-unknown statements above are preserved as history.
+
+Reproduce the source linkage without unpacking full image volumes:
+
+```bash
+python experiments/maike-binary-pilot/check_fig3_calibration.py \
+  /path/to/fig3_share.zip /path/to/native-zips \
+  --output /path/to/new-calibration-evidence.json
+```
+
+Sources: the user-supplied Fig. 3 archive associated with
+[Buffry et al. (2024)](https://doi.org/10.1186/s12915-024-01864-7) and its
+[Figshare data/code record](https://figshare.com/articles/dataset/Data_and_code_for_Figures_3_and_4/24769677).
+Input archives and third-party scripts are not redistributed here.
