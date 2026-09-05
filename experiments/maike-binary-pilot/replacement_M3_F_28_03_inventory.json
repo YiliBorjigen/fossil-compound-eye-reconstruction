@@ -1,0 +1,24 @@
+{
+  "archive": "tiffs_M3_F_28_03_eye_lenses-20260903T135112Z-1-001(2).zip",
+  "sha256": "d18763929208c1fff12ada55124e1f489cd420ec66f101ebb9309656fce38ffa",
+  "zip_bytes": 7929219,
+  "slices": 875,
+  "tiff_bytes_after_unzip": 8645014,
+  "decoded_uint8_bytes": 2461882500,
+  "shapes_xy": [
+    [
+      1914,
+      1470
+    ]
+  ],
+  "modes": [
+    "P"
+  ],
+  "slice_number_first": 42,
+  "slice_number_last": 916,
+  "contiguous_unique_slice_numbers": true,
+  "possible_calibration_metadata": [],
+  "inspection": "ZIP members and all TIFF headers only; no image pixels analysed",
+  "status": "Replacement attachment received; completes the twelve named M3/RED3 archives",
+  "supersedes_status_only": "archive_inventory.json failed_attachment_not_inspected entry; prior snapshot preserved"
+}

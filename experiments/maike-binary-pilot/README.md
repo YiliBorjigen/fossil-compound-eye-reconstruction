@@ -147,3 +147,19 @@ Use the original archive names containing the specimen IDs. Output paths refuse
 overwriting. The code, manifests, frozen model, per-facet errors, summaries and
 derived figures are committed. Mask-derived full prediction grids are generated
 locally by the scripts; input TIFFs and local grids are not redistributed here.
+
+## Replacement archive received — 5 September 2026
+
+The replacement `M3_F_28_03` ZIP is now accessible, completing all twelve
+named M3/RED3 archives. Its 875 TIFF slices have unique consecutive numbers
+42–916 and dimensions 1914 × 1470 pixels. The ZIP occupies 7,929,219 bytes;
+the TIFF files total 8,645,014 bytes after ZIP extraction, while the decoded
+8-bit array would occupy 2,461,882,500 bytes (2.462 GB). Across all twelve
+archives, decoded 8-bit arrays would total 30.939 GB (decimal).
+
+[The replacement receipt](replacement_M3_F_28_03_inventory.json) records its
+SHA-256 and header inspection. It supersedes the earlier attachment-failed
+status; the eleven-file `archive_inventory.json` and the original report above
+remain preserved as the pilot's historical snapshot. Only ZIP metadata and
+TIFF headers were inspected for this replacement. No voxel calibration was
+found in those headers. The two-file reconstruction results above are unchanged.
