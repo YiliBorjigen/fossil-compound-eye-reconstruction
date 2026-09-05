@@ -1,0 +1,145 @@
+{
+  "summary": [
+    {
+      "block": "pooled",
+      "n": 62,
+      "position_rbf_median_mae_voxels": 0.99497485757083,
+      "outer_geometry_median_mae_voxels": 0.9836070234841129,
+      "median_paired_position_minus_geometry_voxels": -0.003839781827208233
+    },
+    {
+      "block": 0,
+      "n": 14,
+      "position_rbf_median_mae_voxels": 1.3689779183676434,
+      "outer_geometry_median_mae_voxels": 1.4543745201525962,
+      "median_paired_position_minus_geometry_voxels": -0.16853274007785296
+    },
+    {
+      "block": 1,
+      "n": 16,
+      "position_rbf_median_mae_voxels": 1.1658400571757919,
+      "outer_geometry_median_mae_voxels": 1.0762800158666195,
+      "median_paired_position_minus_geometry_voxels": 0.11826206366345604
+    },
+    {
+      "block": 2,
+      "n": 17,
+      "position_rbf_median_mae_voxels": 0.725700891622314,
+      "outer_geometry_median_mae_voxels": 0.6986923462286354,
+      "median_paired_position_minus_geometry_voxels": -0.08773052244395008
+    },
+    {
+      "block": 3,
+      "n": 15,
+      "position_rbf_median_mae_voxels": 0.994896480085126,
+      "outer_geometry_median_mae_voxels": 0.7358749377323459,
+      "median_paired_position_minus_geometry_voxels": 0.041278067986922906
+    }
+  ],
+  "tuning": [
+    {
+      "block": 0,
+      "selected_smoothing": 100.0,
+      "inner_validation": [
+        {
+          "mean_facet_mae": 1.5074987459636318,
+          "smoothing": 0.01
+        },
+        {
+          "mean_facet_mae": 1.4525740741919992,
+          "smoothing": 0.1
+        },
+        {
+          "mean_facet_mae": 1.2257929988368244,
+          "smoothing": 1.0
+        },
+        {
+          "mean_facet_mae": 1.0603059692276817,
+          "smoothing": 10.0
+        },
+        {
+          "mean_facet_mae": 1.0404244340625064,
+          "smoothing": 100.0
+        }
+      ]
+    },
+    {
+      "block": 1,
+      "selected_smoothing": 10.0,
+      "inner_validation": [
+        {
+          "mean_facet_mae": 1.7956158306486385,
+          "smoothing": 0.01
+        },
+        {
+          "mean_facet_mae": 1.7403325547470785,
+          "smoothing": 0.1
+        },
+        {
+          "mean_facet_mae": 1.5591239325129105,
+          "smoothing": 1.0
+        },
+        {
+          "mean_facet_mae": 1.5187880998043113,
+          "smoothing": 10.0
+        },
+        {
+          "mean_facet_mae": 1.5821741995036618,
+          "smoothing": 100.0
+        }
+      ]
+    },
+    {
+      "block": 2,
+      "selected_smoothing": 10.0,
+      "inner_validation": [
+        {
+          "mean_facet_mae": 1.567046307605779,
+          "smoothing": 0.01
+        },
+        {
+          "mean_facet_mae": 1.5391044323442076,
+          "smoothing": 0.1
+        },
+        {
+          "mean_facet_mae": 1.4642103667784194,
+          "smoothing": 1.0
+        },
+        {
+          "mean_facet_mae": 1.4138978332660264,
+          "smoothing": 10.0
+        },
+        {
+          "mean_facet_mae": 1.4418661822844911,
+          "smoothing": 100.0
+        }
+      ]
+    },
+    {
+      "block": 3,
+      "selected_smoothing": 10.0,
+      "inner_validation": [
+        {
+          "mean_facet_mae": 1.082314718367401,
+          "smoothing": 0.01
+        },
+        {
+          "mean_facet_mae": 1.0678613201368268,
+          "smoothing": 0.1
+        },
+        {
+          "mean_facet_mae": 1.0074027737585738,
+          "smoothing": 1.0
+        },
+        {
+          "mean_facet_mae": 0.966684360864144,
+          "smoothing": 10.0
+        },
+        {
+          "mean_facet_mae": 0.9883095330421827,
+          "smoothing": 100.0
+        }
+      ]
+    }
+  ]
+}

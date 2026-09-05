@@ -1,0 +1,217 @@
+{
+  "inspection": "All TIFF headers; no pixel decoding in this inventory",
+  "available_archives": 11,
+  "total_decoded_uint8_bytes": 28477363212,
+  "failed_attachment_not_inspected": "tiffs_M3_F_28_03_eye_lenses-20260903T135112Z-1-001(1).zip",
+  "archives": [
+    {
+      "archive": "tiffs_M3_F_24_01_eye_lenses-20260903T135137Z-1-001(1).zip",
+      "sha256": "a1af8a4b3f04f9b22f4f416854189072b14dd59b13b6708048d4766580e4a638",
+      "zip_bytes": 8656592,
+      "tiff_file_bytes_after_unzip": 9318938,
+      "decoded_uint8_bytes": 2457993600,
+      "slices": 864,
+      "slice_number_first": 28,
+      "slice_number_last": 891,
+      "contiguous_unique_slice_numbers": true,
+      "image_shapes_modes": [
+        [
+          1740,
+          1635,
+          "P"
+        ]
+      ],
+      "possible_calibration_metadata": []
+    },
+    {
+      "archive": "tiffs_M3_F_35_03_eye_lenses-20260903T135109Z-1-001(1).zip",
+      "sha256": "6a205f1d691e88829861fd56d16269b4c6867d1ae7bd3f14ca558279b18ccef0",
+      "zip_bytes": 8363277,
+      "tiff_file_bytes_after_unzip": 9146864,
+      "decoded_uint8_bytes": 2353618350,
+      "slices": 1031,
+      "slice_number_first": 6,
+      "slice_number_last": 1036,
+      "contiguous_unique_slice_numbers": true,
+      "image_shapes_modes": [
+        [
+          1602,
+          1425,
+          "P"
+        ]
+      ],
+      "possible_calibration_metadata": []
+    },
+    {
+      "archive": "tiffs_M3_M_26_01_eye_lenses-20260903T135105Z-1-001(1).zip",
+      "sha256": "69b0206668e185d333f5fcdf8302a85cec048e4bb39ad93cd54001d5ec415f37",
+      "zip_bytes": 6172316,
+      "tiff_file_bytes_after_unzip": 6691184,
+      "decoded_uint8_bytes": 1846161450,
+      "slices": 694,
+      "slice_number_first": 16,
+      "slice_number_last": 709,
+      "contiguous_unique_slice_numbers": true,
+      "image_shapes_modes": [
+        [
+          1689,
+          1575,
+          "P"
+        ]
+      ],
+      "possible_calibration_metadata": []
+    },
+    {
+      "archive": "tiffs_M3_M_32_01_eye_lenses-20260903T135052Z-1-001(1).zip",
+      "sha256": "adc4aa40945bcba20956679262b211444ec307391361f775e15ab4555e797d51",
+      "zip_bytes": 6382619,
+      "tiff_file_bytes_after_unzip": 6916610,
+      "decoded_uint8_bytes": 1682680230,
+      "slices": 714,
+      "slice_number_first": 23,
+      "slice_number_last": 736,
+      "contiguous_unique_slice_numbers": true,
+      "image_shapes_modes": [
+        [
+          1485,
+          1587,
+          "P"
+        ]
+      ],
+      "possible_calibration_metadata": []
+    },
+    {
+      "archive": "tiffs_M3_M_36_01_eye_lenses-20260903T135121Z-1-001(1).zip",
+      "sha256": "024cb4ba7de8c56a98fa96bf881b67d94cdb49a2d0c43160cfdffe8b9a30f2bc",
+      "zip_bytes": 6859529,
+      "tiff_file_bytes_after_unzip": 7381050,
+      "decoded_uint8_bytes": 1780432164,
+      "slices": 684,
+      "slice_number_first": 26,
+      "slice_number_last": 709,
+      "contiguous_unique_slice_numbers": true,
+      "image_shapes_modes": [
+        [
+          1569,
+          1659,
+          "P"
+        ]
+      ],
+      "possible_calibration_metadata": []
+    },
+    {
+      "archive": "tiffs_RED3_25_F_36_eye_lenses-20260903T135103Z-1-001(1).zip",
+      "sha256": "9208899f9c2481ebbe43b760b3efe6dfb60cfeb8b3b7fe156c8ee7884feed495",
+      "zip_bytes": 11412517,
+      "tiff_file_bytes_after_unzip": 12290610,
+      "decoded_uint8_bytes": 4163213808,
+      "slices": 1158,
+      "slice_number_first": 27,
+      "slice_number_last": 1184,
+      "contiguous_unique_slice_numbers": true,
+      "image_shapes_modes": [
+        [
+          2004,
+          1794,
+          "P"
+        ]
+      ],
+      "possible_calibration_metadata": []
+    },
+    {
+      "archive": "tiffs_RED3_25_F_37_eye_lenses-20260903T135100Z-1-001(1).zip",
+      "sha256": "1d230daea5bacacc92f5ab5aec4da13c1d4b10e7a2aedc554ed3baf7cc0e3012",
+      "zip_bytes": 9907754,
+      "tiff_file_bytes_after_unzip": 10734126,
+      "decoded_uint8_bytes": 3530616012,
+      "slices": 1172,
+      "slice_number_first": 20,
+      "slice_number_last": 1191,
+      "contiguous_unique_slice_numbers": true,
+      "image_shapes_modes": [
+        [
+          2079,
+          1449,
+          "P"
+        ]
+      ],
+      "possible_calibration_metadata": []
+    },
+    {
+      "archive": "tiffs_RED3_25_F_38_eye_lenses-20260903T135116Z-1-001(1).zip",
+      "sha256": "b735f6767029f512ba094a7ffeb4c1d46a3cc04039022890cce1f54b4e8a6b57",
+      "zip_bytes": 10740551,
+      "tiff_file_bytes_after_unzip": 11585528,
+      "decoded_uint8_bytes": 3229063650,
+      "slices": 1135,
+      "slice_number_first": 55,
+      "slice_number_last": 1189,
+      "contiguous_unique_slice_numbers": true,
+      "image_shapes_modes": [
+        [
+          1542,
+          1845,
+          "P"
+        ]
+      ],
+      "possible_calibration_metadata": []
+    },
+    {
+      "archive": "tiffs_RED3_25_M_26_eye_lenses-20260903T135055Z-1-001(1).zip",
+      "sha256": "9c1ab44205610e940617e19249df8c5364a0b88115ff736b3c6a3952bd63b3de",
+      "zip_bytes": 8599547,
+      "tiff_file_bytes_after_unzip": 9425096,
+      "decoded_uint8_bytes": 2628288000,
+      "slices": 1040,
+      "slice_number_first": 60,
+      "slice_number_last": 1099,
+      "contiguous_unique_slice_numbers": true,
+      "image_shapes_modes": [
+        [
+          1560,
+          1620,
+          "P"
+        ]
+      ],
+      "possible_calibration_metadata": []
+    },
+    {
+      "archive": "tiffs_RED3_25_M_27_eye_lenses-20260903T135132Z-1-001(1).zip",
+      "sha256": "5997775e6366fc4c268eb1cc65e467b101cc07ecaad2c0d8d4363bd16729d4ef",
+      "zip_bytes": 9110763,
+      "tiff_file_bytes_after_unzip": 9999332,
+      "decoded_uint8_bytes": 2491692840,
+      "slices": 1252,
+      "slice_number_first": 37,
+      "slice_number_last": 1288,
+      "contiguous_unique_slice_numbers": true,
+      "image_shapes_modes": [
+        [
+          1365,
+          1458,
+          "P"
+        ]
+      ],
+      "possible_calibration_metadata": []
+    },
+    {
+      "archive": "tiffs_RED3_25_M_28_eye_lenses-20260903T135127Z-1-001(1).zip",
+      "sha256": "d3492e58cde9a6182729f0c9803fcc368f3bb7debdeb798d6e633f03febc40ce",
+      "zip_bytes": 8047098,
+      "tiff_file_bytes_after_unzip": 8976288,
+      "decoded_uint8_bytes": 2313603108,
+      "slices": 1283,
+      "slice_number_first": 16,
+      "slice_number_last": 1298,
+      "contiguous_unique_slice_numbers": true,
+      "image_shapes_modes": [
+        [
+          1698,
+          1062,
+          "P"
+        ]
+      ],
+      "possible_calibration_metadata": []
+    }
+  ]
+}

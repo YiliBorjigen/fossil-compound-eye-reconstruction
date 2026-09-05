@@ -33,3 +33,15 @@ Further contributors will be added here with their concrete contribution—for
 example data provision, manual annotation, anatomical interpretation, imaging
 advice, software or validation—and with the applicable citation and data-use
 conditions.
+
+## Maike Kittelmann — corneal-lens data
+
+**Maike Kittelmann** shared binary corneal-lens TIFF stacks for the M3 strain
+of *Drosophila simulans* and RED3 strain of *Drosophila mauritiana* with Li Yi.
+Eleven archives were accessible in the 5 September 2026 analysis; `M3_M_26_01`
+and `M3_M_32_01` support the first binary-lens reconstruction pilot and frozen
+cross-file test. The remaining accessible archives received header inspection
+only. The supplied stacks are not redistributed here.
+
+Related publication: [Buffry et al. (2024), Evolution of compound eye morphology
+underlies differences in vision between closely related Drosophila species](https://doi.org/10.1186/s12915-024-01864-7).

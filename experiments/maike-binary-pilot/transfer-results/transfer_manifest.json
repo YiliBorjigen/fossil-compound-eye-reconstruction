@@ -1,0 +1,20 @@
+{
+  "test_archive": "tiffs_M3_M_32_01_eye_lenses-20260903T135052Z-1-001(1).zip",
+  "test_archive_sha256": "adc4aa40945bcba20956679262b211444ec307391361f775e15ab4555e797d51",
+  "training_model_sha256": "be753b7367db4a4aa8f08bdd739245ea6d8e85d4967404a8c99dad8e3e694cb2",
+  "test_candidates": 71,
+  "test_scorable": 60,
+  "test_first_source_slice": 23,
+  "test_crop_yx": [
+    [
+      1200,
+      1500
+    ],
+    [
+      375,
+      825
+    ]
+  ],
+  "test_target_fields_removed_prediction_invariance": "passed for all candidates",
+  "scope": "One frozen cross-file, within-strain crop transfer. Physical spacing and independent raw anatomical verification absent."
+}

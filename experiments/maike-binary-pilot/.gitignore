@@ -1,0 +1,3 @@
+__pycache__/
+results/local_surface_grids.npz
+transfer-results/local_transfer_grids.npz

@@ -281,3 +281,19 @@ read as **surfaces derived from supplied lens-layer segmentations, with anatomic
 identity unverified**. The previous numerical results and experiment files are
 preserved. One of Maike Kittelmann's supplied corneal-lens binary stacks is the
 next candidate reference; its contents have not yet been inspected in this audit.
+
+
+## Maike binary-lens pilot added 5 September 2026
+
+Eleven supplied M3/RED3 archives have now been inspected. A model trained on a
+crop of `M3_M_26_01` predicts central inner-surface patches in `M3_M_32_01`
+without using the second file's inner surfaces for fitting. On 60 scorable
+patches out of 71 outer-defined candidates, median patch MAE is **2.47 voxels**,
+versus **4.61** for a frozen training template and **21.92** for the specified
+outer ellipsoid continuation. The within-eye development result was tied by a
+strong position-only comparator; that negative control is retained.
+
+This is a first cross-file result against supplied binary corneal-lens masks.
+It covers central patches, not complete lens rims or closed solids. Physical
+voxel spacing, independent raw-image validation, broader transfer and fossil
+recovery remain unresolved. See the [pilot, frozen model and results](experiments/maike-binary-pilot/README.md).
