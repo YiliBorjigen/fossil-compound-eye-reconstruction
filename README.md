@@ -4,6 +4,79 @@ This project asks a simple question with a difficult limit: if the outer
 surface of a fossil eye lens survives but its internal surface is missing, can
 the lost surface be reconstructed?
 
+## Positive modern-eye result — 5 September 2026
+
+**A model trained on one modern eye predicts hidden central inner-surface
+patches in another eye more accurately than a frozen training template.**
+Using Maike Kittelmann's supplied binary corneal-lens masks, the model was
+trained on `M3_M_26_01` and frozen before scoring `M3_M_32_01`, both
+*D. simulans* M3. Test-eye predictions use retained outer geometry; the test
+eye's inner surfaces were not used for fitting, feature normalization or tuning.
+
+| Method on the second eye | Median patch MAE, µm | 90th percentile patch MAE, µm |
+|---|---:|---:|
+| Specified outer ellipsoid continuation | 7.124 | 10.344 |
+| Frozen training template | 1.497 | 1.838 |
+| Frozen outer-geometry ridge model | **0.803** | **1.070** |
+
+These are medians and 90th percentiles of per-patch mean absolute **axial**
+errors against the supplied binary-mask boundaries. The geometry model's
+median error is **46.4% lower** than the template's. Of 71 candidates selected
+from outer geometry, 60 met the fixed target-support criteria and were scored;
+the other 11 remain recorded in the candidate denominator.
+
+This is a **positive preliminary transfer result**, supporting a learned
+relationship between outer geometry and inner shape in these two modern eyes.
+It uses intact training examples as a population prior. It does not establish
+a unique inner surface from outer curvature alone.
+
+The scope remains one training eye and one test eye, with central crops:
+60 patches are not 60 independent animals. Complete rims, closed lens solids,
+independent greyscale-image validation, broader biological transfer and fossil
+recovery remain unvalidated. The within-eye development test was essentially
+tied by a strong position-only smoother; that negative control still stands.
+The fossil and other transfer limitations recorded below also remain.
+
+**Calibration is now resolved:** the supplied native masks have
+**0.325 µm isotropic spacing**, while the authors' Fig. 3 stacks are binned
+4 × 4 × 4 and use 1.3 µm spacing. The authors' code and sampled pixel comparisons
+across all twelve specimens establish this source linkage. The micrometre
+values above convert the existing voxel scores; no model was retrained for
+this conversion.
+
+See the [pilot and frozen transfer protocol](experiments/maike-binary-pilot/README.md),
+[calibration evidence](experiments/maike-binary-pilot/fig3_calibration_evidence.json),
+[converted results](experiments/maike-binary-pilot/transfer-results/transfer_summary_um.csv)
+and [two orthogonal prediction profiles](experiments/maike-binary-pilot/transfer-results/transfer_two_profiles.png).
+
+### Relationship to published work
+
+The source data and established approaches must be distinguished from this
+repository's missing-surface prediction experiment:
+
+| Published work | Relevant contribution |
+|---|---|
+| [Buffry et al. (2024), BMC Biology](https://link.springer.com/article/10.1186/s12915-024-01864-7) | Published the M3/RED3 eye study, lens morphology measurements and associated data/code. The present pilot is a reanalysis of supplied masks associated with that study. |
+| [Currea et al. (2023), Communications Biology](https://www.nature.com/articles/s42003-023-04575-x) | ODA/ODA-3D detects ommatidia and estimates anatomical optical parameters from microscope and microCT images. |
+| [Zhao et al. (2025), Nature](https://www.nature.com/articles/s41586-025-09276-5) | Uses measured lens and photoreceptor geometry to map viewing directions and relate eye structure to motion-sensitive neurons. |
+| [Gál, Horváth and Clarkson (2000), Historical Biology](https://doi.org/10.1080/10292380009380568) | Reconstructed lens shape and optics in the trilobite *Neocobboldia chinlinica*: lens reconstruction itself has longstanding precedent. |
+
+A focused literature check on 5 September 2026 did **not find a published
+report of this exact test**: learn inner-patch shape from intact examples in
+one eye, predict another eye's hidden inner patches from outer geometry, and
+score against its withheld mask surfaces with frozen template and ellipsoid
+comparators. Searches covered compound-eye inner-surface prediction, shape
+completion and trilobite lens reconstruction, alongside the related sources
+above. This is a provisional distinction, not an exhaustive novelty review or
+a claim to be the first. The candidate contribution is the explicit prediction
+benchmark and its validation; additional independent eyes are needed to assess
+how consistently the result transfers.
+
+This update supplements the earlier evidence below, which is retained in full.
+Earlier statements that Maike's masks were uninspected, only eleven archives
+were available, or voxel spacing was unresolved are historical: all twelve
+archives are now available and calibration has been established.
+
 ## Answer so far
 
 **Not from outer curvature alone.** In the *Asaphus* scan studied here, local
