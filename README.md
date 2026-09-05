@@ -267,3 +267,17 @@ This is an exploratory research repository by Li Yi (Yili Borjigen), not a
 finished anatomical reconstruction package. Dataset and software provenance is
 listed in [`NOTICE.md`](NOTICE.md). Code in this repository is released under
 the MIT licence.
+
+
+## Source qualification added 5 September 2026
+
+A [direct audit of the supplied Arthur Zhao meshes](experiments/mesh-integrity-audit/README.md)
+found continuous lens-layer shells and confirmed that the 2023 depth difference
+is present in the supplied geometry. The source paper describes lens-containing
+segmentation volumes for landmark detection; it does not independently validate
+each exported shell wall as an individual lens boundary. Pending an image-based
+or author-confirmed boundary check, the modern targets above should therefore be
+read as **surfaces derived from supplied lens-layer segmentations, with anatomical
+identity unverified**. The previous numerical results and experiment files are
+preserved. One of Maike Kittelmann's supplied corneal-lens binary stacks is the
+next candidate reference; its contents have not yet been inspected in this audit.

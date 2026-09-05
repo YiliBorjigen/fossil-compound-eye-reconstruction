@@ -1,0 +1,186 @@
+{
+  "scope": "Topology and geometric section audit, not anatomical validation",
+  "units": "WRL coordinate units; no physical-unit declaration in supplied format",
+  "files": [
+    {
+      "filename": "20231107-PTA-surface-lens(1).wrl",
+      "sha256": "1a9e5b150208d7f71bc4848b798d988ee52d17bd1aa12d063e5e38dbce7c6b20",
+      "file_bytes": 62228260,
+      "coordinate_table_vertices": 252478,
+      "face_sets": [
+        {
+          "vertices": 120704,
+          "triangles": 241404,
+          "connected_components": 1,
+          "largest_component_vertices": 120704,
+          "largest_component_fraction": 1.0,
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_two_face_edges": 0,
+          "degenerate_triangles": 0,
+          "triangle_area_q05_q50_q95_coordinate_squared": [
+            0.09248611942722604,
+            1.772195716930069,
+            3.4701465347677387
+          ],
+          "eye_face_set": 0,
+          "pca_centre": [
+            393.4693010768723,
+            812.0623796687698,
+            582.3063619271028
+          ],
+          "pca_basis_columns": [
+            [
+              0.7586652919394278,
+              0.650446055323302,
+              -0.03670018965643867
+            ],
+            [
+              0.4114270268915412,
+              -0.4346776791485457,
+              0.8011136728287822
+            ],
+            [
+              -0.5051284750928715,
+              0.6228765883900196,
+              0.5973859550457814
+            ]
+          ],
+          "section_segments": 1772,
+          "section_vertex_hit_triangles_excluded": 0
+        },
+        {
+          "vertices": 131774,
+          "triangles": 263544,
+          "connected_components": 1,
+          "largest_component_vertices": 131774,
+          "largest_component_fraction": 1.0,
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_two_face_edges": 0,
+          "degenerate_triangles": 0,
+          "triangle_area_q05_q50_q95_coordinate_squared": [
+            0.1103219584413983,
+            1.7412529387145295,
+            2.726853722023613
+          ],
+          "eye_face_set": 1,
+          "pca_centre": [
+            692.6631394065533,
+            242.37795594275795,
+            389.9313912123746
+          ],
+          "pca_basis_columns": [
+            [
+              -0.5448019114373106,
+              0.40394079959843393,
+              0.7348623733149162
+            ],
+            [
+              -0.5308178066315383,
+              0.5122871826708392,
+              -0.6751253947483068
+            ],
+            [
+              0.649171266660144,
+              0.7578876386978167,
+              0.06467606707207747
+            ]
+          ],
+          "section_segments": 1671,
+          "section_vertex_hit_triangles_excluded": 0
+        }
+      ]
+    },
+    {
+      "filename": "20240701-PTA-surface-lens(1).wrl",
+      "sha256": "d4d7ab34517e744c5ce1a1d56f6b4fba0deaffcb32b4c9dbbfebf87529beecfa",
+      "file_bytes": 330975296,
+      "coordinate_table_vertices": 1324678,
+      "face_sets": [
+        {
+          "vertices": 657352,
+          "triangles": 1314652,
+          "connected_components": 27,
+          "largest_component_vertices": 656606,
+          "largest_component_fraction": 0.9988651437890201,
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_two_face_edges": 0,
+          "degenerate_triangles": 36,
+          "triangle_area_q05_q50_q95_coordinate_squared": [
+            0.016950719185285082,
+            0.34149062870199587,
+            0.6451659212772716
+          ],
+          "eye_face_set": 0,
+          "pca_centre": [
+            549.4427750711645,
+            848.6743708765522,
+            516.4058579929681
+          ],
+          "pca_basis_columns": [
+            [
+              0.9866313607625579,
+              0.08773171044069769,
+              0.13733792245032944
+            ],
+            [
+              -0.07296981788196755,
+              -0.5157106376440521,
+              0.853649778245761
+            ],
+            [
+              -0.1457187827223917,
+              0.8522591655147597,
+              0.5024145212451462
+            ]
+          ],
+          "section_segments": 3632,
+          "section_vertex_hit_triangles_excluded": 0
+        },
+        {
+          "vertices": 667326,
+          "triangles": 1334508,
+          "connected_components": 62,
+          "largest_component_vertices": 665278,
+          "largest_component_fraction": 0.9969310352061811,
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_two_face_edges": 0,
+          "degenerate_triangles": 10,
+          "triangle_area_q05_q50_q95_coordinate_squared": [
+            0.016606266314858613,
+            0.3397130980148213,
+            0.6490937599127785
+          ],
+          "eye_face_set": 1,
+          "pca_centre": [
+            464.8543495632306,
+            162.3408026377006,
+            518.6624381194092
+          ],
+          "pca_basis_columns": [
+            [
+              0.9708125042969652,
+              0.22888536632738973,
+              0.07165591798191756
+            ],
+            [
+              -0.17585239323252636,
+              0.4761346263757854,
+              0.8616099775190534
+            ],
+            [
+              -0.1630920515998483,
+              0.8490626046689183,
+              -0.5024874884589515
+            ]
+          ],
+          "section_segments": 3609,
+          "section_vertex_hit_triangles_excluded": 0
+        }
+      ]
+    }
+  ]
+}
