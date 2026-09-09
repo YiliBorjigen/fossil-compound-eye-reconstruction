@@ -224,3 +224,17 @@ Sources: the user-supplied Fig. 3 archive associated with
 [Buffry et al. (2024)](https://doi.org/10.1186/s12915-024-01864-7) and its
 [Figshare data/code record](https://figshare.com/articles/dataset/Data_and_code_for_Figures_3_and_4/24769677).
 Input archives and third-party scripts are not redistributed here.
+
+## Frozen follow-up on the remaining eyes — 9 September 2026
+
+The original M26 model has now been applied, without retraining, to the other
+accessible source eyes under a prespecified outer-only crop rule. Geometry
+improves median patch error over the frozen template in four of six additional
+scorable eyes and is worse in two. Two further eyes fail deployment, and two
+current source ZIP copies are unreadable. These outcomes limit the generality
+of the original M32 result; the original files and values are preserved.
+
+See the [full results and source-file status](remaining-eye-results-20260909/README.md)
+and [frozen protocol](REMAINING_EYES_PROTOCOL.md). The original 46.4% gain is not
+uniformly transferable. The positive results still concern central binary-mask
+patches, not complete fossil lenses or optical function.

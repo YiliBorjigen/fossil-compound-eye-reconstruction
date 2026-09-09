@@ -1,0 +1,532 @@
+{
+  "model_sha256": "be753b7367db4a4aa8f08bdd739245ea6d8e85d4967404a8c99dad8e3e694cb2",
+  "script_sha256": "dc61b2b02350f1a2602904f92fb9ce5c6f449b9257f882e863dddf1c62b7d417",
+  "spacing_um_xyz": [
+    0.325,
+    0.325,
+    0.325
+  ],
+  "specimens": [
+    "M3_M_36_01",
+    "M3_F_24_01",
+    "M3_F_28_03",
+    "M3_F_35_03",
+    "RED3_25_M_26",
+    "RED3_25_M_27",
+    "RED3_25_M_28",
+    "RED3_25_F_36",
+    "RED3_25_F_37",
+    "RED3_25_F_38"
+  ],
+  "training_specimen": "M3_M_26_01",
+  "earlier_test_excluded": "M3_M_32_01",
+  "crop_rule": "Outer-envelope rule in REMAINING_EYES_PROTOCOL.md; no manual adjustments",
+  "results": [
+    {
+      "specimen": "M3_M_36_01",
+      "species": "D. simulans",
+      "sex": "male",
+      "archive": "tiffs_M3_M_36_01_eye_lenses-20260903T135121Z-1-001(1).zip",
+      "archive_sha256": "024cb4ba7de8c56a98fa96bf881b67d94cdb49a2d0c43160cfdffe8b9a30f2bc",
+      "crop": {
+        "y": [
+          1230,
+          1530
+        ],
+        "x": [
+          691,
+          1141
+        ],
+        "seed_z": [
+          20,
+          300
+        ],
+        "anchor_zxy": [
+          64,
+          916,
+          1487.8536608809782
+        ],
+        "source_shape_zyx": [
+          684,
+          1659,
+          1569
+        ]
+      },
+      "first_source_slice": 26,
+      "status": "scored",
+      "candidates": 47,
+      "scorable": 40,
+      "target_fields_removed_prediction_invariance": "passed",
+      "metrics": [
+        {
+          "specimen": "M3_M_36_01",
+          "species": "D. simulans",
+          "sex": "male",
+          "method": "outer_ellipsoid",
+          "candidates": 47,
+          "scorable": 40,
+          "median_patch_mae_um": 4.782763436216156,
+          "p90_patch_mae_um": 7.150034880843211
+        },
+        {
+          "specimen": "M3_M_36_01",
+          "species": "D. simulans",
+          "sex": "male",
+          "method": "frozen_training_template",
+          "candidates": 47,
+          "scorable": 40,
+          "median_patch_mae_um": 1.6193961683380949,
+          "p90_patch_mae_um": 1.804070373938816
+        },
+        {
+          "specimen": "M3_M_36_01",
+          "species": "D. simulans",
+          "sex": "male",
+          "method": "frozen_outer_geometry",
+          "candidates": 47,
+          "scorable": 40,
+          "median_patch_mae_um": 1.4077306075227183,
+          "p90_patch_mae_um": 1.6519885912839563
+        }
+      ],
+      "geometry_better_patches": 31,
+      "median_paired_improvement_um": 0.15458747547101997
+    },
+    {
+      "specimen": "M3_F_24_01",
+      "species": "D. simulans",
+      "sex": "female",
+      "archive": "tiffs_M3_F_24_01_eye_lenses-20260903T135137Z-1-001(1).zip",
+      "archive_sha256": "a1af8a4b3f04f9b22f4f416854189072b14dd59b13b6708048d4766580e4a638",
+      "crop": {
+        "y": [
+          1204,
+          1504
+        ],
+        "x": [
+          847,
+          1297
+        ],
+        "seed_z": [
+          500,
+          780
+        ],
+        "anchor_zxy": [
+          640,
+          1072,
+          1462.0541544285595
+        ],
+        "source_shape_zyx": [
+          864,
+          1635,
+          1740
+        ]
+      },
+      "first_source_slice": 28,
+      "status": "scored",
+      "candidates": 33,
+      "scorable": 33,
+      "target_fields_removed_prediction_invariance": "passed",
+      "metrics": [
+        {
+          "specimen": "M3_F_24_01",
+          "species": "D. simulans",
+          "sex": "female",
+          "method": "outer_ellipsoid",
+          "candidates": 33,
+          "scorable": 33,
+          "median_patch_mae_um": 4.702206841338157,
+          "p90_patch_mae_um": 10.24141121208577
+        },
+        {
+          "specimen": "M3_F_24_01",
+          "species": "D. simulans",
+          "sex": "female",
+          "method": "frozen_training_template",
+          "candidates": 33,
+          "scorable": 33,
+          "median_patch_mae_um": 0.9484565358777642,
+          "p90_patch_mae_um": 2.4823963864441723
+        },
+        {
+          "specimen": "M3_F_24_01",
+          "species": "D. simulans",
+          "sex": "female",
+          "method": "frozen_outer_geometry",
+          "candidates": 33,
+          "scorable": 33,
+          "median_patch_mae_um": 1.363202029143618,
+          "p90_patch_mae_um": 2.0937249332324765
+        }
+      ],
+      "geometry_better_patches": 5,
+      "median_paired_improvement_um": -0.39248216658712193
+    },
+    {
+      "specimen": "M3_F_28_03",
+      "species": "D. simulans",
+      "sex": "female",
+      "archive": "tiffs_M3_F_28_03_eye_lenses-20260903T135112Z-1-001(2).zip",
+      "archive_sha256": "70b08f6bc6db694ab72ecefe47f79d0491d0e20a4f744543504424425381aa1f",
+      "status": "input_unreadable",
+      "reason": "File is not a zip file"
+    },
+    {
+      "specimen": "M3_F_35_03",
+      "species": "D. simulans",
+      "sex": "female",
+      "archive": "tiffs_M3_F_35_03_eye_lenses-20260903T135109Z-1-001(1).zip",
+      "archive_sha256": "6a205f1d691e88829861fd56d16269b4c6867d1ae7bd3f14ca558279b18ccef0",
+      "crop": {
+        "y": [
+          1041,
+          1341
+        ],
+        "x": [
+          587,
+          1037
+        ],
+        "seed_z": [
+          730,
+          1010
+        ],
+        "anchor_zxy": [
+          928,
+          812,
+          1251.169093637032
+        ],
+        "source_shape_zyx": [
+          1031,
+          1425,
+          1602
+        ]
+      },
+      "first_source_slice": 6,
+      "status": "scored",
+      "candidates": 33,
+      "scorable": 7,
+      "target_fields_removed_prediction_invariance": "passed",
+      "metrics": [
+        {
+          "specimen": "M3_F_35_03",
+          "species": "D. simulans",
+          "sex": "female",
+          "method": "outer_ellipsoid",
+          "candidates": 33,
+          "scorable": 7,
+          "median_patch_mae_um": 9.71373284926344,
+          "p90_patch_mae_um": 11.102759136907535
+        },
+        {
+          "specimen": "M3_F_35_03",
+          "species": "D. simulans",
+          "sex": "female",
+          "method": "frozen_training_template",
+          "candidates": 33,
+          "scorable": 7,
+          "median_patch_mae_um": 2.588960595209763,
+          "p90_patch_mae_um": 3.0471797608621873
+        },
+        {
+          "specimen": "M3_F_35_03",
+          "species": "D. simulans",
+          "sex": "female",
+          "method": "frozen_outer_geometry",
+          "candidates": 33,
+          "scorable": 7,
+          "median_patch_mae_um": 1.378449253705287,
+          "p90_patch_mae_um": 1.5967240265955536
+        }
+      ],
+      "geometry_better_patches": 7,
+      "median_paired_improvement_um": 1.071832400129406
+    },
+    {
+      "specimen": "RED3_25_M_26",
+      "species": "D. mauritiana",
+      "sex": "male",
+      "archive": "tiffs_RED3_25_M_26_eye_lenses-20260903T135055Z-1-001(1).zip",
+      "archive_sha256": "636ad52e9b425f2f0cdfbd5ff0ba1c570c5e1dc7ecbcb3543ef8d631c4f8a999",
+      "status": "input_unreadable",
+      "reason": "File is not a zip file"
+    },
+    {
+      "specimen": "RED3_25_M_27",
+      "species": "D. mauritiana",
+      "sex": "male",
+      "archive": "tiffs_RED3_25_M_27_eye_lenses-20260903T135132Z-1-001(1).zip",
+      "archive_sha256": "5997775e6366fc4c268eb1cc65e467b101cc07ecaad2c0d8d4363bd16729d4ef",
+      "crop": {
+        "y": [
+          1051,
+          1351
+        ],
+        "x": [
+          635,
+          1085
+        ],
+        "seed_z": [
+          468,
+          748
+        ],
+        "anchor_zxy": [
+          608,
+          860,
+          1311.9651938825275
+        ],
+        "source_shape_zyx": [
+          1252,
+          1458,
+          1365
+        ]
+      },
+      "first_source_slice": 37,
+      "status": "scored",
+      "candidates": 46,
+      "scorable": 45,
+      "target_fields_removed_prediction_invariance": "passed",
+      "metrics": [
+        {
+          "specimen": "RED3_25_M_27",
+          "species": "D. mauritiana",
+          "sex": "male",
+          "method": "outer_ellipsoid",
+          "candidates": 46,
+          "scorable": 45,
+          "median_patch_mae_um": 4.721332999647165,
+          "p90_patch_mae_um": 8.27771573701745
+        },
+        {
+          "specimen": "RED3_25_M_27",
+          "species": "D. mauritiana",
+          "sex": "male",
+          "method": "frozen_training_template",
+          "candidates": 46,
+          "scorable": 45,
+          "median_patch_mae_um": 1.6111565335424631,
+          "p90_patch_mae_um": 2.4572810503791445
+        },
+        {
+          "specimen": "RED3_25_M_27",
+          "species": "D. mauritiana",
+          "sex": "male",
+          "method": "frozen_outer_geometry",
+          "candidates": 46,
+          "scorable": 45,
+          "median_patch_mae_um": 0.8456715086668286,
+          "p90_patch_mae_um": 1.239811683890181
+        }
+      ],
+      "geometry_better_patches": 41,
+      "median_paired_improvement_um": 0.7776197249307039
+    },
+    {
+      "specimen": "RED3_25_M_28",
+      "species": "D. mauritiana",
+      "sex": "male",
+      "archive": "tiffs_RED3_25_M_28_eye_lenses-20260903T135127Z-1-001(1).zip",
+      "archive_sha256": "d3492e58cde9a6182729f0c9803fcc368f3bb7debdeb798d6e633f03febc40ce",
+      "crop": {
+        "y": [
+          502,
+          802
+        ],
+        "x": [
+          1199,
+          1649
+        ],
+        "seed_z": [
+          692,
+          972
+        ],
+        "anchor_zxy": [
+          832,
+          1424,
+          607.3585215732712
+        ],
+        "source_shape_zyx": [
+          1283,
+          1062,
+          1698
+        ]
+      },
+      "first_source_slice": 16,
+      "status": "failed",
+      "reason": "Insufficient outer-defined candidates"
+    },
+    {
+      "specimen": "RED3_25_F_36",
+      "species": "D. mauritiana",
+      "sex": "female",
+      "archive": "tiffs_RED3_25_F_36_eye_lenses-20260903T135103Z-1-001(1).zip",
+      "archive_sha256": "9208899f9c2481ebbe43b760b3efe6dfb60cfeb8b3b7fe156c8ee7884feed495",
+      "crop": {
+        "y": [
+          1237,
+          1537
+        ],
+        "x": [
+          1071,
+          1521
+        ],
+        "seed_z": [
+          212,
+          492
+        ],
+        "anchor_zxy": [
+          352,
+          1296,
+          1496.0642716854313
+        ],
+        "source_shape_zyx": [
+          1158,
+          1794,
+          2004
+        ]
+      },
+      "first_source_slice": 27,
+      "status": "scored",
+      "candidates": 28,
+      "scorable": 28,
+      "target_fields_removed_prediction_invariance": "passed",
+      "metrics": [
+        {
+          "specimen": "RED3_25_F_36",
+          "species": "D. mauritiana",
+          "sex": "female",
+          "method": "outer_ellipsoid",
+          "candidates": 28,
+          "scorable": 28,
+          "median_patch_mae_um": 7.109752578570504,
+          "p90_patch_mae_um": 12.723751853942964
+        },
+        {
+          "specimen": "RED3_25_F_36",
+          "species": "D. mauritiana",
+          "sex": "female",
+          "method": "frozen_training_template",
+          "candidates": 28,
+          "scorable": 28,
+          "median_patch_mae_um": 1.7477663380419475,
+          "p90_patch_mae_um": 3.9109783824297257
+        },
+        {
+          "specimen": "RED3_25_F_36",
+          "species": "D. mauritiana",
+          "sex": "female",
+          "method": "frozen_outer_geometry",
+          "candidates": 28,
+          "scorable": 28,
+          "median_patch_mae_um": 1.8150377288738,
+          "p90_patch_mae_um": 2.1596724473381936
+        }
+      ],
+      "geometry_better_patches": 13,
+      "median_paired_improvement_um": -0.0811938032597656
+    },
+    {
+      "specimen": "RED3_25_F_37",
+      "species": "D. mauritiana",
+      "sex": "female",
+      "archive": "tiffs_RED3_25_F_37_eye_lenses-20260903T135100Z-1-001(1).zip",
+      "archive_sha256": "1d230daea5bacacc92f5ab5aec4da13c1d4b10e7a2aedc554ed3baf7cc0e3012",
+      "crop": {
+        "y": [
+          1075,
+          1375
+        ],
+        "x": [
+          687,
+          1137
+        ],
+        "seed_z": [
+          100,
+          380
+        ],
+        "anchor_zxy": [
+          240,
+          912,
+          1334.9980667660352
+        ],
+        "source_shape_zyx": [
+          1172,
+          1449,
+          2079
+        ]
+      },
+      "first_source_slice": 20,
+      "status": "scored",
+      "candidates": 42,
+      "scorable": 42,
+      "target_fields_removed_prediction_invariance": "passed",
+      "metrics": [
+        {
+          "specimen": "RED3_25_F_37",
+          "species": "D. mauritiana",
+          "sex": "female",
+          "method": "outer_ellipsoid",
+          "candidates": 42,
+          "scorable": 42,
+          "median_patch_mae_um": 3.3950024395284055,
+          "p90_patch_mae_um": 5.553847438184049
+        },
+        {
+          "specimen": "RED3_25_F_37",
+          "species": "D. mauritiana",
+          "sex": "female",
+          "method": "frozen_training_template",
+          "candidates": 42,
+          "scorable": 42,
+          "median_patch_mae_um": 1.3620224952282904,
+          "p90_patch_mae_um": 1.9242779991936012
+        },
+        {
+          "specimen": "RED3_25_F_37",
+          "species": "D. mauritiana",
+          "sex": "female",
+          "method": "frozen_outer_geometry",
+          "candidates": 42,
+          "scorable": 42,
+          "median_patch_mae_um": 1.2687290540014429,
+          "p90_patch_mae_um": 1.4529342648292114
+        }
+      ],
+      "geometry_better_patches": 27,
+      "median_paired_improvement_um": 0.09346550537415317
+    },
+    {
+      "specimen": "RED3_25_F_38",
+      "species": "D. mauritiana",
+      "sex": "female",
+      "archive": "tiffs_RED3_25_F_38_eye_lenses-20260903T135116Z-1-001(1).zip",
+      "archive_sha256": "b735f6767029f512ba094a7ffeb4c1d46a3cc04039022890cce1f54b4e8a6b57",
+      "crop": {
+        "y": [
+          1332,
+          1632
+        ],
+        "x": [
+          411,
+          861
+        ],
+        "seed_z": [
+          452,
+          732
+        ],
+        "anchor_zxy": [
+          592,
+          636,
+          1586.6825488270704
+        ],
+        "source_shape_zyx": [
+          1135,
+          1845,
+          1542
+        ]
+      },
+      "first_source_slice": 55,
+      "status": "failed",
+      "reason": "Selected candidate lacks retained outer support"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "specimen": "RED3_25_F_36",
+  "species": "D. mauritiana",
+  "sex": "female",
+  "archive": "tiffs_RED3_25_F_36_eye_lenses-20260903T135103Z-1-001(1).zip",
+  "archive_sha256": "9208899f9c2481ebbe43b760b3efe6dfb60cfeb8b3b7fe156c8ee7884feed495",
+  "crop": {
+    "y": [
+      1237,
+      1537
+    ],
+    "x": [
+      1071,
+      1521
+    ],
+    "seed_z": [
+      212,
+      492
+    ],
+    "anchor_zxy": [
+      352,
+      1296,
+      1496.0642716854313
+    ],
+    "source_shape_zyx": [
+      1158,
+      1794,
+      2004
+    ]
+  },
+  "first_source_slice": 27
+}

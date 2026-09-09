@@ -4,6 +4,46 @@ This project asks a simple question with a difficult limit: if the outer
 surface of a fossil eye lens survives but its internal surface is missing, can
 the lost surface be reconstructed?
 
+## Follow-up across the remaining eyes — 9 September 2026
+
+**The original positive result extends to some additional eyes, but the
+geometry model's advantage is inconsistent.** Keeping the M26 model frozen,
+the follow-up scored six additional eyes: geometry had lower median patch
+error than the frozen template in **four**, and higher error in **two**.
+
+| Additional eye | Scorable / candidates | Template MAE, µm | Geometry MAE, µm |
+|---|---:|---:|---:|
+| M3_M_36_01 | 40 / 47 | 1.619 | **1.408** |
+| M3_F_24_01 | 33 / 33 | **0.948** | 1.363 |
+| M3_F_35_03 | 7 / 33 | 2.589 | **1.378** |
+| RED3_25_M_27 | 45 / 46 | 1.611 | **0.846** |
+| RED3_25_F_36 | 28 / 28 | **1.748** | 1.815 |
+| RED3_25_F_37 | 42 / 42 | 1.362 | **1.269** |
+
+Entries are medians of patch mean absolute axial errors against binary masks.
+All ten remaining eyes were planned: two other accessible eyes failed the
+fixed outer-surface deployment rules, and two current ZIP copies were
+unreadable. All four are recorded in the
+[complete follow-up report](experiments/maike-binary-pilot/remaining-eye-results-20260909/README.md).
+The table's 195 scorable patches come from six eyes; they are not 195
+independent animals. The M3_F_35_03 improvement covers only 7 of 33 candidates.
+
+Geometry improves on the template in two of three scorable additional M3
+eyes (*D. simulans*) and two of three scorable RED3 eyes (*D. mauritiana*).
+This supplies limited evidence of cross-species transfer, with substantial
+coverage and deployment limits. Both learned methods outperform the specified
+ellipsoid in every scorable eye. The unconstrained geometry model also produces
+some nonpositive thickness values in two eyes; it is not a reliable closed-lens
+construction method.
+
+The [protocol](experiments/maike-binary-pilot/REMAINING_EYES_PROTOCOL.md) was
+committed before scoring. Crops were selected automatically from outer
+geometry, with no target-dependent adjustments. This differs from the
+original manually located crops, and there is no anatomical registration
+between eyes. The model was neither retrained nor tuned. Fossil anatomical
+identity, complete-lens recovery and optical function remain unresolved.
+The earlier results below are preserved in full.
+
 ## Positive modern-eye result — 5 September 2026
 
 **A model trained on one modern eye predicts hidden central inner-surface

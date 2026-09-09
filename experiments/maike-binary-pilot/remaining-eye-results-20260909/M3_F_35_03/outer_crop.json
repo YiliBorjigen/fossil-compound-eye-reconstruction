@@ -1,0 +1,32 @@
+{
+  "specimen": "M3_F_35_03",
+  "species": "D. simulans",
+  "sex": "female",
+  "archive": "tiffs_M3_F_35_03_eye_lenses-20260903T135109Z-1-001(1).zip",
+  "archive_sha256": "6a205f1d691e88829861fd56d16269b4c6867d1ae7bd3f14ca558279b18ccef0",
+  "crop": {
+    "y": [
+      1041,
+      1341
+    ],
+    "x": [
+      587,
+      1037
+    ],
+    "seed_z": [
+      730,
+      1010
+    ],
+    "anchor_zxy": [
+      928,
+      812,
+      1251.169093637032
+    ],
+    "source_shape_zyx": [
+      1031,
+      1425,
+      1602
+    ]
+  },
+  "first_source_slice": 6
+}

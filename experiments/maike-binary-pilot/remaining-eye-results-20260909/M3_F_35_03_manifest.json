@@ -1,0 +1,70 @@
+{
+  "specimen": "M3_F_35_03",
+  "species": "D. simulans",
+  "sex": "female",
+  "archive": "tiffs_M3_F_35_03_eye_lenses-20260903T135109Z-1-001(1).zip",
+  "archive_sha256": "6a205f1d691e88829861fd56d16269b4c6867d1ae7bd3f14ca558279b18ccef0",
+  "crop": {
+    "y": [
+      1041,
+      1341
+    ],
+    "x": [
+      587,
+      1037
+    ],
+    "seed_z": [
+      730,
+      1010
+    ],
+    "anchor_zxy": [
+      928,
+      812,
+      1251.169093637032
+    ],
+    "source_shape_zyx": [
+      1031,
+      1425,
+      1602
+    ]
+  },
+  "first_source_slice": 6,
+  "status": "scored",
+  "candidates": 33,
+  "scorable": 7,
+  "target_fields_removed_prediction_invariance": "passed",
+  "metrics": [
+    {
+      "specimen": "M3_F_35_03",
+      "species": "D. simulans",
+      "sex": "female",
+      "method": "outer_ellipsoid",
+      "candidates": 33,
+      "scorable": 7,
+      "median_patch_mae_um": 9.71373284926344,
+      "p90_patch_mae_um": 11.102759136907535
+    },
+    {
+      "specimen": "M3_F_35_03",
+      "species": "D. simulans",
+      "sex": "female",
+      "method": "frozen_training_template",
+      "candidates": 33,
+      "scorable": 7,
+      "median_patch_mae_um": 2.588960595209763,
+      "p90_patch_mae_um": 3.0471797608621873
+    },
+    {
+      "specimen": "M3_F_35_03",
+      "species": "D. simulans",
+      "sex": "female",
+      "method": "frozen_outer_geometry",
+      "candidates": 33,
+      "scorable": 7,
+      "median_patch_mae_um": 1.378449253705287,
+      "p90_patch_mae_um": 1.5967240265955536
+    }
+  ],
+  "geometry_better_patches": 7,
+  "median_paired_improvement_um": 1.071832400129406
+}

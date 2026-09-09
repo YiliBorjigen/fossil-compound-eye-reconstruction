@@ -1,0 +1,9 @@
+{
+  "specimen": "RED3_25_M_26",
+  "species": "D. mauritiana",
+  "sex": "male",
+  "archive": "tiffs_RED3_25_M_26_eye_lenses-20260903T135055Z-1-001(1).zip",
+  "archive_sha256": "636ad52e9b425f2f0cdfbd5ff0ba1c570c5e1dc7ecbcb3543ef8d631c4f8a999",
+  "status": "input_unreadable",
+  "reason": "File is not a zip file"
+}

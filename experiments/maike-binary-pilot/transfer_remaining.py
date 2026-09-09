@@ -151,8 +151,12 @@ def main():
                       np.mean(np.abs(predictions[i][METHODS[2]] - records[i]["inner"])) for i in valid]
             entry.update(metrics=eye, geometry_better_patches=sum(v > 0 for v in paired),
                          median_paired_improvement_um=float(np.median(paired) * SPACING_UM) if paired else None)
+        except zipfile.BadZipFile as error:
+            entry.update(status="input_unreadable", reason=str(error))
         except (ValueError, FileNotFoundError) as error:
             entry.update(status="failed", reason=str(error))
+        if "geometry_better_patches" in entry:
+            entry["geometry_better_patches"] = int(entry["geometry_better_patches"])
         run["results"].append(entry)
         (args.output / (specimen + "_manifest.json")).write_text(json.dumps(entry, indent=2) + "\n")
         print(json.dumps({k: entry[k] for k in ["specimen", "status", "candidates", "scorable", "metrics", "reason"] if k in entry}), flush=True)

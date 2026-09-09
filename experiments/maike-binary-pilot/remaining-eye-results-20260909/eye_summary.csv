@@ -1,0 +1,19 @@
+specimen,species,sex,method,candidates,scorable,median_patch_mae_um,p90_patch_mae_um
+M3_M_36_01,D. simulans,male,outer_ellipsoid,47,40,4.782763436216156,7.150034880843211
+M3_M_36_01,D. simulans,male,frozen_training_template,47,40,1.6193961683380949,1.804070373938816
+M3_M_36_01,D. simulans,male,frozen_outer_geometry,47,40,1.4077306075227183,1.6519885912839563
+M3_F_24_01,D. simulans,female,outer_ellipsoid,33,33,4.702206841338157,10.24141121208577
+M3_F_24_01,D. simulans,female,frozen_training_template,33,33,0.9484565358777642,2.4823963864441723
+M3_F_24_01,D. simulans,female,frozen_outer_geometry,33,33,1.363202029143618,2.0937249332324765
+M3_F_35_03,D. simulans,female,outer_ellipsoid,33,7,9.71373284926344,11.102759136907535
+M3_F_35_03,D. simulans,female,frozen_training_template,33,7,2.588960595209763,3.0471797608621873
+M3_F_35_03,D. simulans,female,frozen_outer_geometry,33,7,1.378449253705287,1.5967240265955536
+RED3_25_M_27,D. mauritiana,male,outer_ellipsoid,46,45,4.721332999647165,8.27771573701745
+RED3_25_M_27,D. mauritiana,male,frozen_training_template,46,45,1.6111565335424631,2.4572810503791445
+RED3_25_M_27,D. mauritiana,male,frozen_outer_geometry,46,45,0.8456715086668286,1.239811683890181
+RED3_25_F_36,D. mauritiana,female,outer_ellipsoid,28,28,7.109752578570504,12.723751853942964
+RED3_25_F_36,D. mauritiana,female,frozen_training_template,28,28,1.7477663380419475,3.9109783824297257
+RED3_25_F_36,D. mauritiana,female,frozen_outer_geometry,28,28,1.8150377288738,2.1596724473381936
+RED3_25_F_37,D. mauritiana,female,outer_ellipsoid,42,42,3.3950024395284055,5.553847438184049
+RED3_25_F_37,D. mauritiana,female,frozen_training_template,42,42,1.3620224952282904,1.9242779991936012
+RED3_25_F_37,D. mauritiana,female,frozen_outer_geometry,42,42,1.2687290540014429,1.4529342648292114

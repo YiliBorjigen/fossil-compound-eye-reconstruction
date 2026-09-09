@@ -1,0 +1,9 @@
+{
+  "specimen": "M3_F_28_03",
+  "species": "D. simulans",
+  "sex": "female",
+  "archive": "tiffs_M3_F_28_03_eye_lenses-20260903T135112Z-1-001(2).zip",
+  "archive_sha256": "70b08f6bc6db694ab72ecefe47f79d0491d0e20a4f744543504424425381aa1f",
+  "status": "input_unreadable",
+  "reason": "File is not a zip file"
+}

@@ -1,0 +1,70 @@
+{
+  "specimen": "RED3_25_F_37",
+  "species": "D. mauritiana",
+  "sex": "female",
+  "archive": "tiffs_RED3_25_F_37_eye_lenses-20260903T135100Z-1-001(1).zip",
+  "archive_sha256": "1d230daea5bacacc92f5ab5aec4da13c1d4b10e7a2aedc554ed3baf7cc0e3012",
+  "crop": {
+    "y": [
+      1075,
+      1375
+    ],
+    "x": [
+      687,
+      1137
+    ],
+    "seed_z": [
+      100,
+      380
+    ],
+    "anchor_zxy": [
+      240,
+      912,
+      1334.9980667660352
+    ],
+    "source_shape_zyx": [
+      1172,
+      1449,
+      2079
+    ]
+  },
+  "first_source_slice": 20,
+  "status": "scored",
+  "candidates": 42,
+  "scorable": 42,
+  "target_fields_removed_prediction_invariance": "passed",
+  "metrics": [
+    {
+      "specimen": "RED3_25_F_37",
+      "species": "D. mauritiana",
+      "sex": "female",
+      "method": "outer_ellipsoid",
+      "candidates": 42,
+      "scorable": 42,
+      "median_patch_mae_um": 3.3950024395284055,
+      "p90_patch_mae_um": 5.553847438184049
+    },
+    {
+      "specimen": "RED3_25_F_37",
+      "species": "D. mauritiana",
+      "sex": "female",
+      "method": "frozen_training_template",
+      "candidates": 42,
+      "scorable": 42,
+      "median_patch_mae_um": 1.3620224952282904,
+      "p90_patch_mae_um": 1.9242779991936012
+    },
+    {
+      "specimen": "RED3_25_F_37",
+      "species": "D. mauritiana",
+      "sex": "female",
+      "method": "frozen_outer_geometry",
+      "candidates": 42,
+      "scorable": 42,
+      "median_patch_mae_um": 1.2687290540014429,
+      "p90_patch_mae_um": 1.4529342648292114
+    }
+  ],
+  "geometry_better_patches": 27,
+  "median_paired_improvement_um": 0.09346550537415317
+}
