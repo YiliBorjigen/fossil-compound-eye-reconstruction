@@ -1,0 +1,7 @@
+specimen,species,sex,method,candidates,scorable,median_patch_mae_um,p90_patch_mae_um
+M3_F_28_03,D. simulans,female,outer_ellipsoid,42,15,9.888943133095543,13.881847644665616
+M3_F_28_03,D. simulans,female,frozen_training_template,42,15,1.4890390500639756,2.5965338749030598
+M3_F_28_03,D. simulans,female,frozen_outer_geometry,42,15,1.375281859898422,1.9978034017571449
+RED3_25_M_26,D. mauritiana,male,outer_ellipsoid,43,21,6.494861778807892,9.564622174535087
+RED3_25_M_26,D. mauritiana,male,frozen_training_template,43,21,1.719164508600472,2.8643813468699633
+RED3_25_M_26,D. mauritiana,male,frozen_outer_geometry,43,21,1.192425137440828,1.4725250275819401

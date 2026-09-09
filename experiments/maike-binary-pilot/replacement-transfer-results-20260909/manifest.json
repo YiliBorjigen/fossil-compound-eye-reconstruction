@@ -1,0 +1,158 @@
+{
+  "model_sha256": "be753b7367db4a4aa8f08bdd739245ea6d8e85d4967404a8c99dad8e3e694cb2",
+  "script_sha256": "dc61b2b02350f1a2602904f92fb9ce5c6f449b9257f882e863dddf1c62b7d417",
+  "spacing_um_xyz": [
+    0.325,
+    0.325,
+    0.325
+  ],
+  "specimens": [
+    "M3_F_28_03",
+    "RED3_25_M_26"
+  ],
+  "training_specimen": "M3_M_26_01",
+  "earlier_test_excluded": "M3_M_32_01",
+  "crop_rule": "Outer-envelope rule in REMAINING_EYES_PROTOCOL.md; no manual adjustments",
+  "results": [
+    {
+      "specimen": "M3_F_28_03",
+      "species": "D. simulans",
+      "sex": "female",
+      "archive": "tiffs_M3_F_28_03_eye_lenses-20260903T135112Z-1-001(3).zip",
+      "archive_sha256": "d18763929208c1fff12ada55124e1f489cd420ec66f101ebb9309656fce38ffa",
+      "crop": {
+        "y": [
+          1124,
+          1424
+        ],
+        "x": [
+          275,
+          725
+        ],
+        "seed_z": [
+          500,
+          780
+        ],
+        "anchor_zxy": [
+          640,
+          500,
+          1325.4841679988424
+        ],
+        "source_shape_zyx": [
+          875,
+          1470,
+          1914
+        ]
+      },
+      "first_source_slice": 42,
+      "status": "scored",
+      "candidates": 42,
+      "scorable": 15,
+      "target_fields_removed_prediction_invariance": "passed",
+      "metrics": [
+        {
+          "specimen": "M3_F_28_03",
+          "species": "D. simulans",
+          "sex": "female",
+          "method": "outer_ellipsoid",
+          "candidates": 42,
+          "scorable": 15,
+          "median_patch_mae_um": 9.888943133095543,
+          "p90_patch_mae_um": 13.881847644665616
+        },
+        {
+          "specimen": "M3_F_28_03",
+          "species": "D. simulans",
+          "sex": "female",
+          "method": "frozen_training_template",
+          "candidates": 42,
+          "scorable": 15,
+          "median_patch_mae_um": 1.4890390500639756,
+          "p90_patch_mae_um": 2.5965338749030598
+        },
+        {
+          "specimen": "M3_F_28_03",
+          "species": "D. simulans",
+          "sex": "female",
+          "method": "frozen_outer_geometry",
+          "candidates": 42,
+          "scorable": 15,
+          "median_patch_mae_um": 1.375281859898422,
+          "p90_patch_mae_um": 1.9978034017571449
+        }
+      ],
+      "geometry_better_patches": 9,
+      "median_paired_improvement_um": 0.12885669136452715
+    },
+    {
+      "specimen": "RED3_25_M_26",
+      "species": "D. mauritiana",
+      "sex": "male",
+      "archive": "tiffs_RED3_25_M_26_eye_lenses-20260903T135055Z-1-001(2).zip",
+      "archive_sha256": "9c1ab44205610e940617e19249df8c5364a0b88115ff736b3c6a3952bd63b3de",
+      "crop": {
+        "y": [
+          1211,
+          1511
+        ],
+        "x": [
+          463,
+          913
+        ],
+        "seed_z": [
+          644,
+          924
+        ],
+        "anchor_zxy": [
+          784,
+          688,
+          1443.1157852710478
+        ],
+        "source_shape_zyx": [
+          1040,
+          1620,
+          1560
+        ]
+      },
+      "first_source_slice": 60,
+      "status": "scored",
+      "candidates": 43,
+      "scorable": 21,
+      "target_fields_removed_prediction_invariance": "passed",
+      "metrics": [
+        {
+          "specimen": "RED3_25_M_26",
+          "species": "D. mauritiana",
+          "sex": "male",
+          "method": "outer_ellipsoid",
+          "candidates": 43,
+          "scorable": 21,
+          "median_patch_mae_um": 6.494861778807892,
+          "p90_patch_mae_um": 9.564622174535087
+        },
+        {
+          "specimen": "RED3_25_M_26",
+          "species": "D. mauritiana",
+          "sex": "male",
+          "method": "frozen_training_template",
+          "candidates": 43,
+          "scorable": 21,
+          "median_patch_mae_um": 1.719164508600472,
+          "p90_patch_mae_um": 2.8643813468699633
+        },
+        {
+          "specimen": "RED3_25_M_26",
+          "species": "D. mauritiana",
+          "sex": "male",
+          "method": "frozen_outer_geometry",
+          "candidates": 43,
+          "scorable": 21,
+          "median_patch_mae_um": 1.192425137440828,
+          "p90_patch_mae_um": 1.4725250275819401
+        }
+      ],
+      "geometry_better_patches": 21,
+      "median_paired_improvement_um": 0.5772086548539862
+    }
+  ]
+}

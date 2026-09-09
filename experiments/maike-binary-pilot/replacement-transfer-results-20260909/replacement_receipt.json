@@ -1,0 +1,14 @@
+[
+  {
+    "specimen": "M3_F_28_03",
+    "archive": "tiffs_M3_F_28_03_eye_lenses-20260903T135112Z-1-001(3).zip",
+    "bytes": 7929219,
+    "sha256": "d18763929208c1fff12ada55124e1f489cd420ec66f101ebb9309656fce38ffa"
+  },
+  {
+    "specimen": "RED3_25_M_26",
+    "archive": "tiffs_RED3_25_M_26_eye_lenses-20260903T135055Z-1-001(2).zip",
+    "bytes": 8599547,
+    "sha256": "9c1ab44205610e940617e19249df8c5364a0b88115ff736b3c6a3952bd63b3de"
+  }
+]

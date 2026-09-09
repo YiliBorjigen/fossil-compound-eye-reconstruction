@@ -4,6 +4,32 @@ This project asks a simple question with a difficult limit: if the outer
 surface of a fossil eye lens survives but its internal surface is missing, can
 the lost surface be reconstructed?
 
+## Completed replacement checks — 9 September 2026
+
+**Both replacement-eye checks favour the frozen geometry model.** The new
+archives match the original calibrated sources by SHA-256. Using the unchanged
+M26 model and the same fixed outer-only crop and scoring rules gives:
+
+| Replacement eye | Scorable / candidates | Template MAE, µm | Geometry MAE, µm |
+|---|---:|---:|---:|
+| M3_F_28_03 | 15 / 42 | 1.489 | **1.375** |
+| RED3_25_M_26 | 21 / 43 | 1.719 | **1.192** |
+
+These are medians of patch mean absolute axial errors. The reductions from
+the template are 7.6% and 30.6%. The completed ten-eye follow-up now has
+**six improvements and two losses among eight scorable additional eyes**,
+plus **two fixed-rule deployment failures**. Geometry improves in three of
+four scorable additional M3 eyes and three of four scorable RED3 eyes.
+No unreadable source archives remain in that follow-up; the earlier M32
+test remains separate. Earlier eyes were not rerun or used for model tuning.
+
+This strengthens the evidence for limited transfer, including across the two
+species, while the new checks' low scoring coverage remains a material limit.
+Complete fossil lenses and optical function remain unvalidated. See the
+[completed results, all ten outcomes and provenance](experiments/maike-binary-pilot/replacement-transfer-results-20260909/README.md).
+The earlier unreadable-input statements below are retained as history and
+superseded by these successful replacement checks.
+
 ## Follow-up across the remaining eyes — 9 September 2026
 
 **The original positive result extends to some additional eyes, but the

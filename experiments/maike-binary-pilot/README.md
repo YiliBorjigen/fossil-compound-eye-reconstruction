@@ -238,3 +238,16 @@ See the [full results and source-file status](remaining-eye-results-20260909/REA
 and [frozen protocol](REMAINING_EYES_PROTOCOL.md). The original 46.4% gain is not
 uniformly transferable. The positive results still concern central binary-mask
 patches, not complete fossil lenses or optical function.
+
+## Replacement checks completed — 9 September 2026
+
+Both replacement archives match the original calibrated sources and have now
+been scored using the unchanged frozen model and transfer rules. M3_F_28_03
+has median patch MAE 1.375 µm versus 1.489 µm for the template (15/42 candidates
+scorable); RED3_25_M_26 has 1.192 versus 1.719 µm (21/43 scorable).
+
+The completed ten-eye follow-up has six improvements and two losses among
+eight scorable eyes, plus two deployment failures. Earlier unreadable-input
+entries are superseded and preserved. See the [completed results and combined
+summary](replacement-transfer-results-20260909/README.md). Earlier eyes were
+not rerun; the model and scoring settings are unchanged.
