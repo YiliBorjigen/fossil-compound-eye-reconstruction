@@ -1,3 +1,77 @@
+# Inner-surface prediction in modern compound eyes
+
+This analysis tests whether intact lenses can teach a model to predict a
+missing inner surface in another eye. It uses binary corneal-lens masks
+shared by Maike Kittelmann from the M3 strain of *Drosophila simulans* and
+RED3 strain of *D. mauritiana*, associated with
+[Buffry et al. (2024)](https://doi.org/10.1186/s12915-024-01864-7).
+
+## Method
+
+The model is trained on central lens patches from `M3_M_26_01`. It learns
+inner-surface depth from outer shape and facet size, and is compared with
+a shared-shape template and an ellipsoid fitted to the visible surface.
+Training uses intact examples; prediction uses only the outer geometry
+of the test eye.
+
+The targets are boundaries of the supplied masks. Error is measured along
+the image y axis at corresponding surface-grid points. Native voxel spacing
+is **0.325 µm in all three directions**, established from the authors' code
+and the [calibration checks](fig3_calibration_evidence.json).
+
+## Results
+
+The first separate test eye, `M3_M_32_01`, had 60 scorable patches from
+71 candidates. Median patch error was 0.803 µm for the geometry model,
+1.497 µm for the template and 7.124 µm for the ellipsoid.
+
+The unchanged model was then applied to the other ten eyes. It had lower
+median error than the template in six eyes and higher error in two;
+surface detection failed in the remaining two. Within each species,
+geometry improved on the template in three of four scorable follow-up eyes.
+
+The eight scorable follow-up eyes contain 231 scorable patches from
+314 candidates. Coverage varies considerably: some eyes support only a
+small part of the selected region. The within-eye development test was also
+matched by a position-only smoother. The evidence supports useful prediction
+in several eyes, with inconsistent gains from outer geometry.
+
+The analysis covers central patches. It does not reconstruct complete rims
+or closed lenses, and mask boundaries have not been independently checked
+against the original greyscale CT. The geometry model produces some
+nonpositive thickness values in two follow-up eyes. Its predictions need
+further validation before use as anatomical reconstructions.
+
+## Results and reproduction
+
+| File or directory | Contents |
+|---|---|
+| [First separate-eye test](transfer-results/transfer_summary_um.csv) | M32 errors in voxels and micrometres |
+| [Completed follow-up](replacement-transfer-results-20260909/README.md) | Every eye's result, coverage and failures |
+| [Combined results](replacement-transfer-results-20260909/combined_eye_summary.csv) | Per-eye medians and 90th-percentile errors |
+| [Follow-up protocol](REMAINING_EYES_PROTOCOL.md) | Crop selection and scoring rules fixed before the test |
+| [Saved model](transfer-results/frozen_training_model.json) | Training coefficients and template |
+
+Install the local dependencies with
+`python -m pip install -r experiments/maike-binary-pilot/requirements.txt`.
+
+The [original pilot](run_pilot.py) trains and evaluates within M26.
+[transfer_m32.py](transfer_m32.py) runs the first separate-eye test.
+[transfer_remaining.py](transfer_remaining.py) applies the saved model to
+the ten follow-up eyes. [complete_replacement_checks.py](complete_replacement_checks.py)
+runs only the two checks completed after replacement files arrived.
+Each script accepts `--help`; the linked reports contain run commands and
+the required source filenames.
+
+Source images are not redistributed. The earlier notes below document
+development decisions, calibration and the original sequence of results.
+
+<details>
+<summary>Original pilot notes and subsequent updates</summary>
+
+These notes retain the original wording and order. The summary above includes
+the completed calibration and follow-up results.
+
 # Maike binary-lens pilot and frozen M3 transfer — 5 September 2026
 
 ## Result
@@ -251,3 +325,5 @@ eight scorable eyes, plus two deployment failures. Earlier unreadable-input
 entries are superseded and preserved. See the [completed results and combined
 summary](replacement-transfer-results-20260909/README.md). Earlier eyes were
 not rerun; the model and scoring settings are unchanged.
+
+</details>

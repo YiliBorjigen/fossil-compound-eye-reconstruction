@@ -1,3 +1,101 @@
+# Fossil compound eye reconstruction
+
+This project tests how much of a missing lens surface can be reconstructed
+from the anatomy that survives. It uses fossil micro-CT data and intact
+modern eyes, hiding measured surfaces to test how well each method predicts
+them.
+
+Two sources of information are tested: preserved neighbouring surfaces in
+the same eye, and the relationship between outer and inner shape learned
+from intact reference eyes.
+
+## Results
+
+### Fossil reconstruction
+
+In the *Asaphus* volume, estimating depth from six neighbouring facets and
+adding a shared surface shape gives a median facet error of **8.10 µm**.
+A position-only smoother gives 8.01 µm; the neighbour method has a lower
+90th-percentile error, 12.00 versus 17.73 µm. Local outer curvature alone
+performs worse, at 13.09 µm.
+
+The target is a repeated internal CT boundary whose anatomical identity
+remains uncertain. It has not been confirmed as the inner lens surface.
+The test covers 74 facets in one specimen, and transfer of the boundary
+extraction to *Archegonus* failed.
+
+![Reconstruction of hidden internal CT boundaries in Asaphus](experiments/repeat-aligned/results/experiment_54_whole_facet_reconstruction.png)
+
+[Methods and results](reports/EXPERIMENT_54_WHOLE_FACET_RECONSTRUCTION.md)
+· [Boundary annotation](reports/EXPERIMENT_55_BLINDED_BOUNDARY_PILOT.md)
+
+### Modern reference eyes
+
+Maike Kittelmann's corneal-lens masks provide intact reference data from
+*Drosophila simulans* and *D. mauritiana*. A model trained on one eye predicts
+central inner-surface patches from the retained outer surface. In the first
+separate test eye, median patch error was **0.803 µm**, compared with
+1.497 µm for a shared-shape template.
+
+The same model was then tested on the ten remaining eyes without retraining:
+
+| Outcome relative to the template | Eyes |
+|---|---:|
+| Lower median error | 6 |
+| Higher median error | 2 |
+| Surface detection could not support the test | 2 |
+
+Scoring covers 231 of 314 candidate patches in the eight scorable follow-up
+eyes. Some eyes have limited coverage. These results show useful prediction
+in several reference eyes, including transfer between the two species,
+with inconsistent gains over the simpler template.
+
+[Modern-eye analysis](experiments/maike-binary-pilot/README.md)
+· [Results for every follow-up eye](experiments/maike-binary-pilot/replacement-transfer-results-20260909/README.md)
+
+The project does not yet produce a validated complete fossil lens or an
+optical model. The next fossil step is to establish which preserved boundary
+belongs to the lens and test reconstruction in another suitable specimen.
+
+## Code and data
+
+The repository contains analysis scripts, reconstruction outputs, figures and
+experiment reports. Each experiment documents its inputs and run commands.
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+```
+
+Start with the [fossil workflow](experiments/asaphus/README.md) or the
+[modern lens workflow](experiments/maike-binary-pilot/README.md).
+Raw CT volumes and the privately supplied source images are not included;
+see [data provenance](data/README.md) and [source notices](NOTICE.md).
+
+The [experiment history](docs/experiment-history.md) records the wider
+development of the project. Earlier work on Arthur Zhao's surface meshes is
+described in the [cross-volume study](reports/EXPERIMENT_58_ARTHUR_CROSS_VOLUME_VALIDATION.md)
+and [same-eye neighbour study](reports/EXPERIMENT_59_ARTHUR_NEIGHBOUR_RECONSTRUCTION.md).
+Those mesh results should be read with the
+[source-boundary qualification](experiments/mesh-integrity-audit/README.md).
+
+## Credits
+
+Research project by Li Yi (Yili Borjigen). Thanks to Maike Kittelmann for the
+corneal-lens stacks, Arthur Zhao for the lens and photoreceptor-tip meshes,
+and Michael Reiser for connecting the project with the eyemap data and
+researchers. [Full acknowledgements](ACKNOWLEDGEMENTS.md).
+
+Code is released under the MIT licence. The source datasets retain their
+own terms of use.
+
+<details>
+<summary>Earlier README and research notes</summary>
+
+The following text is preserved as a historical record. Some statements were
+superseded by later results; the overview above describes the current findings.
+
 # Reconstructing missing internal surfaces in fossil compound eyes
 
 This project asks a simple question with a difficult limit: if the outer
@@ -436,3 +534,5 @@ This is a first cross-file result against supplied binary corneal-lens masks.
 It covers central patches, not complete lens rims or closed solids. Physical
 voxel spacing, independent raw-image validation, broader transfer and fossil
 recovery remain unresolved. See the [pilot, frozen model and results](experiments/maike-binary-pilot/README.md).
+
+</details>
