@@ -70,6 +70,9 @@ python -m pip install -r requirements.txt
 
 Start with the [fossil workflow](experiments/asaphus/README.md) or the
 [modern lens workflow](experiments/maike-binary-pilot/README.md).
+An [audit of Tunhe Zhou's butterfly cone labels](experiments/zhou-cone-labels/README.md)
+records candidate objects, fragmentation and overlap between labelled regions.
+
 Raw CT volumes and the privately supplied source images are not included;
 see [data provenance](data/README.md) and [source notices](NOTICE.md).
 

@@ -1,0 +1,140 @@
+{
+  "source_url": "https://github.com/zhoutunhe/InSegtCone/blob/da283cac7818e72f62e9a2f645e2ab93fdb29d27/data/autoSegmentedLabelsPnapi.zip",
+  "source_commit": "da283cac7818e72f62e9a2f645e2ab93fdb29d27",
+  "archive_sha256": "4637a27d46d5df9c467936effaabdccd7b16e3b8c002d12eda684dd872a490d3",
+  "archive_bytes": 2409446,
+  "tiff_file_bytes_sum": 22384274,
+  "tiff_files": 3294,
+  "shape_row_column_slice": [
+    368,
+    496,
+    366
+  ],
+  "coordinate_units": "voxels; registration and physical spacing not independently checked",
+  "screen": {
+    "minimum_voxels": 50,
+    "minimum_largest_26_connected_fraction": 0.95,
+    "minimum_pca_largest_to_second_variance_ratio": 3,
+    "exclude_volume_border": true
+  },
+  "total_region_label_objects": 9828,
+  "total_labelled_voxel_assignments": 579729,
+  "objects_with_multiple_26_connected_components": 505,
+  "objects_largest_component_below_95pct": 226,
+  "passes_morphology_screen": 4273,
+  "cross_region_overlapping_label_pairs": 2153,
+  "candidate_duplicate_pairs_at_half_smaller_object_overlap": 1262,
+  "objects_in_candidate_duplicate_pairs": 2006,
+  "screened_objects_without_candidate_cross_region_duplicate": 2999,
+  "regions": [
+    {
+      "region": 1,
+      "objects": 774,
+      "labelled_voxels": 43594,
+      "fragmented_objects": 60,
+      "largest_component_below_95pct": 12,
+      "objects_below_50_voxels": 301,
+      "border_objects": 0,
+      "passes_morphology_screen": 461,
+      "median_voxels": 55.0,
+      "median_axis_span_voxels": 8.4666411183774
+    },
+    {
+      "region": 2,
+      "objects": 1440,
+      "labelled_voxels": 114087,
+      "fragmented_objects": 140,
+      "largest_component_below_95pct": 76,
+      "objects_below_50_voxels": 800,
+      "border_objects": 0,
+      "passes_morphology_screen": 563,
+      "median_voxels": 42.0,
+      "median_axis_span_voxels": 7.634690282189539
+    },
+    {
+      "region": 3,
+      "objects": 536,
+      "labelled_voxels": 48469,
+      "fragmented_objects": 63,
+      "largest_component_below_95pct": 24,
+      "objects_below_50_voxels": 152,
+      "border_objects": 0,
+      "passes_morphology_screen": 341,
+      "median_voxels": 80.0,
+      "median_axis_span_voxels": 10.116797466833646
+    },
+    {
+      "region": 4,
+      "objects": 1962,
+      "labelled_voxels": 114478,
+      "fragmented_objects": 84,
+      "largest_component_below_95pct": 27,
+      "objects_below_50_voxels": 1006,
+      "border_objects": 0,
+      "passes_morphology_screen": 774,
+      "median_voxels": 49.0,
+      "median_axis_span_voxels": 6.946726438616898
+    },
+    {
+      "region": 5,
+      "objects": 1859,
+      "labelled_voxels": 92245,
+      "fragmented_objects": 28,
+      "largest_component_below_95pct": 1,
+      "objects_below_50_voxels": 1187,
+      "border_objects": 0,
+      "passes_morphology_screen": 664,
+      "median_voxels": 20.0,
+      "median_axis_span_voxels": 4.124345375221035
+    },
+    {
+      "region": 6,
+      "objects": 1232,
+      "labelled_voxels": 46700,
+      "fragmented_objects": 21,
+      "largest_component_below_95pct": 17,
+      "objects_below_50_voxels": 725,
+      "border_objects": 0,
+      "passes_morphology_screen": 441,
+      "median_voxels": 30.0,
+      "median_axis_span_voxels": 5.854369171215636
+    },
+    {
+      "region": 7,
+      "objects": 636,
+      "labelled_voxels": 32799,
+      "fragmented_objects": 31,
+      "largest_component_below_95pct": 21,
+      "objects_below_50_voxels": 422,
+      "border_objects": 0,
+      "passes_morphology_screen": 175,
+      "median_voxels": 37.0,
+      "median_axis_span_voxels": 7.748859393693773
+    },
+    {
+      "region": 8,
+      "objects": 854,
+      "labelled_voxels": 54797,
+      "fragmented_objects": 50,
+      "largest_component_below_95pct": 34,
+      "objects_below_50_voxels": 306,
+      "border_objects": 0,
+      "passes_morphology_screen": 520,
+      "median_voxels": 69.0,
+      "median_axis_span_voxels": 9.46966389092065
+    },
+    {
+      "region": 9,
+      "objects": 535,
+      "labelled_voxels": 32560,
+      "fragmented_objects": 28,
+      "largest_component_below_95pct": 14,
+      "objects_below_50_voxels": 194,
+      "border_objects": 0,
+      "passes_morphology_screen": 334,
+      "median_voxels": 69.0,
+      "median_axis_span_voxels": 10.777679967734759
+    }
+  ],
+  "status": "Geometric input audit only; no anatomical validation or reconstruction accuracy result"
+}
