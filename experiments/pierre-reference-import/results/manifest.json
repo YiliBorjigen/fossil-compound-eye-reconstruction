@@ -1,0 +1,496 @@
+{
+  "archives": [
+    {
+      "archive": "Pieris napi.zip",
+      "archive_sha256": "56c7da2431c9356886e448378173807dcc7ef299660cdb53f217ccd1880298c2",
+      "archive_bytes": 55746857,
+      "source_files": 9679,
+      "uncompressed_file_bytes": 448757431,
+      "gathered_path": "Pieris napi/butterfly Auto Cones/GatheredConeStruct.mat",
+      "gathered_meaning": "Ind contains 1-based linear voxel indices, Sub contains 1-based x,y,z coordinates; neither gives individual cone IDs",
+      "selection_path": "Pieris napi/Results/trustedConeCenters.mat",
+      "selection_entries": 11921,
+      "selection_ones": 7722,
+      "selection_meaning": "Saved keep/discard vector; cone ordering and downstream cleaning not verified. Do not interpret ones as final unique cone count",
+      "region_folder_order": "alphabetical, validated at one sampled slice per region",
+      "regions": [
+        {
+          "saved_mask_index": 1,
+          "tiff_folder": "Pieris napi/butterfly Auto Cones/coneLable1",
+          "tiff_shape_row_column": [
+            1410,
+            1054
+          ],
+          "tiff_slices": 871,
+          "sparse_voxels": 230219,
+          "all_linear_indices_match_xyz": true,
+          "sample_tiff": "Pieris napi/butterfly Auto Cones/coneLable1/240.tiff",
+          "sample_sparse_voxels": 646,
+          "sample_sparse_voxels_nonzero_in_tiff": 646,
+          "sample_all_match": true
+        },
+        {
+          "saved_mask_index": 2,
+          "tiff_folder": "Pieris napi/butterfly Auto Cones/coneLable2",
+          "tiff_shape_row_column": [
+            1410,
+            1054
+          ],
+          "tiff_slices": 871,
+          "sparse_voxels": 467575,
+          "all_linear_indices_match_xyz": true,
+          "sample_tiff": "Pieris napi/butterfly Auto Cones/coneLable2/490.tiff",
+          "sample_sparse_voxels": 1557,
+          "sample_sparse_voxels_nonzero_in_tiff": 1557,
+          "sample_all_match": true
+        },
+        {
+          "saved_mask_index": 3,
+          "tiff_folder": "Pieris napi/butterfly Auto Cones/coneLable3",
+          "tiff_shape_row_column": [
+            1410,
+            1054
+          ],
+          "tiff_slices": 871,
+          "sparse_voxels": 207001,
+          "all_linear_indices_match_xyz": true,
+          "sample_tiff": "Pieris napi/butterfly Auto Cones/coneLable3/686.tiff",
+          "sample_sparse_voxels": 975,
+          "sample_sparse_voxels_nonzero_in_tiff": 975,
+          "sample_all_match": true
+        },
+        {
+          "saved_mask_index": 4,
+          "tiff_folder": "Pieris napi/butterfly Auto Cones/coneLable4",
+          "tiff_shape_row_column": [
+            1410,
+            1054
+          ],
+          "tiff_slices": 871,
+          "sparse_voxels": 516834,
+          "all_linear_indices_match_xyz": true,
+          "sample_tiff": "Pieris napi/butterfly Auto Cones/coneLable4/299.tiff",
+          "sample_sparse_voxels": 817,
+          "sample_sparse_voxels_nonzero_in_tiff": 817,
+          "sample_all_match": true
+        },
+        {
+          "saved_mask_index": 5,
+          "tiff_folder": "Pieris napi/butterfly Auto Cones/coneLable5",
+          "tiff_shape_row_column": [
+            1410,
+            1054
+          ],
+          "tiff_slices": 871,
+          "sparse_voxels": 349384,
+          "all_linear_indices_match_xyz": true,
+          "sample_tiff": "Pieris napi/butterfly Auto Cones/coneLable5/653.tiff",
+          "sample_sparse_voxels": 1539,
+          "sample_sparse_voxels_nonzero_in_tiff": 1539,
+          "sample_all_match": true
+        },
+        {
+          "saved_mask_index": 6,
+          "tiff_folder": "Pieris napi/butterfly Auto Cones/coneLable6",
+          "tiff_shape_row_column": [
+            1410,
+            1054
+          ],
+          "tiff_slices": 871,
+          "sparse_voxels": 289486,
+          "all_linear_indices_match_xyz": true,
+          "sample_tiff": "Pieris napi/butterfly Auto Cones/coneLable6/774.tiff",
+          "sample_sparse_voxels": 5181,
+          "sample_sparse_voxels_nonzero_in_tiff": 5181,
+          "sample_all_match": true
+        },
+        {
+          "saved_mask_index": 7,
+          "tiff_folder": "Pieris napi/butterfly Auto Cones/coneLable7",
+          "tiff_shape_row_column": [
+            1410,
+            1054
+          ],
+          "tiff_slices": 871,
+          "sparse_voxels": 496068,
+          "all_linear_indices_match_xyz": true,
+          "sample_tiff": "Pieris napi/butterfly Auto Cones/coneLable7/273.tiff",
+          "sample_sparse_voxels": 2747,
+          "sample_sparse_voxels_nonzero_in_tiff": 2747,
+          "sample_all_match": true
+        },
+        {
+          "saved_mask_index": 8,
+          "tiff_folder": "Pieris napi/butterfly Auto Cones/coneLable8",
+          "tiff_shape_row_column": [
+            1410,
+            1054
+          ],
+          "tiff_slices": 871,
+          "sparse_voxels": 466970,
+          "all_linear_indices_match_xyz": true,
+          "sample_tiff": "Pieris napi/butterfly Auto Cones/coneLable8/501.tiff",
+          "sample_sparse_voxels": 1363,
+          "sample_sparse_voxels_nonzero_in_tiff": 1363,
+          "sample_all_match": true
+        },
+        {
+          "saved_mask_index": 9,
+          "tiff_folder": "Pieris napi/butterfly Auto Cones/coneLable9",
+          "tiff_shape_row_column": [
+            1410,
+            1054
+          ],
+          "tiff_slices": 871,
+          "sparse_voxels": 377587,
+          "all_linear_indices_match_xyz": true,
+          "sample_tiff": "Pieris napi/butterfly Auto Cones/coneLable9/676.tiff",
+          "sample_sparse_voxels": 1558,
+          "sample_sparse_voxels_nonzero_in_tiff": 1558,
+          "sample_all_match": true
+        }
+      ],
+      "other_label_stacks": [
+        {
+          "folder": "Pieris napi/butterfly_head_labels",
+          "tiff_files": 681,
+          "sample_file": "Pieris napi/butterfly_head_labels/butterfly_head_labels_340.tif",
+          "sample_shape_row_column": [
+            696,
+            717
+          ],
+          "sample_dtype": "uint8",
+          "sample_values": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "folder": "Pieris napi/butterfly_manual_cone_labels",
+          "tiff_files": 871,
+          "sample_file": "Pieris napi/butterfly_manual_cone_labels/butterfly_manual_cone_labels_435.tif",
+          "sample_shape_row_column": [
+            1410,
+            1054
+          ],
+          "sample_dtype": "uint8",
+          "sample_values": [
+            0,
+            1
+          ]
+        },
+        {
+          "folder": "Pieris napi/butterfly_only_CE",
+          "tiff_files": 236,
+          "sample_file": "Pieris napi/butterfly_only_CE/butterfly_eyeLabels_118.tif",
+          "sample_shape_row_column": [
+            381,
+            285
+          ],
+          "sample_dtype": "uint8",
+          "sample_values": [
+            0,
+            1,
+            2
+          ]
+        }
+      ],
+      "amira_info_headers": {},
+      "optional_orientation_grid": null,
+      "matlab_scripts_present": [],
+      "status": "Source import checks only. No new anatomical validation or prediction accuracy claimed"
+    },
+    {
+      "archive": "77970 Bombus terrestris.zip",
+      "archive_sha256": "949fde466c599cdda8619ff9884022b8f42a5bce427e3d44fe952531e7e8e3ec",
+      "archive_bytes": 61633969,
+      "source_files": 6737,
+      "uncompressed_file_bytes": 382183344,
+      "gathered_path": "77970 Bombus terrestris/automaticallySegmentedCones/GatheredConeStruct.mat",
+      "gathered_meaning": "Ind contains 1-based linear voxel indices, Sub contains 1-based x,y,z coordinates; neither gives individual cone IDs",
+      "selection_path": "77970 Bombus terrestris/Results/trustedConeCenters.mat",
+      "selection_entries": 6391,
+      "selection_ones": 5748,
+      "selection_meaning": "Saved keep/discard vector; cone ordering and downstream cleaning not verified. Do not interpret ones as final unique cone count",
+      "region_folder_order": "alphabetical, validated at one sampled slice per region",
+      "regions": [
+        {
+          "saved_mask_index": 1,
+          "tiff_folder": "77970 Bombus terrestris/automaticallySegmentedCones/coneLable1",
+          "tiff_shape_row_column": [
+            1631,
+            1055
+          ],
+          "tiff_slices": 467,
+          "sparse_voxels": 229440,
+          "all_linear_indices_match_xyz": true,
+          "sample_tiff": "77970 Bombus terrestris/automaticallySegmentedCones/coneLable1/330.tiff",
+          "sample_sparse_voxels": 1313,
+          "sample_sparse_voxels_nonzero_in_tiff": 1313,
+          "sample_all_match": true
+        },
+        {
+          "saved_mask_index": 2,
+          "tiff_folder": "77970 Bombus terrestris/automaticallySegmentedCones/coneLable10",
+          "tiff_shape_row_column": [
+            1631,
+            1055
+          ],
+          "tiff_slices": 467,
+          "sparse_voxels": 101930,
+          "all_linear_indices_match_xyz": true,
+          "sample_tiff": "77970 Bombus terrestris/automaticallySegmentedCones/coneLable10/255.tiff",
+          "sample_sparse_voxels": 604,
+          "sample_sparse_voxels_nonzero_in_tiff": 604,
+          "sample_all_match": true
+        },
+        {
+          "saved_mask_index": 3,
+          "tiff_folder": "77970 Bombus terrestris/automaticallySegmentedCones/coneLable11",
+          "tiff_shape_row_column": [
+            1631,
+            1055
+          ],
+          "tiff_slices": 467,
+          "sparse_voxels": 69841,
+          "all_linear_indices_match_xyz": true,
+          "sample_tiff": "77970 Bombus terrestris/automaticallySegmentedCones/coneLable11/169.tiff",
+          "sample_sparse_voxels": 526,
+          "sample_sparse_voxels_nonzero_in_tiff": 526,
+          "sample_all_match": true
+        },
+        {
+          "saved_mask_index": 4,
+          "tiff_folder": "77970 Bombus terrestris/automaticallySegmentedCones/coneLable12",
+          "tiff_shape_row_column": [
+            1631,
+            1055
+          ],
+          "tiff_slices": 467,
+          "sparse_voxels": 13355,
+          "all_linear_indices_match_xyz": true,
+          "sample_tiff": "77970 Bombus terrestris/automaticallySegmentedCones/coneLable12/116.tiff",
+          "sample_sparse_voxels": 150,
+          "sample_sparse_voxels_nonzero_in_tiff": 150,
+          "sample_all_match": true
+        },
+        {
+          "saved_mask_index": 5,
+          "tiff_folder": "77970 Bombus terrestris/automaticallySegmentedCones/coneLable2",
+          "tiff_shape_row_column": [
+            1631,
+            1055
+          ],
+          "tiff_slices": 467,
+          "sparse_voxels": 396541,
+          "all_linear_indices_match_xyz": true,
+          "sample_tiff": "77970 Bombus terrestris/automaticallySegmentedCones/coneLable2/254.tiff",
+          "sample_sparse_voxels": 2411,
+          "sample_sparse_voxels_nonzero_in_tiff": 2411,
+          "sample_all_match": true
+        },
+        {
+          "saved_mask_index": 6,
+          "tiff_folder": "77970 Bombus terrestris/automaticallySegmentedCones/coneLable3",
+          "tiff_shape_row_column": [
+            1631,
+            1055
+          ],
+          "tiff_slices": 467,
+          "sparse_voxels": 63793,
+          "all_linear_indices_match_xyz": true,
+          "sample_tiff": "77970 Bombus terrestris/automaticallySegmentedCones/coneLable3/220.tiff",
+          "sample_sparse_voxels": 342,
+          "sample_sparse_voxels_nonzero_in_tiff": 342,
+          "sample_all_match": true
+        },
+        {
+          "saved_mask_index": 7,
+          "tiff_folder": "77970 Bombus terrestris/automaticallySegmentedCones/coneLable4",
+          "tiff_shape_row_column": [
+            1631,
+            1055
+          ],
+          "tiff_slices": 467,
+          "sparse_voxels": 193282,
+          "all_linear_indices_match_xyz": true,
+          "sample_tiff": "77970 Bombus terrestris/automaticallySegmentedCones/coneLable4/230.tiff",
+          "sample_sparse_voxels": 1585,
+          "sample_sparse_voxels_nonzero_in_tiff": 1585,
+          "sample_all_match": true
+        },
+        {
+          "saved_mask_index": 8,
+          "tiff_folder": "77970 Bombus terrestris/automaticallySegmentedCones/coneLable5",
+          "tiff_shape_row_column": [
+            1631,
+            1055
+          ],
+          "tiff_slices": 467,
+          "sparse_voxels": 466061,
+          "all_linear_indices_match_xyz": true,
+          "sample_tiff": "77970 Bombus terrestris/automaticallySegmentedCones/coneLable5/147.tiff",
+          "sample_sparse_voxels": 4858,
+          "sample_sparse_voxels_nonzero_in_tiff": 4858,
+          "sample_all_match": true
+        },
+        {
+          "saved_mask_index": 9,
+          "tiff_folder": "77970 Bombus terrestris/automaticallySegmentedCones/coneLable6",
+          "tiff_shape_row_column": [
+            1631,
+            1055
+          ],
+          "tiff_slices": 467,
+          "sparse_voxels": 87584,
+          "all_linear_indices_match_xyz": true,
+          "sample_tiff": "77970 Bombus terrestris/automaticallySegmentedCones/coneLable6/101.tiff",
+          "sample_sparse_voxels": 963,
+          "sample_sparse_voxels_nonzero_in_tiff": 963,
+          "sample_all_match": true
+        },
+        {
+          "saved_mask_index": 10,
+          "tiff_folder": "77970 Bombus terrestris/automaticallySegmentedCones/coneLable7",
+          "tiff_shape_row_column": [
+            1631,
+            1055
+          ],
+          "tiff_slices": 467,
+          "sparse_voxels": 126364,
+          "all_linear_indices_match_xyz": true,
+          "sample_tiff": "77970 Bombus terrestris/automaticallySegmentedCones/coneLable7/188.tiff",
+          "sample_sparse_voxels": 1334,
+          "sample_sparse_voxels_nonzero_in_tiff": 1334,
+          "sample_all_match": true
+        },
+        {
+          "saved_mask_index": 11,
+          "tiff_folder": "77970 Bombus terrestris/automaticallySegmentedCones/coneLable8",
+          "tiff_shape_row_column": [
+            1631,
+            1055
+          ],
+          "tiff_slices": 467,
+          "sparse_voxels": 576947,
+          "all_linear_indices_match_xyz": true,
+          "sample_tiff": "77970 Bombus terrestris/automaticallySegmentedCones/coneLable8/116.tiff",
+          "sample_sparse_voxels": 7984,
+          "sample_sparse_voxels_nonzero_in_tiff": 7984,
+          "sample_all_match": true
+        },
+        {
+          "saved_mask_index": 12,
+          "tiff_folder": "77970 Bombus terrestris/automaticallySegmentedCones/coneLable9",
+          "tiff_shape_row_column": [
+            1631,
+            1055
+          ],
+          "tiff_slices": 467,
+          "sparse_voxels": 84417,
+          "all_linear_indices_match_xyz": true,
+          "sample_tiff": "77970 Bombus terrestris/automaticallySegmentedCones/coneLable9/069.tiff",
+          "sample_sparse_voxels": 2061,
+          "sample_sparse_voxels_nonzero_in_tiff": 2061,
+          "sample_all_match": true
+        }
+      ],
+      "other_label_stacks": [
+        {
+          "folder": "77970 Bombus terrestris/60279_BTF_CE_Hd",
+          "tiff_files": 440,
+          "sample_file": "77970 Bombus terrestris/60279_BTF_CE_Hd/60279_BTF_CE_Hd_220.tif",
+          "sample_shape_row_column": [
+            1209,
+            1232
+          ],
+          "sample_dtype": "uint8",
+          "sample_values": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "folder": "77970 Bombus terrestris/77970_BT_F_only_CE",
+          "tiff_files": 187,
+          "sample_file": "77970 Bombus terrestris/77970_BT_F_only_CE/77970_BT_F_only_CE_093.tif",
+          "sample_shape_row_column": [
+            653,
+            422
+          ],
+          "sample_dtype": "uint8",
+          "sample_values": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "folder": "77970 Bombus terrestris/Manual skewed labels",
+          "tiff_files": 467,
+          "sample_file": "77970 Bombus terrestris/Manual skewed labels/77970_BT_F00652.to-byte_233.tif",
+          "sample_shape_row_column": [
+            1631,
+            1055
+          ],
+          "sample_dtype": "uint8",
+          "sample_values": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "amira_info_headers": {
+        "77970 Bombus terrestris/77970_BT_F_only_CE/77970_BT_F_only_CE_.info": [
+          "# Amira Stacked Slices",
+          "pixelsize 4 4",
+          "offset 1.19995 0",
+          "\"77970_BT_F_only_CE_000.tif\" 0.799988",
+          "\"77970_BT_F_only_CE_001.tif\" 4.79999",
+          "\"77970_BT_F_only_CE_002.tif\" 8.79999"
+        ],
+        "77970 Bombus terrestris/60279_BTF_CE_Hd/60279_BTF_CE_Hd_.info": [
+          "# Amira Stacked Slices",
+          "pixelsize 4 4",
+          "offset -1.1001 0.699951",
+          "\"60279_BTF_CE_Hd_000.tif\" -0.5",
+          "\"60279_BTF_CE_Hd_001.tif\" 3.5",
+          "\"60279_BTF_CE_Hd_002.tif\" 7.5"
+        ],
+        "77970 Bombus terrestris/Manual skewed labels/77970_BT_F00652.to-byte_.info": [
+          "# Amira Stacked Slices",
+          "pixelsize 1.6 1.6",
+          "offset 0 0",
+          "\"77970_BT_F00652.to-byte_000.tif\" 0",
+          "\"77970_BT_F00652.to-byte_001.tif\" 1.6",
+          "\"77970_BT_F00652.to-byte_002.tif\" 3.2"
+        ]
+      },
+      "optional_orientation_grid": {
+        "path": "77970 Bombus terrestris/CCorientationOnDistanceBasedGrid.mat",
+        "shape_rows_columns": [
+          114376,
+          6
+        ],
+        "finite_values_per_column": [
+          114376,
+          114376,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fully_finite_rows": 0,
+        "status": "Not a usable complete position/direction table if any required column is entirely missing"
+      },
+      "matlab_scripts_present": [],
+      "status": "Source import checks only. No new anatomical validation or prediction accuracy claimed"
+    }
+  ]
+}
