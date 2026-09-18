@@ -45,3 +45,22 @@ only. The supplied stacks are not redistributed here.
 
 Related publication: [Buffry et al. (2024), Evolution of compound eye morphology
 underlies differences in vision between closely related Drosophila species](https://doi.org/10.1186/s12915-024-01864-7).
+
+## Pierre Tichit and Tunhe Zhou — crystalline-cone reference data
+
+**Pierre Tichit** shared processed insect-eye datasets from the InSegtCone
+work, including automatic cone segmentations, manual annotations, eye and
+cornea masks, saved curation selections and comparison files. The supplied
+archives include *Pieris napi* and *Bombus terrestris* reference data. He also
+explained that the saved cleaning results were retained in MATLAB format and
+pointed to `Results/trustedConeCenters.mat`. These contributions support
+checking cone geometry and segmentation quality. The original source archives
+are not redistributed in this repository.
+
+**Tunhe Zhou** provided access to the [uncleaned automatic *Pieris napi* cone
+labels](https://github.com/zhoutunhe/InSegtCone/blob/master/data/autoSegmentedLabelsPnapi.zip),
+explained that overlapping segmentations require cleaning, and directed the
+request for cleaned results to Pierre Tichit.
+
+Related publication: [Tichit, Zhou, Kjer et al. (2022), InSegtCone: interactive
+segmentation of crystalline cones in compound eyes](https://doi.org/10.1186/s40850-021-00101-w).

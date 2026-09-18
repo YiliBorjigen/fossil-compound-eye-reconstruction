@@ -90,6 +90,10 @@ corneal-lens stacks, Arthur Zhao for the lens and photoreceptor-tip meshes,
 and Michael Reiser for connecting the project with the eyemap data and
 researchers. [Full acknowledgements](ACKNOWLEDGEMENTS.md).
 
+Thanks also to Pierre Tichit for sharing processed insect-eye reference data
+and saved curation results, and to Tunhe Zhou for providing the automatic
+*Pieris napi* cone labels and explaining their cleaning requirements.
+
 Code is released under the MIT licence. The source datasets retain their
 own terms of use.
 
