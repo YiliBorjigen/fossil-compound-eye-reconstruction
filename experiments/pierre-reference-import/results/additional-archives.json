@@ -1,0 +1,344 @@
+{
+  "archives": [
+    {
+      "archive": "Archive.zip",
+      "sha256": "ef81537823e4b79d3c12c711634cb12b3918f1312771a9857410bca45f251713",
+      "archive_bytes": 29317504,
+      "source_files": 8821,
+      "uncompressed_file_bytes": 482390916,
+      "extensions": {
+        ".mat": 4,
+        ".tiff": 8816,
+        ".xlsx": 1
+      },
+      "matlab_scripts": []
+    },
+    {
+      "archive": "Archive 2.zip",
+      "sha256": "d6a9f10f77c032128d3e160695f9214c6b9a1c6a537688d8a2bc33f1790ec891",
+      "archive_bytes": 23433348,
+      "source_files": 9921,
+      "uncompressed_file_bytes": 529144733,
+      "extensions": {
+        ".mat": 2,
+        ".tiff": 9918,
+        ".xlsx": 1
+      },
+      "matlab_scripts": []
+    },
+    {
+      "archive": "Archive(1).zip",
+      "sha256": "d1b9428e1d4839059d1e397aa8754ef7350eb23dd43ba18b59ee64a4fa84bf94",
+      "archive_bytes": 4891549,
+      "source_files": 1002,
+      "uncompressed_file_bytes": 4351070,
+      "extensions": {
+        ".tif": 995,
+        ".mat": 7
+      },
+      "matlab_scripts": []
+    },
+    {
+      "archive": "Archive(2).zip",
+      "sha256": "4a803371f2f386f611afde13add405d84f468a3fee8733dada99129292bca838",
+      "archive_bytes": 216287081,
+      "source_files": 44,
+      "uncompressed_file_bytes": 333471431,
+      "extensions": {
+        ".svg": 30,
+        ".mat": 2,
+        ".fig": 12
+      },
+      "matlab_scripts": []
+    },
+    {
+      "archive": "Archive(3).zip",
+      "sha256": "12e31e198b0792a2106da369f27bdbcd08557a6cdf69b1ba93f1d1c5c48ef11b",
+      "archive_bytes": 353217560,
+      "source_files": 47,
+      "uncompressed_file_bytes": 471021284,
+      "extensions": {
+        ".svg": 30,
+        ".mat": 2,
+        ".fig": 15
+      },
+      "matlab_scripts": []
+    },
+    {
+      "archive": "Archive(4).zip",
+      "sha256": "7fceb2b50e29f8b9ccedfd1245fc41ae4dffca4933843e47f7d0e19c5e0451b3",
+      "archive_bytes": 355554409,
+      "source_files": 62,
+      "uncompressed_file_bytes": 473347989,
+      "extensions": {
+        ".svg": 30,
+        ".mat": 2,
+        ".fig": 30
+      },
+      "matlab_scripts": []
+    },
+    {
+      "archive": "60185_AM_only_CE.zip",
+      "sha256": "c62a92c1507cc8115a4ad74b73506002e66133e459cd6673680e0e1449c8598b",
+      "archive_bytes": 787751,
+      "source_files": 221,
+      "uncompressed_file_bytes": 656190,
+      "extensions": {
+        ".tif": 221
+      },
+      "matlab_scripts": []
+    }
+  ],
+  "runs": [
+    {
+      "archive": "Archive(2).zip",
+      "run": 1,
+      "selection_member": "Results01/trustedConeCenters.mat",
+      "selection_entries": 3954,
+      "selection_entries_marked_keep": 3892,
+      "figure_member": "Results01/CleanConeViewingAxes.fig",
+      "plotted_axis_segments": 2863,
+      "all_segments_finite": true,
+      "all_segments_nonzero": true,
+      "line_starts_equal_plotted_centres": true,
+      "display_line_length_range": [
+        999.9999999999993,
+        1000.0000000000007
+      ],
+      "loadmat_warnings": [],
+      "angular_comparison_figure": "Results01/AngularDifManualAutoCone.fig",
+      "angular_comparison_points": 74
+    },
+    {
+      "archive": "Archive(2).zip",
+      "run": 2,
+      "selection_member": "Results02/trustedConeCenters.mat",
+      "selection_entries": 4726,
+      "selection_entries_marked_keep": 4643,
+      "figure_member": "Results02/CleanConeViewingAxes.fig",
+      "plotted_axis_segments": 4281,
+      "all_segments_finite": true,
+      "all_segments_nonzero": true,
+      "line_starts_equal_plotted_centres": true,
+      "display_line_length_range": [
+        999.9999999999993,
+        1000.0000000000008
+      ],
+      "loadmat_warnings": [],
+      "angular_comparison_figure": "Results02/AngularDifManualAutoCone.fig",
+      "angular_comparison_points": 88
+    },
+    {
+      "archive": "Archive(3).zip",
+      "run": 4,
+      "selection_member": "Results04/trustedConeCenters.mat",
+      "selection_entries": 5865,
+      "selection_entries_marked_keep": 5707,
+      "figure_member": "Results04/CleanConeViewingAxes.fig",
+      "plotted_axis_segments": 4423,
+      "all_segments_finite": true,
+      "all_segments_nonzero": true,
+      "line_starts_equal_plotted_centres": true,
+      "display_line_length_range": [
+        999.9999999999993,
+        1000.000000000001
+      ],
+      "loadmat_warnings": [],
+      "angular_comparison_figure": "Results04/AngularDifManualAutoCone.fig",
+      "angular_comparison_points": 94
+    },
+    {
+      "archive": "Archive(3).zip",
+      "run": 6,
+      "selection_member": "Results06/trustedConeCenters.mat",
+      "selection_entries": 6203,
+      "selection_entries_marked_keep": 5773,
+      "figure_member": "Results06/CleanConeViewingAxes.fig",
+      "plotted_axis_segments": 4457,
+      "all_segments_finite": true,
+      "all_segments_nonzero": true,
+      "line_starts_equal_plotted_centres": true,
+      "display_line_length_range": [
+        999.9999999999992,
+        1000.0000000000007
+      ],
+      "loadmat_warnings": [],
+      "angular_comparison_figure": "Results06/AngularDifManualAutoCone.fig",
+      "angular_comparison_points": 95
+    },
+    {
+      "archive": "Archive(4).zip",
+      "run": 9,
+      "selection_member": "Results09/trustedConeCenters.mat",
+      "selection_entries": 6595,
+      "selection_entries_marked_keep": 6121,
+      "figure_member": "Results09/CleanConeViewingAxes.fig",
+      "plotted_axis_segments": 4300,
+      "all_segments_finite": true,
+      "all_segments_nonzero": true,
+      "line_starts_equal_plotted_centres": true,
+      "display_line_length_range": [
+        999.9999999999993,
+        1000.0000000000008
+      ],
+      "loadmat_warnings": [],
+      "angular_comparison_figure": "Results09/AngularDifManualAutoCone.fig",
+      "angular_comparison_points": 91
+    },
+    {
+      "archive": "Archive(4).zip",
+      "run": 12,
+      "selection_member": "Results12/trustedConeCenters.mat",
+      "selection_entries": 6588,
+      "selection_entries_marked_keep": 6253,
+      "figure_member": "Results12/CleanConeViewingAxes.fig",
+      "plotted_axis_segments": 4390,
+      "all_segments_finite": true,
+      "all_segments_nonzero": true,
+      "line_starts_equal_plotted_centres": true,
+      "display_line_length_range": [
+        999.9999999999993,
+        1000.0000000000008
+      ],
+      "loadmat_warnings": [],
+      "angular_comparison_figure": "Results12/AngularDifManualAutoCone.fig",
+      "angular_comparison_points": 94
+    }
+  ],
+  "comparisons": [
+    {
+      "member": "60185_ManualSegCones_Labels/comparisonAutoToManualCones.mat",
+      "rows_columns": [
+        101,
+        2
+      ],
+      "all_finite": true,
+      "second_column_values": [
+        0.0,
+        1.0
+      ],
+      "second_column_ones": 68,
+      "column_meanings": "Not established by this inspection; no accuracy is reported."
+    },
+    {
+      "member": "60185_ManualSegCones_Labels/comparisonAutoToManualCones04.mat",
+      "rows_columns": [
+        101,
+        2
+      ],
+      "all_finite": true,
+      "second_column_values": [
+        0.0,
+        1.0
+      ],
+      "second_column_ones": 82,
+      "column_meanings": "Not established by this inspection; no accuracy is reported."
+    },
+    {
+      "member": "60185_ManualSegCones_Labels/comparisonAutoToManualCones12.mat",
+      "rows_columns": [
+        101,
+        2
+      ],
+      "all_finite": true,
+      "second_column_values": [
+        0.0,
+        1.0
+      ],
+      "second_column_ones": 88,
+      "column_meanings": "Not established by this inspection; no accuracy is reported."
+    },
+    {
+      "member": "60185_ManualSegCones_Labels/comparisonAutoToManualCones06.mat",
+      "rows_columns": [
+        101,
+        2
+      ],
+      "all_finite": true,
+      "second_column_values": [
+        0.0,
+        1.0
+      ],
+      "second_column_ones": 84,
+      "column_meanings": "Not established by this inspection; no accuracy is reported."
+    },
+    {
+      "member": "60185_ManualSegCones_Labels/comparisonAutoToManualCones02.mat",
+      "rows_columns": [
+        101,
+        2
+      ],
+      "all_finite": true,
+      "second_column_values": [
+        0.0,
+        1.0
+      ],
+      "second_column_ones": 68,
+      "column_meanings": "Not established by this inspection; no accuracy is reported."
+    },
+    {
+      "member": "60185_ManualSegCones_Labels/comparisonAutoToManualCones01.mat",
+      "rows_columns": [
+        101,
+        2
+      ],
+      "all_finite": true,
+      "second_column_values": [
+        0.0,
+        1.0
+      ],
+      "second_column_ones": 67,
+      "column_meanings": "Not established by this inspection; no accuracy is reported."
+    },
+    {
+      "member": "60185_ManualSegCones_Labels/comparisonAutoToManualCones09.mat",
+      "rows_columns": [
+        101,
+        2
+      ],
+      "all_finite": true,
+      "second_column_values": [
+        0.0,
+        1.0
+      ],
+      "second_column_ones": 86,
+      "column_meanings": "Not established by this inspection; no accuracy is reported."
+    }
+  ],
+  "unnumbered_comparison_equals_02": true,
+  "orientation_grid": {
+    "file": "CCorientationOnDistanceBasedGrid.mat",
+    "sha256": "8a9cbdfdcb8d3f5d2dfc2fb2b44628271def62c8a4409090cc634d2f17762265",
+    "rows_columns": [
+      124560,
+      6
+    ],
+    "finite_entries_per_column": [
+      124560,
+      124560,
+      0,
+      0,
+      0,
+      0
+    ],
+    "fully_finite_rows": 0
+  },
+  "endpoint_measurements": {
+    "file": "measured_ManyPoints.csv",
+    "sha256": "d58e9092ad70d718ea2383233a5f4a985645d5ecf91ecd4235c6e93214f1af7c",
+    "rows_columns": [
+      138,
+      7
+    ],
+    "all_finite": true,
+    "maximum_difference_first_column_vs_endpoint_distance": 5.797172647703519e-06,
+    "units_and_registration": "Not established by the headerless file."
+  },
+  "interpretation": {
+    "source_study": "https://doi.org/10.1186/s40850-021-00101-w",
+    "runs": "The 1/2/4/6/9/12 region settings match the published Apis experiment; do not count them as six independent specimens.",
+    "directions": "Numeric centres and display segments are readable. Segment lengths are display scaling, not cone lengths. Registration to TIFF coordinates and original object IDs remains unresolved.",
+    "selection": "Keep flags are not final unique cone counts and have not been applied to TIFF objects.",
+    "status": "Source-data inspection. No reconstruction test or new prediction accuracy."
+  }
+}

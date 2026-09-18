@@ -1,5 +1,62 @@
 # Reference data supplied by Pierre Tichit
 
+## Additional uploads checked on 18 September 2026
+
+The new files contain numeric results, including saved cone directions. The
+`CleanConeViewingAxes.fig` files are MATLAB data files, not flat images: their
+3D line coordinates can be read directly in Python. No missing source file
+was recovered.
+
+| Result folder | Selection entries marked keep | Plotted cone directions | Plotted manual/automatic comparisons |
+|---|---:|---:|---:|
+| Results01 | 3,892 | 2,863 | 74 |
+| Results02 | 4,643 | 4,281 | 88 |
+| Results04 | 5,707 | 4,423 | 94 |
+| Results06 | 5,773 | 4,457 | 95 |
+| Results09 | 6,121 | 4,300 | 91 |
+| Results12 | 6,253 | 4,390 | 94 |
+
+The paper describes these six settings as different numbers of subregions of
+one *Apis mellifera* eye. They must not be counted as six independent eyes.
+The comparison counts above match Table S1 in the [published supplementary
+information](https://media.springernature.com/original/springer-static/esm/art%3A10.1186%2Fs40850-021-00101-w/MediaObjects/40850_2021_101_MOESM1_ESM.docx).
+The four-region direction count also matches the published 4,423 cones.
+These are author-supplied reference results, not new reconstruction results.
+
+All six direction figures contain finite, nonzero segments whose starts match
+the plotted cone centres exactly. Their lengths are uniformly 1,000 plot
+units: this is display scaling, not measured cone length. Coordinate registration
+to the TIFFs and the correspondence to individual source labels remain to be
+established. Reading these saved directions does not require the missing
+cleaning script; reproducing the selection and cleaning from the TIFFs still does.
+
+The earlier uploads provide the corresponding automatic labels, manual labels,
+eye/cornea masks and comparison files. The comparison MAT files contain 101
+rows each. The unnumbered comparison duplicates the data in the `02` file.
+Their second-column flags have not been interpreted or used as accuracy scores.
+`measured_ManyPoints.csv` contains 138 endpoint pairs with matching distances;
+it has no column labels or units, so these are not assigned a biological meaning.
+The standalone orientation-grid MAT has no finite values in columns 3–6 and
+cannot supply complete direction vectors.
+
+The useful next step is to register the saved cone directions and corneal
+surface in the same coordinates, then evaluate a surface-only prediction
+against the supplied manual annotations. This inspection does not establish
+that fossil soft tissue or lens interiors can be reconstructed.
+
+Reproduce the checks without unpacking full TIFF stacks:
+
+```bash
+python experiments/pierre-reference-import/inspect_additional_archives.py \\
+  /path/to/uploads \\
+  --output experiments/pierre-reference-import/results/additional-archives.json
+```
+
+The [additional manifest](results/additional-archives.json) records hashes and
+checks. Original archives and their coordinate arrays are not redistributed.
+The earlier two-specimen inspection is retained below.
+
+
 Both uploaded specimen archives can be read directly in Python. No source file
 was edited, recovered, or reconstructed. The inspection reads MATLAB arrays
 and selected TIFF slices without expanding the complete stacks.
