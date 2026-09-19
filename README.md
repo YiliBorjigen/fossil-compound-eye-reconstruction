@@ -69,6 +69,13 @@ correction therefore improves the median in two of three eyes, with one specimen
 per species. Each model learns from surviving directions in its own eye; this
 is not transfer of a trained model between species.
 
+A subsequent [interpolation comparison](experiments/pierre-reference-import/registration-test/INTERPOLATION.md)
+found that simply averaging nearby tilt corrections gives lower median errors:
+**10.99°, 10.43° and 6.79°** in the honeybee, bumblebee and butterfly. The
+quadratic correction has lower 90th-percentile errors in all three. This
+supports retaining simple neighbour-based methods as comparators; it does not
+establish a generally superior reconstruction algorithm.
+
 The project does not yet produce a validated complete fossil lens or an
 optical model. The next fossil step is to establish which preserved boundary
 belongs to the lens and test reconstruction in another suitable specimen.

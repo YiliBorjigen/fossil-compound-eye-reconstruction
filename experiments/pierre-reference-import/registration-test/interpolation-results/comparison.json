@@ -1,0 +1,1035 @@
+{
+  "protocol": {
+    "question": "Does the existing surface-plus-quadratic-tilt predictor outperform standard interpolation under the same buffered quarter-eye holdouts?",
+    "status": "Follow-up control on previously examined specimens; specified before calculating these comparator errors, not a preregistered independent validation.",
+    "specimens": [
+      "apis",
+      "bombus",
+      "pieris"
+    ],
+    "unchanged": {
+      "normal_neighbours": 256,
+      "folds": 4,
+      "buffer_plot_units": 80,
+      "quadratic_ridge_penalty_per_training_cone": 0.001,
+      "input_coordinates": "First two surface PCA coordinates, centred at surface medians and divided by surface standard deviations.",
+      "primary_metric": "Median unsigned manual-reference axis error in degrees, reported separately per eye.",
+      "reference_targets": "Leading PCA axes of the same manual voxel clouds.",
+      "site_correspondence": "Nearest corneal point to each supplied cone centre."
+    },
+    "comparators": {
+      "idw16": {
+        "neighbours": 16,
+        "inverse_distance_power": 2
+      },
+      "tps64": {
+        "neighbours": 64,
+        "kernel": "thin_plate_spline",
+        "degree": 1,
+        "smoothing": 0.001
+      }
+    },
+    "symmetric_inputs": "Apply both interpolators to outward-oriented unit axes directly and to axis-minus-surface-normal residuals. Add the query surface normal only for the residual versions. Normalise predictions before scoring.",
+    "duplicate_sites": "After each training split, average vectors at exactly identical standardised surface sites. Do not renormalise averaged training targets; normalise final predictions.",
+    "reporting": "Keep both fixed comparator settings and every specimen/fold, including large errors and failures. No settings selected using target errors; no inferential statistics treating cones as independent eyes.",
+    "verification": "Original four methods must reproduce every saved per-cone error and fold assignment within 1e-7 degrees; abort otherwise.",
+    "interpretation": "These are comparator checks within three previously seen eyes, not biological uncertainty calibration, new specimen replication, complete lens reconstruction or fossil validation."
+  },
+  "protocol_sha256": "1e19090aaf4eb5066510cd1045055d2fe17ac63371fdb112b6a46d1bd01e2597",
+  "source_code_sha256": {
+    "compare_interpolation.py": "c4e769fa7f25ae696f198d3aa023a8f7c4632633357ecfae6e34ccc3744f3113",
+    "run_holdout.py": "f44210f07723263d344da1bd2da40b8b3b415171e6fa5aed3bd2fd3052c1e3d9",
+    "replicate_holdout.py": "4b90379c77435e9976de12678e4d2acba7d60fbadbadf6aa5a4524efce389c85"
+  },
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "specimens": [
+    {
+      "overall": {
+        "surface_normal": {
+          "n": 101,
+          "median_deg": 37.878029212521916,
+          "mean_deg": 36.923850157969405,
+          "p90_deg": 45.94410250081377
+        },
+        "position_only": {
+          "n": 101,
+          "median_deg": 18.78377868714921,
+          "mean_deg": 21.490356637924126,
+          "p90_deg": 41.06876831531625
+        },
+        "surface_plus_tilt": {
+          "n": 101,
+          "median_deg": 13.547326991517103,
+          "mean_deg": 15.540200703723121,
+          "p90_deg": 25.281644453342466
+        },
+        "surface_global_rotation": {
+          "n": 101,
+          "median_deg": 18.12883643278651,
+          "mean_deg": 21.526874221546848,
+          "p90_deg": 39.91353023932689
+        },
+        "idw16_direct": {
+          "n": 101,
+          "median_deg": 19.447307916723936,
+          "mean_deg": 25.77712942584084,
+          "p90_deg": 53.345367109690855
+        },
+        "idw16_residual": {
+          "n": 101,
+          "median_deg": 10.987186102968252,
+          "mean_deg": 16.124682971902466,
+          "p90_deg": 33.74617687742931
+        },
+        "tps64_direct": {
+          "n": 101,
+          "median_deg": 17.634118427129216,
+          "mean_deg": 25.074551824765702,
+          "p90_deg": 69.17052609164973
+        },
+        "tps64_residual": {
+          "n": 101,
+          "median_deg": 17.12602325509949,
+          "mean_deg": 25.02617128384521,
+          "p90_deg": 69.9871720536957
+        }
+      },
+      "folds": [
+        {
+          "block": 0,
+          "training_auto_cones": 3029,
+          "unique_training_surface_sites": 3029,
+          "hidden_auto_cones": 1095,
+          "manual_test_cones": 27,
+          "errors": {
+            "surface_normal": {
+              "n": 27,
+              "median_deg": 39.99679315111672,
+              "mean_deg": 38.63985663180679,
+              "p90_deg": 45.88083990996769
+            },
+            "position_only": {
+              "n": 27,
+              "median_deg": 19.468882216645724,
+              "mean_deg": 22.89985202291173,
+              "p90_deg": 42.646202439259106
+            },
+            "surface_plus_tilt": {
+              "n": 27,
+              "median_deg": 16.079311234744036,
+              "mean_deg": 14.848687458201779,
+              "p90_deg": 23.70627260839319
+            },
+            "surface_global_rotation": {
+              "n": 27,
+              "median_deg": 18.15150108882732,
+              "mean_deg": 17.388682813970313,
+              "p90_deg": 22.107043337101874
+            },
+            "idw16_direct": {
+              "n": 27,
+              "median_deg": 23.40487700006023,
+              "mean_deg": 25.714508675709695,
+              "p90_deg": 50.27765869127871
+            },
+            "idw16_residual": {
+              "n": 27,
+              "median_deg": 8.503216855000046,
+              "mean_deg": 9.341159465265653,
+              "p90_deg": 19.63669962927428
+            },
+            "tps64_direct": {
+              "n": 27,
+              "median_deg": 17.82720239555695,
+              "mean_deg": 19.65957936906302,
+              "p90_deg": 34.46067145482184
+            },
+            "tps64_residual": {
+              "n": 27,
+              "median_deg": 16.645257781276907,
+              "mean_deg": 18.76754258140649,
+              "p90_deg": 30.28925495254547
+            }
+          }
+        },
+        {
+          "block": 1,
+          "training_auto_cones": 2840,
+          "unique_training_surface_sites": 2840,
+          "hidden_auto_cones": 1229,
+          "manual_test_cones": 25,
+          "errors": {
+            "surface_normal": {
+              "n": 25,
+              "median_deg": 37.62228293938996,
+              "mean_deg": 37.25748423520335,
+              "p90_deg": 42.003250982313276
+            },
+            "position_only": {
+              "n": 25,
+              "median_deg": 10.769654846802338,
+              "mean_deg": 12.372882824069663,
+              "p90_deg": 21.083067195421755
+            },
+            "surface_plus_tilt": {
+              "n": 25,
+              "median_deg": 8.283308808915976,
+              "mean_deg": 9.69101458536687,
+              "p90_deg": 15.227928557794048
+            },
+            "surface_global_rotation": {
+              "n": 25,
+              "median_deg": 15.26773675483048,
+              "mean_deg": 15.438600381705387,
+              "p90_deg": 26.333872553279633
+            },
+            "idw16_direct": {
+              "n": 25,
+              "median_deg": 13.279652667361855,
+              "mean_deg": 15.690834824243133,
+              "p90_deg": 32.67685833567402
+            },
+            "idw16_residual": {
+              "n": 25,
+              "median_deg": 9.87643593132687,
+              "mean_deg": 11.24295633998237,
+              "p90_deg": 19.395104691328594
+            },
+            "tps64_direct": {
+              "n": 25,
+              "median_deg": 14.151086378046978,
+              "mean_deg": 16.391329839988014,
+              "p90_deg": 27.52249861539041
+            },
+            "tps64_residual": {
+              "n": 25,
+              "median_deg": 15.476390078208851,
+              "mean_deg": 17.39748601268786,
+              "p90_deg": 30.639115474407234
+            }
+          }
+        },
+        {
+          "block": 2,
+          "training_auto_cones": 3247,
+          "unique_training_surface_sites": 3246,
+          "hidden_auto_cones": 897,
+          "manual_test_cones": 25,
+          "errors": {
+            "surface_normal": {
+              "n": 25,
+              "median_deg": 34.332911382530895,
+              "mean_deg": 34.256456773004096,
+              "p90_deg": 42.45989206756856
+            },
+            "position_only": {
+              "n": 25,
+              "median_deg": 23.85900153935949,
+              "mean_deg": 20.936284143736813,
+              "p90_deg": 33.32468923886986
+            },
+            "surface_plus_tilt": {
+              "n": 25,
+              "median_deg": 13.547326991517103,
+              "mean_deg": 13.515256521704707,
+              "p90_deg": 19.751314938223953
+            },
+            "surface_global_rotation": {
+              "n": 25,
+              "median_deg": 23.236127727321662,
+              "mean_deg": 31.134105887624493,
+              "p90_deg": 57.078521987315426
+            },
+            "idw16_direct": {
+              "n": 25,
+              "median_deg": 28.61066448850604,
+              "mean_deg": 35.42406334064455,
+              "p90_deg": 69.12527081540912
+            },
+            "idw16_residual": {
+              "n": 25,
+              "median_deg": 9.178199267376991,
+              "mean_deg": 18.522033508094548,
+              "p90_deg": 51.82401463522773
+            },
+            "tps64_direct": {
+              "n": 25,
+              "median_deg": 19.606694501597442,
+              "mean_deg": 23.08866528743551,
+              "p90_deg": 57.06713149700218
+            },
+            "tps64_residual": {
+              "n": 25,
+              "median_deg": 16.476805376276626,
+              "mean_deg": 24.416408925869465,
+              "p90_deg": 65.59832439797
+            }
+          }
+        },
+        {
+          "block": 3,
+          "training_auto_cones": 2901,
+          "unique_training_surface_sites": 2900,
+          "hidden_auto_cones": 1202,
+          "manual_test_cones": 24,
+          "errors": {
+            "surface_normal": {
+              "n": 24,
+              "median_deg": 39.69728292641686,
+              "mean_deg": 37.424342153789155,
+              "p90_deg": 50.41770579948234
+            },
+            "position_only": {
+              "n": 24,
+              "median_deg": 27.73705871138202,
+              "mean_deg": 29.97920173402325,
+              "p90_deg": 52.05238080810489
+            },
+            "surface_plus_tilt": {
+              "n": 24,
+              "median_deg": 18.1369182703501,
+              "mean_deg": 24.52037216782492,
+              "p90_deg": 49.66034792071077
+            },
+            "surface_global_rotation": {
+              "n": 24,
+              "median_deg": 20.253646464132153,
+              "mean_deg": 22.516758486074423,
+              "p90_deg": 35.8230420585883
+            },
+            "idw16_direct": {
+              "n": 24,
+              "median_deg": 19.57683282002113,
+              "mean_deg": 26.305245151815466,
+              "p90_deg": 47.412886550764135
+            },
+            "idw16_residual": {
+              "n": 24,
+              "median_deg": 21.372913930603037,
+              "mean_deg": 26.344038683252233,
+              "p90_deg": 43.09804263671637
+            },
+            "tps64_direct": {
+              "n": 24,
+              "median_deg": 38.92146181506414,
+              "mean_deg": 42.280050547960236,
+              "p90_deg": 85.58395230256833
+            },
+            "tps64_residual": {
+              "n": 24,
+              "median_deg": 29.994222948526954,
+              "mean_deg": 40.64884485443573,
+              "p90_deg": 85.46856707670497
+            }
+          }
+        }
+      ],
+      "original_per_cone_max_difference_deg": {
+        "surface_normal": 0.0,
+        "position_only": 0.0,
+        "surface_plus_tilt": 0.0,
+        "surface_global_rotation": 0.0
+      },
+      "existing_correction_better_than_comparator_count": {
+        "position_only": 81,
+        "surface_global_rotation": 68,
+        "idw16_direct": 72,
+        "idw16_residual": 45,
+        "tps64_direct": 67,
+        "tps64_residual": 68
+      },
+      "specimen": "apis",
+      "automatic_cones": 4423,
+      "manual_cones": 101,
+      "registration_max_error": 6.833326690313736e-11,
+      "source_hashes": {
+        "Archive(3).zip": "12e31e198b0792a2106da369f27bdbcd08557a6cdf69b1ba93f1d1c5c48ef11b",
+        "60185_AM_only_CE.zip": "c62a92c1507cc8115a4ad74b73506002e66133e459cd6673680e0e1449c8598b"
+      }
+    },
+    {
+      "overall": {
+        "surface_normal": {
+          "n": 102,
+          "median_deg": 18.705274975877686,
+          "mean_deg": 21.293426839191252,
+          "p90_deg": 35.85695743385697
+        },
+        "position_only": {
+          "n": 102,
+          "median_deg": 11.73190074545587,
+          "mean_deg": 12.34266864547717,
+          "p90_deg": 22.933026190527983
+        },
+        "surface_plus_tilt": {
+          "n": 102,
+          "median_deg": 12.04312444668892,
+          "mean_deg": 12.162616182692872,
+          "p90_deg": 20.016981671278902
+        },
+        "surface_global_rotation": {
+          "n": 102,
+          "median_deg": 24.90854488967624,
+          "mean_deg": 26.602737372606676,
+          "p90_deg": 43.536878429894415
+        },
+        "idw16_direct": {
+          "n": 102,
+          "median_deg": 22.45979384051158,
+          "mean_deg": 25.613810576033583,
+          "p90_deg": 45.905346565669596
+        },
+        "idw16_residual": {
+          "n": 102,
+          "median_deg": 10.433068200391881,
+          "mean_deg": 12.323061363356635,
+          "p90_deg": 25.538897484695767
+        },
+        "tps64_direct": {
+          "n": 102,
+          "median_deg": 17.116926950400877,
+          "mean_deg": 26.455706427732807,
+          "p90_deg": 74.48495172044356
+        },
+        "tps64_residual": {
+          "n": 102,
+          "median_deg": 20.54440630431322,
+          "mean_deg": 28.238659764879547,
+          "p90_deg": 76.33294617018753
+        }
+      },
+      "folds": [
+        {
+          "block": 0,
+          "training_auto_cones": 2763,
+          "unique_training_surface_sites": 2695,
+          "hidden_auto_cones": 768,
+          "manual_test_cones": 21,
+          "errors": {
+            "surface_normal": {
+              "n": 21,
+              "median_deg": 25.05204781650444,
+              "mean_deg": 26.052268562451683,
+              "p90_deg": 34.15883061858081
+            },
+            "position_only": {
+              "n": 21,
+              "median_deg": 7.667323138851203,
+              "mean_deg": 9.852376872571403,
+              "p90_deg": 18.510479303275666
+            },
+            "surface_plus_tilt": {
+              "n": 21,
+              "median_deg": 6.8888222636254035,
+              "mean_deg": 8.776386596654875,
+              "p90_deg": 17.043858767919275
+            },
+            "surface_global_rotation": {
+              "n": 21,
+              "median_deg": 22.2196488711,
+              "mean_deg": 22.997273338888025,
+              "p90_deg": 31.49414163690061
+            },
+            "idw16_direct": {
+              "n": 21,
+              "median_deg": 20.07513940856456,
+              "mean_deg": 23.05217807176752,
+              "p90_deg": 40.518493876423264
+            },
+            "idw16_residual": {
+              "n": 21,
+              "median_deg": 9.530940150433066,
+              "mean_deg": 10.588826492036834,
+              "p90_deg": 18.74311390866165
+            },
+            "tps64_direct": {
+              "n": 21,
+              "median_deg": 22.463789094105547,
+              "mean_deg": 38.2130931644008,
+              "p90_deg": 83.37400171206053
+            },
+            "tps64_residual": {
+              "n": 21,
+              "median_deg": 23.906648793291513,
+              "mean_deg": 38.504974955523,
+              "p90_deg": 81.21890587691978
+            }
+          }
+        },
+        {
+          "block": 1,
+          "training_auto_cones": 2480,
+          "unique_training_surface_sites": 2437,
+          "hidden_auto_cones": 955,
+          "manual_test_cones": 27,
+          "errors": {
+            "surface_normal": {
+              "n": 27,
+              "median_deg": 24.681867764215,
+              "mean_deg": 26.030025665786134,
+              "p90_deg": 44.3678509024819
+            },
+            "position_only": {
+              "n": 27,
+              "median_deg": 11.427777005672544,
+              "mean_deg": 11.68829285862303,
+              "p90_deg": 20.890994210172803
+            },
+            "surface_plus_tilt": {
+              "n": 27,
+              "median_deg": 12.440935029880421,
+              "mean_deg": 12.553223480157355,
+              "p90_deg": 20.251306877030935
+            },
+            "surface_global_rotation": {
+              "n": 27,
+              "median_deg": 40.29501864900605,
+              "mean_deg": 36.59103986342447,
+              "p90_deg": 52.80567520258778
+            },
+            "idw16_direct": {
+              "n": 27,
+              "median_deg": 24.97073749687409,
+              "mean_deg": 28.826695519569384,
+              "p90_deg": 48.347544433534566
+            },
+            "idw16_residual": {
+              "n": 27,
+              "median_deg": 11.326810553244556,
+              "mean_deg": 15.288319707236159,
+              "p90_deg": 29.815192009188447
+            },
+            "tps64_direct": {
+              "n": 27,
+              "median_deg": 16.712046902743783,
+              "mean_deg": 19.528935412882376,
+              "p90_deg": 36.37419020925112
+            },
+            "tps64_residual": {
+              "n": 27,
+              "median_deg": 21.161497050661655,
+              "mean_deg": 21.425942146820294,
+              "p90_deg": 37.435476271262075
+            }
+          }
+        },
+        {
+          "block": 2,
+          "training_auto_cones": 2577,
+          "unique_training_surface_sites": 2529,
+          "hidden_auto_cones": 983,
+          "manual_test_cones": 25,
+          "errors": {
+            "surface_normal": {
+              "n": 25,
+              "median_deg": 22.605447475205903,
+              "mean_deg": 23.680733752409033,
+              "p90_deg": 35.796334939724645
+            },
+            "position_only": {
+              "n": 25,
+              "median_deg": 9.822567749896242,
+              "mean_deg": 11.489014112334305,
+              "p90_deg": 23.479048785913236
+            },
+            "surface_plus_tilt": {
+              "n": 25,
+              "median_deg": 11.21516906201025,
+              "mean_deg": 13.016354591801933,
+              "p90_deg": 27.96965532698149
+            },
+            "surface_global_rotation": {
+              "n": 25,
+              "median_deg": 21.449424245376086,
+              "mean_deg": 22.283461765436485,
+              "p90_deg": 33.714799688827334
+            },
+            "idw16_direct": {
+              "n": 25,
+              "median_deg": 20.78167002100283,
+              "mean_deg": 22.98389190515554,
+              "p90_deg": 38.11823089257292
+            },
+            "idw16_residual": {
+              "n": 25,
+              "median_deg": 6.602073679667889,
+              "mean_deg": 9.253742925972276,
+              "p90_deg": 21.034351648756264
+            },
+            "tps64_direct": {
+              "n": 25,
+              "median_deg": 16.60298742258254,
+              "mean_deg": 17.969469827281113,
+              "p90_deg": 37.710314025022335
+            },
+            "tps64_residual": {
+              "n": 25,
+              "median_deg": 19.305746341084543,
+              "mean_deg": 21.801832536251155,
+              "p90_deg": 45.90515201192769
+            }
+          }
+        },
+        {
+          "block": 3,
+          "training_auto_cones": 2358,
+          "unique_training_surface_sites": 2329,
+          "hidden_auto_cones": 1077,
+          "manual_test_cones": 29,
+          "errors": {
+            "surface_normal": {
+              "n": 29,
+              "median_deg": 11.509210457691845,
+              "mean_deg": 11.379408999985205,
+              "p90_deg": 17.29533268643285
+            },
+            "position_only": {
+              "n": 29,
+              "median_deg": 13.315663377093271,
+              "mean_deg": 15.491138880120433,
+              "p90_deg": 25.88506702224556
+            },
+            "surface_plus_tilt": {
+              "n": 29,
+              "median_deg": 14.391675905090588,
+              "mean_deg": 13.515063218814609,
+              "p90_deg": 17.562711468612747
+            },
+            "surface_global_rotation": {
+              "n": 29,
+              "median_deg": 23.495524767784232,
+              "mean_deg": 23.63765004968482,
+              "p90_deg": 28.713892152662044
+            },
+            "idw16_direct": {
+              "n": 29,
+              "median_deg": 24.82002756752238,
+              "mean_deg": 26.74465043417397,
+              "p90_deg": 47.96611586817501
+            },
+            "idw16_residual": {
+              "n": 29,
+              "median_deg": 12.10383349454697,
+              "mean_deg": 13.464093016721373,
+              "p90_deg": 23.46920574439117
+            },
+            "tps64_direct": {
+              "n": 29,
+              "median_deg": 22.215221668220067,
+              "mean_deg": 31.70652059815439,
+              "p90_deg": 77.28121865164357
+            },
+            "tps64_residual": {
+              "n": 29,
+              "median_deg": 21.73592351409929,
+              "mean_deg": 32.69629553728635,
+              "p90_deg": 79.2066391256974
+            }
+          }
+        }
+      ],
+      "original_per_cone_max_difference_deg": {
+        "surface_normal": 0.0,
+        "position_only": 0.0,
+        "surface_plus_tilt": 0.0,
+        "surface_global_rotation": 0.0
+      },
+      "existing_correction_better_than_comparator_count": {
+        "position_only": 42,
+        "surface_global_rotation": 96,
+        "idw16_direct": 90,
+        "idw16_residual": 52,
+        "tps64_direct": 66,
+        "tps64_residual": 73
+      },
+      "specimen": "bombus",
+      "archive": "77970 Bombus terrestris.zip",
+      "archive_sha256": "949fde466c599cdda8619ff9884022b8f42a5bce427e3d44fe952531e7e8e3ec",
+      "manual_figure": "77970 Bombus terrestris/Results/CleanManualConeFig.fig",
+      "automatic_figure": "77970 Bombus terrestris/Results/CleanConeViewingAxes.fig",
+      "automatic_cones": 3783,
+      "manual_cones": 102,
+      "surface_voxels": 114376,
+      "plotted_landmarks": 22876,
+      "registration_fit_landmarks": 11438,
+      "registration_heldout_landmarks": 11438,
+      "registration_heldout_max_error": 9.448691289858378e-11,
+      "linear_singular_values": [
+        4.0000005797751506,
+        3.999993474352248,
+        3.999984805722218
+      ],
+      "affine_row_matrix": [
+        [
+          -0.8215200000001244,
+          0.6957679999999087,
+          -3.8523879999999657
+        ],
+        [
+          0.5075960000001163,
+          3.9220120000000946,
+          0.600095999999966
+        ],
+        [
+          3.8816799999995624,
+          -0.3656188000003363,
+          -0.8938039999998814
+        ],
+        [
+          -1732.4420796677305,
+          -1423.739183933395,
+          487.27608175702295
+        ]
+      ],
+      "manual_axis_eigenvalue_ratio_range": [
+        3.0041473529760427,
+        16.335118735986953
+      ],
+      "registration_scope": "Author figure plots every fifth mask surface voxel. The transform is fitted on alternating plotted points and checked on the other half; full raw surface is transformed for normal estimation."
+    },
+    {
+      "overall": {
+        "surface_normal": {
+          "n": 104,
+          "median_deg": 17.513786628044897,
+          "mean_deg": 17.484140755052543,
+          "p90_deg": 26.71068293046357
+        },
+        "position_only": {
+          "n": 104,
+          "median_deg": 9.030854524955103,
+          "mean_deg": 10.760891490584653,
+          "p90_deg": 19.592950026537306
+        },
+        "surface_plus_tilt": {
+          "n": 104,
+          "median_deg": 7.1084699525009,
+          "mean_deg": 8.382548818193714,
+          "p90_deg": 14.364723462235403
+        },
+        "surface_global_rotation": {
+          "n": 104,
+          "median_deg": 18.989576397655405,
+          "mean_deg": 20.73516012388238,
+          "p90_deg": 35.73837777555887
+        },
+        "idw16_direct": {
+          "n": 104,
+          "median_deg": 28.01935531499978,
+          "mean_deg": 30.99913325792698,
+          "p90_deg": 52.709270585062065
+        },
+        "idw16_residual": {
+          "n": 104,
+          "median_deg": 6.7905717191574215,
+          "mean_deg": 8.325325256382134,
+          "p90_deg": 15.58847778779372
+        },
+        "tps64_direct": {
+          "n": 104,
+          "median_deg": 16.760756403739148,
+          "mean_deg": 22.672972628082675,
+          "p90_deg": 44.34947435199059
+        },
+        "tps64_residual": {
+          "n": 104,
+          "median_deg": 18.053926682327468,
+          "mean_deg": 22.50538904091712,
+          "p90_deg": 44.36742914467673
+        }
+      },
+      "folds": [
+        {
+          "block": 0,
+          "training_auto_cones": 2816,
+          "unique_training_surface_sites": 2770,
+          "hidden_auto_cones": 1227,
+          "manual_test_cones": 30,
+          "errors": {
+            "surface_normal": {
+              "n": 30,
+              "median_deg": 19.384232293538265,
+              "mean_deg": 19.383731482960517,
+              "p90_deg": 35.151580383603566
+            },
+            "position_only": {
+              "n": 30,
+              "median_deg": 10.004358120574175,
+              "mean_deg": 12.85914143987734,
+              "p90_deg": 29.346184687627392
+            },
+            "surface_plus_tilt": {
+              "n": 30,
+              "median_deg": 7.4286353500771725,
+              "mean_deg": 9.463894892775578,
+              "p90_deg": 19.95098082951495
+            },
+            "surface_global_rotation": {
+              "n": 30,
+              "median_deg": 28.942098861350473,
+              "mean_deg": 28.18810004067103,
+              "p90_deg": 49.41043556142309
+            },
+            "idw16_direct": {
+              "n": 30,
+              "median_deg": 34.78662677692758,
+              "mean_deg": 35.04547186327802,
+              "p90_deg": 57.94940937927759
+            },
+            "idw16_residual": {
+              "n": 30,
+              "median_deg": 10.55835359407575,
+              "mean_deg": 11.325544877512446,
+              "p90_deg": 17.542599261624442
+            },
+            "tps64_direct": {
+              "n": 30,
+              "median_deg": 30.348845950727405,
+              "mean_deg": 30.3061980744546,
+              "p90_deg": 54.87963131261219
+            },
+            "tps64_residual": {
+              "n": 30,
+              "median_deg": 27.924200662522775,
+              "mean_deg": 28.7107178938773,
+              "p90_deg": 53.37102476720798
+            }
+          }
+        },
+        {
+          "block": 1,
+          "training_auto_cones": 3108,
+          "unique_training_surface_sites": 3056,
+          "hidden_auto_cones": 941,
+          "manual_test_cones": 27,
+          "errors": {
+            "surface_normal": {
+              "n": 27,
+              "median_deg": 15.27083347328124,
+              "mean_deg": 16.28522420582266,
+              "p90_deg": 26.653644345951545
+            },
+            "position_only": {
+              "n": 27,
+              "median_deg": 6.6149772206686555,
+              "mean_deg": 8.388371594434634,
+              "p90_deg": 16.28414853255638
+            },
+            "surface_plus_tilt": {
+              "n": 27,
+              "median_deg": 5.964142234049938,
+              "mean_deg": 6.731936494147181,
+              "p90_deg": 12.350029044016408
+            },
+            "surface_global_rotation": {
+              "n": 27,
+              "median_deg": 9.289761839263143,
+              "mean_deg": 12.585250589710798,
+              "p90_deg": 24.098024820978694
+            },
+            "idw16_direct": {
+              "n": 27,
+              "median_deg": 24.851259977454916,
+              "mean_deg": 28.630296242896698,
+              "p90_deg": 53.14774813204385
+            },
+            "idw16_residual": {
+              "n": 27,
+              "median_deg": 5.933499582108548,
+              "mean_deg": 7.41006445981349,
+              "p90_deg": 13.7325376158414
+            },
+            "tps64_direct": {
+              "n": 27,
+              "median_deg": 15.909223932966793,
+              "mean_deg": 17.46435065602803,
+              "p90_deg": 26.096124292402227
+            },
+            "tps64_residual": {
+              "n": 27,
+              "median_deg": 14.025845789086159,
+              "mean_deg": 16.34810482667819,
+              "p90_deg": 24.1547747477821
+            }
+          }
+        },
+        {
+          "block": 2,
+          "training_auto_cones": 2995,
+          "unique_training_surface_sites": 2964,
+          "hidden_auto_cones": 1018,
+          "manual_test_cones": 24,
+          "errors": {
+            "surface_normal": {
+              "n": 24,
+              "median_deg": 18.215585163841055,
+              "mean_deg": 17.176232880812382,
+              "p90_deg": 21.751889007965826
+            },
+            "position_only": {
+              "n": 24,
+              "median_deg": 10.626342087654812,
+              "mean_deg": 12.687386352827412,
+              "p90_deg": 24.91703839168462
+            },
+            "surface_plus_tilt": {
+              "n": 24,
+              "median_deg": 9.457219718089217,
+              "mean_deg": 8.76718324663306,
+              "p90_deg": 11.642018563263147
+            },
+            "surface_global_rotation": {
+              "n": 24,
+              "median_deg": 25.707498507401226,
+              "mean_deg": 25.366227925284733,
+              "p90_deg": 32.96188179192426
+            },
+            "idw16_direct": {
+              "n": 24,
+              "median_deg": 26.89868126764721,
+              "mean_deg": 32.25510935381635,
+              "p90_deg": 52.1096826648414
+            },
+            "idw16_residual": {
+              "n": 24,
+              "median_deg": 6.797192884885981,
+              "mean_deg": 8.190044830131788,
+              "p90_deg": 14.829879820029191
+            },
+            "tps64_direct": {
+              "n": 24,
+              "median_deg": 14.80888991810464,
+              "mean_deg": 21.28158833491487,
+              "p90_deg": 48.70067069344256
+            },
+            "tps64_residual": {
+              "n": 24,
+              "median_deg": 17.7256874453364,
+              "mean_deg": 24.97187661998751,
+              "p90_deg": 49.88992920626753
+            }
+          }
+        },
+        {
+          "block": 3,
+          "training_auto_cones": 2907,
+          "unique_training_surface_sites": 2863,
+          "hidden_auto_cones": 1148,
+          "manual_test_cones": 23,
+          "errors": {
+            "surface_normal": {
+              "n": 23,
+              "median_deg": 17.441238938460156,
+              "mean_deg": 16.735132666953913,
+              "p90_deg": 22.490636575072983
+            },
+            "position_only": {
+              "n": 23,
+              "median_deg": 9.334106083175048,
+              "mean_deg": 8.79892027421264,
+              "p90_deg": 12.664964214990944
+            },
+            "surface_plus_tilt": {
+              "n": 23,
+              "median_deg": 7.64374556172485,
+              "mean_deg": 8.50841508903094,
+              "p90_deg": 14.437840365747215
+            },
+            "surface_global_rotation": {
+              "n": 23,
+              "median_deg": 16.10441366105615,
+              "mean_deg": 15.748800675417892,
+              "p90_deg": 23.808558476042027
+            },
+            "idw16_direct": {
+              "n": 23,
+              "median_deg": 27.586340644464993,
+              "mean_deg": 27.191525212011392,
+              "p90_deg": 40.04639979400688
+            },
+            "idw16_residual": {
+              "n": 23,
+              "median_deg": 5.553638004964899,
+              "mean_deg": 5.627594086967027,
+              "p90_deg": 8.046897376888461
+            },
+            "tps64_direct": {
+              "n": 23,
+              "median_deg": 16.033753593203368,
+              "mean_deg": 20.28294014505418,
+              "p90_deg": 37.06926760144439
+            },
+            "tps64_residual": {
+              "n": 23,
+              "median_deg": 17.250654595559737,
+              "mean_deg": 19.06587192343695,
+              "p90_deg": 30.12550243084995
+            }
+          }
+        }
+      ],
+      "original_per_cone_max_difference_deg": {
+        "surface_normal": 0.0,
+        "position_only": 0.0,
+        "surface_plus_tilt": 0.0,
+        "surface_global_rotation": 0.0
+      },
+      "existing_correction_better_than_comparator_count": {
+        "position_only": 66,
+        "surface_global_rotation": 93,
+        "idw16_direct": 101,
+        "idw16_residual": 50,
+        "tps64_direct": 91,
+        "tps64_residual": 94
+      },
+      "specimen": "pieris",
+      "archive": "Pieris napi.zip",
+      "archive_sha256": "56c7da2431c9356886e448378173807dcc7ef299660cdb53f217ccd1880298c2",
+      "manual_figure": "Pieris napi/Results/CleanManualConeFig.fig",
+      "automatic_figure": "Pieris napi/Results/CleanConeViewingAxes.fig",
+      "automatic_cones": 4334,
+      "manual_cones": 104,
+      "surface_voxels": 169458,
+      "plotted_landmarks": 33892,
+      "registration_fit_landmarks": 16946,
+      "registration_heldout_landmarks": 16946,
+      "registration_heldout_max_error": 2.1044735707867353e-11,
+      "linear_singular_values": [
+        4.000006284599475,
+        4.000002667479577,
+        4.000001089453743
+      ],
+      "affine_row_matrix": [
+        [
+          3.402212000000067,
+          1.7270040000000955,
+          1.201012000000054
+        ],
+        [
+          -1.6899280000000054,
+          3.603903999999992,
+          -0.39503880000000424
+        ],
+        [
+          -1.252640000000056,
+          -0.1714020000000689,
+          3.794935999999957
+        ],
+        [
+          -673.0753486077847,
+          -896.710952919085,
+          -567.6438541865216
+        ]
+      ],
+      "manual_axis_eigenvalue_ratio_range": [
+        1.6939593168501048,
+        7.521974942498543
+      ],
+      "registration_scope": "Author figure plots every fifth mask surface voxel. The transform is fitted on alternating plotted points and checked on the other half; full raw surface is transformed for normal estimation."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "question": "Does the existing surface-plus-quadratic-tilt predictor outperform standard interpolation under the same buffered quarter-eye holdouts?",
+  "status": "Follow-up control on previously examined specimens; specified before calculating these comparator errors, not a preregistered independent validation.",
+  "specimens": ["apis", "bombus", "pieris"],
+  "unchanged": {
+    "normal_neighbours": 256,
+    "folds": 4,
+    "buffer_plot_units": 80,
+    "quadratic_ridge_penalty_per_training_cone": 0.001,
+    "input_coordinates": "First two surface PCA coordinates, centred at surface medians and divided by surface standard deviations.",
+    "primary_metric": "Median unsigned manual-reference axis error in degrees, reported separately per eye.",
+    "reference_targets": "Leading PCA axes of the same manual voxel clouds.",
+    "site_correspondence": "Nearest corneal point to each supplied cone centre."
+  },
+  "comparators": {
+    "idw16": {"neighbours": 16, "inverse_distance_power": 2},
+    "tps64": {"neighbours": 64, "kernel": "thin_plate_spline", "degree": 1, "smoothing": 0.001}
+  },
+  "symmetric_inputs": "Apply both interpolators to outward-oriented unit axes directly and to axis-minus-surface-normal residuals. Add the query surface normal only for the residual versions. Normalise predictions before scoring.",
+  "duplicate_sites": "After each training split, average vectors at exactly identical standardised surface sites. Do not renormalise averaged training targets; normalise final predictions.",
+  "reporting": "Keep both fixed comparator settings and every specimen/fold, including large errors and failures. No settings selected using target errors; no inferential statistics treating cones as independent eyes.",
+  "verification": "Original four methods must reproduce every saved per-cone error and fold assignment within 1e-7 degrees; abort otherwise.",
+  "interpretation": "These are comparator checks within three previously seen eyes, not biological uncertainty calibration, new specimen replication, complete lens reconstruction or fossil validation."
+}

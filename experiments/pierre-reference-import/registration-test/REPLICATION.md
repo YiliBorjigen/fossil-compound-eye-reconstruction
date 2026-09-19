@@ -1,5 +1,10 @@
 # Replication in bumblebee and butterfly eyes
 
+Follow-up: [fixed interpolation controls](INTERPOLATION.md) give lower median
+errors with simple neighbour-averaged tilt corrections in all three eyes, but
+larger tail errors than the quadratic correction. The original results below
+are retained.
+
 The fixed procedure improves on position alone in the honeybee and butterfly,
 but does not improve the primary median-error metric in the bumblebee. The
 evidence supports a useful, specimen-dependent correction rather than a
