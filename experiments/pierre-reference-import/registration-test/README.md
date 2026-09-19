@@ -1,5 +1,11 @@
 # Predicting cone directions in hidden regions of one honeybee eye
 
+The [fixed replication in bumblebee and butterfly eyes](REPLICATION.md) is now
+complete. The correction improves median error in the butterfly but is slightly
+worse than position alone in the bumblebee. The honeybee results below are
+preserved; the three-eye evidence does not establish universal improvement.
+
+
 The supplied data support a within-eye direction test against manual cone
 annotations. A surface-normal predictor with a learned spatial tilt correction
 has lower median error than position alone or a single rotation of the surface

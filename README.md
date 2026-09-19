@@ -62,6 +62,13 @@ normals gives 18.13°. The correction improves the median in all four quarters,
 but some large errors remain. This tests prediction within one modern eye using
 surviving internal directions; cross-eye transfer and fossil validity are untested.
 
+The same fixed procedure has now been [repeated in the bumblebee and butterfly](experiments/pierre-reference-import/registration-test/REPLICATION.md).
+Median errors for position alone versus the tilt correction are **11.73° versus
+12.04°** in the bumblebee and **9.03° versus 7.11°** in the butterfly. The
+correction therefore improves the median in two of three eyes, with one specimen
+per species. Each model learns from surviving directions in its own eye; this
+is not transfer of a trained model between species.
+
 The project does not yet produce a validated complete fossil lens or an
 optical model. The next fossil step is to establish which preserved boundary
 belongs to the lens and test reconstruction in another suitable specimen.
