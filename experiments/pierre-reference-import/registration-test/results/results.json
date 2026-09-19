@@ -1,0 +1,242 @@
+{
+  "source_hashes": {
+    "Archive(3).zip": "12e31e198b0792a2106da369f27bdbcd08557a6cdf69b1ba93f1d1c5c48ef11b",
+    "60185_AM_only_CE.zip": "c62a92c1507cc8115a4ad74b73506002e66133e459cd6673680e0e1449c8598b"
+  },
+  "registration": {
+    "paired_landmarks": 3253,
+    "fit_landmarks": 1627,
+    "heldout_landmarks": 1626,
+    "affine_row_matrix": [
+      [
+        3.1487720000001316,
+        0.9143680000001168,
+        -2.2911039999999008
+      ],
+      [
+        0.5444839999999798,
+        -3.881052000000015,
+        -0.8005960000000125
+      ],
+      [
+        -2.405980000000286,
+        0.3183587999997388,
+        -3.1796000000002316
+      ],
+      [
+        1029.538844554693,
+        963.9058623717109,
+        834.8319758047976
+      ]
+    ],
+    "linear_singular_values": [
+      3.999999582197203,
+      3.9999974993365597,
+      3.999993061002017
+    ],
+    "heldout_max_error": 6.380111638177782e-11,
+    "surface_points": 124560,
+    "surface_bidirectional_max_error": 6.833326690313736e-11,
+    "manual_plot_surface_max_error": 6.814462098426915e-11
+  },
+  "protocol": {
+    "specimens": 1,
+    "auto_training_source_run": 4,
+    "manual_voxel_clouds": 101,
+    "manual_source_figure": "Results06/CleanManualConeFig.fig",
+    "normal_neighbours": 256,
+    "folds": 4,
+    "buffer_plot_units": 80,
+    "ridge_penalty_per_training_cone": 0.001,
+    "polynomial_degree": 2,
+    "evaluation_sites": "Nearest corneal point to each supplied manual cone centre",
+    "training_targets": "Author automatic directions outside the hidden quadrant and buffer",
+    "evaluation_targets": "Leading PCA axes of author manual voxel clouds",
+    "angles": "Unsigned axis angle in degrees",
+    "parameter_selection": "Fixed before the first error calculation; no search or tuning"
+  },
+  "additional_control": "One global rotation of normals fitted per training fold; added after viewing primary results to test whether simple orientation bias explains the gain.",
+  "manual_axis_eigenvalue_ratio_range": [
+    3.8251107140806706,
+    34.29561033286419
+  ],
+  "overall": {
+    "surface_normal": {
+      "n": 101,
+      "median_deg": 37.878029212521916,
+      "mean_deg": 36.923850157969405,
+      "p90_deg": 45.94410250081377
+    },
+    "position_only": {
+      "n": 101,
+      "median_deg": 18.78377868714921,
+      "mean_deg": 21.490356637924126,
+      "p90_deg": 41.06876831531625
+    },
+    "surface_plus_tilt": {
+      "n": 101,
+      "median_deg": 13.547326991517103,
+      "mean_deg": 15.540200703723121,
+      "p90_deg": 25.281644453342466
+    },
+    "surface_global_rotation": {
+      "n": 101,
+      "median_deg": 18.12883643278651,
+      "mean_deg": 21.526874221546848,
+      "p90_deg": 39.91353023932689
+    }
+  },
+  "folds": [
+    {
+      "block": 0,
+      "training_auto_cones": 3029,
+      "hidden_auto_cones": 1095,
+      "manual_test_cones": 27,
+      "errors": {
+        "surface_normal": {
+          "n": 27,
+          "median_deg": 39.99679315111672,
+          "mean_deg": 38.63985663180679,
+          "p90_deg": 45.88083990996769
+        },
+        "position_only": {
+          "n": 27,
+          "median_deg": 19.468882216645724,
+          "mean_deg": 22.89985202291173,
+          "p90_deg": 42.646202439259106
+        },
+        "surface_plus_tilt": {
+          "n": 27,
+          "median_deg": 16.079311234744036,
+          "mean_deg": 14.848687458201779,
+          "p90_deg": 23.70627260839319
+        },
+        "surface_global_rotation": {
+          "n": 27,
+          "median_deg": 18.15150108882732,
+          "mean_deg": 17.388682813970313,
+          "p90_deg": 22.107043337101874
+        }
+      }
+    },
+    {
+      "block": 1,
+      "training_auto_cones": 2840,
+      "hidden_auto_cones": 1229,
+      "manual_test_cones": 25,
+      "errors": {
+        "surface_normal": {
+          "n": 25,
+          "median_deg": 37.62228293938996,
+          "mean_deg": 37.25748423520335,
+          "p90_deg": 42.003250982313276
+        },
+        "position_only": {
+          "n": 25,
+          "median_deg": 10.769654846802338,
+          "mean_deg": 12.372882824069663,
+          "p90_deg": 21.083067195421755
+        },
+        "surface_plus_tilt": {
+          "n": 25,
+          "median_deg": 8.283308808915976,
+          "mean_deg": 9.69101458536687,
+          "p90_deg": 15.227928557794048
+        },
+        "surface_global_rotation": {
+          "n": 25,
+          "median_deg": 15.26773675483048,
+          "mean_deg": 15.438600381705387,
+          "p90_deg": 26.333872553279633
+        }
+      }
+    },
+    {
+      "block": 2,
+      "training_auto_cones": 3247,
+      "hidden_auto_cones": 897,
+      "manual_test_cones": 25,
+      "errors": {
+        "surface_normal": {
+          "n": 25,
+          "median_deg": 34.332911382530895,
+          "mean_deg": 34.256456773004096,
+          "p90_deg": 42.45989206756856
+        },
+        "position_only": {
+          "n": 25,
+          "median_deg": 23.85900153935949,
+          "mean_deg": 20.936284143736813,
+          "p90_deg": 33.32468923886986
+        },
+        "surface_plus_tilt": {
+          "n": 25,
+          "median_deg": 13.547326991517103,
+          "mean_deg": 13.515256521704707,
+          "p90_deg": 19.751314938223953
+        },
+        "surface_global_rotation": {
+          "n": 25,
+          "median_deg": 23.236127727321662,
+          "mean_deg": 31.134105887624493,
+          "p90_deg": 57.078521987315426
+        }
+      }
+    },
+    {
+      "block": 3,
+      "training_auto_cones": 2901,
+      "hidden_auto_cones": 1202,
+      "manual_test_cones": 24,
+      "errors": {
+        "surface_normal": {
+          "n": 24,
+          "median_deg": 39.69728292641686,
+          "mean_deg": 37.424342153789155,
+          "p90_deg": 50.41770579948234
+        },
+        "position_only": {
+          "n": 24,
+          "median_deg": 27.73705871138202,
+          "mean_deg": 29.97920173402325,
+          "p90_deg": 52.05238080810489
+        },
+        "surface_plus_tilt": {
+          "n": 24,
+          "median_deg": 18.1369182703501,
+          "mean_deg": 24.52037216782492,
+          "p90_deg": 49.66034792071077
+        },
+        "surface_global_rotation": {
+          "n": 24,
+          "median_deg": 20.253646464132153,
+          "mean_deg": 22.516758486074423,
+          "p90_deg": 35.8230420585883
+        }
+      }
+    }
+  ],
+  "surface_plus_tilt_better_than_normal_count": 93,
+  "surface_plus_tilt_better_than_position_count": 81,
+  "normal_neighbourhood_sensitivity": {
+    "64": {
+      "n": 101,
+      "median_deg": 37.94101062132341,
+      "mean_deg": 37.12379047268312,
+      "p90_deg": 46.17644267456002
+    },
+    "1024": {
+      "n": 101,
+      "median_deg": 37.915856263819535,
+      "mean_deg": 36.86673734730708,
+      "p90_deg": 45.44226868352917
+    }
+  },
+  "limitations": [
+    "One modern eye, not independent specimen replication or fossil validation.",
+    "Automatic labels and author curation predate this holdout; upstream processing was not rerun with regions hidden.",
+    "Manual labels are an anatomical reference, not error-free ground truth or independent raw-image validation.",
+    "Known cone centres provide evaluation-site correspondence. Facet detection and whole-eye reconstruction are not tested.",
+    "Learned models use internal directions from other regions of this same eye; surface-only cross-eye transfer is not tested."
+  ]
+}

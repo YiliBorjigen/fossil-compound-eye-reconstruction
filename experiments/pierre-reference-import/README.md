@@ -1,5 +1,16 @@
 # Reference data supplied by Pierre Tichit
 
+## Registration and direction test added 19 September 2026
+
+The coordinate match is now verified against all 124,560 corneal mask voxels.
+A [four-quarter holdout against 101 manual cones](registration-test/README.md)
+gives 13.55° median error with a learned spatial tilt correction, versus 18.78°
+for position alone and 18.13° for one rotation of surface normals. Training uses
+automatic directions outside the hidden quarter and a surrounding buffer.
+This is one modern specimen; it does not establish cross-eye or fossil transfer.
+The earlier import notes below record the state before this registration check.
+
+
 ## Additional uploads checked on 18 September 2026
 
 The new files contain numeric results, including saved cone directions. The

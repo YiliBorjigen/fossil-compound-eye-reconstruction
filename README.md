@@ -53,6 +53,15 @@ with inconsistent gains over the simpler template.
 [Modern-eye analysis](experiments/maike-binary-pilot/README.md)
 · [Results for every follow-up eye](experiments/maike-binary-pilot/replacement-transfer-results-20260909/README.md)
 
+A separate [honeybee cone-direction test](experiments/pierre-reference-import/registration-test/README.md)
+uses Pierre Tichit's manual annotations. When each quarter of one eye is hidden,
+a surface-normal model with a tilt correction learned from automatic cone
+directions in the remaining regions gives **13.55° median error** across 101
+manual cones. Position alone gives 18.78°, and one learned rotation of surface
+normals gives 18.13°. The correction improves the median in all four quarters,
+but some large errors remain. This tests prediction within one modern eye using
+surviving internal directions; cross-eye transfer and fossil validity are untested.
+
 The project does not yet produce a validated complete fossil lens or an
 optical model. The next fossil step is to establish which preserved boundary
 belongs to the lens and test reconstruction in another suitable specimen.
