@@ -1,0 +1,31 @@
+name: SplitScope tests
+
+on:
+  push:
+    paths:
+      - 'apps/splitscope/**'
+      - '.github/workflows/splitscope-tests.yml'
+  pull_request:
+    paths:
+      - 'apps/splitscope/**'
+      - '.github/workflows/splitscope-tests.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  numerical-and-build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps/splitscope
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm test
+      - run: npm run build
+      - name: Verify committed offline app matches source
+        run: git diff --exit-code -- dist/

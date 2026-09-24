@@ -1,5 +1,8 @@
 # Fossil compound eye reconstruction
 
+> **New: [SplitScope — an interactive spatial validation lab](apps/splitscope/).**
+> Compare random, spatial and buffered holdouts in your browser, explore your own CSV locally, and export every prediction. [Download the offline app](https://github.com/YiliBorjigen/fossil-compound-eye-reconstruction/raw/refs/heads/main/apps/splitscope/dist/splitscope.html).
+
 This project tests how much of a missing lens surface can be reconstructed
 from the anatomy that survives. It uses fossil micro-CT data and intact
 modern eyes, hiding measured surfaces to test how well each method predicts

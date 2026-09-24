@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SplitScope — See what your split is asking</title>
+<meta name="description" content="An interactive spatial validation lab. Compare random, spatial and buffered holdouts, inspect predictions, and explore your own CSV locally. No installation or upload.">
+<meta name="theme-color" content="#0b1018">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b1018'/%3E%3Cpath d='M8 8h6v16H8zm10 0h6v16h-6z' fill='%2387f0ce'/%3E%3Cpath d='M8 17h16' stroke='%230b1018' stroke-width='3'/%3E%3C/svg%3E">
+<style>/* INLINE_STYLE */</style>
+</head>
+<body>
+<a class="skip" href="#laboratory">Skip to experiment</a>
+<header class="topbar">
+  <a class="brand" href="#"><span class="mark" aria-hidden="true">◧</span> SplitScope <span class="version">LAB / 01</span></a>
+  <nav aria-label="Main navigation"><a href="#method">How it works</a><a class="github-link" href="https://github.com/YiliBorjigen/fossil-compound-eye-reconstruction/tree/main/apps/splitscope" target="_blank" rel="noopener noreferrer">Source on GitHub <span aria-hidden="true">↗</span></a></nav>
+</header>
+<main id="laboratory">
+  <section class="intro" aria-labelledby="title">
+    <div><p class="eyebrow">THE SPATIAL VALIDATION LAB</p><h1>Same data.<br><span>Different question.</span></h1><p class="intro-copy">A model can look accurate when the answer is next door.<br class="desktop"> Change the holdout. See what the score was hiding.</p></div>
+    <div class="intro-note"><span class="note-number">01—03</span><p>One coordinate-only model.<br>Three ways to test it.<br><strong>Every score calculated live.</strong></p></div>
+  </section>
+  <div class="workbench">
+    <aside class="controls" aria-label="Experiment settings">
+      <div class="panel-heading"><h2>Your experiment</h2><button id="reset" class="text-button" type="button">Reset</button></div>
+      <label for="preset">Dataset</label>
+      <select id="preset"><option value="field">Smooth spatial field</option><option value="facets">Faceted surface</option><option value="noise">Independent noise</option><option value="custom" disabled>Your CSV</option></select>
+      <p id="dataset-description" class="control-note">Nearby observations share a pattern. Synthetic data, not measurements.</p>
+      <div class="range-label"><label for="noise">Measurement noise</label><output id="noise-output" for="noise">0.12</output></div>
+      <input type="range" id="noise" min="0" max="0.8" step="0.02" value="0.12">
+      <div class="range-label"><label for="neighbors">Neighbours <i>k</i></label><output id="neighbors-output" for="neighbors">6</output></div>
+      <input type="range" id="neighbors" min="1" max="20" step="1" value="6">
+      <div class="range-label"><label for="buffer">Exclusion buffer</label><output id="buffer-output" for="buffer">12%</output></div>
+      <input type="range" id="buffer" min="0" max="40" step="1" value="12">
+      <p id="buffer-note" class="control-note">Percentage of the longest coordinate span.</p>
+      <label for="region">Spatial holdout location</label>
+      <select id="region"><option value="center">Centre</option><option value="left">Left edge</option><option value="right">Right edge</option><option value="top">Top edge</option></select>
+      <div class="seed-row"><div><label for="seed">Random seed</label><input id="seed" type="number" min="0" max="999999" step="1" value="42"></div><button id="reseed" class="square-button" title="Try the next seed" aria-label="Try the next seed" type="button">↻</button></div>
+      <div class="control-divider"></div>
+      <button id="import-open" class="secondary-button full" type="button"><span aria-hidden="true">＋</span> Bring your own CSV</button>
+      <p class="local-note">Your data stays in this browser.<br>No account. No data upload.</p>
+    </aside>
+    <section class="results" aria-label="Experiment results">
+      <div class="results-toolbar"><div><span class="live-label">LIVE EXPERIMENT</span><span id="sample-count">784 observations · 25% held out</span></div><div class="view-switch" role="group" aria-label="Map display"><button class="selected" id="view-split" aria-pressed="true" type="button">Split</button><button id="view-values" aria-pressed="false" type="button">Values</button><button id="view-error" aria-pressed="false" type="button">Errors</button></div></div>
+      <div class="map-grid" id="map-grid">
+        <article class="map-card" data-strategy="random"><div class="card-title"><span class="step">01</span><h2>Random</h2><span class="strategy-tag">INTERSPERSED</span></div><p class="card-question">Can I predict among neighbours?</p><div class="map" id="map-random"></div><div class="score"><strong id="rmse-random">—</strong><span>RMSE<br><small>lower is better</small></span></div><p id="counts-random" class="counts"></p><div class="distance-row"><span>Nearest training point</span><b id="distance-random">—</b></div></article>
+        <article class="map-card" data-strategy="spatial"><div class="card-title"><span class="step">02</span><h2>Spatial</h2><span class="strategy-tag">ONE REGION</span></div><p class="card-question">Can I fill a missing region?</p><div class="map" id="map-spatial"></div><div class="score"><strong id="rmse-spatial">—</strong><span>RMSE<br><small>lower is better</small></span></div><p id="counts-spatial" class="counts"></p><div class="distance-row"><span>Nearest training point</span><b id="distance-spatial">—</b></div></article>
+        <article class="map-card" data-strategy="buffered"><div class="card-title"><span class="step">03</span><h2>Buffered</h2><span class="strategy-tag">WITH DISTANCE</span></div><p class="card-question">What if close neighbours are gone?</p><div class="map" id="map-buffered"></div><div class="score"><strong id="rmse-buffered">—</strong><span>RMSE<br><small>lower is better</small></span></div><p id="counts-buffered" class="counts"></p><div class="distance-row"><span>Nearest training point</span><b id="distance-buffered">—</b></div></article>
+      </div>
+      <div class="legend-row"><div id="legend" class="legend"></div><span class="legend-hint">Hover a point to inspect it · axes in coordinate units</span></div>
+      <div class="insight" aria-live="polite"><span id="gap-number">—</span><div><h2 id="gap-title">The validation gap</h2><p id="gap-copy"></p></div></div>
+      <div id="warning" class="warning" hidden role="status"></div>
+      <div class="results-bottom"><span>Model: distance-weighted kNN on <b>x, y only</b></span><button id="share" class="text-button" type="button">Copy experiment link ↗</button></div>
+    </section>
+  </div>
+  <section class="analysis-section" aria-labelledby="comparison-title">
+    <div class="section-top"><div><p class="eyebrow">LOOK BEYOND ONE NUMBER</p><h2 id="comparison-title">Error has a geography.</h2></div><div class="export-actions"><button id="export-svg" class="secondary-button" type="button">Save figure <span aria-hidden="true">↓</span></button><button id="export-csv" class="secondary-button" type="button">Results CSV <span aria-hidden="true">↓</span></button><button id="export-json" class="secondary-button" type="button">Full report <span aria-hidden="true">↓</span></button></div></div>
+    <div class="analysis-grid"><div class="chart-panel"><div class="chart-title"><h3>Error vs. distance to training</h3><span>HELD-OUT POINTS</span></div><div id="distance-chart"></div><p class="control-note">Each dot is one held-out prediction. Hover to inspect. Distance uses the original coordinates.</p></div><div class="table-panel"><h3>Compare with a simple baseline</h3><p class="control-note">The mean baseline predicts the training-set average everywhere.</p><div class="table-scroll"><table><caption class="sr-only">Validation metrics by strategy</caption><thead><tr><th scope="col">Holdout</th><th scope="col">kNN RMSE</th><th scope="col">Mean RMSE</th><th scope="col">R²</th></tr></thead><tbody id="metrics-table"></tbody></table></div><p class="table-note">R² can be negative. It is undefined for constant test values.<br>Test size is matched. Random and spatial holdouts test different points.</p></div></div>
+  </section>
+  <section id="method" class="method-section" aria-labelledby="method-title"><div><p class="eyebrow">THE QUESTION COMES FIRST</p><h2 id="method-title">A harder split isn’t<br>automatically a better split.</h2></div><div class="method-copy"><p>Choose a validation design that matches where you will predict. Random holdout tests interspersed observations; a spatial holdout tests a contiguous region; a buffer also removes nearby training observations.</p><p><strong>A score gap is not proof of leakage.</strong> Test locations, prediction distance and training-set size differ. This lab uses one split per strategy, not cross-validation or an estimate of uncertainty. A regional holdout within one specimen does not test transfer to another specimen.</p><details><summary>Read the exact method and limitations</summary><p>The spatial test set contains the 25% of observations nearest to the selected region centre. The buffered strategy uses those same test points and excludes training points closer than the chosen distance to any test point. Random holdout selects the same number of test points using a seeded shuffle. All splits use the same observed data and kNN settings.</p><p>Predictions are weighted by inverse Euclidean distance, using at most k training points. No test values enter fitting. Distances are calculated in the supplied x/y units, without separate axis scaling. Use projected coordinates with the same unit on both axes, not latitude/longitude degrees. Synthetic fields and faceted surfaces are teaching examples, not biological simulations.</p><p>Imported data: 20–1,600 rows, unique coordinates, finite numeric <code>x,y,value</code> columns. No categorical groups, temporal validation, automatic buffer selection, hyperparameter tuning or confidence intervals. Use an established validation package for those tasks.</p><p>Related work: <a href="https://doi.org/10.1111/ecog.02881" target="_blank" rel="noopener noreferrer">Roberts et al. (2017)</a>, <a href="https://doi.org/10.1016/j.ecolmodel.2021.109692" target="_blank" rel="noopener noreferrer">Wadoux et al. (2021)</a>, <a href="https://github.com/rvalavi/blockCV" target="_blank" rel="noopener noreferrer">blockCV</a>, <a href="https://scikit-learn.org/stable/modules/cross_validation.html" target="_blank" rel="noopener noreferrer">scikit-learn</a>.</p></details></div></section>
+  <footer><span>SplitScope <span class="footer-version">v1.0.0</span> · Built by Li Yi</span><span>An open-source companion to <a href="https://github.com/YiliBorjigen/fossil-compound-eye-reconstruction" target="_blank" rel="noopener noreferrer">fossil eye reconstruction ↗</a></span><a href="./splitscope.html" download="splitscope.html">Download offline app ↓</a></footer>
+</main>
+<dialog id="import-dialog" aria-labelledby="import-title"><form method="dialog"><button class="dialog-close" aria-label="Close import dialog">×</button></form><p class="eyebrow">YOUR DATA. YOUR BROWSER.</p><h2 id="import-title">Bring a spatial question.</h2><p>Paste a CSV or choose a file with <code>x,y,value</code> columns. Use the same coordinate unit on both axes. 20–1,600 unique locations.</p><label for="csv-file" class="file-label">Choose a CSV file<input id="csv-file" type="file" accept=".csv,text/csv"></label><label for="csv-text">Or paste your data</label><textarea id="csv-text" rows="7" spellcheck="false" placeholder="x,y,value&#10;0,0,1.2&#10;1,0,1.4&#10;…"></textarea><p id="import-error" class="error-message" role="alert"></p><div class="dialog-actions"><button id="sample-csv" class="secondary-button" type="button">Download example CSV</button><button id="import-apply" class="primary-button" type="button">Explore data →</button></div><p class="local-note">The file is read locally. Its contents are never sent to a server.</p></dialog>
+<div id="toast" role="status" class="toast" hidden></div>
+<noscript><p class="warning">Enable JavaScript to run this local scientific demonstration.</p></noscript>
+<script type="module">/* INLINE_SCRIPT */</script>
+</body></html>
